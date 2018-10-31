@@ -1,0 +1,469 @@
+﻿###########################
+# TUR Events
+###########################
+
+add_namespace = turkey
+
+#Focus - Looking West
+country_event = {
+    id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.1.o1
+		ai_chance = { factor = 100 }
+		add_manpower = 20000
+	}
+}
+
+#Focus - Looking East
+country_event = {
+    id = turkey.2
+	title = turkey.2.t
+	desc = turkey.2.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.2.o1
+		ai_chance = { factor = 100 }
+		add_manpower = 20000
+	}
+}
+
+#Focus - Retake Wallachia
+country_event = {
+    id = turkey.3
+	title = turkey.3.t
+	desc = turkey.3.d
+	picture = GFX_report_event_soldiers_marching
+	
+    is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.3.o1
+	    ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = annex_everything
+			target = ROM
+		}
+	}
+
+}
+
+#Focus - Albania Accepts
+country_event = {
+    id = turkey.7
+	title = turkey.7.t
+	desc = turkey.7.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.7.o1
+		ai_chance = { factor = 100 }
+		add_political_power = -30
+	}
+	
+}
+
+#Focus - Retake Serbia
+country_event = {
+    id = turkey.4
+	title = turkey.4.t
+	desc = turkey.4.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.4.o1
+	    ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SER
+		}
+	}
+}
+
+#Focus - Serbia Accepts
+country_event = {
+    id = turkey.8
+	title = turkey.8.t
+	desc = turkey.8.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+    is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.8.o1
+		ai_chance = { factor = 100 }
+		add_political_power = -30
+	}
+	
+	
+}
+
+#Focus - Hungary Folds
+country_event = {
+    id = turkey.9
+	title = turkey.9.t
+	desc = turkey.9.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.9.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 84
+		transfer_state = 76
+		transfer_state = 83
+		transfer_state = 82
+		add_stability = 0.05
+		add_named_threat = { threat = -2 name = transylvania_crisis_averted }
+	}
+}
+
+#Focus - Hungary Refuses
+country_event = {
+    id = turkey.10
+	title = turkey.10.t
+	desc = turkey.10.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = { #Declare War
+	    name = turkey.10.o1
+	    ai_chance = { factor = 85 }
+		TUR = {
+			declare_war_on = {
+				target = HUN
+				type = take_state_focus
+				generator = { 84 76 83 82 } 
+			}
+		}
+		
+		add_war_support = 0.05
+	}
+	
+	option = { #Back down
+	    name = turkey.10.o2
+		ai_chance = { factor = 15 }
+		add_stability = -0.05
+		add_political_power = -60
+		add_named_threat = { threat = -2 name = transylvania_crisis_averted }
+	}
+}
+
+#Focus - Hungary Accepts Alliance
+country_event = {
+    id = turkey.11
+	title = turkey.11.t
+	desc = turkey.11.d
+	picture = GFX_report_event_german_turkish_pact
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.11.o1
+		ai_chance = { factor = 100 }
+		create_faction = centre_front
+		add_to_faction = HUN
+	}
+	
+}
+
+#Focus - Persian Rivalry
+country_event = {
+    id = turkey.5
+	title = turkey.5.t
+	desc = turkey.5.d
+	picture = GFX_report_event_czech_soldiers_02
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.5.o1
+		ai_chance = { factor = 100 }
+		add_manpower = 40000
+	}
+}
+
+#Focus - Persia Accepts
+country_event = {
+    id = turkey.12
+	title = turkey.12.t
+	desc = turkey.12.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = turkey.12.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 229
+	}
+	
+}
+
+#Olympic Preparations
+country_event = {
+	id = turkey.13
+	title = turkey.13.t
+	desc = turkey.13.d
+	picture = report_event_vienna_expo
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		date > 1936.8.1
+        date < 1936.8.16
+	}
+	
+	option = {
+	    name = turkey.13.o1
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 10
+		hidden_effect = {
+		    every_country = { news_event = { id = news.5 } }
+		}
+	}
+	
+	option = {
+	    name = turkey.13.o2
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 5
+		hidden_effect = {
+		    every_country = { news_event = { id = news.5 } }
+		}
+	}
+}
+
+#Iraq Conference
+country_event = {
+	id = turkey.14
+	title = turkey.14.t
+	desc = turkey.14.d
+	picture = report_event_vienna_expo
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		date > 1937.11.1
+        date < 1937.11.16
+	}
+	
+	option = { #Negotiate with leaders
+	    name = turkey.14.o1
+		ai_chance = {
+			factor = 30
+		}
+		TUR = {
+		    country_event = { days = 7 id = turkey.15 } 
+		}
+	}
+	
+	option = { #Let them be
+	    name = turkey.14.o2
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+		    TUR = {
+		        country_event = { days = 30 id = turkey.16 } 
+		    }
+		}
+	}
+	
+	option = { #Arrest them all
+	    name = turkey.14.o3
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -100
+		add_stability = -0.1
+		hidden_effect = {
+		    TUR = {
+		        country_event = { days = 60 id = turkey.17 } 
+		    }
+		}
+	}
+}
+
+#Iraq Conference - Negotiations
+country_event = {
+    id = turkey.15
+	title = turkey.15.t
+	desc = turkey.15.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = { #Puppet Iraq, Kuwait remains Ottoman
+	    name = turkey.15.o1
+		ai_chance = {
+			factor = 40
+		}
+		add_ideas = tough_diplomats
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		TUR = { puppet = IRQ }
+	}
+	
+	option = { #Puppet Iraq, Jordan and Kuwait
+	    name = turkey.15.o2
+		ai_chance = {
+			factor = 10
+		}
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		KUW = { transfer_state = 656 }
+		JOR = { transfer_state = 455 }
+		TUR = { puppet = IRQ }
+		TUR = { puppet = JOR }
+		TUR = { puppet = KUW }
+	}
+	
+	option = { #Independent Iraq and Kuwait
+	    name = turkey.15.o3
+		ai_chance = {
+			factor = 50
+		}
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		KUW = { transfer_state = 656 }
+	}
+}
+
+#Iraq and Kuwait Declare Independence
+country_event = {
+    id = turkey.16
+	title = turkey.16.t
+	desc = turkey.16.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = { 
+	    name = turkey.16.o1
+		ai_chance = {
+			factor = 100
+		}
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		KUW = { transfer_state = 656 }
+	}
+}
+
+#Iraqi Revolt
+country_event = {
+    id = turkey.17
+	title = turkey.17.t
+	desc = turkey.17.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = { #Attack
+	    name = turkey.17.o1
+		ai_chance = {
+			factor = 60
+		}
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		KUW = { transfer_state = 656 }
+		declare_war_on = {
+			target = IRQ
+			type = annex_everything
+		}
+		IRQ = {
+		    add_ideas = national_liberation_force
+		}
+	}
+	
+	option = { #Back down
+	    name = turkey.17.o2
+		ai_chance = {
+			factor = 40
+		}
+		IRQ = { transfer_state = 291 }
+		IRQ = { transfer_state = 675 }
+		IRQ = { transfer_state = 676 }
+		KUW = { transfer_state = 656 }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

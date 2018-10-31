@@ -1,0 +1,69 @@
+﻿division_template = {
+	name = "Inphaintree Diveejann"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	
+	division= {	
+		name = "1 Sena"
+		location = 2086
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {	
+		name = "2 Sena"
+		location = 2086
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {	
+		name = "3 Sena"
+		location = 9975
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {	
+		name = "4 Sena"
+		location = 4245
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {	
+		name = "5 Sena"
+		location = 4516
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {	
+		name = "6 Sena"
+		location = 4187
+		division_template = "Inphaintree Diveejann"
+		start_experience_factor = 0.1
+
+	}
+	
+	
+	
+}

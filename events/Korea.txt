@@ -1,0 +1,206 @@
+﻿###########################
+# KOR Events
+###########################
+
+add_namespace = korea
+
+#Faction Disputes in the Party
+country_event = {
+	id = korea.1
+	title = korea.1.t
+	desc = korea.1.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		date > 1937.4.1
+		date < 1937.4.18
+		has_government = national_conservative
+	}
+	
+	option = {
+	    name = korea.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -25
+	}
+}
+
+#Factions split further - left and right divide
+country_event = {
+	id = korea.2
+	title = korea.2.t
+	desc = korea.2.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		date > 1937.7.1
+		date < 1937.7.18
+		has_government = national_conservative
+	}
+	
+	option = {
+	    name = korea.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -25
+	}
+}
+
+#Conservative party collapses
+country_event = {
+	id = korea.3
+	title = korea.3.t
+	desc = korea.3.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		date > 1937.9.1
+		date < 1937.9.18
+		has_government = national_conservative
+	}
+	
+	option = {
+	    name = korea.3.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.1
+		add_political_power = -60
+	}
+}
+
+#Calls for a referendum
+country_event = {
+	id = korea.4
+	title = korea.4.t
+	desc = korea.4.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		date > 1937.10.1
+		date < 1937.10.18
+		has_government = national_conservative
+	}
+	
+	option = { #Hold referendum
+	    name = korea.4.o1
+		ai_chance = {
+			factor = 70
+		}
+		hidden_effect = {
+		    KOR = {
+		        country_event = { days = 60 id = korea.5 } 
+		    }
+		}
+
+	}
+	
+	option = { #Don't hold referendum
+	    name = korea.4.o2
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.2
+		add_political_power = -60
+		add_popularity = {
+			ideology = national_conservative
+			popularity = -0.2
+		}
+	}
+}
+
+#Referendum Day
+country_event = {
+    id = korea.5
+	title = korea.5.t
+	desc = korea.5.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Conservatives
+	    name = korea.5.o1
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.15
+		}
+		if = {
+		    limit = { NOT = { has_government = national_conservative } }
+			set_politics = {
+			    ruling_party = national_conservative
+			    elections_allowed = yes
+		    }
+		}
+		
+	}
+	
+	option = { #Americanists
+	    name = korea.5.o2
+		ai_chance = {
+			factor = 40
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.5
+		}
+	}
+	
+	option = { #De Leonists
+	    name = korea.5.o3
+		ai_chance = {
+			factor = 40
+		}
+		set_politics = {
+			ruling_party = de_leonist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.5
+		}
+		hidden_effect = {
+		    KOR = {
+		        country_event = { days = 20 id = korea.6 } 
+		    }
+		}
+	}
+	
+	option = { #Nationalists
+	    name = korea.5.o4
+		ai_chance = {
+			factor = 10
+		}
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.5
+		}
+	}
+}
+
+
+

@@ -1,0 +1,49 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Teahean"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1. Kangtp Hluong"
+		location = 4401
+		division_template = "Teahean" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "2. Kangtp Hluong"
+		location = 10134
+		division_template = "Teahean" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "3. Kangtp Hluong"
+		location = 1300
+		division_template = "Teahean" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "4. Kangtp Hluong"
+		location = 4401
+		division_template = "Teahean" 	
+		start_experience_factor = 0.2
+	}
+
+
+
+
+
+
+
+}

@@ -1,0 +1,2548 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+#ILIS 1936
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_hindenburg_intact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.o2
+		trigger = {
+			is_in_faction_with = SWE
+			NOT = { tag = SWE }
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = news.1.o3
+		trigger = {
+			NOT = { is_in_faction_with = SWE }
+			NOT = { tag = SWE }
+			NOT = { tag = FRA }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news.1.o4
+		trigger = {
+			NOT = { tag = SWE }
+			NOT = { tag = FRA }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+		name = news.1.o5
+		trigger = { tag = FRA }
+	}
+}
+
+#EXPO Paris 1937
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_069
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+		name = news.2.o2
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = news.2.o3
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+			NOT = { tag = FRA }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news.2.o4
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = AUS }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+		name = news.2.o5
+		trigger = {
+		AUS = {
+			has_government = de_leonist
+			}
+		}
+	}
+}
+
+#EXPO Petrograd 1938
+news_event = {
+	id = news.3
+	title = news.3.t
+	desc = news.3.d
+	picture = GFX_news_event_069
+	
+	fire_only_once = yes
+    
+	trigger = {
+        date > 1938.5.1
+        date < 1938.5.16
+    }
+	
+	option = {
+		name = news.3.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+		name = news.3.o2
+		trigger = {
+			is_in_faction_with = SOV
+			NOT = { tag = SOV }
+		}
+	}
+	
+	option = {
+		name = news.3.o3
+		trigger = {
+			NOT = { is_in_faction_with = SOV }
+			NOT = { tag = SOV }
+			NOT = { tag = AUS }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news.3.o4
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+		name = news.3.o5
+		trigger = { tag = AUS }
+	}
+}
+
+#EXPO New York 1939
+news_event = {
+	id = news.4
+	title = news.4.t
+	desc = news.4.d
+	picture = GFX_news_event_069
+	
+	fire_only_once = yes
+    
+	trigger = {
+        date > 1939.4.1
+        date < 1939.4.16
+    }
+	
+	option = {
+		name = news.4.o1
+		trigger = { tag = USA }
+	}
+	
+	option = {
+		name = news.4.o2
+		trigger = {
+			is_in_faction_with = USA
+			NOT = { tag = USA }
+		}
+	}
+	
+	option = {
+		name = news.4.o3
+		trigger = {
+			NOT = { is_in_faction_with = USA }
+			NOT = { tag = USA }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news.4.o4
+		trigger = {
+			NOT = { tag = USA }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+		name = news.4.o5
+		trigger = {
+		FRA = {
+			has_government = absolute_monarchist
+			}
+		}
+	}
+}
+
+#Olympics 1936 -Summer-
+news_event = {
+	id = news.5
+	title = news.5.t
+	desc = news.5.d
+	picture = GFX_olympics_1940
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.5.o1
+		trigger = { tag = TUR }
+		add_stability = 0.01
+	}
+	
+	option = {
+		name = news.5.o2
+		trigger = {
+			NOT = { tag = TUR }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news.5.o3
+		trigger = {
+			NOT = { tag = TUR }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+		name = news.5.o4
+		trigger = { tag = GRE }
+	}
+	
+	option = {
+		name = news.5.o5
+		trigger = { tag = PER }
+	}
+}
+
+#Olympics 1936 -Winter-
+news_event = {
+	id = news.6
+	title = news.6.t
+	desc = news.6.d
+	picture = GFX_news_event_070
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6.o1
+		trigger = { tag = DEN }
+		add_stability = 0.02
+	}
+	
+	option = {
+		name = news.6.o2
+		trigger = {
+			NOT = { tag = DEN }
+			NOT = { tag = AUS }
+			NOT = { has_government = absolute_monarchist }
+		}
+	}
+	
+	option = {
+		name = news.6.o3
+		trigger = {
+			NOT = { tag = FRA }
+			has_government = absolute_monarchist
+		}
+	}
+	
+	option = {
+		name = news.6.o4
+		trigger = { tag = FRA }
+		add_stability = 0.02
+	}
+	
+	option = {
+		name = news.6.o5
+		trigger = { tag = AUS }
+	}
+}
+
+#Himmler Plane Crash
+news_event = {
+	id = news.7
+	title = news.7.t
+	desc = news.7.d
+	picture = GFX_news_event_journalists_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.7.o1
+		trigger = { tag = SWE }
+	}
+	
+	option = {
+	    name = news.7.o2
+		trigger = {
+			NOT = { tag = SWE }
+			has_government = strasserist
+		}
+	}
+	
+	option = {
+		name = news.7.o3
+		trigger = {
+			NOT = { tag = SWE }
+			NOT = { has_government = strasserist }
+		}
+	}
+}
+
+#Portugese Constitutional Change
+news_event = {
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.8.o1
+		trigger = { tag = POR }
+	}
+	
+	option = {
+	    name = news.8.o2
+		trigger = {
+			NOT = { tag = POR }
+			has_government = americanist 
+		}
+	}
+	
+	option = {
+	    name = news.8.o3
+		trigger = {
+			NOT = { tag = POR }
+			NOT = { has_government = americanist }
+		}
+	}
+}
+
+#League of Nations Established
+news_event = {
+	id = news.9
+	title = news.9.t
+	desc = news.9.d
+	picture = GFX_news_event_hitler_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.9.o1
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.9.o2
+		trigger = {
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Anti-French Gatherings in Italy
+news_event = {
+	id = news.10
+	title = news.10.t
+	desc = news.10.d
+	picture = GFX_news_event_hitler_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.10.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.10.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.10.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Venice Incident - French Convoys Protected 
+news_event = {
+	id = news.11
+	title = news.11.t
+	desc = news.11.d
+	picture = GFX_news_event_churchill_degaulle
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.11.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.11.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.11.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Venice Incident - French Convoys Not Protected
+news_event = {
+	id = news.12
+	title = news.12.t
+	desc = news.12.d
+	picture = GFX_news_event_churchill_degaulle
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.12.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.12.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.12.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Venetian Separatists Unite With Italian Nationalists
+news_event = {
+	id = news.13
+	title = news.13.t
+	desc = news.13.d
+	picture = GFX_news_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.13.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.13.o2
+		trigger = {
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#French Ambassador to Italy Killed by De Leonists - Italians do Nothing 
+news_event = {
+	id = news.14
+	title = news.14.t
+	desc = news.14.d
+	picture = GFX_news_event_067
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.14.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.14.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.14.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#French Ambassador to Italy Killed by De Leonists - Italians Strike De Leonists
+news_event = {
+	id = news.15
+	title = news.15.t
+	desc = news.15.d
+	picture = GFX_news_event_067
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.15.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.15.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.15.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Nationalism Grows in the South of Italy
+news_event = {
+	id = news.16
+	title = news.16.t
+	desc = news.16.d
+	picture = GFX_news_event_herman_goring
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.16.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.16.o2
+		trigger = { tag = PAP }
+	}
+	
+	option = {
+	    name = news.16.o3
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.16.o4
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			NOT = { tag = PAP }
+		}
+	}
+}
+
+#Italian Military Purged
+news_event = {
+	id = news.17
+	title = news.17.t
+	desc = news.17.d
+	picture = GFX_news_event_journalists_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.17.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.17.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.17.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Italian Advisory Council Resignations - Positions Filled
+news_event = {
+	id = news.18
+	title = news.18.t
+	desc = news.18.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.18.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.18.o2
+		trigger = {
+		    NOT = { tag = ITA }
+			NOT = { has_government = absolute_monarchist }
+		}
+	}
+	
+	option = {
+	    name = news.18.o3
+		trigger = {
+		    NOT = { tag = ITA }
+			has_government = absolute_monarchist
+		}
+	}
+}
+
+#Italian Advisory Council Resignations - Council Dissolved
+news_event = {
+	id = news.19
+	title = news.19.t
+	desc = news.19.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.19.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.19.o2
+		trigger = {
+		    NOT = { tag = ITA }
+			NOT = { has_government = absolute_monarchist }
+		}
+	}
+	
+	option = {
+	    name = news.19.o3
+		trigger = {
+	        NOT = { tag = ITA }
+			has_government = absolute_monarchist
+		}
+	}
+}
+
+#Italian New Year Coup - Success
+news_event = {
+	id = news.20
+	title = news.20.t
+	desc = news.20.d
+	picture = GFX_news_event_romanian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.20.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.20.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.20.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+	
+	option = {
+	    name = news.20.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+}
+
+#Italian New Year Coup - Failure
+news_event = {
+	id = news.21
+	title = news.21.t
+	desc = news.21.d
+	picture = GFX_news_event_soviet_soldiers_ruins
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.21.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.21.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.21.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+	
+	option = {
+	    name = news.21.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+}
+
+#Italian De Leonist Revolution and Eugene III Death
+news_event = {
+	id = news.22
+	title = news.22.t
+	desc = news.22.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.22.o1
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.22.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.22.o3
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			NOT = { has_government = absolute_monarchist }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+	    name = news.22.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			has_government = absolute_monarchist
+		}
+	}
+	
+	option = {
+	    name = news.22.o5
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ITA }
+			has_government = de_leonist
+		}
+	}
+}
+
+#Switzerland Ultimatum - Puppet Accepted
+news_event = {
+	id = news.23
+	title = news.23.t
+	desc = news.23.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.23.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.23.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.23.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Switzerland Ultimatum - Puppet Refused
+news_event = {
+	id = news.24
+	title = news.24.t
+	desc = news.24.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.24.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.24.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.24.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Switzerland Ultimatum - Western Switzerland Accepted
+news_event = {
+	id = news.25
+	title = news.25.t
+	desc = news.25.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.25.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.25.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.25.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Switzerland Ultimatum - Western Switzerland Refused
+news_event = {
+	id = news.26
+	title = news.26.t
+	desc = news.26.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.26.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.26.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.26.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Switzerland Ultimatum - Completely Accepted
+news_event = {
+	id = news.27
+	title = news.27.t
+	desc = news.27.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.27.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.27.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.27.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Switzerland Ultimatum - Completely Refused
+news_event = {
+	id = news.28
+	title = news.28.t
+	desc = news.28.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.28.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.28.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.28.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Swiss-French Friendship
+news_event = {
+	id = news.29
+	title = news.29.t
+	desc = news.29.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.29.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.29.o2
+		trigger = { tag = SWI }
+	}
+	
+	option = {
+	    name = news.29.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SWI }
+		}
+	}
+}
+
+#Islands for Investment
+news_event = {
+	id = news.30
+	title = news.30.t
+	desc = news.30.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.30.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.30.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.30.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ITA }
+		}
+	}
+}
+
+#Croatia Accepts Being Puppeted by France
+news_event = {
+	id = news.31
+	title = news.31.t
+	desc = news.31.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.31.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.31.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.31.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#Croatia Refuses Being Puppeted by France
+news_event = {
+	id = news.32
+	title = news.32.t
+	desc = news.32.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.32.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.32.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.32.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#Croatia Joins Continental
+news_event = {
+	id = news.33
+	title = news.33.t
+	desc = news.33.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.33.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.33.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.33.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#Croatia Refuses Alliance With France
+news_event = {
+	id = news.34
+	title = news.34.t
+	desc = news.34.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.34.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.34.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.34.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#French Demands for Istria Accepted
+news_event = {
+	id = news.35
+	title = news.35.t
+	desc = news.35.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.35.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.35.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.35.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#French Demands for Istria Refused
+news_event = {
+	id = news.36
+	title = news.36.t
+	desc = news.36.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.36.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.36.o2
+		trigger = { tag = CRO }
+	}
+	
+	option = {
+	    name = news.36.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CRO }
+		}
+	}
+}
+
+#Scottish Alliance
+news_event = {
+	id = news.37
+	title = news.37.t
+	desc = news.37.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.37.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.37.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.37.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SCD }
+			is_in_faction_with = FRA
+		}
+	}
+	
+	option = {
+	    name = news.37.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = SCD }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+#Sunderland Ultimatum - To France
+news_event = {
+	id = news.38
+	title = news.38.t
+	desc = news.38.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.38.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.38.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.38.o3
+		trigger = { tag = ENG }
+	}
+	
+	option = {
+	    name = news.38.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ENG }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Sunderland Ultimatum - To Scotland
+news_event = {
+	id = news.39
+	title = news.39.t
+	desc = news.39.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.39.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.39.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.39.o3
+		trigger = { tag = ENG }
+	}
+	
+	option = {
+	    name = news.39.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ENG }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Sunderland Ultimatum - Refused
+news_event = {
+	id = news.40
+	title = news.40.t
+	desc = news.40.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.40.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.40.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.40.o3
+		trigger = { tag = ENG }
+	}
+	
+	option = {
+	    name = news.40.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = ENG }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Ireland Hands Over Ulster
+news_event = {
+	id = news.41
+	title = news.41.t
+	desc = news.41.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.41.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.41.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.41.o3
+		trigger = { tag = IRE }
+	}
+	
+	option = {
+	    name = news.41.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = IRE }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Ireland Hands Over Ulster and Connaught
+news_event = {
+	id = news.42
+	title = news.42.t
+	desc = news.42.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.42.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.42.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.42.o3
+		trigger = { tag = IRE }
+	}
+	
+	option = {
+	    name = news.42.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = IRE }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Scotland-Ireland Unification
+news_event = {
+	id = news.43
+	title = news.43.t
+	desc = news.43.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.43.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.43.o2
+		trigger = { tag = SCD }
+	}
+	
+	option = {
+	    name = news.43.o3
+		trigger = { tag = IRE }
+	}
+	
+	option = {
+	    name = news.43.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = IRE }
+			NOT = { tag = SCD }
+		}
+	}
+}
+
+#Unholy Alliance
+news_event = {
+	id = news.44
+	title = news.44.t
+	desc = news.44.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.44.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.44.o2
+		trigger = { tag = AUS }
+	}
+	
+	option = {
+	    name = news.44.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = AUS }
+		}
+	}
+}
+
+#Unholy Alliance Refused
+news_event = {
+	id = news.45
+	title = news.45.t
+	desc = news.45.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.45.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.45.o2
+		trigger = { tag = AUS }
+	}
+	
+	option = {
+	    name = news.45.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = AUS }
+		}
+	}
+}
+
+#Northern Amazon to France
+news_event = {
+	id = news.46
+	title = news.46.t
+	desc = news.46.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.46.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.46.o2
+		trigger = { tag = BRA }
+	}
+	
+	option = {
+	    name = news.46.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = BRA }
+		}
+	}
+}
+
+#Canada betrays England
+news_event = {
+	id = news.47
+	title = news.47.t
+	desc = news.47.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.47.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.47.o2
+		trigger = { tag = CAN }
+	}
+	
+	option = {
+	    name = news.47.o3
+		trigger = { tag = ENG }
+	}
+	
+	option = {
+	    name = news.47.o4
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CAN }
+			NOT = { tag = ENG }
+		}
+	}
+}
+
+#Kongo Expedition, vassalisation accepted
+news_event = {
+	id = news.48
+	title = news.48.t
+	desc = news.48.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.48.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.48.o2
+		trigger = { tag = KON }
+	}
+	
+	option = {
+	    name = news.48.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = KON }
+		}
+	}
+}
+
+#South China Purchase Accepted
+news_event = {
+	id = news.49
+	title = news.49.t
+	desc = news.49.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.49.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.49.o2
+		trigger = { tag = CHI }
+	}
+	
+	option = {
+	    name = news.49.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CHI }
+		}
+	}
+}
+
+#South China Purchase Refused
+news_event = {
+	id = news.50
+	title = news.50.t
+	desc = news.50.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.50.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.50.o2
+		trigger = { tag = CHI }
+	}
+	
+	option = {
+	    name = news.50.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = CHI }
+		}
+	}
+}
+
+#Oman Cedes Qatar to France
+news_event = {
+	id = news.51
+	title = news.51.t
+	desc = news.51.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.51.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.51.o2
+		trigger = { tag = OMA }
+	}
+	
+	option = {
+	    name = news.51.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = OMA }
+		}
+	}
+}
+
+#Oman Refuses to Cede Qatar to France
+news_event = {
+	id = news.52
+	title = news.52.t
+	desc = news.52.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.52.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.52.o2
+		trigger = { tag = OMA }
+	}
+	
+	option = {
+	    name = news.52.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = OMA }
+		}
+	}
+}
+
+news_event = {
+	id = news.600
+	title = news.600.t
+	desc = news.600.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.600.a
+		trigger = {
+			NOT = { original_tag = JAP }
+		}
+	}
+	
+	option = {
+		name = news.600.b
+		trigger = { 
+			original_tag = JAP
+		}
+	}
+	
+}
+
+#Nationalist Coup in Rome/Papal States
+news_event = {
+	id = news.53
+	title = news.53.t
+	desc = news.53.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.53.o1
+		trigger = { tag = PAP }
+	}
+	
+	option = {
+	    name = news.53.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.53.o3
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.53.o4
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Rome/Papal States Annexed by Italy
+news_event = {
+	id = news.54
+	title = news.54.t
+	desc = news.54.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.54.o1
+		trigger = { tag = PAP }
+	}
+	
+	option = {
+	    name = news.54.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.54.o3
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.54.o4
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Central Italy Revolt - Joins Italy
+news_event = {
+	id = news.55
+	title = news.55.t
+	desc = news.55.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.55.o1
+		trigger = { tag = PAP }
+	}
+	
+	option = {
+	    name = news.55.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.55.o3
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.55.o4
+		trigger = {
+		    NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Loose Union Between Italy and Sicily
+news_event = {
+	id = news.56
+	title = news.56.t
+	desc = news.56.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.56.o1
+		trigger = { tag = SCY }
+	}
+	
+	option = {
+	    name = news.56.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.56.o3
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.56.o4
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Full Unification Between Italy and Sicily
+news_event = {
+	id = news.57
+	title = news.57.t
+	desc = news.57.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.57.o1
+		trigger = { tag = SCY }
+	}
+	
+	option = {
+	    name = news.57.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.57.o3
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.57.o4
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Successful Unionist Coup in Sicily
+news_event = {
+	id = news.58
+	title = news.58.t
+	desc = news.58.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.58.o1
+		trigger = { tag = SCY }
+	}
+	
+	option = {
+	    name = news.58.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.58.o3
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.58.o4
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Sicilian Government Holds on in Palermo, Sicily
+news_event = {
+	id = news.59
+	title = news.59.t
+	desc = news.59.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.59.o1
+		trigger = { tag = SCY }
+	}
+	
+	option = {
+	    name = news.59.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.59.o3
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.59.o4
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Palermo Putsch - Sicily United With Italy
+news_event = {
+	id = news.60
+	title = news.60.t
+	desc = news.60.d
+	picture = GFX_news_event_soviet_tanks
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.60.o1
+		trigger = { tag = SCY }
+	}
+	
+	option = {
+	    name = news.60.o2
+		trigger = { tag = ITA }
+	}
+	
+	option = {
+	    name = news.60.o3
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			has_government = nationalist
+		}
+	}
+	
+	option = {
+	    name = news.60.o4
+		trigger = {
+		    NOT = { tag = SCY }
+			NOT = { tag = ITA }
+			NOT = { has_government = nationalist }
+		}
+	}
+}
+
+#Treaty of Versailles
+news_event = {
+	id = news.61
+	title = news.61.t
+	desc = news.61.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = news.61.o1
+		trigger = { tag = AUS }
+	}
+	
+	option = {
+	    name = news.61.o2
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+	    name = news.61.o3
+		trigger = {
+		    NOT = { tag = FRA }
+			NOT = { tag = AUS }
+		}
+	}
+}
+
+# Faction Founded!
+news_event = {
+	id = news.62
+	title = news.62.t
+	desc = {
+		text = news.62.d_01
+		trigger = { FROM = { has_government = strasserist } }
+	}
+	desc = {
+		text = news.62.d_02
+		trigger = { FROM = { has_government = nationalist } }
+	}
+	desc = {
+		text = news.62.d_03
+		trigger = { FROM = { has_government = absolute_monarchist } }
+	}
+	desc = {
+		text = news.62.d_04
+		trigger = { FROM = { has_government = national_conservative } }
+	}
+	
+	desc = {
+		text = news.62.d_05
+		trigger = { FROM = { has_government = theoconservative } }
+	}
+	
+	desc = {
+		text = news.62.d_06
+		trigger = { FROM = { has_government = national_liberal } }
+	}
+	
+	desc = {
+		text = news.62.d_07
+		trigger = { FROM = { has_government = americanist } }
+	}
+	
+	desc = {
+		text = news.62.d_08
+		trigger = { FROM = { has_government = georgist } }
+	}
+	
+	desc = {
+		text = news.62.d_09
+		trigger = { FROM = { has_government = democratic_socialist } }
+	}
+	
+	desc = {
+		text = news.62.d_10
+		trigger = { FROM = { has_government = collectivist } }
+	}
+	
+	desc = {
+		text = news.62.d_11
+		trigger = { FROM = { has_government = de_leonist } }
+	}
+
+	picture = GFX_news_event_009
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			NOT = { is_in_faction_with = FROM }
+		}
+		name = news.62.a
+	}
+	option = {
+		trigger = { tag = FROM }
+		name = news.62.b
+	}
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			is_in_faction_with = FROM
+		}
+		name = news.62.c
+	}
+}
+	
+#Growing Religious Tensions in Russia
+news_event = {
+	id = news.63
+	title = news.63.t
+	desc = news.63.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.63.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.63.o2
+		trigger = {
+			NOT = { tag = SOV }
+		}
+	}
+}
+
+#Far Left Supports Religious Minorities in Russia
+news_event = {
+	id = news.64
+	title = news.64.t
+	desc = news.64.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.64.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.64.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = { #Same as de leonist
+	    name = news.64.o3
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = collectivist
+		}
+	}
+	
+	option = {
+	    name = news.64.o4
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = de_leonist }
+			NOT = { has_government = collectivist }
+		}
+	}
+}
+
+#Moscow Rebellion after Islamic Farmers Union crushed
+news_event = {
+	id = news.65
+	title = news.65.t
+	desc = news.65.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.65.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.65.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = { 
+	    name = news.65.o3
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = collectivist
+		}
+	}
+	
+	option = {
+	    name = news.65.o4
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = de_leonist }
+			NOT = { has_government = collectivist }
+		}
+	}
+}
+
+#Duma proposal accepted in Russia
+news_event = {
+	id = news.66
+	title = news.66.t
+	desc = news.66.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.66.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.66.o2
+		trigger = {
+			NOT = { tag = SOV }
+			OR = {
+			    has_government = strasserist
+				has_government = nationalist
+				has_government = absolute_monarchist
+				has_government = theoconservative
+			}
+		}
+	}
+	
+	option = {
+	    name = news.66.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = {
+			    OR = {
+			        has_government = strasserist
+				    has_government = nationalist
+				    has_government = absolute_monarchist
+				    has_government = theoconservative
+			    }
+			}
+		}
+	}
+}
+
+#Duma proposal refused in Russia
+news_event = {
+	id = news.67
+	title = news.67.t
+	desc = news.67.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.67.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.67.o2
+		trigger = {
+			NOT = { tag = SOV }
+			OR = {
+			    has_government = strasserist
+				has_government = nationalist
+				has_government = absolute_monarchist
+				has_government = theoconservative
+			}
+		}
+	}
+	
+	option = {
+	    name = news.67.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = {
+			    OR = {
+			        has_government = strasserist
+				    has_government = nationalist
+				    has_government = absolute_monarchist
+				    has_government = theoconservative
+			    }
+			}
+		}
+	}
+}
+
+#Winter Palace Massacre
+news_event = {
+	id = news.68
+	title = news.68.t
+	desc = news.68.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.68.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.68.o2
+		trigger = {
+			NOT = { tag = SOV }
+			OR = {
+			    has_government = de_leonist
+				has_government = collectivist
+			}
+		}
+	}
+	
+	option = {
+	    name = news.68.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = {
+			    OR = {
+			        has_government = de_leonist
+				    has_government = collectivist
+			    }
+			}
+		}
+	}
+}
+
+#Generals take over Russia after Lenin's Soviet
+news_event = {
+	id = news.69
+	title = news.69.t
+	desc = news.69.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.69.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.69.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+	    name = news.69.o3
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = strasserist
+		}
+	}
+	
+	option = {
+	    name = news.69.o4
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = strasserist }
+			NOT = { has_government = de_leonist }
+		}
+	}
+}
+
+#De Leonist Revolution in Russia after Lenin's Soviet
+news_event = {
+	id = news.70
+	title = news.70.t
+	desc = news.70.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.70.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.70.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+	    name = news.70.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = de_leonist }
+		}
+	}
+}
+
+#First Russian Elections - De Leonists win
+news_event = {
+	id = news.71
+	title = news.71.t
+	desc = news.71.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.71.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.71.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = de_leonist
+		}
+	}
+	
+	option = {
+	    name = news.71.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = de_leonist }
+		}
+	}
+}
+
+#First Russian Elections - Democratic Socialists Win
+news_event = {
+	id = news.72
+	title = news.72.t
+	desc = news.72.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.72.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.72.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = democratic_socialist
+		}
+	}
+	
+	option = {
+	    name = news.72.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = democratic_socialist }
+		}
+	}
+}
+
+#First Russian Elections - Americanists Win
+news_event = {
+	id = news.73
+	title = news.73.t
+	desc = news.73.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.73.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.73.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = americanist
+		}
+	}
+	
+	option = {
+	    name = news.73.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = americanist }
+		}
+	}
+}
+
+#Collectivist Revolution in Russia after Moscow rebellion
+news_event = {
+	id = news.74
+	title = news.74.t
+	desc = news.74.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = news.74.o1
+		trigger = { tag = SOV }
+	}
+	
+	option = {
+	    name = news.74.o2
+		trigger = {
+			NOT = { tag = SOV }
+			has_government = collectivist
+		}
+	}
+	
+	option = {
+	    name = news.74.o3
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { has_government = collectivist }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+	

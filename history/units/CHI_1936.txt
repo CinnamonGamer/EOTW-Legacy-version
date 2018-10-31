@@ -1,0 +1,420 @@
+﻿division_template = {
+	name = "Juntuán"				
+									
+	regiments = {					
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	priority = 0 # garrison
+}
+division_template = {
+	name = "Sanjiao Jun"			
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Qibing Jun"		
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }	
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		
+	}
+}
+
+####OOB####
+units = {
+    division = {
+		name = "37 Bubing Shi"
+		location = 10433 #Harbin
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4925 #Chengdu
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4925 #Chengdu
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7137 #Nanning
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7137 #Nanning
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7191 #Hangzhou
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 12189 #Khabarovsk
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11752 #Zhangbei
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11752 #Zhangbei
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 6981 #Korean Border
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4709 #Urumqi
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7727 #Mongolian Border
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 12690 #Mongolian Border
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 12690 #Mongolian Border
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 957 #Vladivistok
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7965 #Dali
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7965 #Dali
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 1319 #Kunming
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7097 #Changsha
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7191 #Hangzhou
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10076 #Near Shanghai
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10000 #Qingdao
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 1150 #Dalian
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10068 #Tianjin
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10068 #Tianjin
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 9843 #Beijing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 9843 #Beijing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 9843 #Beijing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11913 #Nanjing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11913 #Nanjing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 6999 #Chonqing
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10062 #Hong Kong
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 1047 #Guangzhou
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7014 #Shanghai
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10000 #Qingdao
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10433 #Harbin
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10433 #Harbin
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 10068 #Tianjin
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7186 #Taipei
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.2
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 9843 #Beijing
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 957 #Vladivistok
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11913 #Nanjing
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 8049 #Yan'an
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 11752 #Zhangbei
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4709 #Urumqi
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7418 #Xi'an
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 1069 #Jinan
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4205 
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4121 #Viet Border
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7965 #Dali
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 5018 #Assam/Tibet Border
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 4655 #Mongolian Border
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+	
+	division = {
+		name = "37 Bubing Shi"
+		location = 7249 #Russian Border
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.1
+	}
+
+
+
+
+}

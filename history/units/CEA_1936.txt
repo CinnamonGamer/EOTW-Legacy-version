@@ -1,0 +1,53 @@
+﻿division_template = {
+	name = "Division de Infanteria"		# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+    division= {	
+		name = "Ejercito de Honduras"
+		location = 12865 #Capital
+		division_template = "Division de Infanteria"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {	
+		name = "2ro de Infanteria"
+		location = 12823
+		division_template = "Division de Infanteria"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {	
+		name = "Ejercito Panama"
+		location = 7617
+		division_template = "Division de Infanteria"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {	
+		name = "3ro Infanteria"
+		location = 13087
+		division_template = "Division de Infanteria"
+		start_experience_factor = 0.1
+
+	}
+
+
+
+
+
+
+
+}

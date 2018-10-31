@@ -1,0 +1,31 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Inifanduri Kupesana"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Gomo Musoja Chikwata"	
+    regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+	}
+}
+
+##### OOB #####
+units = {   
+    division= {	
+		name = "1st Army"
+		location = 10929
+		division_template = "Inifanduri Kupesana" 	
+		start_experience_factor = 0.2
+	}
+
+
+}

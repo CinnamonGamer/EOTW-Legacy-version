@@ -1,0 +1,2085 @@
+focus_tree = {
+	id = indian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MUG
+		}
+	}
+	
+	focus = {
+		id = MUG_industrialisation
+		icon = GFX_goal_generic_construct_civilian
+		x = 4
+		y = 0
+		cost = 40
+		completion_reward = {
+			remove_ideas = MUG_developing_country
+			add_ideas = MUG_industrialisation_idea
+			add_research_slot = 1
+		}
+	}	
+	
+	focus = {
+	    id = MUG_interest_in_navy
+		icon = GFX_goal_generic_build_navy
+	    prerequisite = { focus = MUG_industrialisation }
+		cost = 10
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_the_new_navy
+				uses = 3
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_dockyards_buildin
+		icon = GFX_goal_generic_build_navy
+	    prerequisite = { focus = MUG_interest_in_navy }
+		cost = 10
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = MUG_dockyards_idea
+		}
+	}
+	
+	focus = {
+	    id = MUG_fort_island
+		icon = GFX_goal_generic_build_navy
+	    prerequisite = { focus = MUG_dockyards_buildin }
+		available = {
+			owns_state = 422
+		}
+		cost = 10
+		x = 0
+		y = 3
+		completion_reward = {
+			422 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10201
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10229
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7344
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7260
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4219
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12258
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = MUG_political_effort
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		x = 28
+		y = 0
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+	    id = MUG_way_of_democracy
+		icon = GFX_goal_generic_build_navy
+	    prerequisite = { focus = MUG_political_effort }
+		mutually_exclusive = { focus = MUG_unity_of_the_people }
+		cost = 10
+		x = 20
+		y = 1
+		completion_reward = {
+			country_event = india.7
+		}
+	}
+	
+		
+		focus = {
+	    id = MUG_socialist_democracy
+		icon = GFX_goal_generic_trade
+	    prerequisite = { focus = MUG_way_of_democracy }
+		mutually_exclusive = { focus = MUG_liberity_americanism }
+		mutually_exclusive = { focus = MUG_gandhis_leadership }
+		available = {
+			has_idea = democratic_socialism
+		}
+		cost = 10
+		x = 19
+		y = 2
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic_socialist
+				popularity = 0.15
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_liberity_americanism
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	    prerequisite = { focus = MUG_way_of_democracy }
+		mutually_exclusive = { focus = MUG_socialist_democracy }
+		mutually_exclusive = { focus = MUG_gandhis_leadership }
+		available = {
+			has_idea = americanism
+		}
+		cost = 10
+		x = 24
+		y = 2
+		completion_reward = {
+			add_popularity = {
+				ideology = americanist
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_gandhis_leadership
+		icon =  GFX_goal_generic_national_unity
+	    prerequisite = { focus = MUG_way_of_democracy }
+		mutually_exclusive = { focus = MUG_socialist_democracy }
+		mutually_exclusive = { focus = MUG_liberity_americanism }
+		available = {
+			has_idea = georgism
+		}
+		cost = 10
+		x = 13
+		y = 2
+		completion_reward = {
+			add_ideas = MUG_Mahatma_Gandhi
+			add_stability = 0.10
+			add_war_support = -0.20
+		}
+	}
+
+	
+	focus = {
+	    id = MUG_liberity
+		icon =  GFX_goal_generic_navy_battleship
+	    prerequisite = { focus = MUG_liberity_americanism }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 24
+		y = 3
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 40
+			add_popularity = {
+				ideology = americanist
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_socialist_workers
+		icon =  GFX_goal_generic_soviet_construction
+	    prerequisite = { focus = MUG_socialist_democracy }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 19
+		y = 3
+		completion_reward = {
+			add_ideas = MUG_socialist_workers_idea
+		}
+	}
+	
+	
+	focus = {
+		id = MUG_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = MUG_interest_in_navy }
+		x = -3
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_indian_ocean_fleet
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = MUG_cruiser_effort }
+		x = -2
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = MUG_cruiser_effort }
+		x = -4
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = MUG_destroyers
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = MUG_interest_in_navy }
+		x = -6
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = MUG_destroyers }
+		x = -6
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_start_the_warmachine
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = MUG_industrialisation }
+		x = 4
+		y = 1
+		cost = 10
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+		    	add_war_support = 0.20
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_army_doctorine
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = MUG_start_the_warmachine }
+		x = 2
+		y = 3
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_airbattle
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = MUG_army_doctorine }
+		x = 0
+		y = 4
+		cost = 10
+
+		complete_tooltip = {
+			air_experience = 25	
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_naval_bombs
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = MUG_airbattle }
+		prerequisite = { focus = USA_indian_ocean_fleet }
+		x = -1
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_airbases
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = MUG_airbattle }
+		x = 1
+		y = 5
+		cost = 10
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = MUG_airbases }
+		mutually_exclusive = { focus = MUG_bomber_focus }
+		x = 0
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = MUG_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = MUG_airbases }
+		mutually_exclusive = { focus = MUG_fighter_focus }
+		x = 2
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_aviation_doctorines
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = MUG_bomber_focus focus = MUG_fighter_focus }
+		x = 1
+		y = 7
+		cost = 10
+
+		complete_tooltip = {
+			air_experience = 25
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = MUG_aviation_doctorines }
+		x = 1
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 0.5
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MUG_army_doctorine }
+		x = 5
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = MUG_light_vehicles
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MUG_equipment_effort }
+		x = 4
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_light_armor
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = MUG_equipment_effort }
+		x = 6
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = MUG_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = MUG_artillery }
+		prerequisite = { focus = MUG_light_vehicles }
+		x = 5
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_civilian_buildup
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MUG_start_the_warmachine }
+		x = 8
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MUG_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = MUG_civilian_buildup }
+		x = 8
+		y = 4
+		cost = 10
+		completion_reward = {
+		add_research_slot = 1
+			remove_ideas = MUG_industrialisation_idea
+		}
+	}
+	
+	focus = {
+		id = MUG_armor_production
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MUG_start_the_warmachine }
+		mutually_exclusive = { focus = MUG_gun_production }
+		mutually_exclusive = { focus = MUG_artilley_production }
+		x = 3
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = MUG_building_own_tanks
+		}
+	}
+	
+	focus = {
+		id = MUG_gun_production
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MUG_start_the_warmachine }
+		mutually_exclusive = { focus = MUG_armor_production }
+		mutually_exclusive = { focus = MUG_artilley_production }
+		x = 5
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = MUG_gun_production_idea
+		}
+	}
+	
+	focus = {
+		id = MUG_artilley_production
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = MUG_start_the_warmachine }
+		mutually_exclusive = { focus = MUG_armor_production }
+		mutually_exclusive = { focus = MUG_gun_production }
+		x = 7
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = MUG_big_guns_arty
+		}
+	}
+	
+	focus = {
+	    id = MUG_natural_resources
+		icon =  GFX_goal_generic_production
+	    prerequisite = { focus = MUG_gandhis_leadership }
+		available = {
+			has_government = georgist
+		}
+		cost = 10
+		x = 12
+		y = 3
+		completion_reward = {
+			add_ideas = MUG_georgist_boost
+		}
+	}
+	
+	focus = {
+	    id = MUG_go_green
+		icon =  GFX_goal_generic_improve_relations
+	    prerequisite = { focus = MUG_gandhis_leadership }
+		cost = 10
+		x = 14
+		y = 3
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = georgist
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_synthetic_oils
+		icon =  GFX_goal_generic_oil_refinery
+	    prerequisite = { focus = MUG_natural_resources }
+		available = {
+			has_government = georgist
+			controls_state = 439
+		}
+		cost = 10
+		x = 12
+		y = 4
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 439
+			}
+			439 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}	
+		
+		}
+	}	
+	
+	focus = {
+	    id = MUG_go_green2
+		icon =  GFX_goal_generic_improve_relations
+	    prerequisite = { focus = MUG_go_green }
+		cost = 10
+		x = 14
+		y = 4
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 120
+			add_popularity = {
+				ideology = georgist
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_pakistani_friendship
+		icon =  GFX_goal_generic_improve_relations
+	    prerequisite = { focus = MUG_go_green2 }
+		available = {
+			has_government = georgist
+			is_puppet = no
+			PAK = {
+				NOT = { has_war_with = MUG }
+				is_puppet = no
+				is_in_faction = no
+			}
+		}
+		cost = 10
+		x = 11
+		y = 5
+		completion_reward = {
+			PAK = {
+				add_opinion_modifier = { target = MUG modifier = mughal_pakistani_friendship }
+				add_ideas = MUG_georgist_influence
+			}
+			MUG = {
+				add_opinion_modifier = { target = PAK modifier = mughal_pakistani_friendship }
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_peace_keepping
+		icon =  GFX_goal_generic_special_forces
+	    prerequisite = { focus = MUG_go_green2 }
+		available = {
+			has_government = georgist
+		}
+		cost = 10
+		x = 15
+		y = 5
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = MUG_peace_keepers
+		}
+	}
+	######At 20% Portugal gets an event where they can choose what to do with Bangladesh, each with different effects and at 50% france gets the same but with southern india and at 80% they get to choose what to do with Sri Lanka####
+	
+	focus = {
+	    id = MUG_unarmed_liberation
+		icon =  GFX_goal_generic_air_doctrine
+	    prerequisite = { focus = MUG_go_green2 }
+		available = {
+			has_government = georgist
+			MUG = {
+				NOT = { has_war_with = POR }
+				NOT = { has_war_with = FRA }
+				is_puppet = no
+				NOT = { is_in_faction_with = POR }
+				NOT = { is_in_faction_with = FRA }
+			}
+		}
+		cost = 14
+		x = 13
+		y = 5
+		completion_reward = {
+			FRA = {
+				country_event = india.26
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_pacifism
+		icon =  GFX_goal_generic_defence
+	    prerequisite = { focus = MUG_peace_keepping }
+		available = {
+			has_government = georgist
+		}
+		cost = 10
+		x = 15
+		y = 6
+		completion_reward = {
+			add_ideas = MUG_pacifism_idea
+			add_research_slot = 1
+			add_stability = 0.10
+			add_war_support = -0.10
+		}
+	}
+	
+	focus = {
+	    id = MUG_pakistani_alliance
+		icon =  GFX_goal_generic_major_alliance
+	    prerequisite = { focus = MUG_pakistani_friendship }
+		available = {
+			has_government = georgist
+			PAK = {
+				has_government = georgist
+			}
+			is_in_faction = no
+			is_puppet = no
+			PAK = {
+				NOT = { has_war_with = MUG }
+				is_puppet = no
+				is_in_faction = no
+			}
+		}
+		cost = 10
+		x = 11
+		y = 6
+		completion_reward = {
+			PAK = {
+				country_event = india.8
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_join_red_front
+		icon =  GFX_goal_support_communism
+	    prerequisite = { focus = MUG_socialist_workers }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 19
+		y = 4
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			SPR = {
+				country_event = india.44
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_socialist_industry
+		icon =  GFX_goal_generic_construct_civ_factory
+	    prerequisite = { focus = MUG_socialist_workers }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 20
+		y = 5
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = MUG_peacefully_or_forcefully
+		icon =  GFX_goal_generic_forceful_treaty
+	    prerequisite = { focus = MUG_socialist_workers }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 18
+		y = 5
+		completion_reward = {
+			POR = {
+				country_event = india.38
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_take_on_france
+		icon =  GFX_goal_generic_small_arms
+	    prerequisite = { focus = MUG_peacefully_or_forcefully }
+		prerequisite = { focus = MUG_socialist_industry }
+		will_lead_to_war_with = FRA
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 19
+		y = 6
+		completion_reward = {
+			FRA = {
+				country_event = india.41
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_memebership_for_assam
+		icon =  GFX_goal_generic_political_pressure
+	    prerequisite = { focus = MUG_take_on_france }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 19
+		y = 7
+		completion_reward = {
+			ASS = {
+				country_event = india.35
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_assault_pakistan
+		icon =  GFX_goal_generic_soviet_construction
+	    prerequisite = { focus = MUG_take_on_france }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 17
+		y = 7
+		completion_reward = {
+			declare_war_on = {
+				target = PAK
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_against_collectivists
+		icon =  GFX_goal_generic_army_doctrines
+	    prerequisite = { focus = MUG_take_on_france }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 21
+		y = 7
+		completion_reward = {
+		    	add_war_support = 0.10
+			declare_war_on = {
+				target = SIA
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_against_monarchist_tyranny
+		icon =  GFX_goal_generic_attack_allies
+	    prerequisite = { focus = MUG_against_collectivists focus = MUG_assault_pakistan focus = MUG_memebership_for_assam }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 20
+		y = 8
+		completion_reward = {
+		    	add_war_support = 0.10
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_kill_the_rest
+		icon =  GFX_goal_generic_dangerous_deal
+	    prerequisite = { focus = MUG_against_collectivists focus = MUG_assault_pakistan focus = MUG_memebership_for_assam }
+		available = {
+			has_government = democratic_socialist
+		}
+		cost = 10
+		x = 18
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CMB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ICH
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_friend_over_seas
+		icon =  GFX_goal_generic_major_alliance
+	    prerequisite = { focus = MUG_liberity }
+		mutually_exclusive = { focus = MUG_our_own_faction }
+		available = {
+			has_government = americanist
+			USA = {
+				is_in_faction = yes
+				is_faction_leader = yes
+				is_puppet = no
+			}
+		}
+		cost = 10
+		x = 22
+		y = 4
+		
+		bypass = {
+			MUG = {
+				is_in_faction = yes
+				has_government = americanist
+			}
+		} 
+		
+		completion_reward = {
+			country_event = india.51
+		}
+	}
+	focus = {
+	    id = MUG_our_own_faction
+		icon =  GFX_goal_generic_intelligence_exchange
+	    prerequisite = { focus = MUG_liberity }
+		mutually_exclusive = { focus = MUG_friend_over_seas }
+		available = {
+			has_government = americanist
+			is_in_faction = no
+			is_puppet = no
+		}
+		cost = 10
+		x = 26
+		y = 4
+		completion_reward = {
+			country_event = india.50
+		    	add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+	    id = MUG_liberate_india
+		icon =  GFX_goal_generic_intelligence_exchange
+	    prerequisite = { focus = MUG_liberity }
+		available = {
+			has_government = americanist
+			is_in_faction = no
+			is_puppet = no
+		}
+		cost = 10
+		x = 24
+		y = 4
+		completion_reward = {
+		    	add_war_support = 0.10
+		}
+	}
+	focus = {
+	    id = MUG_spread_our_idea
+		icon =  GFX_goal_generic_positive_trade_relations
+	    prerequisite = { focus = MUG_liberate_india }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 28
+		y = 5
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+	    id = MUG_against_tyranny
+		icon =  GFX_goal_generic_navy_carrier
+	    prerequisite = { focus = MUG_liberate_india }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 24
+		y = 6
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = MUG_arsenal_of_freedom
+		icon =  GFX_goal_generic_construct_mil_factory
+	    prerequisite = { focus = MUG_liberate_india }
+		mutually_exclusive = { focus = MUG_construction_boost }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 23
+		y = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_construction_boost
+		icon =  GFX_goal_generic_construct_civ_factory
+	    prerequisite = { focus = MUG_liberate_india }
+		mutually_exclusive = { focus = MUG_arsenal_of_freedom }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 25
+		y = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_spread_indochina
+		icon = GFX_goal_generic_political_pressure
+	    prerequisite = { focus = MUG_spread_our_idea }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 28
+		y = 6
+		completion_reward = {
+			ASS = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+				
+			SIA = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			ICH = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			DAI = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			CMB = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_spread_middle_east
+		icon = GFX_goal_generic_political_pressure
+	    prerequisite = { focus = MUG_spread_our_idea }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 26
+		y = 6
+		completion_reward = {
+			PER = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+				
+			TUR = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+				
+			CES = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			PAK = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			SAU = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+			OMA = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+		}
+	}
+	focus = {
+	    id = MUG_spread_china
+		icon = GFX_goal_generic_political_pressure
+	    prerequisite = { focus = MUG_spread_our_idea }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 30
+		y = 6
+		completion_reward = {
+			CHI = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea
+				}				
+			}
+				
+			TIB = {
+				if = {
+					limit = { has_government = americanist }
+					add_ideas = MUG_influence_defence_americanist
+				}
+				if = {
+					limit = { NOT = { has_government = americanist } }
+					add_ideas = MUG_americanist_influence_idea				
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_empire_out_of_controll
+		icon =  GFX_goal_generic_navy_carrier
+	    prerequisite = { focus = MUG_against_tyranny }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 22
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	focus = {
+	    id = MUG_qing_threath
+		icon =  GFX_goal_generic_navy_carrier
+	    prerequisite = { focus = MUG_against_tyranny }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 24
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHI
+			}
+		}
+	}
+	focus = {
+	    id = MUG_russia_threath
+		icon =  GFX_goal_generic_navy_carrier
+	    prerequisite = { focus = MUG_against_tyranny }
+		available = {
+			has_government = americanist
+		}
+		cost = 10
+		x = 26
+		y = 8
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_unity_of_the_people
+		icon =  GFX_goal_support_fascism
+		prerequisite = { focus = MUG_political_effort }
+		mutually_exclusive = { focus = MUG_way_of_democracy }
+		x = 34
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+			    ideology = absolute_monarchist
+			    popularity = 0.05
+		    }
+			add_popularity = {
+			    ideology = de_leonist
+			    popularity = 0.08
+		    }
+		}
+		
+	}
+	
+	focus = {
+	    id = MUG_strengthen_the_family
+		icon =  GFX_goal_royal_tree
+		prerequisite = { focus = MUG_unity_of_the_people }
+		mutually_exclusive = { focus = MUG_revolutionary_armies }
+		x = 33
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = absolute_monarchist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = MUG_revolutionary_armies
+		icon =  GFX_goal_generic_military_sphere
+		prerequisite = { focus = MUG_unity_of_the_people }
+		mutually_exclusive = { focus = MUG_strengthen_the_family }
+		x = 35
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = de_leonist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = MUG_the_royal_palace
+		icon =  GFX_goal_generic_construct_military
+		prerequisite = { focus = MUG_strengthen_the_family }
+		x = 31
+		y = 3
+		cost = 10
+		completion_reward = {
+		    439 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+	    id = MUG_tour_the_nation
+		icon =  GFX_goal_generic_national_unity
+		prerequisite = { focus = MUG_strengthen_the_family }
+		x = 33
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.02
+			add_popularity = {
+				ideology = absolute_monarchist
+				popularity = 0.1
+			}
+		}
+	}
+
+    focus = {
+	    id = MUG_long_live_the_monarchy
+		icon =  GFX_goal_demand_sudetenland
+		prerequisite = { focus = MUG_tour_the_nation }
+		prerequisite = { focus = MUG_the_royal_palace }
+		x = 32
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_ideas = MUG_devoted_soldiers_idea
+		}
+	}	
+	
+	focus = {
+	    id = MUG_for_the_people
+		icon =  GFX_goal_generic_demand_territory
+		prerequisite = { focus = MUG_tour_the_nation }
+		prerequisite = { focus = MUG_the_royal_palace }
+		x = 34
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_ideas = MUG_devoted_workers_idea
+		}
+	}
+	
+	focus = {
+	    id = MUG_oppression_of_muslims
+		icon =  GFX_goal_generic_military_deal
+		prerequisite = { focus = MUG_for_the_people focus = MUG_long_live_the_monarchy }
+		x = 33
+		y = 5
+		cost = 10
+		completion_reward = {
+		    declare_war_on = {
+				target = PAK
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_forceful_unification
+		icon =  GFX_goal_generic_army_tanks
+		prerequisite = { focus = MUG_for_the_people focus = MUG_long_live_the_monarchy }
+		x = 35
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = ASS
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_death_of_siam
+		icon =  GFX_goal_strike_the_collective
+		prerequisite = { focus = MUG_forceful_unification }
+		x = 36
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = SIA
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_strike_persia
+		icon =  GFX_goal_generic_major_war
+		prerequisite = { focus = MUG_oppression_of_muslims }
+		x = 33
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = PER
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_reclaim_what_is_lost
+		icon =  GFX_goal_generic_major_war
+		prerequisite = { focus = MUG_strike_persia focus = MUG_death_of_siam }
+		mutually_exclusive = { focus = MUG_alliance_for_territory }
+		x = 34
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_alliance_for_territory
+		icon =  GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = MUG_strike_persia focus = MUG_death_of_siam }
+		mutually_exclusive = { focus = MUG_reclaim_what_is_lost }
+		x = 36
+		y = 7
+		cost = 10
+		completion_reward = {
+		    FRA = {
+				country_event = india.54
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_free_media
+		icon =  GFX_goal_generic_territory_or_war
+		prerequisite = { focus = MUG_revolutionary_armies }
+		x = 40
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_ideas = de_leonism
+		}
+	}
+	
+	focus = {
+	    id = MUG_politicians_from_siam
+		icon =  GFX_goal_generic_improve_relations
+		prerequisite = { focus = MUG_revolutionary_armies }
+		x = 42
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_ideas = de_leonism
+			add_popularity = {
+				ideology = collectivist
+				popularity = 0.25
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_take_in_french_defectors
+		icon =  GFX_goal_generic_national_unity
+		prerequisite = { focus = MUG_revolutionary_armies }
+		x = 44
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_ideas = french_influence_de_leonist
+			add_stability = -0.1
+			add_political_power = -10
+		}
+	}
+	
+	focus = {
+	    id = MUG_shifting_loyalties
+		icon =  GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = MUG_take_in_french_defectors focus = MUG_politicians_from_siam focus = MUG_free_media }
+		x = 42
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_ideas = MUG_devoted_soldiers_idea
+		}
+	}
+	
+	focus = {
+	    id = MUG_world_revolution
+		icon =  GFX_goal_expanding_the_empire
+		prerequisite = { focus = MUG_shifting_loyalties }
+		available = {
+		    has_government = de_leonist
+		}
+		x = 42
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_political_power = 250
+		    add_war_support = 0.10
+		}
+	}
+	
+	focus = {
+	    id = MUG_reach_out_to_vienna
+		icon =  GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = MUG_world_revolution }
+		x = 42
+		y = 6
+		cost = 10
+		completion_reward = {
+		    AUS = {
+				country_event = india.57
+			}
+		} 
+	}
+	
+	focus = {
+	    id = MUG_strike_imperialism
+		icon =  GFX_goal_generic_attack_allies
+		prerequisite = { focus = MUG_world_revolution }
+		x = 40
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_the_death_of_china
+		icon =  GFX_goal_generic_attack_allies
+		prerequisite = { focus = MUG_world_revolution }
+		x = 44
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHI
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_destroy_pakistan
+		icon =  GFX_goal_generic_attack_allies
+		prerequisite = { focus = MUG_world_revolution }
+		x = 38
+		y = 7
+		cost = 10
+		completion_reward = {
+		    declare_war_on = {
+				target = PAK
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+	    id = MUG_the_weak_nation
+		icon =  GFX_goal_generic_attack_allies
+		prerequisite = { focus = MUG_world_revolution }
+		x = 46
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = SIA
+			}
+		}
+	}
+

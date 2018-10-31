@@ -1,0 +1,247 @@
+ideas = {
+
+    country = {
+	    legalisation_of_leftist_parties = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.08
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		expanded_royal_privileges = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				absolute_monarchist_drift = 0.08
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		right_wing_unions_idea = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				strasserist_drift = 0.08
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		atlantic_ties = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				americanist_drift = 0.08
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		links_with_the_church_idea = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				national_conservative_drift = 0.01
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		cultural_divide = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription = -0.01
+				army_attack_factor = -0.02
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		mighty_sweden_idea = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription = 0.04
+				army_attack_factor = 0.1
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		forced_peasant_conscription_idea = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription = 0.08
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		urbanisation = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				conscription = 0.01
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		the_final_struggle_idea = {
+		    
+			allowed = {
+				original_tag = SWE
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = -0.2
+				conscription = 0.3
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+}

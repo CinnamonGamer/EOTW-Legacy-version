@@ -1,0 +1,43 @@
+﻿###########################
+# DEN Events
+###########################
+
+add_namespace = denmark
+
+#Olympic Preparations
+country_event = {
+	id = denmark.1
+	title = denmark.1.t
+	desc = denmark.1.d
+	picture = report_event_vienna_expo
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DEN
+		date > 1936.2.1
+        date < 1936.2.18
+	}
+	
+	option = {
+	    name = denmark.1.o1
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -20
+		add_stability = 0.01
+		hidden_effect = {
+		    every_country = { news_event = { id = news.6 } }
+		}
+	}
+	
+	option = {
+	    name = denmark.1.o2
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.6 } }
+		}
+	}
+}

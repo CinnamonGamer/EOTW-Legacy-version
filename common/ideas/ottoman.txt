@@ -1,0 +1,132 @@
+ideas = {
+
+    country = {
+	    crumbling_empire = {
+			
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = absolute_monarchist
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.10
+			}
+		}
+	}
+	
+	country = {
+	    tough_diplomats = {
+			
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_gain = -0.2
+			}
+		}
+	}
+	
+	country = {
+	    new_union = {
+		
+		    allowed = {
+			    original_tag = TUR
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+			    stability_factor = 0.02
+				drift_defence_factor = -0.05
+			}
+		
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    TUR_stronger_monarchy = {
+		
+		    allowed = {
+			    original_tag = TUR
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_goal_generic_occupy_states_ongoing_war
+			
+			modifier = {
+			    drift_defence_factor = 0.2
+				army_attack_factor = 0.02
+			}
+		
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    ottoman_persian_unity = {
+		
+		    allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = GFX_goal_generic_occupy_states_ongoing_war
+			
+			modifier = {
+			    army_core_defence_factor = 0.05
+			}
+		
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    greatest_minds_idea = {
+		
+		    allowed = {
+			    original_tag = TUR
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+			    research_time_factor = -0.08
+			}
+		
+		
+		
+		
+		}
+	}
+}

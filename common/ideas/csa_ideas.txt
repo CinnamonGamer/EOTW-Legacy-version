@@ -1,0 +1,23 @@
+ideas = {
+		
+	country = {
+
+		CSA_recovering_civilwar = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = CSA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				ai_get_ally_desire_factor = -100
+				join_faction_tension = 0.5
+			}
+		}
+	}
+

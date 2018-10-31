@@ -1,0 +1,98 @@
+﻿capital = 330
+
+oob = "MON_1936"
+
+set_stability = 0.34
+set_war_support = 0.42
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+}
+
+add_ideas = {
+	limited_conscription
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 100
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = absolute_monarchist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	closed_economy
+	service_by_requirement
+	war_economy
+	weak_advisory_council
+}
+
+create_country_leader = {
+	name = "Bogd Gegen"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = religious
+	traits = {
+		#
+	}
+}
+

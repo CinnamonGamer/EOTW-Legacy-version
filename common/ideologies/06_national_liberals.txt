@@ -1,0 +1,50 @@
+ideologies = {
+
+	national_liberal = {
+		
+		types = {
+		
+			libertarian = {
+			}
+			
+			reformist = {
+			}
+			
+			centrist = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_NATIONAL_LIBERAL_1"
+			"FACTION_NAME_NATIONAL_LIBERAL_2"
+			"FACTION_NAME_NATIONAL_LIBERAL_3"
+			"FACTION_NAME_NATIONAL_LIBERAL_4"
+			"FACTION_NAME_NATIONAL_LIBERAL_5"
+			"FACTION_NAME_NATIONAL_LIBERAL_6"
+		}
+		
+		color = { 246 252 84 }
+		
+		war_impact_on_world_tension = 2
+		faction_impact_on_world_tension = 2
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = yes
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.65
+			lend_lease_tension = 0.70
+			send_volunteers_tension = 0.80
+			guarantee_tension = 0.85
+		}
+		
+	}
+
+}

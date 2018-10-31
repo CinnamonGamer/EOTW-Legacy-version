@@ -1,0 +1,1663 @@
+focus_tree = {
+	id = spanish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	
+	focus = {
+	    id = SPR_legacy_of_socialism
+		icon = GFX_goal_generic_propaganda
+		x = 10
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = SPR_maintaining_course
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SPR_legacy_of_socialism }
+		mutually_exclusive = { focus = SPR_the_wrong_direction }
+		x = 9
+		y = 1
+		cost = 10
+        completion_reward = {
+		    add_popularity = {
+				ideology = democratic_socialist
+				popularity = 0.02
+			}
+			add_popularity = {
+					ideology = georgist
+					popularity = 0.02
+			}
+		}		
+	}
+	
+	focus = {
+	    id = SPR_the_wrong_direction
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SPR_legacy_of_socialism }
+		mutually_exclusive = { focus = SPR_maintaining_course }
+		x = 11
+		y = 1
+		cost = 10
+        completion_reward = {
+		    add_political_power = 50
+		}		
+	}
+	
+	focus = {
+	    id = SPR_spanish_democracy
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = SPR_maintaining_course }
+		mutually_exclusive = { focus = SPR_radical_party_factions }
+		x = 9
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_ideas = democratic_socialism
+		}
+	}
+	
+	focus = {
+	    id = SPR_radical_party_factions
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SPR_maintaining_course }
+		mutually_exclusive = { focus = SPR_spanish_democracy }
+		x = 7
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_popularity = {
+				ideology = collectivist
+				popularity = 0.03
+			}
+			add_popularity = {
+					ideology = de_leonist
+					popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_de_leonist_faction
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SPR_radical_party_factions }
+		mutually_exclusive = { focus = SPR_collectivist_faction }
+		x = 4
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_ideas = spanish_de_leonism
+		}
+	}
+	
+	focus = {
+	    id = SPR_collectivist_faction
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SPR_radical_party_factions }
+		mutually_exclusive = { focus = SPR_de_leonist_faction }
+		x = 6
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_ideas = spanish_collectivism
+		}
+	}
+	
+	focus = {
+	    id = SPR_restoring_the_monarchy
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SPR_the_wrong_direction }
+		mutually_exclusive = { focus = SPR_military_influences }
+		mutually_exclusive = { focus = SPR_catholic_roots }
+		mutually_exclusive = { focus = SPR_across_the_atlantic }
+		x = 11
+		y = 2
+		cost = 10
+        completion_reward = {
+		    add_ideas = spanish_monarchism
+		}		
+	}
+	
+	focus = {
+	    id = SPR_military_influences
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SPR_the_wrong_direction }
+		mutually_exclusive = { focus = SPR_restoring_the_monarchy }
+		mutually_exclusive = { focus = SPR_catholic_roots }
+		mutually_exclusive = { focus = SPR_across_the_atlantic }
+		x = 13
+		y = 2
+		cost = 10
+        completion_reward = {
+		    add_ideas = spanish_strasserism
+		}		
+	}
+	
+	focus = {
+	    id = SPR_catholic_roots
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = SPR_the_wrong_direction }
+		mutually_exclusive = { focus = SPR_restoring_the_monarchy }
+		mutually_exclusive = { focus = SPR_military_influences }
+		mutually_exclusive = { focus = SPR_across_the_atlantic }
+		x = 15
+		y = 2
+		cost = 10
+        completion_reward = {
+		    add_ideas = spanish_theoconservatism
+		}		
+	}
+	
+	focus = {
+	    id = SPR_across_the_atlantic
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SPR_the_wrong_direction }
+		mutually_exclusive = { focus = SPR_restoring_the_monarchy }
+		mutually_exclusive = { focus = SPR_military_influences }
+		mutually_exclusive = { focus = SPR_catholic_roots }
+		x = 17
+		y = 2
+		cost = 10
+        completion_reward = {
+		    add_ideas = spanish_americanism
+		}		
+	}
+	
+	focus = {
+	    id = SPR_colonial_empire
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SPR_restoring_the_monarchy }
+		mutually_exclusive = { focus = SPR_european_empire }
+		available = {
+			has_government = absolute_monarchist
+		}
+		x = 10
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		}
+	}
+	
+	focus = {
+	    id = SPR_european_empire
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SPR_restoring_the_monarchy }
+		mutually_exclusive = { focus = SPR_colonial_empire }
+		available = {
+			has_government = absolute_monarchist
+		}
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		}
+	}
+	
+	focus = {
+	    id = SPR_new_granada
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SPR_colonial_empire }
+		available = {
+			has_army_manpower = { size > 150000 }
+		}
+		x = 10
+		y = 4
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_new_spain
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SPR_new_granada }
+		available = {
+			has_army_manpower = { size > 300000 }
+		}
+		x = 10
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = MEX
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_spanish_africa
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SPR_new_spain }
+		available = {
+			has_army_manpower = { size > 300000 }
+		}
+		x = 10
+		y = 6
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KON
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WAF
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_strike_the_usa
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SPR_spanish_africa }
+		available = {
+			has_army_manpower = { size > 500000 }
+		}
+		x = 9
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+			add_stability = 0.1
+		}
+		
+	}
+	
+	focus = {
+	    id = SPR_iberian_wedding
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SPR_european_empire }
+		available = {
+			country_exists = POR
+		}
+		x = 12 
+		y = 4
+		cost = 10
+		completion_reward = {
+		    POR = {
+				country_event = spain.1
+			}
+		}
+		
+	}
+	
+	focus = {
+	    id = SPR_catalonia_referendum
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SPR_iberian_wedding }
+		available = {
+		    FRA = {
+				owns_state = 165
+			}
+		}
+		x = 12
+		y = 5
+		cost = 10
+		completion_reward = {
+		    FRA = {
+				country_event = spain.4
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_lands_of_aragon
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SPR_catalonia_referendum }
+		available = {
+			country_exists = SCY
+			has_army_manpower = { size > 150000 }
+		}
+		x = 12
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SCY
+			}
+		} 
+	}
+	
+	focus = {
+	    id = SPR_the_armada
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SPR_lands_of_aragon }
+		available = {
+			country_exists = ENG
+			has_army_manpower = { size > 400000 }
+		}
+		x = 12
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_portugese_coup
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SPR_military_influences }
+		available = {
+			country_exists = POR
+			has_government = strasserist
+		}
+		x = 14
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    POR = {
+				country_event = spain.7
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_take_sicily
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = SPR_portugese_coup }
+		available = {
+			country_exists = SCY
+			has_army_manpower = { size > 150000 }
+		}
+		x = 14
+		y = 4 
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = SCY
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_the_catholic_menace
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SPR_take_sicily }
+		available = {
+			country_exists = PAP
+			has_army_manpower = { size > 150000 }
+		}
+		x = 14
+		y = 5
+		cost = 10
+        completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = PAP
+			}
+		}		
+	}
+	
+	focus = {
+	    id = SPR_strike_france
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SPR_the_catholic_menace }
+		available = {
+			country_exists = FRA
+			has_army_manpower = { size > 800000 }
+		}
+		x = 14 
+		y = 6
+		cost = 10
+        completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}		
+	}
+	
+	focus = {
+	    id = SPR_industrial_empire
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SPR_strike_france }
+		x = 15
+		y = 7
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_join_the_pope
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SPR_catholic_roots }
+		mutually_exclusive = { focus = SPR_our_own_way }
+		available = {
+			country_exists = PAP
+			has_government = theoconservative
+			PAP = {
+				is_puppet = no
+				NOT = { has_war_with = SPR }
+				has_government = theoconservative
+			}
+		}
+		x = 16
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    PAP = {
+				country_event = spain.12
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_our_own_way
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = SPR_catholic_roots }
+		mutually_exclusive = { focus = SPR_join_the_pope }
+		available = {
+			has_government = theoconservative
+		}
+		x = 18
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_ideas = catholic_nation
+		}
+	}
+	
+	focus = {
+	    id = SPR_first_modern_crusade
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = SPR_join_the_pope }
+		x = 16
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = LBA
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_second_modern_crusade
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = SPR_first_modern_crusade }
+		x = 17
+		y = 5
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = WAF
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GLC
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_final_crusade
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SPR_second_modern_crusade }
+		available = {
+		    has_army_manpower = { size > 400000 }
+		}
+		x = 17
+		y = 6
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_catholic_portugal
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = SPR_our_own_way }
+		available = {
+			country_exists = POR
+			has_army_manpower = { size > 200000 }
+		}
+		x = 18
+		y = 4
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = POR
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_bring_god_back_to_sicily
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SPR_catholic_portugal }
+		available = {
+			country_exists = SCY
+			has_army_manpower = { size > 150000 }
+		}
+		x = 19
+		y = 5
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = SCY
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_a_spanish_pope
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = SPR_bring_god_back_to_sicily }
+		available = {
+			country_exists = PAP
+			has_army_manpower = { size > 200000 }
+		}
+		x = 20
+		y = 6
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAP
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_liberation_of_rome
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SPR_across_the_atlantic }
+		available = {
+			country_exists = PAP
+			has_government = americanist
+			has_army_manpower = { size > 200000 }
+		}
+		x = 20
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAP
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_adriatic_freedom
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SPR_liberation_of_rome }
+		available = {
+		    has_army_manpower = { size > 150000 }
+		}
+		x = 21
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CRO
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ALB
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_victory_over_tyranny
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SPR_adriatic_freedom }
+		available = {
+		    has_army_manpower = { size > 800000 }
+			country_exists = FRA
+		}
+		x = 22
+		y = 5
+		cost = 10 
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_national_development_plan
+		icon = GFX_goal_generic_production
+		x = 28
+		y = 0
+		cost = 10 
+		completion_reward = {
+		    add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = SPR_industrial_projects
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SPR_national_development_plan }
+		mutually_exclusive = { focus = SPR_factory_science }
+		x = 27
+		y = 1
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_factory_science
+		icon = GFX_focus_research
+		prerequisite = { focus = SPR_national_development_plan }
+		mutually_exclusive = { focus = SPR_industrial_projects }
+		x = 29
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_military_expansion_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SPR_industrial_projects }
+		mutually_exclusive = { focus = SPR_consumer_goods }
+		x = 25
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_consumer_goods
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SPR_industrial_projects }
+		mutually_exclusive = { focus = SPR_military_expansion_focus }
+		x = 27
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_troop_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPR_military_expansion_focus }
+		x = 25
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_airport_construction
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = SPR_consumer_goods }
+		x = 27
+		y = 3
+		cost = 10
+        completion_reward = {
+		    air_experience = 2
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}		
+	}
+	
+	focus = {
+	    id = SPR_madrid_plan
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SPR_airport_construction focus = SPR_troop_infrastructure }
+		x = 26
+		y = 4
+		cost = 10
+		completion_reward = {
+		    41 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_airport_blueprints
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SPR_factory_science }
+		x = 30
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_ammunition_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SPR_airport_blueprints }
+		x = 30
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_nationwide_inspections
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SPR_ammunition_factory }
+		x = 29
+		y = 4
+		cost = 10
+        completion_reward = {
+		    add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		    add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			
+		}		
+	}
+	
+	focus = {
+	    id = SPR_armada_project
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = SPR_nationwide_inspections focus = SPR_madrid_plan }
+		x = 27
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 0.5
+				category = nuclear
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_zaragoza_academy
+		icon = GFX_goal_generic_small_arms
+		x = 36
+		y = 0
+		cost = 10
+		completion_reward = {
+		    army_experience = 20
+		}
+	}
+	
+	focus = {
+	    id = SPR_unstoppable_force
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SPR_zaragoza_academy }
+		x = 38
+		y = 1
+		cost = 10 
+		completion_reward = {
+		    army_experience = 5
+		}
+	}
+	
+	focus = {
+	    id = SPR_frontline_soldiers
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SPR_zaragoza_academy }
+		x = 34
+		y = 1
+		cost = 10 
+		completion_reward = {
+		    army_experience = 5
+		}
+	}
+	
+	focus = {
+	    id = SPR_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SPR_frontline_soldiers }
+		x = 35
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = artillery_focus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_guns_focus
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SPR_frontline_soldiers }
+		x = 33
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_heavy_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SPR_unstoppable_force }
+		x = 37
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = heavy_armor_focus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_general_armored
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SPR_unstoppable_force }
+		x = 39
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_elite_army
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = SPR_general_armored }
+		prerequisite = { focus = SPR_heavy_tanks }
+		prerequisite = { focus = SPR_guns_focus }
+		prerequisite = { focus = SPR_artillery_focus }
+		x = 36
+		y = 3
+		cost = 10
+		completion_reward = {
+		    army_experience = 50
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.2
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.2
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_spanish_seas
+		icon = GFX_goal_generic_amphibious_assault
+		x = 42
+		y = 0
+		cost = 10
+		completion_reward = {
+		    navy_experience = 10
+		}
+	}
+	
+	focus = {
+	    id = SPR_looking_east
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SPR_spanish_seas }
+		mutually_exclusive = { focus = SPR_looking_west }
+		x = 43
+		y = 1
+		cost = 10
+		completion_reward = {
+		    navy_experience = 10
+		}
+	}
+	
+	focus = {
+	    id = SPR_looking_west
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SPR_spanish_seas }
+		mutually_exclusive = { focus = SPR_looking_east }
+		x = 41
+		y = 1
+		cost = 10
+		completion_reward = {
+		    navy_experience = 10
+		}
+	}
+	
+	focus = {
+	    id = SPR_mediterranean_capabilities
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = SPR_looking_east }
+		x = 43
+		y = 2
+		cost = 10
+		completion_reward = {
+		    167 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			168 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			169 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_destroyers
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SPR_mediterranean_capabilities }
+		x = 44
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SPR_destroyers }
+		x = 44
+		y = 4
+		cost = 10 
+		completion_reward = {
+		   add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_atlantic_capabilities
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = SPR_looking_west }
+		x = 41
+		y = 2
+		cost = 10
+		completion_reward = {
+		    173 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			171 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			172 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_convoys
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = SPR_atlantic_capabilities }
+		x = 40
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.5
+				uses = 1
+				technology = convoy_interdiction_ti
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SPR_convoys }
+		x = 40
+		y = 4
+		cost = 10 
+		completion_reward = {
+		   add_tech_bonus = {
+				name = submarines_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_military_takeover_of_lape
+		icon = GFX_goal_generic_build_airforce
+		x = 48
+		y = 0
+		cost = 10
+		completion_reward = {
+		    air_experience = 10 
+		}
+	}
+	
+	focus = {
+	    id = SPR_expansion_of_capabilities
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = SPR_military_takeover_of_lape }
+		mutually_exclusive = { focus = SPR_fleet_expansion }
+		x = 49
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_political_power = 75
+		}
+	}
+	
+	focus = {
+	    id = SPR_fleet_expansion
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SPR_military_takeover_of_lape }
+		mutually_exclusive = { focus = SPR_expansion_of_capabilities }
+		x = 47
+		y = 1
+		cost = 10
+		completion_reward = {
+		    air_experience = 15
+		}
+	}
+	
+	focus = {
+	    id = SPR_north_west_bases
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPR_expansion_of_capabilities }
+		x = 50
+		y = 2
+		cost = 10
+		completion_reward = {
+		    171 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_south_east_bases
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SPR_north_west_bases }
+		x = 50
+		y = 3
+		cost = 10
+		completion_reward = {
+		    167 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_new_madrid_airport
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SPR_south_east_bases }
+		x = 49
+		y = 4
+		cost = 10
+		completion_reward = {
+		    41 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = SPR_fleet_expansion }
+		x = 46
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber2
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_fighters
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SPR_bombers }
+		x = 46
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = heavy_fighters
+				bonus = 0.5
+				uses = 1				
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_heavy_air
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SPR_fighters }
+		x = 47
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = combined_bomber_offensive
+				bonus = 0.5
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+	
+	focus = {
+	    id = SPR_air_academy
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SPR_heavy_air focus = SPR_new_madrid_airport }
+		x = 48
+		y = 5
+		cost = 10
+		completion_reward = {
+		    air_experience = 50
+		}
+	}
+	
+	focus = {
+	    id = SPR_the_iberian_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SPR_de_leonist_faction }
+		available = {
+		    has_government = de_leonist
+		}
+		x = 4
+		y = 4
+		cost = 10
+		completion_reward = {
+		    POR = {
+			    country_event = spain.13
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_red_sicily
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = SPR_the_iberian_revolution }
+		available = {
+		    has_army_manpower = { size > 150000 }
+		}
+		x = 4
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SCY
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_red_rome
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = SPR_red_sicily }
+		available = {
+		    has_army_manpower = { size > 200000 }
+		}
+		x = 4
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = PAP
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_struggle_against_monarchy
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SPR_red_rome }
+		mutually_exclusive = { focus = SPR_atlantic_struggle }
+		x = 2
+		y = 7
+		cost = 10
+		completion_reward = {
+		    AUS = {
+			    country_event = spain.15
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_atlantic_struggle
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SPR_red_rome }
+		mutually_exclusive = { focus = SPR_struggle_against_monarchy }
+		x = 4
+		y = 7
+		cost = 10
+        completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = USA
+		    }
+		}		
+	}
+	
+	focus = {
+	    id = SPR_portugese_workers_liberation
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SPR_collectivist_faction }
+		available = {
+		    has_government = collectivist
+		}
+		x = 6
+		y = 4
+		cost = 10
+		completion_reward = {
+		    POR = {
+			    country_event = spain.16
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_kongo_protectorate
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SPR_portugese_workers_liberation }
+		x = 6
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = KON
+		    }
+		}
+		
+	}
+	
+	focus = {
+	    id = SPR_sicilian_farmers
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SPR_kongo_protectorate }
+		x = 6
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SCY
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_peoples_armada
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SPR_sicilian_farmers }
+		x = 7
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ENG
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_pressure_portugal
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SPR_spanish_democracy }
+		available = {
+		    has_government = democratic_socialist
+		}
+		x = 8
+		y = 3
+		cost = 10
+        completion_reward = {
+		    POR = {
+			    country_event = spain.18
+		    }
+		}		
+	}
+	
+	focus = {
+	    id = SPR_morocco_for_investment
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SPR_pressure_portugal }
+		x = 8
+		y = 4 
+		cost = 10
+		completion_reward = {
+		    FRA = {
+			    country_event = spain.20
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_remains_of_the_portugese_empire
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = SPR_morocco_for_investment }
+		x = 8
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = BRA
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SPR_remains_of_our_empire
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = SPR_remains_of_the_portugese_empire }
+		x = 8
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = COL
+		    }
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = CEA
+		    }
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ARG
+		    }
+		}
+	}
+	
+}

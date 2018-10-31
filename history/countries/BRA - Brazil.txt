@@ -1,0 +1,192 @@
+﻿capital = 500
+
+set_stability = 0.29
+set_war_support = 0.71
+
+oob = "BRA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	CAS1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 5
+		}
+
+		nationalist = {
+			popularity = 2
+		}
+		
+		absolute_monarchist = {
+			popularity = 11
+		}
+		
+		national_conservative = { 
+			popularity = 74
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 6
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 2
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = national_conservative
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+add_ideas = {
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+create_country_leader = {
+	name = "Garrastazu Médici"
+	desc = ""
+	picture = "gfx/leaders/BRA/Portrait_BRA_Garrastazu_Medici.dds"
+	expire = "1965.1.1"
+	ideology = traditional_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Carlos de Vasconcelos Motta"
+	desc = ""
+	picture = "gfx/leaders/BRA/Portrait_BRA_Carlos_Carmelo.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Artur Bernardes"
+	desc = ""
+	picture = "gfx/leaders/BRA/Portrait_BRA_Artur_Bernardes.dds"
+	expire = "1965.1.1"
+	ideology = environmental_georgist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Washington Luís"
+	desc = ""
+	picture = "gfx/leaders/BRA/Portrait_BRA_Washington_Luis.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Plínio Salgado"
+	desc = "POLITICS_PLINIO_SALGADO_DESC"
+	picture = "gfx/leaders/BRA/Portrait_BRA_Plinio_Salgado.dds"
+	expire = "1965.1.1"
+	ideology = fascist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Astrojildo Pereira"
+	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
+	picture = "gfx/leaders/BRA/Portrait_BRA_Astrojildo_Pereira.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Minervino de Oliveira"
+	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
+	picture = "gfx/leaders/BRA/Portrait_BRA_Minervino_de_oliveira.dds"
+	expire = "1965.1.1"
+	ideology = radical_collectivism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Tancredo Neves"
+	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
+	picture = "gfx/leaders/BRA/Portrait_BRA_Tancredo_Neves.dds"
+	expire = "1965.1.1"
+	ideology = centrist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Armando de Sales Oliveira"
+	desc = "POLITICS_ARMANDO_SALES_DESC"
+	picture = "gfx/leaders/BRA/Portrait_BRA_Armando_Salles.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pedro III"
+	desc = ""
+	picture = "gfx/leaders/BRA/Portrait_BRA_Pedro_3.dds"
+	expire = "1965.1.1"
+	ideology = imperial
+	traits = {
+		#
+	}
+}

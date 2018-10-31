@@ -1,0 +1,38 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    
+	venice_incident = {
+		value = 5
+	}
+	
+	ambassador_killed_bad = {
+		value = -20
+	}
+	
+	ambassador_killed_better = {
+		value = -10
+	}
+	
+	de_leonist_oppression = {
+		value = -20
+	}
+	
+	nationalism_spreading = {
+		value = -15
+	}
+	
+	central_italian_revolt_opinion = {
+		value = -15
+	}
+
+
+}

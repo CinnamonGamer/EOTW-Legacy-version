@@ -1,0 +1,57 @@
+focus_tree = {
+	id = germany_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZZZ
+		}
+	}
+	
+	focus = {
+	    id = GMY_consolidate_germany
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+	}
+	
+	focus = {
+	    id = GMY_the_ruhr_boom
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GMY_consolidate_germany }
+		x = 9
+		y = 1
+		cost = 10
+		completion_reward = {
+		    
+		}
+	}
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

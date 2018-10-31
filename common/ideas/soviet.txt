@@ -1,0 +1,862 @@
+ideas = {
+
+    country = {
+	    
+		undeveloped_nation_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				research_time_factor = 0.03
+			}
+			
+			
+
+			
+			picture = generic_production_bonus
+        }
+    }
+	
+	country = {
+	    
+		indecisive_government_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.02
+				war_support_factor = -0.02
+				foreign_subversive_activites = 0.2
+			}
+			
+			
+
+			
+			picture = generic_disjointed_gov
+        }
+    }
+    
+	country = {
+	    
+		independent_construction_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+
+			
+			picture = FRA_fortification_focus
+        }
+    }
+	
+	country = {
+	    
+		nationalised_construction_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+			}
+
+			
+			picture = generic_morale_bonus
+        }
+    }
+	
+	country = {
+	    
+		construction_companies_seized = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				research_time_factor = -0.02
+				consumer_goods_factor = 0.05
+			}
+
+			
+			picture = generic_intel_bonus
+        }
+    }
+	
+	country = {
+	    
+		construction_privatisation_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.2
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+			
+			
+
+			
+			picture = neutrality_idea
+        }
+    }
+	
+	country = {
+	    
+		happy_scientists_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				research_time_factor = -0.1
+				political_power_gain = -0.5
+			}
+			
+			
+
+			
+			picture = air_support_focus
+        }
+    }
+	
+	country = {
+	    
+		stressed_workers_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = 0.3
+                drift_defence_factor = -0.5
+			}
+			
+			
+
+			
+			picture = SOV_scientist_defect
+        }
+    }
+	
+	country = {
+	    
+		industrial_population_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+                stability_factor = 0.1
+                war_support_factor = 0.1
+			}
+			
+			
+
+			
+			picture = generic_infantry_bonus
+        }
+    }
+	
+	country = {
+	    
+		industrialisation_begins_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+                stability_factor = -0.1
+                war_support_factor = -0.1
+			}
+			
+			
+
+			
+			picture = generic_production_bonus
+        }
+    }
+	
+	country = {
+	    
+		two_year_plan_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+                political_power_gain = -0.3
+				conscription = -0.03
+			}
+			
+			
+
+			
+			picture = trotskyite_plot_purged
+        }
+    }
+	
+	country = {
+	    
+		five_year_plan_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+                political_power_gain = -0.4
+				conscription = -0.06
+			}
+			
+			
+
+			
+			picture = trotskyite_plot_purged
+        }
+    }
+	
+	country = {
+	    
+		production_focus_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 
+				}
+				artillery = {
+					build_cost_ic = -0.1 
+				}
+			}
+			
+			
+
+			
+			picture = strategic_bombing_focus
+        }
+    }
+	
+	country = {
+	    
+		nation_of_the_40s_idea = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				research_time_factor = -0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+			
+			
+
+			
+			picture = liberty_ships_focus
+        }
+    }
+	
+	country = {
+	    
+		peoples_government = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    army_morale_Factor = 0.05
+				opinion_gain_monthly_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				foreign_subversive_activites = -0.3
+			}
+			
+			
+
+			
+			picture = generic_pp_unity_bonus
+        }
+    }
+	
+	country = {
+	    
+		modern_oligarchy = {
+			
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    political_power_gain = 0.5
+				consumer_goods_factor = -0.02
+				justify_war_goal_time = -0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+			
+			
+
+			
+			picture = FRA_scw_intervention_nationalists_focus
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_strasserist = {
+			
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    strasserist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_nationalist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    nationalist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_monarchist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    absolute_monarchist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_conservative = {
+			
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    national_conservative_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_theoconservative = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    theoconservative_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_liberal = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    national_liberal_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_americanist = {
+			
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    americanist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_georgist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    georgist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_socialist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    democratic_socialist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_collectivist = {
+			
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    collectivist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		russian_influence_de_leonist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    de_leonist_drift = 0.09
+			}
+			
+			
+
+			
+			picture = generic_spy_intel
+        }
+    }
+	
+	country = {
+	    
+		drafting_social_policy = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    political_power_gain = -0.2
+			}
+			
+			
+
+			
+			picture = generic_volunteer_expedition_bonus
+        }
+    }
+	
+	country = {
+	    
+		cult_of_bravery_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    conscription = 0.02
+			}
+			
+			
+
+			
+			picture = generic_manpower_bonus
+        }
+    }
+	
+	country = {
+	    
+		military_in_education_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    conscription = 0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+			
+			
+
+			
+			picture = generic_research_bonus
+        }
+    }
+	
+	country = {
+	    
+		naval_production_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    production_speed_dockyard_factor = 0.15
+				
+			}
+			
+			
+
+			
+			picture = generic_navy_bonus
+        }
+    }
+	
+	country = {
+	    
+		full_steam_ahead_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+			    naval_speed_factor = 0.25
+				
+			}
+			
+			
+
+			
+			picture = generic_navy_bonus
+        }
+    }
+	
+	country = {
+	    
+		reformed_foreign_ministry = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			rule = {
+				can_create_factions = yes
+			}
+			
+			
+
+			
+			picture = generic_manpower_bonus
+        }
+    }
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+}

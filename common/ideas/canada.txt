@@ -1,0 +1,21 @@
+ideas = {
+
+	country = {
+		edward_viii = {
+			
+			allowed = {
+				original_tag = CAN
+			}
+			
+			removal_cost = -1
+			
+			traits = { popular_figurehead }
+			
+			picture = GFX_idea_edward_viii
+
+		}
+
+
+
+}
+

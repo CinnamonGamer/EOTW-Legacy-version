@@ -1,0 +1,101 @@
+﻿###########################
+# HOL Events
+###########################
+
+add_namespace = netherlands
+
+#Surrender when Australia has taken Indonesia
+country_event = {
+	id = netherlands.1
+	title = netherlands.1.t
+	desc = netherlands.1.d
+	picture = GFX_report_event_USA_tanks_snow
+	
+	trigger = {
+		tag = HOL
+		has_war_with = AST
+		surrender_progress > 0.2
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = netherlands.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		AST = {
+			country_event = { id = netherlands.2 }
+		}
+		effect_tooltip = {
+			AST = { white_peace = HOL }
+		}
+	}
+
+	#Never give up!!!
+	option = {
+		name = netherlands.1.o2
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.1
+	}
+}
+
+#Australian Response to Dutch Surrender
+country_event = {
+	id = netherlands.2
+	title = netherlands.2.t
+	desc = netherlands.2.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	trigger = {
+		tag = AST
+	}
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = netherlands.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = HOL
+		transfer_state = 672
+		transfer_state = 335
+		transfer_state = 667
+		transfer_state = 721
+		transfer_state = 738
+		transfer_state = 668
+		transfer_state = 669
+	}
+
+	#Take it all
+	option = {
+		name = netherlands.2.o2
+		ai_chance = {
+			factor = 0
+		}
+		HOL = { country_event = { id = netherlands.3 } }
+	}
+}
+
+#Australia says nope
+country_event = {
+	id = netherlands.3
+	title = netherlands.3.t
+	trigger = {
+		tag = HOL
+	}
+	desc = netherlands.3.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.3.o1
+	}
+}

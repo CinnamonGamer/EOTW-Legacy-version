@@ -1,0 +1,52 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry Mgawanyiko"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mlima Mgawanyiko"	
+    regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 2196 #Dar es Salaam
+		division_template = "Infantry Mgawanyiko" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 5210 #Mumbasa
+		division_template = "Infantry Mgawanyiko" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 8245 #Lourenco Marques
+		division_template = "Mlima Mgawanyiko" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 11145 #North-West Kenya
+		division_template = "Infantry Mgawanyiko" 	
+		start_experience_factor = 0.1
+	}
+
+}

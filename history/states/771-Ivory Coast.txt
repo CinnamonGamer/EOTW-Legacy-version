@@ -1,0 +1,19 @@
+state={
+	id=771
+	name="STATE_771"
+	manpower = 1000000
+
+	state_category = rural
+
+
+	history= {
+		owner = GLC
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GLC
+	}
+	provinces={
+		10803 10762 8122 5013 8065 5070 
+	}
+}

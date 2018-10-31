@@ -1,0 +1,203 @@
+﻿capital = 202
+
+set_stability = 0.61
+set_war_support = 0.41
+
+oob = "UKR_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+}
+
+
+set_convoys = 10
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 100
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 0
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 0
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = strasserist
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	service_by_requirement
+	war_economy
+}
+
+
+create_country_leader = {
+	name = "Stepan Bandera"
+	desc = ""
+	picture = "Portrait_UKR_Stepan_Bandera.dds"
+	expire = "1965.1.1"
+	ideology = militant_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Dmytro Dontsov"
+	desc = ""
+	picture = "Portrait_UKR_Dmytro_Doncow.dds"
+	expire = "1965.1.1"
+	ideology = traditional_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vasyl I"
+	desc = ""
+	picture = "Portrait_UKR_Vasyl_First.dds"
+	expire = "1965.1.1"
+	ideology = military_monarchy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pavlo Skoropadskyi"
+	desc = ""
+	picture = "Portrait_UKR_Skoropadsky.dds"
+	expire = "1965.1.1"
+	ideology = secular_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Polikarp Sikorsky"
+	desc = ""
+	picture = "Portrait_UKR_Polikarp.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Dmytro Doroshenko"
+	desc = ""
+	picture = "Portrait_UKR_Doroshenko.dds"
+	expire = "1965.1.1"
+	ideology = centrist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Serhiy Yefremov"
+	desc = ""
+	picture = "Portrait_UKR_Yefremov.dds"
+	expire = "1965.1.1"
+	ideology = direct_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Symon Petrula"
+	desc = ""
+	picture = "Portrait_UKR_Petlura.dds"
+	expire = "1965.1.1"
+	ideology = liberal_collectivist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Volodymyr Vynnychenko"
+	desc = ""
+	picture = "Portrait_UKR_Vynnychenko.dds"
+	expire = "1965.1.1"
+	ideology = liberal_leninist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Nikita Khrushchev"
+	desc = ""
+	picture = "Portrait_UKR_Khrushchev.dds"
+	expire = "1965.1.1"
+	ideology = bolshevik
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Stanislav Kosior"
+	desc = ""
+	picture = "Portrait_UKR_Kosior.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+

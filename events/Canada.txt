@@ -1,0 +1,514 @@
+﻿###########################
+# Canadian Events
+###########################
+
+add_namespace = canada
+
+#Americanist Movement
+country_event = {
+    id = canada.1
+	title = canada.1.t
+	desc = canada.1.d
+	picture = GFX_report_event_worker_protests
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1936.6.1
+		date < 1936.6.18
+		NOT = {
+			has_government = americanist
+		}
+	}
+	
+	option = {  #Worrying
+	    name = canada.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.02
+		}
+		set_country_flag = americanist_movement
+	}
+    
+}
+
+#Americanist Protests - Trade
+country_event = {
+    id = canada.2
+	title = canada.2.t
+	desc = canada.2.d
+	picture = GFX_report_event_gathering_protest
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1936.11.1
+		date < 1936.11.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = americanist_movement
+	}
+	
+	option = {  #Let them protest
+	    name = canada.2.o1
+		ai_chance = {
+			factor = 18
+		}
+		add_stability = -0.01
+		clr_country_flag = americanist_movement
+	}
+	
+	option = {  #Make compromises
+	    name = canada.2.o2
+		ai_chance = {
+			factor = 82
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.01
+		}
+		remove_ideas = export_focus
+		add_ideas = free_trade
+		add_stability = 0.05
+		clr_country_flag = americanist_movement
+		set_country_flag = americanists_trade_policy_compromise
+	}
+}
+
+#Prime Minister Bennett Corruption
+country_event = {
+    id = canada.3
+	title = canada.3.t
+	desc = canada.3.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.1.1
+		date < 1937.1.18
+		has_government = national_conservative
+		has_country_flag = americanists_trade_policy_compromise
+	}
+	
+	option = {
+	    name = canada.3.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = -0.02
+		}
+		clr_country_flag = americanists_trade_policy_compromise
+		set_country_flag = pm_bennett_corruption
+	}
+}
+
+#Americanist Protests Against Corruption
+country_event = {
+    id = canada.4
+	title = canada.4.t
+	desc = canada.4.d
+	picture = GFX_report_event_worker_protests
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.2.1
+		date < 1937.2.18
+		has_government = national_conservative
+		has_country_flag = pm_bennett_corruption
+	}
+	
+	option = { #Make democratic compromise
+	    name = canada.4.o1
+		ai_chance = {
+			factor = 86
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.01
+		}
+		add_stability = 0.02
+		clr_country_flag = pm_bennett_corruption
+		set_country_flag = make_democratic_compromise
+	}
+	
+	option = { #Refuse any compromise
+	    name = canada.4.o2
+		ai_chance = {
+			factor = 14
+		}
+		add_stability = -0.02
+		add_political_power = -70
+		clr_country_flag = pm_bennett_corruption
+		set_country_flag = refuse_any_democratic_compromise
+	}
+}
+
+#Americanists want elections
+country_event = {
+    id = canada.5
+	title = canada.5.t
+	desc = canada.5.d
+	picture = GFX_report_event_american_hunger_march
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.6.1
+		date < 1937.6.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = make_democratic_compromise
+	}
+	
+	option = { #Hold elections
+	    name = canada.5.o1
+		ai_chance = {
+			factor = 75
+		}
+		set_politics = {
+		    ruling_party = national_conservative
+			elections_allowed = yes
+		}
+		clr_country_flag = make_democratic_compromise
+		set_country_flag = election_preparation
+	}
+	
+	option = { #Refuse
+	    name = canada.5.o2
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = -0.02
+		clr_country_flag = make_democratic_compromise
+		set_country_flag = refuse_elections
+	}
+}
+
+#Rig the Election?
+country_event = {
+    id = canada.6
+	title = canada.6.t
+	desc = canada.6.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.7.1
+		date < 1937.7.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = election_preparation
+	}
+	
+	option = { #Do it
+	    name = canada.6.o1
+		ai_chance = {
+			factor = 40
+		}
+		clr_country_flag = election_preparation
+		set_country_flag = election_rigged
+	}
+	
+	option = { #Don't do it
+	    name = canada.6.o2
+		ai_chance = {
+			factor = 60
+		}
+		clr_country_flag = election_preparation
+		set_country_flag = election_not_rigged
+	}
+}
+
+#Election Day - Rigged
+country_event = {
+    id = canada.7
+	title = canada.7.t
+	desc = canada.7.d
+	picture = GFX_report_event_journalists_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.8.1
+		date < 1937.8.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = election_rigged
+	}
+	
+	option = {
+	    name = canada.7.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.03
+		}
+		add_stability = -0.01
+		clr_country_flag = election_rigged
+		set_country_flag = conservatives_rigged_election
+	}
+}
+
+#Election - Not Rigged
+country_event = {
+    id = canada.8
+	title = canada.8.t
+	desc = canada.8.d
+	picture = GFX_report_event_journalists_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.8.1
+		date < 1937.8.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = election_not_rigged
+	}
+	
+	option = {
+	    name = canada.8.o1
+		ai_chance = {
+			factor = 62
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.40
+		}
+		clr_country_flag = election_not_rigged
+		set_country_flag = americanists_win_election
+	}
+	
+	option = {
+	    name = canada.8.o2
+		ai_chance = {
+			factor = 38
+		}
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.50
+		}
+		clr_country_flag = election_not_rigged
+	}
+}
+
+#Strasserist Rebellion
+country_event = {
+    id = canada.9
+	title = canada.9.t
+	desc = canada.9.d
+	picture = GFX_report_event_lithuania_army
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.9.1
+		date < 1937.9.18
+		has_government = americanist
+		has_country_flag = americanists_win_election
+	}
+	
+	option = { # Support Strasserists
+		name = canada.9.o1
+		trigger = { is_ai = no }
+		hidden_effect = {
+			set_capital = 464
+			start_civil_war = {
+				ruling_party = strasserist
+				ideology = americanist
+				size = 0.5
+				capital = 276
+				states = { 276 332 466 682 683 467 469 472 470 471 473  }
+			}
+			random_country = {
+				limit = {
+					original_tag = CAN
+					has_government = americanist
+				}
+				set_equipment_fraction = 0.3
+				add_stability = 0.75
+				add_popularity = {
+					ideology = americanist
+					popularity = 0.35
+				}
+			}
+			
+			set_equipment_fraction = 0.3
+			add_stability = 0.9
+			
+			add_popularity = {
+				ideology = strasserist
+				popularity = 1
+			}
+
+		}
+		clr_country_flag = americanists_win_election
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+	option = { # Support Americanists
+		name = canada.9.o2
+		hidden_effect = {
+			start_civil_war = {
+				ideology = strasserist
+				size = 0.5
+				capital = 464
+				states = { 464 465 468 331 740 739 }
+			}
+			random_country = {
+				limit = {
+					original_tag = CAN
+					has_government = strasserist
+				}
+				set_equipment_fraction = 0.3
+				add_stability= 0.9
+			}
+			
+			add_popularity = {
+				ideology = americanist
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = strasserist
+				popularity = -1
+			}	
+			set_equipment_fraction = 0.3
+			add_stability = 0.75
+			
+		}
+		clr_country_flag = americanists_win_election
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+}
+
+#Americanist Rebellion
+country_event = {
+    id = canada.10
+	title = canada.10.t
+	desc = canada.10.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CAN
+		date > 1937.7.1
+		date < 1937.7.18
+		NOT = {
+			has_government = americanist
+		}
+		has_country_flag = refuse_elections
+	}
+	
+	option = { # Support Americanists
+		name = canada.10.o1
+		trigger = { is_ai = no }
+		hidden_effect = {
+			set_capital = 464
+			start_civil_war = {
+				ruling_party = americanist
+				ideology = national_conservative
+				size = 0.5
+				capital = 276
+				states = { 276 332 466 682 683 467 469 472 470 471 473  }
+			}
+			random_country = {
+				limit = {
+					original_tag = CAN
+					has_government = national_conservative
+				}
+				set_equipment_fraction = 0.3
+				add_stability = 0.75
+				add_popularity = {
+					ideology = national_conservative
+					popularity = 0.35
+				}
+			}
+			
+			set_equipment_fraction = 0.3
+			set_stability = 0.9
+			
+			add_popularity = {
+				ideology = americanist
+				popularity = 1
+			}
+
+		}
+		clr_country_flag = refuse_elections
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+	option = { # Support Conservatives
+		name = canada.10.o2
+		hidden_effect = {
+			start_civil_war = {
+				ideology = americanist
+				size = 0.5
+				capital = 464
+				states = { 464 465 468 331 740 739 }
+			}
+			random_country = {
+				limit = {
+					original_tag = CAN
+					has_government = americanist
+				}
+				set_equipment_fraction = 0.3
+				add_stability = 0.9
+			}
+			
+			add_popularity = {
+				ideology = national_conservative
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = americanist
+				popularity = -1
+			}	
+			set_equipment_fraction = 0.3
+			add_stability = 0.75
+			
+		}
+		clr_country_flag = refuse_elections
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+}
+
+
+
+
+
+

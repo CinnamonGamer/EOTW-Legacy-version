@@ -1,0 +1,22 @@
+state={
+	id=768
+	name="STATE_768"
+	manpower = 35000
+	resources={
+		oil = 15
+	}
+
+	state_category = rural
+
+
+	history= {
+		owner = OMA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = OMA
+	}
+	provinces={
+		8051
+	}
+}

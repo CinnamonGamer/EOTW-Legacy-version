@@ -1,0 +1,635 @@
+﻿###########################
+# SPR Events
+###########################
+
+add_namespace = spain
+
+#Spanish Focus - Iberian Wedding
+country_event = {
+    id = spain.1
+	title = spain.1.t
+	desc = spain.1.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+	}
+	
+	option = {
+	    name = spain.1.o1
+		ai_chance = { factor = 65 }
+		SPR = {
+			country_event = spain.2
+		}
+	}
+	
+	option = {
+	    name = spain.1.o2
+		ai_chance = { factor = 35 }
+		SPR = {
+			country_event = spain.3
+		}
+	}
+}
+
+#Focus - Portugese Accept
+country_event = {
+    id = spain.2
+	title = spain.2.t
+	desc = spain.2.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+	}
+	
+	option = {
+	    name = spain.2.o1
+		ai_chance = { factor = 100 }
+		annex_country = { target = POR transfer_troops = yes }
+		add_stability = 0.05
+	}
+}
+
+#Focus - Portugese Refuse
+country_event = {
+    id = spain.3
+	title = spain.3.t
+	desc = spain.3.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+	}
+	
+	option = {
+	    name = spain.3.o1
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = annex_everything
+			target = POR
+		}
+	}
+}
+	
+#Spanish Focus - Catalonia Referendum
+country_event = {
+    id = spain.4
+	title = spain.4.t
+	desc = spain.4.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = FRA
+	}
+	
+	option = {
+	    name = spain.4.o1
+		ai_chance = { factor = 85 }
+		SPR = {
+			country_event = spain.5
+		}
+		add_political_power = 80
+	}
+	
+	option = {
+	    name = spain.4.o2
+		ai_chance = { factor = 15 }
+		SPR = {
+			country_event = spain.6
+		}
+		add_political_power = -30
+	}
+}
+
+#Focus - Referendum
+country_event = {
+    id = spain.5
+	title = spain.5.t
+	desc = spain.5.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.5.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 165
+		add_political_power = 20
+	}	
+}
+
+#Focus - No Referendum
+country_event = {
+    id = spain.6
+	title = spain.6.t
+	desc = spain.6.d
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.6.o1
+		ai_chance = { factor = 100 }
+		add_stability = -0.08
+		add_political_power = -20
+	}	
+}
+
+#Spanish Focus - Strasserist Coup
+country_event = {
+    id = spain.7
+	title = spain.7.t
+	desc = spain.7.d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+    }
+	
+	option = {
+	    name = spain.7.o1
+		ai_chance = { factor = 60 }
+		set_politics = {
+			ruling_party = strasserist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.5
+		}
+		SPR = {
+			country_event = spain.8
+		}
+	}
+	
+	option = {
+	    name = spain.7.o2
+		ai_chance = { factor = 40 }
+        add_stability = 0.05
+		add_political_power = -20
+		SPR = {
+			country_event = spain.9
+		}
+	}
+}
+
+#Focus - Annexation of Portugal
+country_event = {
+    id = spain.8
+	title = spain.8.t
+	desc = spain.8.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+	
+	option = {
+	    name = spain.8.o1
+		ai_chance = { factor = 10 }
+		POR = {
+			country_event = spain.10
+		}
+		add_political_power = -40
+	}
+	
+	option = {
+	    name = spain.8.o2
+		ai_chance = { factor = 90 }
+		add_political_power = 20
+	}
+}
+
+#Focus - Coup Fails
+country_event = {
+    id = spain.9
+	title = spain.9.t
+	desc = spain.9.d
+	picture = GFX_report_event_soviet_purge_officers_02
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+	
+	option = {
+	    name = spain.9.o1
+		ai_chance = { factor = 10 }
+		create_wargoal = {
+			type = annex_everything
+			target = POR
+		}
+	}
+	
+	option = {
+	    name = spain.9.o2
+		ai_chance = { factor = 90 }
+		add_political_power = 40
+		add_stability = 0.02
+	}
+}
+
+#Spanish Focus - Annexation?
+country_event = {
+    id = spain.10
+	title = spain.10.t
+	desc = spain.10.d
+	picture = GFX_report_event_soviet_purge_trial
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+    }
+	
+	option = {
+	    name = spain.10.o1
+		ai_chance = { factor = 30 }
+		SPR = {
+			country_event = spain.11
+		}
+	}
+	
+	option = {
+	    name = spain.10.o2
+		ai_chance = { factor = 70 }
+		add_war_support= 0.05
+	}
+}
+
+#Focus - Portugese Accept Annexation
+country_event = {
+    id = spain.11
+	title = spain.11.t
+	desc = spain.11.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+	
+	option = {
+	    name = spain.11.o1
+		ai_chance = { factor = 100 }
+		annex_country = { target = POR transfer_troops = yes }
+	}
+}
+
+
+#Spanish Focus - Alliance
+country_event = {
+    id = spain.12
+	title = spain.12.t
+	desc = spain.12.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = PAP
+    } 
+
+    option = {
+	    name = spain.12.o1
+		ai_chance = { factor = 100 }
+		create_faction = holy_union
+		add_to_faction = SPR
+	}	
+}
+
+#Spanish Focus - De Leonist Revolution
+country_event = {
+    id = spain.13
+	title = spain.13.t
+	desc = spain.13.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+    }
+
+    option = {
+	    name = spain.13.o1
+		ai_chance = { factor = 60 }
+		set_politics = {
+			ruling_party = de_leonist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.5
+		}
+	}
+
+    option = {
+	    name = spain.13.o2
+		ai_chance = { factor = 40 }
+		add_political_power = -40
+		SPR = {
+			country_event = spain.14
+		}
+	}
+}
+
+#Focus - Portugese Revolution Fails
+country_event = {
+    id = spain.14
+	title = spain.14.t
+	desc = spain.14.d
+	picture = GFX_report_event_soviet_purge_politicians
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.14.o1
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = annex_everything
+			target = POR
+		}
+	}
+}
+
+#Spanish Focus - Joining the Internationale
+country_event = {
+    id = spain.15
+	title = spain.15.t
+	desc = spain.15.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+    }
+
+    option = {
+	    name = spain.15.o1
+		ai_chance = { factor = 100 }
+		AUS = { add_to_faction = SPR }
+	}
+}
+
+#Spanish Focus - Collectivist Revolution
+country_event = {
+    id = spain.16
+	title = spain.16.t
+	desc = spain.16.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+    }
+
+    option = {
+	    name = spain.16.o1
+		ai_chance = { factor = 60 }
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.5
+		}
+	}
+
+    option = {
+	    name = spain.16.o2
+		ai_chance = { factor = 40 }
+		add_political_power = -40
+		SPR = {
+			country_event = spain.17
+		}
+	}
+}
+
+#Focus - Portugese Revolution Fails
+country_event = {
+    id = spain.17
+	title = spain.17.t
+	desc = spain.17.d
+	picture = GFX_report_event_soviet_purge_politicians
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.17.o1
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = annex_everything
+			target = POR
+		}
+	}
+}
+
+#Spanish Focus - Pressure From Spain
+country_event = {
+    id = spain.18
+	title = spain.18.t
+	desc = spain.18.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POR
+    }
+
+    option = {
+	    name = spain.18.o1
+		ai_chance = { factor = 70 }
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.5
+		}
+	}
+
+    option = {
+	    name = spain.18.o2
+		ai_chance = { factor = 30 }
+		add_political_power = 20
+		add_stability = -0.05
+		SPR = {
+			country_event = spain.19
+		}
+	}
+}
+
+#Focus - Portugese Reject Demands
+country_event = {
+    id = spain.19
+	title = spain.19.t
+	desc = spain.19.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.19.o1
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POR
+		}
+	}
+}
+
+#Spanish Focus - Morocco Purchase
+country_event = {
+    id = spain.20
+	title = spain.20.t
+	desc = spain.20.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = FRA
+    }
+
+    option = {
+	    name = spain.20.o1
+		ai_chance = { factor = 65 }
+		SPR = {
+			country_event = spain.21
+		}
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+
+    option = {
+	    name = spain.20.o2
+		ai_chance = { factor = 35 }
+		add_political_power = -10
+		SPR = {
+			country_event = spain.22
+		}
+	}
+}
+
+#Focus - France Accepts
+country_event = {
+    id = spain.21
+	title = spain.21.t
+	desc = spain.21.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.21.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 461
+		transfer_state = 462
+		transfer_state = 290
+	}
+}
+
+#Focus - France Refuses
+country_event = {
+    id = spain.22
+	title = spain.22.t
+	desc = spain.22.d
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SPR
+    }
+
+    option = {
+	    name = spain.22.o1
+		ai_chance = { factor = 100 }
+		add_stability = -0.02
+		add_political_power = -30
+	}
+}	
+	

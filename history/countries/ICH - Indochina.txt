@@ -1,0 +1,109 @@
+﻿capital = 670
+
+set_stability = 0.11
+set_war_support = 0.32
+
+oob = "ICH_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_mountaineers = 1
+}
+
+set_convoys = 15
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 7
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 0
+		}
+
+                georgist = { 
+			popularity = 9
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 84
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = collectivist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	closed_economy
+	service_by_requirement
+	war_economy
+}
+
+create_country_leader = {
+	name = "Ho Chi Minh"
+	desc = ""
+	picture = "Portrait_ICH_Ho_Chi_Minh.dds"
+	expire = "1965.1.1"
+	ideology = qing_collectivism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bao An"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = environmental_georgist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hung Quan"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = fascist
+	traits = {
+		#
+	}
+}

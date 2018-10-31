@@ -1,0 +1,225 @@
+﻿capital = 476
+
+oob = "CAN_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 3
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 55
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 37
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 5
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = national_conservative
+	last_election = "1935.10.14"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+add_ideas = {
+	export_focus
+	volunteer_only
+	civilian_economy
+}
+
+create_country_leader = {
+	name = "Richard Bennett"
+	desc = ""
+	picture = "Portrait_CAN_R_B_Bennett.dds"
+	expire = "1965.1.1"
+	ideology = secular_conservative
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Adrien Arcand"
+	desc = ""
+	picture = "Portrait_CAN_Arcand.dds"
+	expire = "1965.1.1"
+	ideology = fascist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fred Rose"
+	desc = ""
+	picture = "Portrait_CAN_Rose.dds"
+	expire = "1965.1.1"
+	ideology = international_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "J. S. Woodsworth"
+	desc = ""
+	picture = "Portrait_CAN_Woodsworth.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Thomas Crerar"
+	desc = ""
+	picture = "Portrait_CAN_Crerar.dds"
+	expire = "1965.1.1"
+	ideology = socio_capitalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "William King"
+	desc = ""
+	picture = "Portrait_CAN_William_King.dds"
+	expire = "1965.1.1"
+	ideology = centrist
+	traits = {
+		#
+	}
+}
+
+set_convoys = 267
+set_stability = 0.54
+set_war_support = 0.38
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 98
+			}
+
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 1
+				#banned = no #default is no
+			}
+		}
+		
+		ruling_party = democratic
+		last_election = "1935.10.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+}
+
+create_corps_commander = {
+	name = "Thomas Victor Anderson"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = {  }
+	skill = 4
+}
+
+create_field_marshal = {
+	name = "Charles Foulkes"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	traits = { }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "John Montague"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Leonard W. Murray"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+	traits = { }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "H.T. Baillie-Grohman"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	traits = { spotter }
+	skill = 4
+}

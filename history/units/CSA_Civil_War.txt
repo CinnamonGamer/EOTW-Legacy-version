@@ -1,0 +1,107 @@
+##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+		engineer = { x = 0 y = 1 }   
+	}
+}
+
+###### OOB ######
+units = {
+    division= {			
+		name = "1st Infantry"		
+		location = 12735
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "2nd Infantry"		
+		location = 7480
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "3rd Infantry"		
+		location = 12501
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "4th Infantry"		
+		location = 7202
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "5th Infantry"		
+		location = 12384
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "1st Cavalry"		
+		location = 10657
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "2nd Cavalry"		
+		location = 4491
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "3rd Cavalry"		
+		location = 7615
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+
+
+
+}

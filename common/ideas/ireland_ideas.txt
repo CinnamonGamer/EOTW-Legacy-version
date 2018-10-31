@@ -1,0 +1,41 @@
+ideas = {
+		
+	country = {
+
+		IRE_american_advisors = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+	}
+	
+	country = {
+
+		IRE_under_american_protection = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IRE
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				americanist_acceptance = 85
+			}
+		}
+	}

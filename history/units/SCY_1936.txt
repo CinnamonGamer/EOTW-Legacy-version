@@ -1,0 +1,88 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Divisione di Fanteria"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Divisione Alpina"					# Divisione Alpina
+	regiments = {
+		mountaineers = { x = 0 y = 0 }			# Elite Alpina Regiments
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1. Divisione di Fanteria"
+		location = 10074
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Divisione di Fanteria"
+		location = 4159
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "3. Divisione di Fanteria"
+		location = 819
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Divisione Alpina"
+		location = 6972
+		division_template = "Divisione Alpina"		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "2. Divisione Alpina"
+		location = 1156
+		division_template = "Divisione Alpina"		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "4. Divisione di Fanteria"
+		location = 6979
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "5. Divisione di Fanteria"
+		location = 6939
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.1
+	}
+
+
+
+}

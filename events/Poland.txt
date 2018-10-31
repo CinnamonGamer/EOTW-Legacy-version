@@ -1,0 +1,667 @@
+﻿add_namespace = poland
+
+# France: Polish defensive alliance proposal
+country_event = {
+    id = poland.1
+	title = poland.1.t
+	desc = poland.1.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.1.a
+		ai_chance = { factor = 90 }
+		POL = { country_event = poland.2 }
+		give_guarantee = POL
+		POL = { 
+			give_guarantee = FRA
+		}
+	}
+	
+	option = {
+	    name = poland.1.b
+		ai_chance = { factor = 10 }
+		POL = {
+			country_event = poland.3
+		}
+	}
+	
+}
+
+# France accepts defensive alliance
+country_event = {
+	id = poland.2
+	title = poland.2.t
+	desc = poland.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.2.a
+	}
+}
+
+# France refuses defensive alliance
+country_event = {
+	id = poland.3
+	title = poland.3.t
+	desc = poland.3.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.3.a
+
+	}
+}
+
+# France: Polish offensive alliance proposal
+country_event = {
+    id = poland.4
+	title = poland.4.t
+	desc = poland.4.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.4.a
+		ai_chance = { factor = 90 }
+		add_political_power = 75
+		POL = { country_event = poland.5 }
+	}
+	
+	option = {
+	    name = poland.4.b
+		ai_chance = { factor = 10 }
+		POL = {
+			country_event = poland.6
+		}
+	}
+	
+}
+
+# France accepts offensive alliance
+news_event = {
+	id = poland.5
+	title = poland.5.t
+	desc = poland.5.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.5.a
+		FRA = {
+			add_to_faction = ROOT
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 200
+		}
+	}
+}
+
+# France refuses defensive alliance
+country_event = {
+	id = poland.6
+	title = poland.6.t
+	desc = poland.6.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.6.a
+
+	}
+}
+
+# Prussia: Non-Agression Pact
+country_event = {
+    id = poland.7
+	title = poland.7.t
+	desc = poland.7.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.7.a
+		ai_chance = { factor = 75 }
+		POL = { country_event = poland.8 }
+		diplomatic_relation = { country = POL relation = non_aggression_pact }
+	}
+	
+	option = {
+	    name = poland.7.b
+		ai_chance = { factor = 25 }
+		POL = {
+			country_event = poland.9
+		}
+	}
+	
+}
+
+#  Prussia Accepts Non-Agression Pact
+news_event = {
+	id = poland.8
+	title = poland.8.t
+	desc = poland.8.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.8.a
+	}
+}
+
+# Prussia Refuses Non-Agression Pact
+country_event = {
+	id = poland.9
+	title = poland.9.t
+	desc = poland.9.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.9.a
+		
+	}
+}
+
+# Prussia: Polish alliance proposal
+country_event = {
+    id = poland.10
+	title = poland.10.t
+	desc = poland.10.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.10.a
+		ai_chance = { factor = 90 }
+		country_event = poland.11
+		add_political_power = 75
+		add_ai_strategy = {
+			type = alliance
+			id = "POL"
+			value = 200
+		}
+	}
+	
+	option = {
+	    name = poland.10.b
+		ai_chance = { factor = 10 }
+		POL = {
+			country_event = poland.12
+		}
+	}
+	
+}
+
+# Prussia accepts alliance
+news_event = {
+	id = poland.11
+	title = poland.11.t
+	desc = poland.11.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.11.a
+		PRS = {
+			add_to_faction = ROOT
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "PRS"
+			value = 200
+		}
+	}
+}
+
+# Prussia refuses alliance
+country_event = {
+	id = poland.12
+	title = poland.12.t
+	desc = poland.12.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.12.a
+
+	}
+}
+
+# Backstab Prussia
+news_event = {
+	id = poland.13
+	title = poland.13.t
+	desc = poland.13.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.13.a
+		remove_from_faction = POL
+	}
+}
+
+# Galicia: Polish alliance proposal
+country_event = {
+    id = poland.14
+	title = poland.14.t
+	desc = poland.14.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.14.a
+		ai_chance = { factor = 80 }
+		POL = { country_event = poland.15 }
+		add_political_power = -50
+		add_ai_strategy = {
+			type = alliance
+			id = "POL"
+			value = 200
+		}
+	}
+	
+	option = {
+	    name = poland.14.b
+		ai_chance = { factor = 20 }
+		POL = {
+			country_event = poland.16
+		}
+	}
+	
+}
+
+# Galicia accepts alliance
+country_event = {
+	id = poland.15
+	title = poland.15.t
+	desc = poland.15.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.15.a
+		set_rule = { can_create_factions = yes }
+		create_faction = Commonwealth
+		add_to_faction = FROM
+	}
+}
+
+# Galicia refuses alliance
+news_event = {
+	id = poland.16
+	title = poland.16.t
+	desc = poland.16.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.16.a
+		create_wargoal = {
+				type = annex_everything
+				target = GAL
+		}
+	}
+}
+
+# Galicia: Polish union proposal
+country_event = {
+    id = poland.17
+	title = poland.17.t
+	desc = poland.17.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.17.a
+		ai_chance = { 
+			factor = 30 
+			modifier = {
+				factor = 1000
+				is_in_faction_with = POL
+				POL = { is_faction_leader = yes }
+			}
+		}
+		POL = { country_event = poland.18 }
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	
+	option = {
+	    name = poland.17.b
+		ai_chance = { factor = 70 }
+		POL = {
+			country_event = poland.19
+		}
+	}
+	
+}
+
+# Galicia accepts unification
+country_event = {
+	id = poland.18
+	title = poland.18.t
+	desc = poland.18.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.18.a
+		annex_country = { target = GAL transfer_troops = yes }
+		add_political_power = 100
+	}
+}
+
+# Galicia refuses unification
+news_event = {
+	id = poland.19
+	title = poland.19.t
+	desc = poland.19.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.19.a
+		create_wargoal = {
+				type = annex_everything
+				target = GAL
+		}
+	}
+}
+
+# Poland Vassilation Offer
+country_event = {
+    id = poland.20
+	title = poland.20.t
+	desc = poland.20.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.20.a
+		ai_chance = { 
+			base = 20 
+			modifier = { 
+				factor = 140	
+				original_tag = BYL
+			}
+			modifier = { 
+				factor = 60	
+				original_tag = BTC
+			}	
+			modifier = { 
+				factor = 30	
+				original_tag = UKR
+			}	
+		}
+		POL = { country_event = poland.21 }
+	}
+	
+	option = {
+	    name = poland.20.b
+		ai_chance = { factor = 100 }
+		POL = { country_event = poland.22 }
+	}
+	
+}
+
+# Country Accepts Vassilation
+country_event = {
+	id = poland.21
+	title = poland.21.t
+	desc = poland.21.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.21.a
+		puppet = FROM
+		add_political_power = 75
+	}
+}
+
+# Country Declines Vassilation
+news_event = {
+	id = poland.22
+	title = poland.22.t
+	desc = poland.22.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.22.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+}
+
+# Poland Demands Territory
+country_event = {
+    id = poland.23
+	title = poland.23.t
+	desc = poland.23.d
+	picture = GFX_report_event_polish_army
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.23.a
+		ai_chance = { 
+			base = 10 
+			modifier = { 
+				add = 20	
+				original_tag = BYL
+			}		
+		}
+		IF = {
+			limit = { 
+				original_tag = BYL
+			}	
+			set_global_flag = POL_DEMAND_WEST_BYL
+		}
+		IF = {
+			limit = { 
+				original_tag = BTC
+			}	
+			set_global_flag = POL_DEMAND_WEST_BTC
+		}
+		IF = {
+			limit = { 
+				original_tag = UKR
+			}	
+			set_global_flag = POL_DEMAND_WEST_UKR
+		}
+		POL = { country_event = poland.24 }
+	}
+	
+	option = {
+	    name = poland.23.b
+		ai_chance = { factor = 90 }
+		POL = {
+			country_event = poland.25
+		}
+	}
+	
+}
+
+# Country accepts demands
+country_event = {
+	id = poland.24
+	title = poland.24.t
+	desc = poland.24.d
+	picture = GFX_news_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = poland.24.a
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BYL
+				94 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BYL
+					}
+				}
+			}
+			POL = { transfer_state = 94 }
+			94 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BYL
+				95 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BYL
+					}
+				}
+			}
+			POL = { transfer_state = 95 }
+			95 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BYL
+				96 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BYL
+					}
+				}
+			}
+			POL = { transfer_state = 96 }
+			96 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_UKR
+				93 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = UKR
+					}
+				}
+			}
+			POL = { transfer_state = 93 }
+			93 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BTC
+				11 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BTC
+					}
+				}
+			}
+			POL = { transfer_state = 11 }
+			11 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BTC
+				188 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BTC
+					}
+				}
+			}
+			POL = { transfer_state = 188 }
+			188 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BTC
+				189 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BTC
+					}
+				}
+			}
+			POL = { transfer_state = 189 }
+			189 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = { 
+				has_global_flag = POL_DEMAND_WEST_BTC
+				190 = {
+					OR = {
+						is_owned_by = POL
+						is_owned_by = BTC
+					}
+				}
+			}
+			POL = { transfer_state = 190 }
+			190 = { add_core_of = POL }	
+		}
+		IF = {
+			limit = {
+				has_global_flag = POL_DEMAND_WEST_BYL
+			}
+			clr_global_flag = POL_DEMAND_WEST_BYL
+		}
+		IF = {
+			limit = {
+				has_global_flag = POL_DEMAND_WEST_UKR
+			}
+			clr_global_flag = POL_DEMAND_WEST_UKR
+		}
+		IF = {
+			limit = { 
+				original_tag = BTC
+			}	
+			clr_global_flag = POL_DEMAND_WEST_BTC
+		}		
+	}
+}
+
+# Country refuses demands
+news_event = {
+	id = poland.25
+	title = poland.25.t
+	desc = poland.25.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.25.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+}

@@ -1,0 +1,197 @@
+﻿capital = 303
+
+set_stability = 0.09
+set_war_support = 0.24
+
+oob = "PRU_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 90
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 4
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 6
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = strasserist
+	last_election = "1931.10.11"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+add_ideas = {
+	closed_economy
+	extensive_conscription
+	partial_economic_mobilisation
+}
+
+create_country_leader = {
+	name = "Luis Miguel Sanchez Cerro"
+	desc = ""
+	picture = "Portrait_PRU_Sanchez_Cerro.dds"
+	expire = "1965.1.1"
+	ideology = social_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jose Carlos Mariategui"
+	desc = ""
+	picture = "Portrait_PRU_Mariategui.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Augusto Leguia"
+	desc = ""
+	picture = "Portrait_PRU_Augusto_Leguia.dds"
+	expire = "1965.1.1"
+	ideology = reformist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mariano Holguin Maldonado"
+	desc = ""
+	picture = "Portrait_PRU_Mariano_Holguin.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jose Pardo y Barreda"
+	desc = ""
+	picture = "Portrait_PRU_Jose_Pardo.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Manuel Prado Ugarteche"
+	desc = ""
+	picture = "Portrait_PRU_Manuel_Prado.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Oscar R. Benavides"
+	desc = ""
+	picture = "Portrait_PRU_Oscar_Benavides.dds"
+	expire = "1965.1.1"
+	ideology = traditional_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Haya de la Torre"
+	desc = ""
+	picture = "Portrait_PRU_Haya_de_la_Torre.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pedro Beltran Espantoso"
+	desc = ""
+	picture = "Portrait_PRU_Pedro_beltran.dds"
+	expire = "1965.1.1"
+	ideology = environmental_georgist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Luciano Castillo Colonna"
+	desc = ""
+	picture = "Portrait_PRU_Luciano_Castillo.dds"
+	expire = "1965.1.1"
+	ideology = international_collectivist
+	traits = {
+		#
+	}
+}

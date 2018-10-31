@@ -1,0 +1,76 @@
+ideas = {
+
+country = {
+	   JAP_austerity_idea = {
+		
+		    allowed = {
+				always = no
+                               
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	
+
+
+
+	   JAP_construction_idea = {
+		
+		    allowed = {
+				
+                                always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+			
+			picture = generic_production_bonus
+			
+		}
+	
+JAP_Unity_idea = {
+		
+		    allowed = {
+				original_tag = JAP
+                                 always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+			}
+			
+			picture = generic_morale_bonus
+			
+		}
+
+JAP_Org_idea = {
+		
+		    allowed = {
+				original_tag = JAP
+                                 always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.5
+			}
+			
+			picture = generic_manpower_bonus
+			
+		}
+}
+
+}

@@ -1,0 +1,37 @@
+﻿###########################
+# SER Events
+###########################
+
+add_namespace = serbia
+
+#Turkish Focus - Negotiations
+country_event = {
+    id = serbia.1
+	title = serbia.1.t
+	desc = serbia.1.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SER
+	}
+	
+	option = {
+	    name = serbia.1.o1
+		ai_chance = { factor = 25 }
+		TUR = { puppet = SER }
+		TUR = {
+			country_event = { days = 1 id = turkey.8 }
+		}
+		add_political_power = -10
+	}
+
+	option = {
+	    name = serbia.1.o2
+		ai_chance = { factor = 75 }
+		add_stability = 0.1
+		add_political_power = -10
+	}
+	
+}

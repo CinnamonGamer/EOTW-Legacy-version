@@ -1,0 +1,1098 @@
+ideas = {
+
+    country = {
+	    
+		revenge_for_austerlitz = {
+			
+			allowed = {
+				original_tag = PRS
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = -0.10
+				justify_war_goal_time = -0.15
+			}
+			rule = {
+				can_create_factions = yes
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+        }
+    }
+	
+	# POLITICAL
+	political_advisor = {
+	    ludolf_von_alvensleben = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { strasserist_politician }
+			
+			picture = generic_political_advisor_europe_1
+	
+			do_effect = {
+				NOT = {
+					has_government = strasserist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		gustav_ritter_von_kahr = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { nationalist_politician }
+			
+			picture = generic_political_advisor_europe_3
+	
+			do_effect = {
+				NOT = {
+					has_government = nationalist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		paul_von_hindenburg = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { absolute_monarchist_politician }
+			
+			picture = generic_political_advisor_europe_2
+	
+			do_effect = {
+				NOT = {
+					has_government = absolute_monarchist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		adam_stegerwald = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { national_conservative_politician }
+			
+			picture = generic_political_advisor_europe_5
+	
+			do_effect = {
+				NOT = {
+					has_government = national_conservative
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		joseph_wirth = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { theoconservative_politician }
+			
+			picture = generic_political_advisor_europe_4
+	
+			do_effect = {
+				NOT = {
+					has_government = theoconservative
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		hjalmar_schacht = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { national_liberal_politician }
+			
+			picture = generic_political_advisor_europe_1
+	
+			do_effect = {
+				NOT = {
+					has_government = national_liberal
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		kurt_schumacher = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { americanist_politician }
+			
+			picture = generic_political_advisor_europe_2
+	
+			do_effect = {
+				NOT = {
+					has_government = americanist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		hugo_haase = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { georgist_politician }
+			
+			picture = generic_political_advisor_europe_5
+	
+			do_effect = {
+				NOT = {
+					has_government = georgist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		hermann_muller = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { democratic_socialist_politician }
+			
+			picture = generic_political_advisor_europe_3
+	
+			do_effect = {
+				NOT = {
+					has_government = democratic_socialist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		paul_levi = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { collectivist_politician }
+			
+			picture = generic_political_advisor_europe_4
+	
+			do_effect = {
+				NOT = {
+					has_government = collectivist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ernst_meyer = {
+			
+			
+			allowed = {
+				original_tag = "PRS"
+			}			
+			
+			traits = { de_leonist_politician }
+			
+			picture = generic_political_advisor_europe_1
+	
+			do_effect = {
+				NOT = {
+					has_government = de_leonist
+				}
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		PRS_franz_von_papen = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { silent_workhorse }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_hermann_ehrhardt = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_political_advisor_europe_2
+			
+			traits = { backroom_backstabber }
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		PRS_hans_albers = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_political_advisor_europe_1
+			
+			traits = { smooth_talking_charmer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_gustav_krupp = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_army_europe_3
+			
+			traits = { war_industrialist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_oskar_schindler = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_political_advisor_europe_4
+			
+			traits = { captain_of_industry }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_johann_von_kielmansegg = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { armaments_organizer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_werner_von_blomberg = {
+			
+			allowed = {
+				original_tag = "PRS"
+			}
+
+			picture = generic_political_advisor_europe_2
+			
+			traits = { quartermaster_general }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	# MILITARY
+	army_chief = {
+	    
+		
+		walther_von_brauchitsch = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_walther_von_brauchitsch
+			
+			cost = 50
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		heinz_guderian = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_heinz_guderian
+
+			cost = 50
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_kurt_zeitzler = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		PRS_werner_von_fritsch = {
+			
+			picture = idea_werner_von_fritsch
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		alfred_jodl = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = generic_army_europe_1
+			
+
+			
+			traits = { army_chief_maneuver_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+	    
+		erich_raeder = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_navy_europe_2
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		karl_donitz = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_donitz
+			
+
+			
+			traits = { navy_chief_naval_aviation_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hans_georg_von_friedeburg = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_navy_europe_1
+			
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+	
+	}
+	
+	air_chief = {
+	    
+		walther_wever = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_walther_wever
+			
+
+			
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hans_jeschonnek = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_air_europe_3
+
+			
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ernst_udet = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_ernst_udet
+
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+	    
+		hans_von_seeckt = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_army_europe_3
+
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		walter_schellenberg = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_army_europe_2
+
+			
+			traits = { army_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hans_oster = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_army_europe_1
+
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		bruno_loerzer = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_air_europe_1
+			
+
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		werner_junck = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_air_europe_2
+
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		walter_storp = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_air_europe_3
+			
+
+			
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kurt_fricke = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_navy_europe_3
+
+			
+			traits = { navy_capital_ship_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		walter_warzecha = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_navy_europe_1
+
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hermann_bauer = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_generic_navy_europe_2
+			
+
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+	}
+	
+	tank_manufacturer = {
+
+		designer = yes
+	
+		# TECHNOLOGY
+		berliner_maschinenbau = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			picture = idea_generic_tank_manufacturer_3
+
+			traits = { heavy_tank_manufacturer }
+		}
+	
+		auto_union = {
+		
+			picture = generic_tank_manufacturer_2
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			picture = idea_generic_tank_manufacturer_1
+
+			
+
+			traits = { fast_tank_manufacturer }
+		}
+		
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		aeg = {
+		
+			allowed = {
+				original_tag = PRS
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			picture = idea_generic_motorized_equipment_manufacturer_3
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}
+		
+		fb_radom = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			picture = idea_generic_infantry_equipment_manufacturer_2
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	
+		hanomag = {
+						
+			allowed = {
+				original_tag = PRS
+			}		
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			picture = idea_generic_artillery_manufacturer_1
+			
+			traits = { artillery_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		heinkel = {
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_heinkel
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		junkers = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			picture = idea_junkers
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		daimler = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			picture = air_war_plans_division_focus
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		arado_flugzeugwerke = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			picture = idea_generic_air_manufacturer_3
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		
+	}
+	
+	naval_manufacturer = { 
+	
+		designer = yes
+	
+		pommern_meer_unternehmen = {
+			
+			picture = generic_naval_manufacturer_1
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.25
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	
+		preussenwerft = {
+			
+			picture = generic_naval_manufacturer_4
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+	
+	industrial_concern = {
+	
+		berlin_stahlwerk = {
+			
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		siemens = {
+			
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_siemens
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}
+	}
+	
+	theorist = {
+		gerd_von_rundstedt = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_gerd_von_rundstedt
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_grand_battle_plan = 0.10
+			}
+			
+			traits = { grand_battle_plan_expert }
+		}
+		
+		heinz_reinefarth = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+						
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			picture = idea_generic_political_advisor_europe_3
+			
+			traits = { military_theorist }
+		}
+		
+		otto_ciliax = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_otto_ciliax
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_fleet_in_being = 0.10
+			}
+			
+			traits = { grand_fleet_proponent }
+		}
+		
+		gerhard_wagner = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			picture = idea_generic_political_advisor_europe_2
+			
+			traits = { naval_theorist }
+		}
+		
+		dieter_grau = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			cost = 250 
+			
+			research_bonus = {
+				cat_operational_integrity = 0.10
+			}
+			
+			picture = idea_generic_air_europe_2
+			
+			traits = { assault_avaition }
+		}
+		
+		wernher_von_braun = {
+						
+			allowed = {
+				original_tag = PRS
+			}
+			
+			picture = idea_von_braun
+						
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		kurt_diebner = {
+			
+			
+			allowed = {
+				original_tag = PRS
+			}
+			
+			
+			research_bonus = {
+				nuclear = 0.10
+			}
+			
+			picture = idea_generic_political_advisor_south_america_3
+			
+			traits = { nuclear_scientist }
+		}
+	}
+}

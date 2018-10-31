@@ -1,0 +1,331 @@
+ideas = {
+
+    country = {
+	    first_revolution = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.2
+			}
+			rule = {
+				can_create_factions = yes
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    AUS_heavy_industry_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+	    AUS_agricultural_rework_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+	    AUS_toasters_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+	    AUS_Skoda_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 
+				}
+				artillery = {
+					build_cost_ic = -0.1 
+				}
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+
+	country = {
+	    AUS_rapid_training_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	}
+	
+	country = {
+	    AUS_massive_army_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	}
+	
+	country = {
+	    AUS_elite_army_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				minimum_training_level = 0.5
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	}
+	
+	country = {
+	    AUS_elite_training_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = 0.1
+				attrition = -0.1
+				supply_consumption_factor = -0.10
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	}
+	
+	country = {
+	    AUS_well_planned_defence_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			
+			picture = generic_goods_red_bonus
+			
+		}
+	}
+	
+	country = {
+	    AUS_de_leonist_influence_idea = {
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.01
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    AUS_austria_hungary_focus_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.1
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    AUS_unser_kampf_focus_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.1
+				stability_factor = 0.3
+				war_support_factor = 0.3
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	country = {
+	    AUS_ban_nationalism_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				nationalist_drift = -0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    AUS_under_austrian_protection_idea = {
+		
+		    allowed = {
+				original_tag = ROM
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.05
+				de_leonist_acceptance = 85
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    graz_restrictions = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.2
+				training_time_army_factor = 0.1
+				army_morale_factor = -0.05
+				land_reinforce_rate = -0.05
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+
+	country = {
+	    de_leonist_union_member = {
+		
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.05
+				research_time_factor = -0.2
+				consumer_goods_factor = 0.3
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				production_speed_industrial_complex_factor = 0.15
+				political_power_cost = 0.25
+				industrial_capacity_factory = 0.1
+			}
+			
+			picture = GFX_idea_syndicalist_union_member
+			
+		}
+	}
+}

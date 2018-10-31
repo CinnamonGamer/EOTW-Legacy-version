@@ -1,0 +1,41 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Inifanduri Kupesana"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 5117
+		division_template = "Inifanduri Kupesana" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1st Army"
+		location = 8193
+		division_template = "Inifanduri Kupesana" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2nd Army"
+		location = 191
+		division_template = "Inifanduri Kupesana" 	
+		start_experience_factor = 0.3
+	}
+	
+
+
+
+
+}

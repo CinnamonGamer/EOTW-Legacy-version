@@ -1,0 +1,4440 @@
+﻿###########################
+# FRA Events
+###########################
+
+add_namespace = france
+
+#Arc De Triomphe
+country_event = {
+	id = france.1
+	title = france.1.t
+	desc = france.1.d
+	picture = GFX_report_event_dead_soldiers
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		tag = FRA
+		date > 1936.1.1
+		date < 1936.1.18
+	}
+	
+	
+	option = {
+		name = france.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news_FRA.1 } }
+		}
+		add_stability = -0.1
+		add_named_threat = { threat = 1 name = arc_bombed }
+	}
+}
+
+#Council Organisation - State
+country_event = {
+    id = france.2
+	title = france.2.t
+	desc = france.2.d
+	picture = GFX_report_event_soviet_purge_officers_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = FRA
+		date > 1936.3.2
+		date < 1936.3.17
+		
+	}
+	
+	
+	option = {
+	    name = france.2.o1
+		ai_chance = {
+			factor = 85
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.02
+		}
+		add_political_power = 20
+		
+	}
+	
+	option = {
+	    name = france.2.o2
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.02
+		}
+		add_political_power = 5
+		
+	}
+	
+	option = {
+	    name = france.2.o3
+		ai_chance = {
+			factor = 4
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.02
+		}
+		add_political_power = -5
+		
+	}
+	
+	option = {
+	    name = france.2.o4
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.02
+		}
+		add_political_power = -30
+		
+	}
+	
+}
+
+#Council Organisation - Education
+country_event = {
+    id = france.3
+	title = france.3.t
+	desc = france.3.d
+	picture = GFX_report_event_soviet_purge_officers_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = FRA
+		date > 1936.3.15
+		date < 1936.3.30
+		
+	}
+	
+	
+	option = {
+	    name = france.3.o1
+		ai_chance = {
+			factor = 85
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.02
+		}
+		add_political_power = 10
+		
+	}
+	
+	option = {
+	    name = france.3.o2
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.02
+		}
+		add_political_power = 2
+		
+	}
+	
+	option = {
+	    name = france.3.o3
+		ai_chance = {
+			factor = 4
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.02
+		}
+		add_political_power = -3
+		
+	}
+	
+	option = {
+	    name = france.3.o4
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.02
+		}
+		add_political_power = -20
+		
+	}
+	
+}
+
+#Council Organisation - Defense
+country_event = {
+    id = france.4
+	title = france.4.t
+	desc = france.4.d
+	picture = GFX_report_event_soviet_purge_officers_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = FRA
+		date > 1936.4.1
+		date < 1936.4.18
+		
+	}
+	
+	
+	option = {
+	    name = france.4.o1
+		ai_chance = {
+			factor = 70
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.02
+		}
+		add_political_power = 20
+		
+	}
+	
+	option = {
+	    name = france.4.o2
+		ai_chance = {
+			factor = 28
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.02
+		}
+		add_political_power = 5
+		
+	}
+	
+	option = {
+	    name = france.4.o3
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.02
+		}
+		add_political_power = -50
+		
+	}
+	
+	option = {
+	    name = france.4.o4
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.02
+		}
+		add_political_power = -100
+		
+	}
+	
+}
+
+#Cafe Meeting
+country_event = {
+    id = france.5
+	title = france.5.t
+	desc = france.5.d
+	picture = GFX_report_event_pierre_laval
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = FRA
+		date > 1936.10.1
+		date < 1936.10.16
+		
+	}
+	
+	option = {
+	    name = france.5.o1
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 10
+		set_country_flag = generals_continued_meetings
+		
+	}
+	
+	option = {
+	    name = france.5.o2
+		ai_chance = {
+			factor = 20
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = -0.01
+		}
+		add_political_power = -5
+		
+	}
+	
+}
+
+#Unrest
+country_event = {
+    id = france.6
+	title = france.6.t
+	desc = france.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = generals_continued_meetings
+		date > 1936.11.1
+		date < 1936.11.16
+	}
+	
+	option = {
+	    name = france.6.o1
+		ai_chance = {
+		    factor = 50
+	    }
+		set_country_flag = more_unrest
+		clr_country_flag = generals_continued_meetings
+		add_political_power = 10
+	}
+	
+	option ={
+	    name = france.6.o2
+		ai_chance = {
+		    factor = 50
+		}
+		add_political_power = -20
+		add_popularity = {
+			ideology = strasserist
+			popularity = -0.03
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = -0.03
+		}
+		clr_country_flag = generals_continued_meetings
+
+    }
+}
+
+#Military Friends
+country_event = {
+    id = france.7
+	title = france.7.t
+	desc = france.7.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = more_unrest
+		date > 1937.1.1
+		date < 1937.1.16
+	}
+	
+	option = {
+	    name = france.7.o1
+		ai_chance = {
+		    factor = 50
+	    }
+		set_country_flag = military_friends
+		clr_country_flag = more_unrest
+		add_political_power = 10
+	}
+	
+	option ={
+	    name = france.7.o2
+		ai_chance = {
+		    factor = 50
+		}
+		add_political_power = -25
+		add_popularity = {
+			ideology = strasserist
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = -0.05
+		}
+		clr_country_flag = more_unrest
+
+    }
+}
+
+#New Order
+country_event = {
+    id = france.8
+	title = france.8.t
+	desc = france.8.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = military_friends
+		date > 1937.5.1
+		date < 1937.5.16
+	}
+	
+	option = {
+	    name = france.8.o1
+		ai_chance = {
+		    factor = 1
+	    }
+		set_politics = {
+			ruling_party = strasserist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.45
+		}
+		add_political_power = 10
+		set_country_flag = france_1937_coup
+		set_country_flag = strasserist_rev_1937
+		clr_country_flag = military_friends
+		add_stability = -0.1
+		
+	}
+	
+	option = {
+	    name = france.8.o2
+		ai_chance = {
+		    factor = 1
+	    }
+		set_politics = {
+			ruling_party = de_leonist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.45
+		}
+		add_political_power = 10
+		set_country_flag = france_1937_coup
+		set_country_flag = de_leonist_rev_1937
+		clr_country_flag = military_friends
+		add_stability = -0.1
+		
+	}
+	
+	option = {
+	    name = france.8.o3
+		ai_chance = {
+		    factor = 98
+	    }
+		add_popularity = {
+			ideology = de_leonist
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = -0.1
+		}
+		add_political_power = -10
+		set_country_flag = france_1937_coup
+		set_country_flag = retain_control_1937
+		clr_country_flag = military_friends
+		add_stability = -0.1
+		
+	}
+}
+
+#French Somaliland Purchase
+country_event = {
+    id = france.9
+	title = france.9.t
+	desc = france.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_global_flag = ethiopia_wants_french_somaliland
+	}
+	
+	option = {
+	    name = france.9.o1
+		ai_chance = {
+		    factor = 50
+	    }
+		add_political_power = -10
+		set_global_flag = france_accepts_somaliland_purchase
+		clr_global_flag = ethiopia_wants_french_somaliland
+	}
+	
+	option = {
+	    name = france.9.o2
+		ai_chance = {
+		    factor = 50
+	    }
+		set_global_flag = france_refuses_somaliland_purchase
+		clr_global_flag = ethiopia_wants_french_somaliland
+	}
+}
+
+#Expo Preparations
+country_event = {
+    id = france.11
+	title = france.11.t
+	desc = france.11.d
+	picture = report_event_vienna_construction_plan
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		date > 1937.5.1
+        date < 1937.5.15
+	}	
+	
+	option = {
+	    name = france.11.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.2 } }
+		}
+	}
+}
+
+#Ultimatum from France
+country_event = {
+    id = france.12
+	title = france.12.t
+	desc = france.12.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Offer puppet
+	    name = france.12.o1
+		ai_chance = {
+			factor = 20
+		}
+		FRA = {
+				country_event = france.13
+		}
+	}
+	
+	option = { #Offer Western Switzerland
+	    name = france.12.o2
+		ai_chance = {
+			factor = 30
+		}
+		FRA = {
+				country_event = france.14
+		}
+	}
+	
+	option = { #Accept
+	    name = france.12.o3
+		ai_chance = {
+			factor = 10
+		}
+		FRA = {
+				country_event = france.15
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.12.o4
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+				country_event = france.16
+		}
+	}
+}
+
+#Swiss offer puppet
+country_event = {
+    id = france.13
+	title = france.13.t
+	desc = france.13.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.13.o1
+		ai_chance = {
+			factor = 65
+		}
+		FRA = { puppet = SWI }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.23 } }
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.13.o2
+		ai_chance = {
+			factor = 35
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SWI
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.24 } }
+		}
+	}
+}
+
+#Swiss offer Western Switzerland
+country_event = {
+    id = france.14
+	title = france.14.t
+	desc = france.14.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.14.o1
+		ai_chance = {
+			factor = 80
+		}
+		transfer_state = 3
+		hidden_effect = {
+		    every_country = { news_event = { id = news.25 } }
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.14.o2
+		ai_chance = {
+			factor = 20
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SWI
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.26 } }
+		}
+	}
+}
+
+#Swiss Accept
+country_event = {
+    id = france.15
+	title = france.15.t
+	desc = france.15.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.15.o1
+		ai_chance = {
+			factor = 100
+		}
+		annex_country = { target = SWI transfer_troops = no }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.27 } }
+		}
+	}
+}
+
+#Swiss Refuse
+country_event = {
+    id = france.16
+	title = france.16.t
+	desc = france.16.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.16.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SWI
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.28 } }
+		}
+	}
+}
+
+#Befriending France
+country_event = {
+    id = france.17
+	title = france.17.t
+	desc = france.17.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.17.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 200
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.29 } }
+		}
+	}
+}
+
+#Islands for Investment
+country_event = {
+    id = france.18
+	title = france.18.t
+	desc = france.18.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Invest
+	    name = france.18.o1 
+		ai_chance = {
+			factor = 80
+		}
+		16 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		14 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		}
+		158 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		transfer_state = 1
+		transfer_state = 114
+		transfer_state = 177
+		hidden_effect = {
+		    every_country = { news_event = { id = news.30 } }
+		}
+	}
+	
+	option = {
+	    name = france.18.o2 
+		ai_chance = {
+			factor = 20
+		}
+		FRA = {
+			country_event = france.19
+		}
+	}
+}
+
+#IfI refused
+country_event = {
+    id = france.19
+	title = france.19.t
+	desc = france.19.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.19.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -30
+	}
+}
+
+#Future of Croatia
+country_event = {
+    id = france.20
+	title = france.20.t
+	desc = france.20.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Puppet
+	    name = france.20.o1
+		ai_chance = {
+			factor = 30
+		}
+		CRO = {
+			country_event = france.21
+		}
+	}
+	
+	option = { #Alliance 
+	    name = france.20.o2
+		ai_chance = {
+			factor = 70
+		}
+		CRO = {
+			country_event = france.24
+		}
+	}
+}
+
+#France demands puppet control
+country_event = {
+    id = france.21
+	title = france.21.t
+	desc = france.21.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.21.o1
+		ai_chance = {
+			factor = 65
+		}
+		FRA = {
+			country_event = france.22
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.21.o2
+		ai_chance = {
+			factor = 35
+		}
+		FRA = {
+			country_event = france.23
+		}
+	}
+}
+
+#Croatia Accepts puppet control
+country_event = {
+    id = france.22
+	title = france.22.t
+	desc = france.22.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.22.o1
+		ai_chance = {
+			factor = 100
+		}
+		FRA = { puppet = CRO }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.31 } }
+		}
+	}
+}
+
+#Croatia Refuses puppet control
+country_event = {
+    id = france.23
+	title = france.23.t
+	desc = france.23.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.23.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CRO
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.32 } }
+		}
+	}
+}
+
+#France offers alliance
+country_event = {
+    id = france.24
+	title = france.24.t
+	desc = france.24.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.24.o1
+		ai_chance = {
+			factor = 80
+		}
+		FRA = { add_to_faction = CRO }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.33 } }
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.24.o2
+		ai_chance = {
+			factor = 20
+		}
+		FRA = {
+			country_event = france.25
+		}
+	}
+}
+
+#Croatia refuses alliance
+country_event = {
+    id = france.25
+	title = france.25.t
+	desc = france.25.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.25.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CRO
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.34 } }
+		}
+	}
+}
+
+#Istria or War
+country_event = {
+    id = france.26
+	title = france.26.t
+	desc = france.26.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.26.o1
+		ai_chance = {
+			factor = 60
+		}
+		FRA = {
+			country_event = france.27
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.26.o2
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+			country_event = france.28
+		}
+		add_stability = 0.2
+	}
+}
+
+#Istria or War - Croatia Accepts
+country_event = {
+    id = france.27
+	title = france.27.t
+	desc = france.27.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.27.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 736
+		every_country = {
+			add_opinion_modifier = { target = FRA modifier = istria_annexation }  
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.35 } }
+		}
+	}
+}
+
+#Istria or War - Croatia Refuses
+country_event = {
+    id = france.28
+	title = france.28.t
+	desc = france.28.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.28.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = CRO
+			generator = { 736 }
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.36 } }
+		}
+	}
+}
+
+#Science Agreement With France
+country_event = {
+    id = france.29
+	title = france.29.t
+	desc = france.29.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.29.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		add_tech_bonus = {
+			name = synthetic_resources_bonus
+			bonus = 0.5
+			uses = 1
+			category = synth_resources
+		}
+	}
+}
+
+#France Proposes alliance - Scotland
+country_event = {
+    id = france.30
+	title = france.30.t
+	desc = france.30.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.30.o1
+		ai_chance = {
+			factor = 55
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 200
+		}
+		FRA = {
+			country_event = france.31
+		}
+		
+	}
+	
+	option = { #Refuse
+	    name = france.30.o2
+		ai_chance = {
+			factor = 45
+		}
+		FRA = {
+			country_event = france.32
+		}
+	}
+}
+
+#Scotland Accepts alliance
+country_event = {
+    id = france.31
+	title = france.31.t
+	desc = france.31.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.31.o1
+		ai_chance = {
+			factor = 100
+		}
+		FRA = { add_to_faction = SCD }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.37 } }
+		}
+	}
+}
+
+#Scotland Refuses alliance
+country_event = {
+    id = france.32
+	title = france.32.t
+	desc = france.32.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.32.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -20
+		add_stability = -0.01
+	}
+}
+	
+#Sunderland Ultimatum
+country_event = {
+    id = france.33
+	title = france.33.t
+	desc = france.33.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = { #France
+	    name = france.33.o1
+		ai_chance = {
+			factor = 25
+		}
+		FRA = {
+			country_event = france.34
+		}
+	}
+	
+	option = { #Scotland
+	    name = france.33.o2
+		ai_chance = {
+			factor = 50
+		}
+		SCD = {
+			country_event = france.35
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.33.o3
+		ai_chance = {
+			factor = 25
+		}
+		FRA = {
+			country_event = france.36
+		}
+	}
+}
+
+#Sunderland Ultimatum - England Accepts
+country_event = {
+    id = france.34
+	title = france.34.t
+	desc = france.34.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = france.34.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 746
+		hidden_effect = {
+		    every_country = { news_event = { id = news.38 } }
+		}
+	}
+}
+
+#Sunderland Ultimatum - Scotland
+country_event = {
+    id = france.35
+	title = france.35.t
+	desc = france.35.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = france.35.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 746
+		hidden_effect = {
+		    every_country = { news_event = { id = news.39 } }
+		}
+	}
+}
+
+#Sunderland Ultimatum - England Refuses
+country_event = {
+    id = france.36
+	title = france.36.t
+	desc = france.36.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option  = {
+	    name = france.36.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ENG
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.40 } }
+		}
+	}
+}
+
+#Future of Ireland
+country_event = {
+    id = france.37
+	title = france.37.t
+	desc = france.37.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = { #Ulster for Scotland
+	    name = france.37.o1
+		ai_chance = {
+			factor = 70
+		}
+		IRE = {
+			country_event = france.38
+		}
+	}
+	
+	option = { #Ulster and Connaught for Scotland
+	    name = france.37.o2
+		ai_chance = {
+			factor = 20
+		}
+		IRE = {
+			country_event = france.39
+		}
+	}
+	
+	option = { #Complete unification with Scotland
+	    name = france.37.o3
+		ai_chance = {
+			factor = 10
+		}
+		IRE = {
+			country_event = france.40
+		}
+	}
+}
+
+#Future of Ireland - Ulster to Scotland
+country_event = {
+    id = france.38
+	title = france.38.t
+	desc = france.38.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = { #Accept
+	    name = france.38.o1
+		ai_chance = {
+			factor = 80
+		}
+		SCD = {
+			country_event = france.41
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.38.o2
+		ai_chance = {
+			factor = 20
+		}
+		FRA = {
+			country_event = france.42
+		}
+	}
+}
+
+#Future of Ireland - Ulster and Connaught to Scotland
+country_event = {
+    id = france.39
+	title = france.39.t
+	desc = france.39.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = { #Accept
+	    name = france.39.o1
+		ai_chance = {
+			factor = 60
+		}
+		SCD = {
+			country_event = france.43
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.39.o2
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+			country_event = france.44
+		}
+	}
+}
+
+#Future of Ireland - Complete unification with Scotland
+country_event = {
+    id = france.40
+	title = france.40.t
+	desc = france.40.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = { #Accept
+	    name = france.40.o1
+		ai_chance = {
+			factor = 20
+		}
+		SCD = {
+			country_event = france.45
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.40.o2
+		ai_chance = {
+			factor = 80
+		}
+		FRA = {
+			country_event = france.46
+		}
+	}
+}
+
+#Future of Ireland - Ireland hands over Ulster
+country_event = {
+    id = france.41
+	title = france.41.t
+	desc = france.41.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes	
+	
+	option = {
+	    name = france.41.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 119
+		hidden_effect = {
+		    every_country = { news_event = { id = news.41 } }
+		}
+	}
+}
+
+#Future of Ireland - Ireland refuses to hand over Ulster
+country_event = {
+    id = france.42
+	title = france.42.t
+	desc = france.42.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.42.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = IRE
+		}
+	}
+}
+
+#Future of Ireland - Ireland hands over Ulster and Connaught
+country_event = {
+    id = france.43
+	title = france.43.t
+	desc = france.43.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.43.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 119 
+		transfer_state = 134
+		hidden_effect = {
+		    every_country = { news_event = { id = news.42 } }
+		}
+	}
+}
+
+#Future of Ireland - Ireland refuses to hand over Ulster and Connaught
+country_event = {
+    id = france.44
+	title = france.44.t
+	desc = france.44.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.44.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = IRE
+		}
+	}
+}
+
+#Future of Ireland - Ireland accepts unification
+country_event = {
+    id = france.45
+	title = france.45.t
+	desc = france.45.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.45.o1
+		ai_chance = {
+			factor = 100
+		}
+		annex_country = { target = IRE transfer_troops = yes }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.43 } }
+		}
+	}
+}
+
+#Future of Ireland - Ireland refuses complete unification
+country_event = {
+    id = france.46
+	title = france.46.t
+	desc = france.46.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.46.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = IRE
+		}
+	}
+}
+
+#The European Union
+country_event = {
+    id = france.47
+	title = france.47.t
+	desc = france.47.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.47.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_ideas = european_union_member
+		every_country = {
+			limit = { capital_scope = { is_on_continent = europe } 
+			AND = {
+			NOT = { tag = FRA }
+			}
+			}
+			country_event = france.48
+		}
+		every_country = {
+			limit = { AND = { is_in_faction_with = FRA capital_scope = { is_on_continent = europe }
+			}
+			}
+			add_ideas = european_union_member
+		}
+		add_named_threat = { threat = -20 name = european_union_formed }
+	}
+}
+
+#Joining the EU
+country_event = {
+    id = france.48
+	title = france.48.t
+	desc = france.48.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Join
+	    name = france.48.o1
+		ai_chance = {
+			factor = 60
+		}
+		add_opinion_modifier = { target = FRA modifier = european_union }
+		add_ideas = european_union_member
+		add_named_threat = { threat = -0.3 name = joined_the_eu }
+	}
+	
+	option = { #Don't join
+	    name = france.48.o2 
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -40
+		add_stability = -0.05
+	}
+}
+
+#Austria - Unholy Alliance
+country_event = {
+    id = france.49
+	title = france.49.t
+	desc = france.49.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+    option = { #Accept
+	    name = france.49.o1
+		ai_chance = {
+			factor = 20
+		}
+		dismantle_faction = yes 
+		FRA = {
+			country_event = france.50
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.49.o2
+		ai_chance = {
+			factor = 80
+		}
+		FRA = {
+			country_event = france.51
+		}
+	}
+}
+
+#Unholy Alliance - Austria Accepts
+country_event = {
+    id = france.50
+	title = france.50.t
+	desc = france.50.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.50.o1 
+		ai_chance = {
+			factor = 100
+		}
+		dismantle_faction = yes 
+		create_faction = paris_vienna_axis
+		add_to_faction = AUS
+		hidden_effect = {
+		    every_country = { news_event = { id = news.44 } }
+		}
+	}
+}
+
+#Unholy Alliance - Austria Refuses
+country_event = {
+    id = france.51
+	title = france.51.t
+	desc = france.51.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.51.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = AUS
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.45 } }
+		}
+	}
+}
+
+#Retaking Hispanola
+country_event = {
+    id = france.52
+	title = france.52.t
+	desc = france.52.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Conquer
+	    name = france.52.o1
+		ai_chance = {
+			factor = 70
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HSP
+		}
+	}
+	
+	option = { #Try diplomacy
+	    name = france.52.o2
+		ai_chance = {
+			factor = 30
+		}
+		HSP = {
+			country_event = france.53
+		}
+	}
+}
+
+#France offers diplomatic solution to Hispanola
+country_event = {
+    id = france.53
+	title = france.53.t
+	desc = france.53.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.53.o1
+		ai_chance = {
+			factor = 5
+		}
+		FRA = {
+			country_event = france.54
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.53.o2
+		ai_chance = {
+			factor = 95
+		}
+		FRA = {
+			country_event = france.55
+		}
+	}
+}
+
+#Hispanola Accepts
+country_event = {
+    id = france.54
+	title = france.54.t
+	desc = france.54.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.54.o1
+		ai_chance = {
+			factor = 100
+		}
+		annex_country = { target = HSP transfer_troops = no }
+	}
+}
+
+#Hispanola Refuses
+country_event = {
+    id = france.55
+	title = france.55.t
+	desc = france.55.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.55.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HSP
+		}
+	}
+}
+
+#France Demands Northern Amazon - Brazil
+country_event = {
+    id = france.56
+	title = france.56.t
+	desc = france.56.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.56.o1
+		ai_chance = {
+			factor = 60
+		}
+		FRA = {
+			country_event = france.57
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.56.o2
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+			country_event = france.58
+		}
+		add_war_support = 0.1
+		
+	}
+}
+
+#Brazil Accepts
+country_event = {
+    id = france.57
+	title = france.57.t
+	desc = france.57.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.57.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 767
+		hidden_effect = {
+		    every_country = { news_event = { id = news.46 } }
+		}
+	}
+}
+
+#Brazil Refuses
+country_event = {
+    id = france.58
+	title = france.58.t
+	desc = france.58.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.58.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = BRA
+			generator = { 747 }
+		}
+	}
+}
+
+#Canada - Betray England
+country_event = {
+    id = france.59
+	title = france.59.t
+	desc = france.59.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Do it 
+	    name = france.59.o1
+		ai_chance = {
+			factor = 20
+		}
+		ENG = {
+			if = { limit = { is_in_faction_with = CAN }
+				remove_from_faction = CAN
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 200
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.47 } }
+		}
+	}
+	
+	option = { #Don't do it
+	    name = france.59.o2
+		ai_chance = {
+			factor = 80
+		}
+		ENG = {
+		    add_opinion_modifier = { target = CAN modifier = united_against_france }
+		}
+		FRA = {
+			country_event = france.60
+		}
+	}
+}
+
+#Canada doesn't betray England
+country_event = {
+    id = france.60
+	title = france.60.t
+	desc = france.60.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.60.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -10
+	}
+}
+
+#Drafting the Arctic Treaty
+country_event = {
+    id = france.61
+	title = france.61.t
+	desc = france.61.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Iceland
+	    name = france.61.o1
+		ai_chance = {
+			factor = 20
+		}
+		DEN = {
+			country_event = france.62
+		}
+	}
+	
+	option = { #Greenland
+	    name = france.61.o2
+		ai_chance = {
+			factor = 70
+		}
+		DEN = {
+			country_event = france.63
+		}
+	}
+	
+	option = { #Iceland and Greenland
+	    name = france.61.o3
+		ai_chance = {
+			factor = 10
+		}
+		DEN = {
+			country_event = france.64
+		}
+	}
+}
+
+#France asks for Iceland
+country_event = {
+    id = france.62
+	title = france.62.t
+	desc = france.62.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.62.o1
+		ai_chance = {
+			factor = 60
+		}
+		99 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		FRA = {
+			country_event = france.65
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.62.o2
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+			country_event = france.66
+		}
+	}
+}
+
+#France asks for Greenland
+country_event = {
+    id = france.63
+	title = france.63.t
+	desc = france.63.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.63.o1
+		ai_chance = {
+			factor = 70
+		}
+		99 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		FRA = {
+			country_event = france.67
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.63.o2
+		ai_chance = {
+			factor = 30
+		}
+		FRA = {
+			country_event = france.68
+		}
+	}
+}
+
+#France asks for Iceland and Greenland
+country_event = {
+    id = france.64
+	title = france.64.t
+	desc = france.64.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.64.o1
+		ai_chance = {
+			factor = 30
+		}
+		99 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+		}
+		FRA = {
+			country_event = france.69
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.64.o2
+		ai_chance = {
+			factor = 70
+		}
+		FRA = {
+			country_event = france.70
+		}
+	}
+}
+
+#Denmark Accepts for Iceland
+country_event = {
+    id = france.65
+	title = france.65.t
+	desc = france.65.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.65.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 100
+	}
+}
+
+#Denmark Refuses for Iceland
+country_event = {
+    id = france.66
+	title = france.66.t
+	desc = france.66.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.66.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -10
+	}
+}
+
+#Denmark Accepts for Greenland
+country_event = {
+    id = france.67
+	title = france.67.t
+	desc = france.67.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.67.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 101
+	}
+}
+
+#Denmark Refuses for Greenland
+country_event = {
+    id = france.68
+	title = france.68.t
+	desc = france.68.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.68.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -10
+	}
+}
+
+#Denmark Accepts for Iceland and Greenland
+country_event = {
+    id = france.69
+	title = france.69.t
+	desc = france.69.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.69.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 101
+		transfer_state = 100
+	}
+}
+
+#Denmark Refuses for Iceland and Greenland
+country_event = {
+    id = france.70
+	title = france.70.t
+	desc = france.70.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.70.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -10
+	}
+}
+
+#The Kongo Expedition
+country_event = {
+    id = france.71
+	title = france.71.t
+	desc = france.71.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Be vassalised
+	    name = france.71.o1
+		ai_chance = {
+			factor = 60
+		}
+		FRA = {
+			country_event = france.72
+		}
+	}
+	
+	option = { #Refuse to be vassalised
+	    name = france.71.o2
+		ai_chance = {
+			factor = 10
+		}
+		FRA = {
+			country_event = france.73
+		}
+	}
+	
+	option = { #Look to neighbours for help
+	    name = france.71.o3
+		ai_chance = {
+			factor = 30
+		}
+		ETH = {
+			country_event = france.74
+		}
+	}
+}
+
+#Kongo Accepts Vassalisation
+country_event = {
+    id = france.72
+	title = france.72.t
+	desc = france.72.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.72.o1
+		ai_chance = {
+			factor = 100
+		}
+		FRA = { puppet = KON }
+		hidden_effect = {
+		    every_country = { news_event = { id = news.48 } }
+		}
+	}
+}
+
+#Kongo Refuses Vassalisation
+country_event = {
+    id = france.73
+	title = france.73.t
+	desc = france.73.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.73.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KON
+		}
+	}
+}
+
+#Kongo Asks for help - Ethiopia
+country_event = {
+    id = france.74
+	title = france.74.t
+	desc = france.74.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.74.o1 
+		ai_chance = {
+			factor = 80
+		}
+		FRA = {
+			if = { limit = { is_in_faction_with = ETH }
+				remove_from_faction = ETH
+			}
+		}
+		KON = {
+			country_event = france.75
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.74.o2
+		ai_chance = {
+			factor = 20
+		}
+		FRA = {
+		    add_opinion_modifier = { target = ETH modifier = rejected_the_kongo }
+			country_event = france.77
+		}
+		KON = {
+			country_event = france.76
+		}
+	}
+}
+
+#Ethiopia Accepts
+country_event = {
+    id = france.75
+	title = france.75.t
+	desc = france.75.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.75.o1
+		ai_chance = {
+			factor = 5
+		}
+		create_faction = united_africa
+		add_to_faction = ETH
+		FRA = {
+			country_event = france.79
+		}
+	}
+	
+	option = { #Invite Angola
+	    name = france.75.o2
+		ai_chance = {
+			factor = 95
+		}
+		create_faction = united_africa
+		add_to_faction = ETH
+		ANG = {
+			country_event = france.78
+		}
+	}
+}
+
+#Ethiopia Refuses
+country_event = {
+    id = france.76
+	title = france.76.t
+	desc = france.76.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.76.o1 
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.02
+	}
+}
+
+#Ethiopia Refuses - France
+country_event = {
+    id = france.77
+	title = france.77.t
+	desc = france.77.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.77.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KON
+		}
+	}
+}
+
+#Kongo Invites to faction
+country_event = {
+    id = france.78
+	title = france.78.t
+	desc = france.78.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.78.o1
+		ai_chance = {
+			factor = 90
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "KON"
+			value = 200
+		}
+		KON = {
+		    add_to_faction = ANG
+		}
+		FRA = {
+			country_event = france.79
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.78.o2
+		ai_chance = {
+			factor = 10
+		}
+		FRA = {
+			country_event = france.79
+		}
+	}
+}
+
+#Kongo has formed a faction
+country_event = {
+    id = france.79
+	title = france.79.t
+	desc = france.79.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.79.o1 
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KON
+		}
+	}
+}
+
+#Ottomans - French betrayal
+country_event = {
+    id = france.80
+	title = france.80.t
+	desc = france.80.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.80.o1 
+		ai_chance = {
+			factor = 100
+		}
+		add_ai_strategy = {
+			type = antagonize
+			id = "FRA"
+			value = 100
+		}
+		add_war_support = 0.15
+		FRA = {
+			if = { limit = { is_in_faction_with = TUR }
+				remove_from_faction = TUR
+			}
+		}
+	}
+}
+
+#What to give Ottomans
+country_event = {
+    id = france.81
+	title = france.81.t
+	desc = france.81.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Libyan coast
+	    name = france.81.o1
+		ai_chance = {
+			factor = 50
+		}
+		TUR = {
+			country_event = france.82
+			add_opinion_modifier = { target = FRA modifier = libyan_coast }
+		}
+	}
+	
+	option = { #All of Libya
+	    name = france.81.o2
+		ai_chance = {
+			factor = 30
+		}
+		TUR = {
+			country_event = france.83
+			add_opinion_modifier = { target = FRA modifier = libya_transfer }
+		}
+	}
+	
+	option = { #Libya and Tunisia
+	    name = france.81.o3
+		ai_chance = {
+			factor = 20
+		}
+		TUR = {
+			country_event = france.84
+			add_opinion_modifier = { target = FRA modifier = libya_and_tunisia }
+		}
+	}
+}
+
+#France offers the Libyan coast
+country_event = {
+    id = france.82
+	title = france.82.t
+	desc = france.82.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.82.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 448
+		transfer_state = 661
+	}
+}
+
+#France offers Libya
+country_event = {
+    id = france.83
+	title = france.83.t
+	desc = france.83.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.83.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 448
+		transfer_state = 661
+		transfer_state = 273
+	}
+}
+
+#France offers Libya and Tunisia
+country_event = {
+    id = france.84
+	title = france.84.t
+	desc = france.84.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.84.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 448
+		transfer_state = 661
+		transfer_state = 273
+		transfer_state = 665
+		transfer_state = 458
+	}
+}
+
+#South China Purchase - China
+country_event = {
+    id = france.85
+	title = france.85.t
+	desc = france.85.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.85.o1
+		ai_chance = {
+			factor = 30
+		}
+		FRA = {
+			country_event = france.86
+		}
+		FRA = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -1
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = -2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = -1
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.85.o2
+		ai_chance = {
+			factor = 70
+		}
+		FRA = {
+			country_event = france.87
+		}
+	}
+}
+
+#South China Purchase - China Accepts
+country_event = {
+    id = france.86
+	title = france.86.t
+	desc = france.86.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.86.o1 
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 591
+		transfer_state = 594
+		hidden_effect = {
+		    every_country = { news_event = { id = news.49 } }
+		}
+	}
+}
+
+#South China Purchase - China Refuses
+country_event = {
+    id = france.87
+	title = france.87.t
+	desc = france.87.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.87.o1 
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -40
+		FRA = {
+			add_opinion_modifier = { target = CHI modifier = south_china_purchase_refused }
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.50 } }
+		}
+	}
+}
+
+#France Demands Qatar - Oman
+country_event = {
+    id = france.88
+	title = france.88.t
+	desc = france.88.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = france.88.o1
+		ai_chance = {
+			factor = 60
+		}
+		FRA = {
+			country_event = france.89
+		}
+	}
+	
+	option = { #Refuse
+	    name = france.88.o1
+		ai_chance = {
+			factor = 40
+		}
+		FRA = {
+			country_event = france.90
+		}
+	}
+}
+
+#Oman Accepts Demands
+country_event = {
+    id = france.89
+	title = france.89.t
+	desc = france.89.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { 
+	    name = france.89.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 748
+		hidden_effect = {
+		    every_country = { news_event = { id = news.51 } }
+		}
+	}
+}
+
+#Oman Rejects Demands
+country_event = {
+    id = france.90
+	title = france.90.t
+	desc = france.90.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { 
+	    name = france.90.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = OMA
+			generator = { 748 }
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.52 } }
+		}
+	}
+}
+
+#Napoleon's Legacy - The Grand Monuments
+country_event = {
+    id = france.91
+	title = france.91.t
+	desc = france.91.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #North
+	    name = france.91.o1
+		ai_chance = {
+			factor = 50
+		}
+		FRA = {
+			country_event = france.92
+		}
+	}
+	
+	option = { #South
+	    name = france.91.o2
+		ai_chance = {
+			factor = 50
+		}
+		FRA = {
+			country_event = france.93
+		}
+	}
+}
+
+#Grand Monuments - North - Pan-Imperial Autoroute
+country_event = {
+    id = france.92
+	title = france.92.t
+	desc = france.92.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.92.o1
+		ai_chance = {
+			factor = 100
+		}
+		23 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		33 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		24 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		27 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		17 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		28 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#Grand Monuments - South - Coastal Autoroute
+country_event = {
+    id = france.93
+	title = france.93.t
+	desc = france.93.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.93.o1
+		ai_chance = {
+			factor = 100
+		}
+		19 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		31 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		22 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		21 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		735 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		158 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#Surrender when Austria has taken too much territory
+country_event = {
+	id = france.94
+	title = france.94.t
+	desc = france.94.d
+	picture = GFX_report_event_worried_french
+	
+	trigger = {
+		tag = FRA
+		has_war_with = AUS
+		surrender_progress > 0.7
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#Surrender and offer territory
+	option = {
+		name = france.94.o1
+		ai_chance = {
+			factor = 100
+		}
+		AUS = {
+			country_event = { id = france.95 }
+		}
+		effect_tooltip = {
+			AUS = { white_peace = FRA }
+		}
+	}
+
+	#Never give up!!!
+	option = {
+		name = france.94.o2
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.1
+	}
+}
+
+#Austrian Response to French Surrender
+country_event = {
+	id = france.95
+	title = france.95.t
+	desc = france.95.d
+	picture = GFX_report_event_tanks_mexico_city
+
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = france.95.o1
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = FRA
+		every_country = {
+		    limit = { AND = {
+			    is_in_faction_with = FRA
+				has_war_with = AUS
+			} }
+			white_peace = AUS
+		}
+		AUS = {
+		    country_event = { days = 10 id = france.98 } 
+		}
+		FRA = { country_event = { id = france.97 } }
+	}
+
+	#Take it all
+	option = {
+		name = france.95.o2
+		ai_chance = {
+			factor = 0
+		}
+		FRA = { country_event = { id = france.96 } }
+	}
+}
+
+#Austria says nope
+country_event = {
+	id = france.96
+	title = france.96.t
+	desc = france.96.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	option = {
+		name = france.96.o1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Austria accepts
+country_event = {
+	id = france.97
+	title = france.97.t
+	desc = france.97.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	option = {
+		name = france.97.o1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Drafting the Treaty of Versailles - Territorial Changes
+country_event = {
+	id = france.98
+	title = france.98.t
+	desc = france.98.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #Minor
+	    name = france.98.o1
+		ai_chance = {
+			factor = 5
+		}
+		HOL = { transfer_state = 6 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 165 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 42 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 42 }
+		}
+		AUS = { transfer_state = 116 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 158 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 114 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 1 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 1 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 114 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 158 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 158 }
+		}
+		add_political_power = -100
+		add_manpower = -5000
+		add_stability = -0.01
+		AUS = {
+		    country_event = { days = 7 id = france.99 } 
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = lenient }
+		}
+	}
+	
+	option = { #Moderate
+	    name = france.98.o2
+		ai_chance = {
+			factor = 10
+		}
+		HOL = { transfer_state = 6 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 165 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 42 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 42 }
+		}
+		AUS = { transfer_state = 116 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 158 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 114 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 1 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 177 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 177 }
+		}
+		HOL = { transfer_state = 34 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 290 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 290 }
+		}
+		HOL = { transfer_state = 734 }
+		HOL = { transfer_state = 641 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 735 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 735 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 1 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 114 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 158 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 735 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 735 }
+		}
+		add_political_power = -300
+		add_manpower = -10000
+		add_stability = -0.02
+		AUS = {
+		    country_event = { days = 7 id = france.99 } 
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = moderate_territorial_loss }
+		}
+	}
+	
+	option = { #Harsh
+	    name = france.98.o3
+		ai_chance = {
+			factor = 50
+		}
+		HOL = { transfer_state = 6 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 165 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 165 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 42 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 42 }
+		}
+		AUS = { transfer_state = 116 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 158 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 114 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 1 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 177 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 177 }
+		}
+		HOL = { transfer_state = 34 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 290 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 290 }
+		}
+		HOL = { transfer_state = 734 }
+		HOL = { transfer_state = 641 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 735 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 735 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 1 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 114 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 158 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 735 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 735 }
+		}
+		if = {
+		    limit = { LOU = { is_puppet_of = FRA } }
+			FRA = { end_puppet = LOU }
+		}
+		release = ALG 
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } LOU = { is_puppet_of = FRA } } }
+			USA = { annex_country = { target = LOU } }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 21 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 21 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 21 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 21 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 31 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 31 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 22 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 22 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 31 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 31 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 22 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 22 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 28 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 28 }
+		}
+		HOL = { transfer_state = 8 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 461 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 461 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 462 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 462 }
+		}
+		ALG = { transfer_state = 665 }
+		ALG = { transfer_state = 458 }
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } 690 = { is_owned_by = FRA } } }
+			USA = { transfer_state = 690 }
+		}
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } 693 = { is_owned_by = FRA } } }
+			USA = { transfer_state = 693 }
+		}
+		if = {
+		    limit = { AND = { NOT = { USA = { is_in_faction_with = AUS } } 690 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 690 }
+		}
+		if = {
+		    limit = { AND = { NOT = { USA = { is_in_faction_with = AUS } } 690 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 693 }
+		}
+		AUS = { transfer_state = 730 }
+		ARG = { transfer_state = 299 }
+		if = {
+		    limit = { AND = { CHI = { is_in_faction_with = AUS } 728 = { is_owned_by = FRA } } }
+			CHI = { transfer_state = 728 }
+		}
+		if = {
+		    limit = { AND = { NOT = { CHI = { is_in_faction_with = AUS } } 728 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 728 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 708 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 708 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 543 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 543 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 709 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 709 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 708 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 708 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 543 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 543 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 709 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 709 }
+		}
+		AUS = { transfer_state = 178 }
+		AUS = { transfer_state = 697 }
+		AUS = { transfer_state = 689 }
+		AUS = { transfer_state = 320 }
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 429 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 429 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 427 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 427 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 424 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 424 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 425 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 425 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 423 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 423 }
+		}
+		add_political_power = -500
+		add_manpower = -20000
+		add_stability = -0.03
+		AUS = {
+		    country_event = { days = 7 id = france.99 } 
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = harsh_territorial_loss }
+		}
+	}
+	
+	option = { #Disasterous
+	    name = france.98.o4
+		ai_chance = {
+			factor = 35
+		}
+		HOL = { transfer_state = 6 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 165 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 165 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 165 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 42 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 42 }
+		}
+		AUS = { transfer_state = 116 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 158 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 114 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 1 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 177 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 177 }
+		}
+		HOL = { transfer_state = 34 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 290 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 290 }
+		}
+		HOL = { transfer_state = 734 }
+		HOL = { transfer_state = 641 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 735 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 735 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 1 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 1 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 114 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 114 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 158 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 158 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 735 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 735 }
+		}
+		if = {
+		    limit = { LOU = { is_puppet_of = FRA } }
+			FRA = { end_puppet = LOU }
+		}
+		release = ALG 
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } LOU = { is_puppet_of = FRA } } }
+			USA = { annex_country = { target = LOU } }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 21 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 21 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 21 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 21 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 31 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 31 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 22 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 22 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 31 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 31 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 22 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 22 }
+		}
+		if = {
+		    limit = { AND = { RHN = { is_in_faction_with = AUS } 28 = { is_owned_by = FRA } } }
+			RHN = { transfer_state = 28 }
+		}
+		HOL = { transfer_state = 8 }
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 461 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 461 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 462 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 462 }
+		}
+		ALG = { transfer_state = 665 }
+		ALG = { transfer_state = 458 }
+		ALG = { transfer_state = 460 }
+		ALG = { transfer_state = 459 }
+		ALG = { transfer_state = 513 }
+		ALG = { transfer_state = 514 }
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } 690 = { is_owned_by = FRA } } }
+			USA = { transfer_state = 690 }
+		}
+		if = {
+		    limit = { AND = { USA = { is_in_faction_with = AUS } 693 = { is_owned_by = FRA } } }
+			USA = { transfer_state = 693 }
+		}
+		if = {
+		    limit = { AND = { NOT = { USA = { is_in_faction_with = AUS } } 690 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 690 }
+		}
+		if = {
+		    limit = { AND = { NOT = { USA = { is_in_faction_with = AUS } } 690 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 693 }
+		}
+		AUS = { transfer_state = 730 }
+		ARG = { transfer_state = 299 }
+		if = {
+		    limit = { AND = { CHI = { is_in_faction_with = AUS } 728 = { is_owned_by = FRA } } }
+			CHI = { transfer_state = 728 }
+		}
+		if = {
+		    limit = { AND = { NOT = { CHI = { is_in_faction_with = AUS } } 728 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 728 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 708 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 708 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 543 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 543 }
+		}
+		if = {
+		    limit = { AND = { EAF = { has_government = ROOT } 709 = { is_owned_by = FRA } } }
+			EAF = { transfer_state = 709 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 708 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 708 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 543 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 543 }
+		}
+		if = {
+		    limit = { AND = { NOT = { EAF = { has_government = ROOT } } 709 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 709 }
+		}
+		AUS = { transfer_state = 178 }
+		AUS = { transfer_state = 689 }
+		AUS = { transfer_state = 320 }
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 429 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 429 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 427 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 427 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 424 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 424 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 425 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 425 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 423 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 423 }
+		}
+		AUS = { transfer_state = 706 }
+		AUS = { transfer_state = 707 }
+		AUS = { transfer_state = 710 }
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 281 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 281 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 281 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 281 }
+		}
+		HOL = { transfer_state = 309 }
+		if = {
+		    limit = { AND = { BRA = { has_government = ROOT } 310 = { is_owned_by = FRA } } }
+			BRA = { transfer_state = 310 }
+		}
+		if = {
+		    limit = { AND = { NOT = { BRA = { has_government = ROOT } } 310 = { is_owned_by = FRA } } }
+			HOL = { transfer_state = 310 }
+		}
+		if = {
+		    limit = { AND = { VEN = { has_government = ROOT } 687 = { is_owned_by = FRA } } }
+			VEN = { transfer_state = 687 }
+		}
+		if = {
+		    limit = { AND = { NOT = { VEN = { has_government = ROOT } } 687 = { is_owned_by = FRA } } }
+			HOL = { transfer_state = 687 }
+		}
+		AUS = { transfer_state = 694 }
+		AUS = { transfer_state = 308 }
+		AUS = { transfer_state = 710 }
+		AUS = { transfer_state = 713 }
+		if = {
+		    limit = { AND = { NOT = { ARG = { has_government = ROOT } } 720 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 720 }
+		}
+		if = {
+		    limit = { AND = { ARG = { has_government = ROOT } 720 = { is_owned_by = FRA } } }
+			ARG = { transfer_state = 720 }
+		}
+		if = {
+		    limit = { AND = { MUG = { is_in_faction_with = AUS } 422 = { is_owned_by = FRA } } }
+			MUG = { transfer_state = 422 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 422 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 422 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 429 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 429 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 427 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 427 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 424 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 424 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 425 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 425 }
+		}
+		if = {
+		    limit = { AND = { NOT = { MUG = { is_in_faction_with = AUS } } 423 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 423 }
+		}
+		if = {
+		    limit = { AND = { ENG = { has_government = ROOT } 15 = { is_owned_by = FRA } } }
+			ENG = { transfer_state = 15 }
+		}
+		if = {
+		    limit = { AND = { ENG = { has_government = ROOT } 19 = { is_owned_by = FRA } } }
+			ENG = { transfer_state = 19 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ENG = { has_government = ROOT } } 15 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 15 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ENG = { has_government = ROOT } } 19 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 19 }
+		}
+		AUS = { transfer_state = 23 }
+		AUS = { transfer_state = 30 }
+		AUS = { transfer_state = 14 }
+		AUS = { transfer_state = 713 }
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 20 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 20 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 20 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 20 }
+		}
+		if = {
+		    limit = { AND = { ITA = { is_in_faction_with = AUS } 32 = { is_owned_by = FRA } } }
+			ITA = { transfer_state = 32 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ITA = { is_in_faction_with = AUS } } 32 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 32 }
+		}
+		if = {
+		    limit = { AND = { SPR = { is_in_faction_with = AUS } 697 = { is_owned_by = FRA } } }
+			SPR = { transfer_state = 697 }
+		}
+		if = {
+		    limit = { AND = { NOT = { SPR = { is_in_faction_with = AUS } } 697 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 697 }
+		}
+		GLC = { transfer_state = 705 }
+		if = {
+		    limit = { AND = { ETH = { has_government = ROOT } 559 = { is_owned_by = FRA } } }
+			ETH = { transfer_state = 559 }
+		}
+		if = {
+		    limit = { AND = { NOT = { ETH = { has_government = ROOT } } 559 = { is_owned_by = FRA } } }
+			AUS = { transfer_state = 559 }
+		}
+		add_political_power = -800
+		add_manpower = -30000
+		add_stability = -0.05
+		AUS = {
+		    country_event = { days = 7 id = france.99 } 
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = disasterous_territorial_loss }
+		}
+	}
+}
+
+#Drafting the Treaty of Versailles - Politics of France
+country_event = {
+	id = france.99
+	title = france.99.t
+	desc = france.99.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #Independent with the same government as Austria
+	    name = france.99.o1
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+		    limit = { has_government = strasserist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = strasserist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = strasserist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = nationalist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = nationalist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = nationalist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = absolute_monarchist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = absolute_monarchist
+			        elections_allowed = no
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_conservative }
+			FRA = {
+			    set_politics = {
+			        ruling_party = national_conservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = national_conservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = theoconservative }
+			FRA = {
+			    set_politics = {
+			        ruling_party = theoconservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = theoconservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_liberal }
+			FRA = {
+			    set_politics = {
+			        ruling_party = national_liberal
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = national_liberal
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = americanist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = americanist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = americanist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = georgist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = georgist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = georgist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = democratic_socialist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = democratic_socialist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = democratic_socialist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = collectivist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = collectivist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = collectivist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = de_leonist }
+			FRA = {
+			    set_politics = {
+			        ruling_party = de_leonist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = de_leonist
+			        popularity = 0.6
+		        }
+			}
+		}
+		AUS = {
+		    country_event = { days = 7 id = france.100 } 
+		}
+		FRA = {
+		    dismantle_faction = yes 
+		}
+	}
+	
+	option = { #Puppet
+	    name = france.99.o2
+		ai_chance = {
+			factor = 5
+		}
+		AUS = { puppet = FRA }
+		AUS = {
+		    country_event = { days = 7 id = france.100 } 
+		}
+		FRA = {
+		    dismantle_faction = yes 
+		}
+	}
+	
+	option = { #Independent
+	    name = france.99.o3
+		ai_chance = {
+			factor = 90
+		}
+		AUS = {
+		    country_event = { days = 7 id = france.100 } 
+		}
+		FRA = {
+		    dismantle_faction = yes 
+		}
+	}
+}
+
+#Drafting the Treaty of Versailles - Military of France
+country_event = {
+	id = france.100
+	title = france.100.t
+	desc = france.100.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { #Moderate
+	    name = france.100.o1
+		ai_chance = {
+			factor = 45
+		}
+		FRA = {
+		    add_manpower = -100000
+		}
+		AUS = {
+		    country_event = { days = 5 id = france.101 } 
+		}
+	}
+	
+	option = { #Disband
+	    name = france.100.o2
+		ai_chance = {
+			factor = 45
+		}
+		FRA = {
+		    add_manpower = -200000
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = army_restrictions }
+		}
+		AUS = {
+		    country_event = { days = 5 id = france.101 } 
+		}
+	}
+	
+	option = { #Outlaw the army
+	    name = france.100.o3
+		ai_chance = {
+			factor = 10
+		}
+		FRA = {
+			add_ideas = versailles_restrictions
+			add_manpower = -400000
+		}
+		FRA = {
+			add_opinion_modifier = { target = AUS modifier = harsh_army_restrictions }
+		}
+		AUS = {
+		    country_event = { days = 5 id = france.101 } 
+		}
+	}
+}
+
+#Signing of the Treaty of Versailles
+country_event = {
+	id = france.101
+	title = france.101.t
+	desc = france.101.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = france.101.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.1
+		hidden_effect = {
+		    every_country = { news_event = { id = news.61 } }
+		}
+		FRA = {
+		    country_event = { days = 7 id = france.106 } 
+		}
+	}
+}
+
+#Surrender when Austria has taken too much territory - Italy
+country_event = {
+	id = france.102
+	title = france.102.t
+	desc = france.102.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITA
+		has_war_with = AUS
+		surrender_progress > 0.45
+		has_civil_war = no
+	}
+	
+	option = { #Surrender
+	    name = france.102.o1
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = AUS
+		FRA = {
+			if = { limit = { is_in_faction_with = ITA }
+				remove_from_faction = ITA
+			}
+		}
+		AUS = {
+			country_event = france.103
+		}
+	}
+	
+	option = { #Don't surrender
+	    name = france.102.o2
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.15
+		add_war_support = -0.15
+	}
+}
+
+#Italy Surrenders - Austria
+country_event = {
+	id = france.103
+	title = france.103.t
+	desc = france.103.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    if = {
+		    limit = { has_government = strasserist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = strasserist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = strasserist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = nationalist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = nationalist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = nationalist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = absolute_monarchist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = absolute_monarchist
+			        elections_allowed = no
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_conservative }
+			ITA = {
+			    set_politics = {
+			        ruling_party = national_conservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = national_conservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = theoconservative }
+			ITA = {
+			    set_politics = {
+			        ruling_party = theoconservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = theoconservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_liberal }
+			ITA = {
+			    set_politics = {
+			        ruling_party = national_liberal
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = national_liberal
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = americanist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = americanist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = americanist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = georgist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = georgist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = georgist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = democratic_socialist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = democratic_socialist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = democratic_socialist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = collectivist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = collectivist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = collectivist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = de_leonist }
+			ITA = {
+			    set_politics = {
+			        ruling_party = de_leonist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = de_leonist
+			        popularity = 0.6
+		        }
+			}
+		}
+	}
+	
+	option = {
+	    name = france.103.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_to_faction = ITA
+		ITA = {
+		    add_ai_strategy = {
+			    type = alliance
+			    id = "AUS"
+			    value = 200
+		    }
+		}
+	}
+}
+
+#Surrender when Austria has taken too much territory or if at peace, join austria - Rhine
+country_event = {
+	id = france.104
+	title = france.104.t
+	desc = france.104.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RHN
+		FRA = { has_war_with = AUS
+		        surrender_progress > 0.5
+		}
+		NOT = { is_in_faction_with = AUS }
+	}
+	
+	option = { #Surrender
+	    name = france.104.o1
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+		    limit = { has_war_with = AUS }
+			white_peace = AUS
+		}
+		FRA = {
+			if = { limit = { is_in_faction_with = RHN }
+				remove_from_faction = RHN
+			}
+		}
+		AUS = {
+			country_event = france.105
+		}
+	}
+	
+	option = { #Don't surrender
+	    name = france.104.o2
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.15
+	}
+}
+
+#Rhine surrenders or just joins us - Austria
+country_event = {
+	id = france.105
+	title = france.105.t
+	desc = france.105.d
+	picture = GFX_report_event_soviet_purge_officers_02
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    if = {
+		    limit = { has_government = strasserist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = strasserist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = strasserist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = nationalist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = nationalist
+			        elections_allowed = no
+		        }
+		        add_popularity = {
+			        ideology = nationalist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = absolute_monarchist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = absolute_monarchist
+			        elections_allowed = no
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_conservative }
+			RHN = {
+			    set_politics = {
+			        ruling_party = national_conservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = national_conservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = theoconservative }
+			RHN = {
+			    set_politics = {
+			        ruling_party = theoconservative
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = theoconservative
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = national_liberal }
+			RHN = {
+			    set_politics = {
+			        ruling_party = national_liberal
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = national_liberal
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = americanist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = americanist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = americanist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = georgist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = georgist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = georgist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = democratic_socialist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = democratic_socialist
+			        elections_allowed = yes
+		        }
+				add_popularity = {
+			        ideology = democratic_socialist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = collectivist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = collectivist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = collectivist
+			        popularity = 0.6
+		        }
+			}
+		}
+		if = {
+		    limit = { has_government = de_leonist }
+			RHN = {
+			    set_politics = {
+			        ruling_party = de_leonist
+			        elections_allowed = no
+		        }
+				add_popularity = {
+			        ideology = de_leonist
+			        popularity = 0.6
+		        }
+			}
+		}
+	}
+	
+	option = {
+	    name = france.105.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_to_faction = RHN
+		RHN = {
+		    add_ai_strategy = {
+			    type = alliance
+			    id = "AUS"
+			    value = 200
+		    }
+		}
+		remove_ideas = neutrality_idea
+	}
+}
+
+#Execution of Napoleon
+country_event = {
+	id = france.106
+	title = france.106.t
+	desc = france.106.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    if = { 
+            limit = { has_government = absolute_monarchist }
+		}
+		kill_country_leader = yes
+	}
+	
+	option = {
+	    name = france.106.o1
+		ai_chance = {
+			factor = 100
+		}
+		create_country_leader = {
+			name = "Marie I"
+			desc = ""
+			picture = "Portrait_FRA_Marie_First.dds"
+			expire = "1965.1.1"
+			ideology = oligarchist
+			traits = {
+				product_of_versailles
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+

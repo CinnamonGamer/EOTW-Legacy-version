@@ -1,0 +1,52 @@
+ideologies = {
+
+	absolute_monarchist = {
+		
+		types = {
+		
+			military_monarchy = {
+			}
+			
+			oligarchist = {
+			}
+			
+			imperial = {
+			}
+			
+			religious = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_1"
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_2"
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_3"
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_4"
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_5"
+			"FACTION_NAME_ABSOLUTE_MONARCHIST_6"
+		}
+		
+		color = { 200 200 200 }
+		
+		war_impact_on_world_tension = 2
+		faction_impact_on_world_tension = 2
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_guarantee_other_ideologies = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.30
+			lend_lease_tension = 0.30
+			send_volunteers_tension = 0.20
+			guarantee_tension = 0.30
+		}
+		
+	}
+
+}

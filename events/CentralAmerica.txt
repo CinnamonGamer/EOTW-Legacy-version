@@ -1,0 +1,114 @@
+﻿###########################
+# CEA Events
+###########################
+
+add_namespace = centralamerica
+
+#Expansion Plan
+country_event = {
+    id = centralamerica.1
+	title = centralamerica.1.t
+	desc = centralamerica.1.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CEA
+		date > 1936.6.1
+		date < 1936.6.16
+	}
+	
+	option = {
+	    name = centralamerica.1.o1
+		add_political_power = 20
+		set_country_flag = expansion_plan_beginning
+	}
+}
+
+#Yucatan
+country_event = {
+    id = centralamerica.2
+	title = centralamerica.2.t
+	desc = centralamerica.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = CEA
+		date > 1936.10.1
+		date < 1936.10.15
+		has_country_flag = expansion_plan_beginning
+	}
+	
+	option = {
+	    name = centralamerica.2.o1
+		ai_chance = {
+			factor = 98
+		}
+		add_political_power = -10
+		clr_country_flag = expansion_plan_beginning
+		set_global_flag = yucatan_contacted
+	}
+	
+	option = {
+	    name = centralamerica.2.o2
+		ai_chance = {
+			factor = 2
+		}
+		clr_country_flag = expansion_plan_beginning
+	}
+	
+}
+
+#Yucatan Accepts
+country_event = {
+    id = centralamerica.3
+	title = centralamerica.3.t
+	desc = centralamerica.3.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CEA
+		has_global_flag = yucatan_accepts_proposal
+    }
+	
+	option = {
+	    name = centralamerica.3.o1
+		clr_global_flag = yucatan_accepts_proposal
+		CEA = {
+				annex_country = { target = YCT }				
+		}
+		add_stability = 0.1
+		set_country_flag = yucatan_annexed
+	}
+}
+
+#Yucatan Refuses
+country_event = {
+    id = centralamerica.4
+	title = centralamerica.4.t
+	desc = centralamerica.4.d
+	picture = GFX_report_event_german_troops
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CEA
+		has_global_flag = yucatan_refuses_proposal
+    }
+	
+	option = {
+	    name = centralamerica.4.o1
+		clr_global_flag = yucatan_refuses_proposal
+		create_wargoal = {
+			type = annex_everything
+			target = YCT
+		}
+		add_war_support = 0.1
+	}
+	
+}

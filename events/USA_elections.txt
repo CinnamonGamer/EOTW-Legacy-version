@@ -1,0 +1,1401 @@
+﻿add_namespace = election_USA
+
+#1936
+country_event = {
+	id = election_USA.1
+	title = election_USA.1.t
+	desc = election_USA.1.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1936.10.1
+		date < 1936.10.18
+	}
+	
+	
+	option = {	#Smith
+		name = election_USA.1.o1
+		ai_chance = {
+			factor = 60
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.03
+		}
+		add_political_power = 20
+		set_country_flag = smith_1936_re_election
+		
+	}
+	
+	option = {	#Follette
+		name = election_USA.1.o2
+		ai_chance = {
+			factor = 20
+		}
+		set_politics = {
+			ruling_party = national_liberal
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = national_liberal
+			popularity = 0.4
+		}
+		add_political_power = -10
+		set_country_flag = follette_1936_victory
+		
+	}
+	
+	
+	option = {	#Minor
+		name = election_USA.1.o3
+		ai_chance = {
+			factor = 3
+		}
+		set_politics = {
+			ruling_party = georgist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = 0.4
+		}
+		add_political_power = -5
+		set_country_flag = minor_1936_victory
+	}
+	
+	option = {	#Debs
+		name = election_USA.1.o4
+		ai_chance = {
+			factor = 3
+		}
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.4
+		}
+		add_political_power = -10
+		set_country_flag = debs_1936_victory
+	}
+	
+}
+
+#Constitutional Change
+country_event = {
+    id = election_USA.2
+	title = election_USA.2.t
+	desc = election_USA.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1937.1.1
+		date < 1937.1.15
+	}
+	
+	option = {
+	    name = election_USA.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.05
+	}
+}
+
+#President Debs Dies
+country_event = {
+    id = election_USA.3
+	title = election_USA.3.t
+	desc = election_USA.3.d
+	picture = GFX_report_event_usa_funeral
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1936.12.1
+		date < 1936.12.15
+		has_government = democratic_socialist
+	}
+	
+	option = {
+	    name = election_USA.3.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.02
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Norman Thomas"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = democratic_socialist_ideology
+			traits = {
+				
+			}
+		}
+	}
+	
+}
+
+#Citizen Debs Dies
+country_event = {
+    id = election_USA.4
+	title = election_USA.4.t
+	desc = election_USA.4.d
+	picture = GFX_report_event_generic_funeral
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1936.12.1
+		date < 1936.12.15
+		NOT = { has_government = democratic_socialist }
+		
+	}
+	
+	option = {
+	    name = election_USA.4.o1
+		ai_chance = {
+			factor = 70
+		}
+		add_stability = 0.01
+		create_country_leader = {
+			name = "Norman Thomas"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = democratic_socialist_ideology
+			traits = {
+				
+			}
+		}
+	}
+	
+	option = {
+	    name = election_USA.4.o2
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 15
+		create_country_leader = {
+			name = "Norman Thomas"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = democratic_socialist_ideology
+			traits = {
+				
+			}
+		}
+	}
+}
+
+#President Follette Dies
+country_event = {
+    id = election_USA.5
+	title = election_USA.5.t
+	desc = election_USA.5.d
+	picture = GFX_report_event_usa_funeral
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1936.12.1
+		date < 1936.12.15
+		has_government = national_liberal
+	}
+	
+	option = {
+	    name = election_USA.5.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.02
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Robert La Follette Jr."
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = libertarian
+			traits = {
+				
+			}
+		}
+	}
+	
+}
+
+#Citizen Follette Dies
+country_event = {
+    id = election_USA.6
+	title = election_USA.6.t
+	desc = election_USA.6.d
+	picture = GFX_report_event_generic_funeral
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1937.1.1
+		date < 1937.1.15
+		NOT = { has_government = national_liberal }
+		
+	}
+	
+	option = {
+	    name = election_USA.6.o1
+		ai_chance = {
+			factor = 70
+		}
+		add_stability = 0.01
+		create_country_leader = {
+			name = "Robert La Follette Jr."
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = libertarian
+			traits = {
+				
+			}
+		}
+	}
+	
+	option = {
+	    name = election_USA.6.o2
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 15
+		create_country_leader = {
+			name = "Robert La Follette Jr."
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = libertarian
+			traits = {
+				
+			}
+		}
+	}
+}
+
+#1940 Smith -Americanist- vs Thomas -DemSocialist-
+country_event = {
+	id = election_USA.7
+	title = election_USA.7.t
+	desc = election_USA.7.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1940.10.1
+		date < 1940.10.17
+		has_elections = yes
+		has_country_flag = smith_1936_re_election
+		
+	}
+	
+	
+	option = {	#Smith
+		name = election_USA.7.o1
+		ai_chance = {
+			factor = 90
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.03
+		}
+		add_political_power = 20
+		clr_country_flag = smith_1936_re_election
+		
+	}
+	
+	option = {	#Thomas
+		name = election_USA.7.o2
+		ai_chance = {
+			factor = 10
+		}
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.5
+		}
+		add_political_power = -10
+		clr_country_flag = smith_1936_re_election
+		
+	}
+	
+}
+
+#1940 Thomas -DemSocialist- vs Smith -Americanist-
+country_event = {
+	id = election_USA.8
+	title = election_USA.8.t
+	desc = election_USA.8.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1940.10.1
+		date < 1940.10.17
+		has_elections = yes
+		has_country_flag = debs_1936_victory
+		
+	}
+	
+	
+	option = {	#Thomas
+		name = election_USA.8.o1
+		ai_chance = {
+			factor = 25
+		}
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.03
+		}
+		add_political_power = 20
+		clr_country_flag = debs_1936_victory
+		
+	}
+	
+	option = {	#Smith
+		name = election_USA.8.o2
+		ai_chance = {
+			factor = 75
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.55
+		}
+		add_political_power = -10
+		clr_country_flag = debs_1936_victory
+		
+	}
+	
+}
+
+#Democratic Socialists Gain Second Majority
+country_event = {
+    id = election_USA.9
+	title = election_USA.9.t
+	desc = election_USA.9.d
+	picture = GFX_report_event_election_vote
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1937.3.1
+		date < 1937.3.15
+	}
+	
+	option = {
+	    name = election_USA.9.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 10
+	}
+}
+
+#Uproar Election Exclusion
+country_event = {
+    id = election_USA.10
+	title = election_USA.10.t
+	desc = election_USA.10.d
+	picture = GFX_report_event_worker_protests
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = USA
+		date > 1937.4.1
+		date < 1937.4.15
+	}
+	
+	option = {
+	    name = election_USA.10.o1
+		ai_chance = {
+			factor = 95
+		}
+		add_political_power = -10
+		add_stability = -0.02
+		set_country_flag = crackdown_election_changes_1937
+	}
+	
+	option = {
+	    name = election_USA.10.o2
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = uproar_no_intervention_1937
+	}
+}
+
+#Fringe Political Rallies
+country_event = {
+    id = election_USA.11
+	title = election_USA.11.t
+	desc = election_USA.11.d
+	picture = GFX_report_event_fascist_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1937.7.1
+		date < 1937.7.15
+	}
+	
+	option = {
+	    name = election_USA.11.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -15
+	}
+}
+
+#Christmas Raids 1937
+country_event = {
+    id = election_USA.12
+	title = election_USA.12.t
+	desc = election_USA.12.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = USA
+		date > 1937.12.10
+		date < 1937.12.28
+	}
+	
+	option = {
+	    name = election_USA.12.o1
+		ai_chance = {
+			factor = 95
+		}
+		add_political_power = -10
+		add_stability = -0.03
+		set_country_flag = christmas_raids_executed
+	}
+	
+	option = {
+	    name = election_USA.12.o2
+		ai_chance = {
+			factor = 5
+		}
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.06
+		}
+		set_country_flag = no_christmas_raids
+	}
+}
+
+#Dixie Rally
+country_event = {
+    id = election_USA.13
+	title = election_USA.13.t
+	desc = election_USA.13.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = USA
+		date > 1938.1.1
+		date < 1938.1.18
+		has_country_flag = christmas_raids_executed
+	}
+	
+	option = { 
+	    name = election_USA.13.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_political_power = -10
+		add_stability = -0.01
+		clr_country_flag = christmas_raids_executed
+		set_country_flag = dixie_rally
+	}
+}
+
+#Crisis in Alabama
+country_event = {
+    id = election_USA.14
+	title = election_USA.14.t
+	desc = election_USA.14.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = USA
+		date > 1938.2.1
+		date < 1938.2.18
+		has_country_flag = dixie_rally
+	}
+	
+	option = {
+	    name = election_USA.14.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = -0.08
+		}
+		clr_country_flag = dixie_rally
+		set_country_flag = alabama_crisis
+	}
+}
+
+#Southern Independence
+country_event = {
+    id = election_USA.15
+	title = election_USA.15.t
+	desc = election_USA.15.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = USA
+		date > 1938.3.1
+		date < 1938.3.18
+		has_country_flag = alabama_crisis
+	}
+	
+	option = { # Support Dixie
+		name = election_USA.15.o1
+		trigger = { is_ai = no }
+		hidden_effect = {
+			set_capital = 367
+			start_civil_war = {
+				ruling_party = nationalist
+				ideology = americanist
+				size = 0.5
+				capital = 361
+				states = { 362 369 261 396 395 393 361 360 359 358 357  }
+			}
+			random_country = {
+				limit = {
+					original_tag = USA
+					has_government = americanist
+				}
+				set_equipment_fraction = 0.3
+				set_stability = 0.6
+				add_popularity = {
+					ideology = americanist
+					popularity = 0.10
+				}
+			}
+			load_oob = "CSA_Civil_War"
+			set_equipment_fraction = 0.3
+			set_stability = 0.9
+			
+			add_popularity = {
+				ideology = nationalist
+				popularity = 1
+			}
+
+		}
+		clr_country_flag = alabama_crisis
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+	option = { # Support the North
+		name = election_USA.15.o2
+		hidden_effect = {
+			start_civil_war = {
+				ideology = nationalist
+				size = 0.5
+				capital = 367
+				states = { 367 370 365 366 364 368 363 }
+			}
+			random_country = {
+				limit = {
+					original_tag = USA
+					has_government = nationalist
+				}
+				set_equipment_fraction = 0.3
+				set_stability = 0.9
+			}
+			
+			add_popularity = {
+				ideology = americanist
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = nationalist
+				popularity = -1
+			}	
+			set_equipment_fraction = 0.3
+			set_stability = 0.6
+			
+		}
+		clr_country_flag = alabama_crisis
+		add_named_threat = { threat = -5 name = ignorance_of_the_situation }
+	}
+}
+
+#Smith Chooses not to run
+country_event = {
+	id = election_USA.16
+	title = election_USA.16.t
+	desc = election_USA.16.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1944.1.1
+		date < 1944.1.17
+		has_elections = yes
+		
+	}
+	
+	option = {
+	    name = election_USA.16.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 5 id = election_USA.17 } 
+		    }
+		}
+	}
+}
+
+#Thomas chooses not to run
+country_event = {
+    id = election_USA.17
+	title = election_USA.17.t
+	desc = election_USA.17.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = election_USA.17.o1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Republican-Democrat Candidates Finalised
+country_event = {
+	id = election_USA.18
+	title = election_USA.18.t
+	desc = election_USA.18.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1944.4.1
+		date < 1944.4.17
+		has_elections = yes
+	}
+	
+	option = {
+	    name = election_USA.18.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.19 } 
+		    }
+		}
+	}
+}
+
+#New Democrats candidates finalised
+country_event = {
+    id = election_USA.19
+	title = election_USA.19.t
+	desc = election_USA.19.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = election_USA.19.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.20 } 
+		    }
+		}
+	}
+}
+
+#Libertarian candidates finalised
+country_event = {
+    id = election_USA.20
+	title = election_USA.20.t
+	desc = election_USA.20.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = election_USA.20.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.21 } 
+		    }
+		}
+	}
+}
+
+#Socialist candidates finalised
+country_event = {
+    id = election_USA.21
+	title = election_USA.21.t
+	desc = election_USA.21.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = election_USA.21.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 30 id = election_USA.22 } 
+		    }
+		}
+	}
+}
+
+#Republican-Democrat Convention
+country_event = {
+    id = election_USA.22
+	title = election_USA.22.t
+	desc = election_USA.22.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Everett Dirksen
+	    name = election_USA.22.o1
+		ai_chance = {
+			factor = 15
+		}
+		set_country_flag = americanist_1944_dirksen
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.23 } 
+		    }
+		}
+	}
+	
+	option = { #Richard Russell Jr
+	    name = election_USA.22.o2
+		ai_chance = {
+			factor = 15
+		}
+		set_country_flag = americanist_1944_russell
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.23 } 
+		    }
+		}
+	}
+	
+	option = { #Dwight D Eisenhower
+	    name = election_USA.22.o3
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = americanist_1944_eisenhower
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.23 } 
+		    }
+		}
+	}
+	
+	option = { #Henry Morgenthau Jr
+	    name = election_USA.22.o4
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = americanist_1944_morgenthau
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.23 } 
+		    }
+		}
+	}
+}
+
+#New Democrats Convention
+country_event = {
+    id = election_USA.23
+	title = election_USA.23.t
+	desc = election_USA.23.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Asa Philip Randolph
+	    name = election_USA.23.o1
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = georgist_1944_randolph
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.24 } 
+		    }
+		}
+	}
+	
+	option = { #Fiorello La Guardia
+	    name = election_USA.23.o2
+		ai_chance = {
+			factor = 70
+		}
+		set_country_flag = georgist_1944_la_guardia
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.24 } 
+		    }
+		}
+	}
+	
+	option = { #Walter Lippmann
+	    name = election_USA.23.o3
+		ai_chance = {
+			factor = 15
+		}
+		set_country_flag = georgist_1944_lippmann
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.24 } 
+		    }
+		}
+	}
+	
+	option = { #William Averell Harriman
+	    name = election_USA.23.o4
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = georgist_1944_harriman
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.24 } 
+		    }
+		}
+	}
+}
+
+#Libertarian Convention
+country_event = {
+    id = election_USA.24
+	title = election_USA.24.t
+	desc = election_USA.24.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Herbert Hoover
+	    name = election_USA.24.o1
+		ai_chance = {
+			factor = 40
+		}
+		set_country_flag = libertarian_1944_hoover
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.25 } 
+		    }
+		}
+	}
+	
+	option = { #Joseph P Kennedy Sr
+	    name = election_USA.24.o2
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = libertarian_1944_kennedy
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.25 } 
+		    }
+		}
+	}
+	
+	option = { #Alben Barkley
+	    name = election_USA.24.o3
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = libertarian_1944_barkley
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.25 } 
+		    }
+		}
+	}
+	
+	option = { #Henry Ford
+	    name = election_USA.24.o4
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = libertarian_1944_ford
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 6 id = election_USA.25 } 
+		    }
+		}
+	}
+}
+
+#Socialist Alternative Convention
+country_event = {
+    id = election_USA.25
+	title = election_USA.25.t
+	desc = election_USA.25.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { #Devere Allen
+	    name = election_USA.25.o1
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = socialist_1944_allen
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.26 } 
+		    }
+		}
+	}
+	
+	option = { #John Reed
+	    name = election_USA.25.o2
+		ai_chance = {
+			factor = 30
+		}
+		set_country_flag = socialist_1944_reed
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.26 } 
+		    }
+		}
+	}
+	
+	option = { #William Z Foster
+	    name = election_USA.25.o3
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = socialist_1944_foster
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.26 } 
+		    }
+		}
+	}
+	
+	option = { #Darlington Hoopes
+	    name = election_USA.25.o4
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = socialist_1944_hoopes
+		hidden_effect = {
+		    USA = {
+		        country_event = { days = 3 id = election_USA.26 } 
+		    }
+		}
+	}
+}
+
+#Prepare for Election
+country_event = {
+    id = election_USA.26
+	title = election_USA.26.t
+	desc = election_USA.26.d
+	picture = GFX_report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = { 
+	    name = election_USA.26.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -0.05
+	}
+}
+
+#1944 Election
+country_event = {
+	id = election_USA.27
+	title = election_USA.27.t
+	desc = election_USA.27.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+   
+	
+	trigger = {
+		tag = USA
+		date > 1944.10.1
+		date < 1944.10.17
+		has_elections = yes
+		
+	}
+	
+	option = { #Americanists
+	    name = election_USA.27.o1
+		ai_chance = {
+			factor = 80
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.3
+		}
+		if = {
+		    limit = { has_country_flag = americanist_1944_dirksen }
+			create_country_leader = {
+			    name = "Everett Dirksen"
+			    desc = ""
+			    picture = "Portrait_USA_Everett_Dirksen.dds"
+			    expire = "1965.1.1"
+			    ideology = representative_democrat
+			    traits = {
+				    compassionate_gentleman
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = americanist_1944_russell }
+			create_country_leader = {
+			    name = "Richard Russell Jr."
+			    desc = ""
+			    picture = "Portrait_USA_Richard_Russell.dds"
+			    expire = "1965.1.1"
+			    ideology = representative_democrat
+			    traits = {
+				    warmonger
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = americanist_1944_eisenhower }
+			create_country_leader = {
+			    name = "Dwight D. Eisenhower"
+			    desc = ""
+			    picture = "Portrait_USA_Dwight_Eisenhower.dds"
+			    expire = "1965.1.1"
+			    ideology = representative_democrat
+			    traits = {
+				    stout_defender
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = americanist_1944_morgenthau }
+			create_country_leader = {
+			    name = "Henry Morgenthau Jr."
+			    desc = ""
+			    picture = "Portrait_USA_Henry_Morgenthau.dds"
+			    expire = "1965.1.1"
+			    ideology = representative_democrat
+			    traits = {
+				    staunch_constitutionalist
+			    }
+		    }
+		}
+	}
+	
+	option = { #Georgists
+	    name = election_USA.27.o2
+		ai_chance = {
+			factor = 5
+		}
+		set_politics = {
+			ruling_party = georgist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = 0.3
+		}
+		if = {
+		    limit = { has_country_flag = georgist_1944_randolph }
+			create_country_leader = {
+			    name = "Asa Philip Randolph"
+			    desc = ""
+			    picture = "Portrait_USA_Phillip_Randolph.dds"
+			    expire = "1965.1.1"
+			    ideology = socio_capitalist
+			    traits = {
+				    first_black_president
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = georgist_1944_la_guardia }
+			create_country_leader = {
+			    name = "Fiorello H. La Guardia"
+			    desc = ""
+			    picture = "Portrait_USA_La_Guardia.dds"
+			    expire = "1965.1.1"
+			    ideology = socio_capitalist
+			    traits = {
+				    popular_figurehead
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = georgist_1944_lippmann }
+			create_country_leader = {
+			    name = "Walter Lippmann"
+			    desc = ""
+			    picture = "Portrait_USA_Walter_Lippmann.dds"
+			    expire = "1965.1.1"
+			    ideology = socio_capitalist
+			    traits = {
+				    backroom_backstabber
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = georgist_1944_harriman }
+			create_country_leader = {
+			    name = "William Averell Harriman"
+			    desc = ""
+			    picture = "Portrait_USA_Averell_Harriman.dds"
+			    expire = "1965.1.1"
+			    ideology = socio_capitalist
+			    traits = {
+				    pacifist
+			    }
+		    }
+		}
+	}
+	
+	option = { #Libertarians
+	    name = election_USA.27.o3
+		ai_chance = {
+			factor = 5
+		}
+		set_politics = {
+			ruling_party = national_liberal
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = national_liberal
+			popularity = 0.3
+		}
+		if = {
+		    limit = { has_country_flag = libertarian_1944_hoover }
+			create_country_leader = {
+			    name = "Herbert Hoover"
+			    desc = ""
+			    picture = "Portrait_USA_Herbert_Hoover.dds"
+			    expire = "1965.1.1"
+			    ideology = libertarian
+			    traits = {
+				    inexperienced_economist
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = libertarian_1944_kennedy }
+			create_country_leader = {
+			    name = "Joseph P. Kennedy Sr."
+			    desc = ""
+			    picture = "Portrait_USA_Joseph_Kennedy.dds"
+			    expire = "1965.1.1"
+			    ideology = libertarian
+			    traits = {
+				    diplomat
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = libertarian_1944_barkley }
+			create_country_leader = {
+			    name = "Alben W. Barkley"
+			    desc = ""
+			    picture = "Portrait_USA_Barkley.dds"
+			    expire = "1965.1.1"
+			    ideology = libertarian
+			    traits = {
+				    political_dancer
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = libertarian_1944_ford }
+			create_country_leader = {
+			    name = "Henry Ford"
+			    desc = ""
+			    picture = "Portrait_USA_Henry_Ford.dds"
+			    expire = "1965.1.1"
+			    ideology = libertarian
+			    traits = {
+				    modern_industrialist
+			    }
+		    }
+		}
+	}
+	
+	option = { #Socialists
+	    name = election_USA.27.o4
+		ai_chance = {
+			factor = 10
+		}
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.3
+		}
+		if = {
+		    limit = { has_country_flag = socialist_1944_allen }
+			create_country_leader = {
+			    name = "Devere Allen"
+			    desc = ""
+			    picture = "Portrait_USA_Devere_Allen.dds"
+			    expire = "1965.1.1"
+			    ideology = democratic_socialist_ideology
+			    traits = {
+				    paranoid_leader
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = socialist_1944_reed }
+			create_country_leader = {
+			    name = "John Reed"
+			    desc = ""
+			    picture = "Portrait_USA_John_Reed.dds"
+			    expire = "1965.1.1"
+			    ideology = democratic_socialist_ideology
+			    traits = {
+				    admires_austria
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = socialist_1944_foster }
+			create_country_leader = {
+			    name = "William Z. Foster"
+			    desc = ""
+			    picture = "Portrait_USA_Foster.dds"
+			    expire = "1965.1.1"
+			    ideology = democratic_socialist_ideology
+			    traits = {
+				    silent_workhorse
+			    }
+		    }
+		}
+		if = {
+		    limit = { has_country_flag = socialist_1944_hoopes }
+			create_country_leader = {
+			    name = "Darlington Hoopes"
+			    desc = ""
+			    picture = "Portrait_USA_Darlington_Hoopes.dds"
+			    expire = "1965.1.1"
+			    ideology = democratic_socialist_ideology
+			    traits = {
+				    charismatic_wild_card
+			    }
+		    }
+		}
+	}
+}
+
+
+
+
+
+	
+	
+	
+	
+
+

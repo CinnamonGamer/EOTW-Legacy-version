@@ -1,0 +1,124 @@
+﻿capital = 286
+
+set_stability = 0.25
+set_war_support = 0.09
+
+oob = "CMB_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+	early_destroyer = 1
+}
+
+set_convoys = 15
+
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 4
+		}
+
+		nationalist = {
+			popularity = 2
+		}
+		
+		absolute_monarchist = {
+			popularity = 76
+			#banned = no #default is no
+		}
+		
+		national_conservative = {
+			popularity = 0
+		}
+
+                theoconservative = {
+			popularity = 6
+		}
+
+                national_liberal = {
+			popularity = 0
+		}
+
+                americanist = {
+			popularity = 0
+		}
+
+                georgist = {
+			popularity = 0
+		}
+
+                democratic_socialist = {
+			popularity = 0
+		}
+
+                collectivist = {
+			popularity = 9
+		}
+
+                de_leonist = {
+			popularity = 3
+		}
+	}
+	
+	ruling_party = absolute_monarchist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	limited_conscription
+	civilian_economy
+	strong_advisory_council
+}
+
+create_country_leader = {
+	name = "Jayavarman XII"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = imperial
+
+}
+
+create_country_leader = {
+	name = "Tou Samouth"
+	desc = ""
+	picture = "Portrait_CMB_Samouth.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+
+}
+
+create_country_leader = {
+	name = "Saroeung Bopha"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = bolshevik
+
+}
+
+create_country_leader = {
+	name = "Amara Resip"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = religious_cultism
+
+}
+
+create_country_leader = {
+	name = "Chea Atith"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = national_bolshevik
+
+}

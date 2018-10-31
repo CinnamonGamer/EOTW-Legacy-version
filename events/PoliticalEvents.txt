@@ -1,0 +1,811 @@
+﻿add_namespace = political
+
+#Strasserist Coup
+country_event = {
+	id = political.1
+	title = political.1.t
+	desc = political.1.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		strasserist > 0.5
+		NOT = {
+			has_government = strasserist
+		}
+		is_puppet = no
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			strasserist > 0.55
+		}	
+	}
+	
+	option = {
+		name = political.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = strasserist
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.1.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = strasserist
+			size = 0.5
+		}
+	}
+}
+
+
+#Nationalist Coup
+country_event = {
+	id = political.2
+	title = political.2.t
+	desc = political.2.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		nationalist >0.5
+		NOT = {
+			has_government = nationalist
+		}
+		is_puppet = no
+		
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			nationalist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			nationalist > 0.55
+		}
+	}
+	
+	option = {
+		name = political.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.2.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = nationalist
+			size = 0.5
+		}
+	}
+	
+}
+
+#De Leonist Coup
+country_event = {
+	id = political.3
+	title = political.3.t
+	desc = political.3.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		de_leonist >0.5
+		NOT = {
+			has_government = de_leonist
+		}
+		is_puppet = no
+		
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			de_leonist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			de_leonist > 0.55
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_government = de_leonist
+				has_government = nationalist
+			}
+		}
+	}
+	
+	option = {
+		name = political.3.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = de_leonist
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.3.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = de_leonist
+			size = 0.5
+		}
+	}
+	
+}
+
+#Absolute Monarchist Coup
+country_event = {
+	id = political.4
+	title = political.4.t
+	desc = political.4.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		absolute_monarchist >0.5
+		NOT = {
+			has_government = absolute_monarchist
+		}
+		
+		is_puppet = no
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			absolute_monarchist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			absolute_monarchist > 0.55
+		}
+		modifier = {
+			factor = 1.5
+			de_leonist > 0.3
+		}
+	}
+	
+	option = {
+		name = political.4.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = absolute_monarchist
+			elections_allowed = no
+		}
+	}
+	
+	option = {
+		name = political.4.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = absolute_monarchist
+			size = 0.5
+		}
+	}
+}
+
+#Theoconservative Coup
+country_event = {
+	id = political.5
+	title = political.5.t
+	desc = political.5.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		theoconservative >0.5
+		NOT = {
+			has_government = theoconservative
+		}
+		
+		is_puppet = no
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			theoconservative > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			theoconservative > 0.55
+		}
+	}
+	
+	option = {
+		name = political.5.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = theoconservative
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.5.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = theoconservative
+			size = 0.5
+		}
+	}
+}
+
+#National Liberal Coup
+country_event = {
+	id = political.6
+	title = political.6.t
+	desc = political.6.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		national_liberal >0.5
+		NOT = {
+			has_government = national_liberal
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = de_leonist
+			has_government = strasserist
+			has_government = absolute_monarchist
+			has_government = nationalist
+			has_government = collectivist
+			has_government = theoconservative
+			has_government = national_conservative
+			has_government = georgist
+			has_government = democratic_socialist
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			national_liberal > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			national_liberal > 0.55
+		}
+	}
+	
+	option = {
+		name = political.6.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = national_liberal
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.6.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = national_liberal
+			size = 0.5
+		}
+	}
+}
+
+#Americanist Coup
+country_event = {
+	id = political.7
+	title = political.7.t
+	desc = political.7.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		americanist >0.5
+		NOT = {
+			has_government = americanist
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = de_leonist
+			has_government = strasserist
+			has_government = absolute_monarchist
+			has_government = nationalist
+			has_government = theoconservative
+			has_government = collectivist
+                        has_government = national_conservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			americanist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			americanist > 0.55
+		}
+	}
+	
+	option = {
+		name = political.7.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.7.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = americanist
+			size = 0.5
+		}
+	}
+}
+
+#Georgist Coup
+country_event = {
+	id = political.8
+	title = political.8.t
+	desc = political.8.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		georgist >0.5
+		NOT = {
+			has_government = georgist
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = de_leonist
+			has_government = strasserist
+			has_government = absolute_monarchist
+			has_government = nationalist
+			has_government = theoconservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			georgist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			georgist > 0.55
+		}
+	}
+	
+	option = {
+		name = political.8.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = georgist
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.8.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = georgist
+			size = 0.5
+		}
+	}
+}
+
+#Democratic Socialist Coup
+country_event = {
+	id = political.9
+	title = political.9.t
+	desc = political.9.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		democratic_socialist >0.5
+		NOT = {
+			has_government = democratic_socialist
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = de_leonist
+			has_government = strasserist
+			has_government = absolute_monarchist
+			has_government = nationalist
+			has_government = theoconservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			democratic_socialist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			democratic_socialist > 0.55
+		}
+	}
+	
+	option = {
+		name = political.9.o1
+		ai_chance = {
+			factor = 100
+		}
+		set_politics = {
+			ruling_party = democratic_socialist
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.9.o2
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = democratic_socialist
+			size = 0.5
+		}
+	}
+}
+
+#Collectivist Coup
+country_event = {
+	id = political.10
+	title = political.10.t
+	desc = political.10.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		collectivist >0.5
+		NOT = {
+			has_government = collectivist
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = strasserist
+			has_government = absolute_monarchist
+			has_government = nationalist
+			has_government = theoconservative
+			has_government = national_conservative
+			has_government = national_liberal
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			collectivist > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			collectivist > 0.55
+		}
+	}
+	
+	option = {
+		name = political.10.o1
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.10.o2
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.10.o3
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = collectivist
+			size = 0.5
+		}
+	}
+}
+
+#National Conservative Coup
+country_event = {
+	id = political.11
+	title = political.11.t
+	desc = political.11.d
+	picture = GFX_report_event_coup
+	
+	trigger = {
+		national_conservative >0.5
+		NOT = {
+			has_government = national_conservative
+		}
+		
+		is_puppet = no
+		OR = {
+			has_government = de_leonist
+			has_government = strasserist
+			has_government = collectivist
+			has_government = democratic_socialist
+			has_government = georgist
+			has_government = nationalist
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.5
+			national_conservative > 0.5
+		}
+		modifier = {
+			factor = 0.5
+			national_conservative > 0.55
+		}
+	}
+	
+	option = {
+		name = political.11.o1
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = national_conservative
+			elections_allowed = no
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.11.o2
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = national_conservative
+			elections_allowed = yes
+		}
+		if = {
+		    limit = { has_idea = weak_advisory_council }
+			remove_ideas = weak_advisory_council
+		}
+		if = {
+		    limit = { has_idea = strong_advisory_council }
+			remove_ideas = strong_advisory_council
+		}
+	}
+	
+	option = {
+		name = political.11.o3
+		ai_chance = {
+			factor = 0
+		}
+		start_civil_war = {
+			ideology = national_conservative
+			size = 0.5
+		}
+	}
+}
+
+#Strasserist Rally
+country_event = {
+	id = political.12
+	title = political.12.t
+	desc = political.12.d
+	picture = GFX_report_event_political_gathering
+	
+	trigger = {
+		strasserist > 0.03
+	}
+	
+	mean_time_to_happen = {
+		days = 1000
+	}
+	
+	option = {
+		name = political.12.o1
+		add_popularity = {
+			ideology = strasserist
+			popularity = 0.01
+		}
+	}
+}
+
+#De Leonist Rally
+country_event = {
+	id = political.13
+	title = political.13.t
+	desc = political.13.d
+	picture = GFX_report_event_political_gathering
+	
+	trigger = {
+		de_leonist > 0.03
+	}
+	
+	mean_time_to_happen = {
+		days = 1000
+	}
+	
+	option = {
+		name = political.13.o1
+		add_popularity = {
+			ideology = de_leonist
+			popularity = 0.01
+		}
+	}
+}
+
+#Americanist Conference
+country_event = {
+	id = political.14
+	title = political.14.t
+	desc = political.14.d
+	picture = GFX_report_event_political_gathering
+	
+	trigger = {
+		americanist > 0.03
+	}
+	
+	mean_time_to_happen = {
+		days = 1000
+	}
+	
+	option = {
+		name = political.14.o1
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.01
+		}
+	}
+}

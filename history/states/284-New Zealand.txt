@@ -1,0 +1,29 @@
+
+state={
+	id=284
+	name="STATE_284" # North Island
+	manpower = 700000
+	
+	state_category = city
+	
+	history={
+		owner = MAO
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 4
+			air_base = 3
+			1814 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			1814 10
+		}
+		add_core_of =  MAO
+	}
+
+	provinces={
+	    1786 1801 1814 4748 4804 7692 7783 7826 10609 12604 12617 
+	}
+}

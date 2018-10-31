@@ -1,0 +1,84 @@
+ideas = {
+    
+	country = {
+	    united_germany = {
+		    
+			allowed = {
+		        original_tag = GMY
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				justify_war_goal_time = -0.15
+			}
+			rule = {
+				can_create_factions = yes
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+			
+		
+		
+		
+		
+		
+		
+		}
+		
+		unstable_politics = {
+		    
+			allowed = {
+		        original_tag = GMY
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+			
+		
+		
+		
+		
+		
+		
+		}
+		
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

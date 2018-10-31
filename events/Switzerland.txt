@@ -1,0 +1,31 @@
+﻿###########################
+# SWI Events
+###########################
+
+add_namespace = switzerland
+
+#League of Nations
+country_event = {
+	id = switzerland.1
+	title = switzerland.1.t
+	desc = switzerland.1.d
+	picture = report_event_vienna_expo
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWI
+		threat > 0.5
+	}
+	
+	option = {
+	    name = switzerland.1.o1
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		    every_country = { news_event = { id = news.9 } }
+		}
+		add_named_threat = { threat = -25 name = league_of_nations }
+	}
+}

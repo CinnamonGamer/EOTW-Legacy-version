@@ -1,0 +1,78 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = absolute_monarchist
+			ideas = {
+				weak_advisory_council
+			}
+		}
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = americanist
+			ideas = {
+				undisturbed_isolation
+				USA_the_american_system
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = national_conservative
+			ideas = {
+		        ENG_bitter_looser
+			}
+		}
+		"CHI"={
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = absolute_monarchist
+			ideas = {
+			    corrupt_officials_idea
+	            crumbling_monarchy_idea
+	            broken_marriage_idea
+	            forbidden_city_idea
+				strong_advisory_council
+			}
+		}
+		"TUR"={
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = absolute_monarchist
+			ideas={
+			    crumbling_empire
+				weak_advisory_council
+			}			
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = theoconservative
+			ideas = {
+				undeveloped_nation_idea
+				indecisive_government_idea
+			}
+		}
+		
+		"AUS"={
+			history = "AUS_GATHERING_STORM_DESC"
+			ideology = de_leonist
+			ideas = {
+				first_revolution
+			}
+		}
+
+                
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

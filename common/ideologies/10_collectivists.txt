@@ -1,0 +1,54 @@
+ideologies = {
+
+	collectivist = {
+		
+		types = {
+		
+			international_collectivist = {
+			}
+		
+			national_collectivist = {
+			}
+			
+			bolshevik = {
+			}
+			
+			qing_collectivism = {
+			}
+			
+			radical_collectivism = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COLLECTIVIST_1"
+			"FACTION_NAME_COLLECTIVIST_2"
+			"FACTION_NAME_COLLECTIVIST_3"
+			"FACTION_NAME_COLLECTIVIST_4"
+			"FACTION_NAME_COLLECTIVIST_5"
+			"FACTION_NAME_COLLECTIVIST_6"
+		}
+		
+		color = { 230 255 0 }
+		
+		war_impact_on_world_tension = 3
+		faction_impact_on_world_tension = 3
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = no
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.15
+			lend_lease_tension = 0.15
+			send_volunteers_tension = 0.15
+			guarantee_tension = 0.25
+		}
+		
+	}
+
+}

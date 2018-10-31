@@ -1,0 +1,25 @@
+ideas = {
+
+	country = {
+		mohammad_mosaddegh = {
+			
+			allowed = {
+				tag = PER
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = -0.1
+				production_speed_synthetic_refinery_factor = 0.2
+				stability_factor = 0.2
+			}
+			
+			picture = GFX_idea_mohammad_mosaddegh
+
+		}
+
+
+
+}
+

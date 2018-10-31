@@ -1,0 +1,42 @@
+ideas = {
+
+    country = {
+	    voice_of_god = {
+		
+		    allowed = {
+				original_tag = PAP
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+				stability_factor = 0.05
+				drift_defence_factor = 0.5
+			}
+			
+			picture = generic_democratic_drift_bonus
+			
+		}
+	}
+	
+	country = {
+	    isolated_pope = {
+		
+		    allowed = {
+				original_tag = PAP
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				join_faction_tension = 1.00
+				ai_get_ally_desire_factor = -100
+				stability_factor = 0.05
+			}
+			
+			picture = generic_democratic_drift_bonus
+			
+		}
+	}
+}

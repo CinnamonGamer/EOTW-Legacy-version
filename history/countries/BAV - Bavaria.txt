@@ -1,0 +1,211 @@
+﻿capital = 52
+
+oob = "BAV_1936"
+
+set_stability = 0.62
+set_war_support = 0.50
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 7
+		}
+
+		nationalist = {
+			popularity = 2
+		}
+
+		absolute_monarchist = {
+			popularity = 80
+		}
+		
+		national_conservative = {
+			popularity = 1
+		}
+
+                theoconservative = {
+			popularity = 5
+		}
+
+                national_liberal = {
+			popularity = 0
+		}
+
+                americanist = {
+			popularity = 2
+		}
+
+                georgist = {
+			popularity = 0
+		}
+
+                democratic_socialist = {
+			popularity = 0
+		}
+
+                collectivist = {
+			popularity = 0
+		}
+
+                de_leonist = {
+			popularity = 3
+		}
+	}
+	
+	ruling_party = absolute_monarchist
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	export_focus
+	volunteer_only
+	civilian_economy
+	weak_advisory_council
+}
+
+
+create_country_leader = {
+	name = "Rupprecht I"
+	desc = ""
+	picture = "Portrait_BAV_Ludwig_Fourth.dds"
+	expire = "1965.1.1"
+	ideology = oligarchist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Erich Mühsam"
+	desc = ""
+	picture = "Portrait_BAV_Erich_Muhsam.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Erich Ludendorff"
+	desc = ""
+	picture = "Portrait_BAV_Ludendorff.dds"
+	expire = "1965.1.1"
+	ideology = militant_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fritz Schaefer"
+	desc = ""
+	picture = "Portrait_BAV_Schaefer.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Heinrich Held"
+	desc = ""
+	picture = "Portrait_BAV_Heinrich_Held.dds"
+	expire = "1965.1.1"
+	ideology = liberal_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gottfried Feder"
+	desc = ""
+	picture = "Portrait_BAV_Gottfried_Feder.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Karl Scharnagl"
+	desc = ""
+	picture = "Portrait_BAV_Scharnagl.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Thomas Dehler"
+	desc = ""
+	picture = "Portrait_BAV_Thomas_Dehler.dds"
+	expire = "1965.1.1"
+	ideology = libertarian
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Constantin Fehrenbach"
+	desc = ""
+	picture = "Portrait_BAV_Constantin_Fehrenbach.dds"
+	expire = "1965.1.1"
+	ideology = liberal_collectivist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Friedrich Ebert"
+	desc = ""
+	picture = "Portrait_BAV_Friedrich_Ebert.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gustav Landauer"
+	desc = ""
+	picture = "Portrait_BAV_Landauer.dds"
+	expire = "1965.1.1"
+	ideology = radical_collectivism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Karl Eglseer"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer trickster }
+	skill = 3
+}

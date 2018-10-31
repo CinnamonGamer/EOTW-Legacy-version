@@ -1,0 +1,1493 @@
+focus_tree = {
+    id = ottoman_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+	}
+	
+	focus = {
+		id = TUR_imperial_reforms
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		x = 10
+		y = 0
+		available = {
+			country_exists = TUR
+			has_government = absolute_monarchist
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = TUR_new_union
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = TUR_imperial_reforms }
+		cost = 10
+		x = 10
+		y = 1
+		available = {
+			has_government = absolute_monarchist
+		}
+		completion_reward = {
+			add_ideas = new_union
+		}
+	}
+	
+	focus = {
+	    id = TUR_strengthening_the_monarchy
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 7
+		y = 0
+		available = {
+			country_exists = TUR
+			has_government = absolute_monarchist
+		}
+		completion_reward = {
+		    add_ideas = TUR_stronger_monarchy
+		}
+	}
+	
+	focus = {
+		id = TUR_looking_west
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TUR_strengthening_the_monarchy }
+		cost = 10
+		x = 6
+		y = 1
+		available = {
+			has_government = absolute_monarchist
+			country_exists = TUR
+		}
+		completion_reward = {
+			TUR = {
+				country_event = turkey.1
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_looking_east
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TUR_strengthening_the_monarchy }
+		cost = 10
+		x = 8
+		y = 1
+		available = {
+			has_government = absolute_monarchist
+			country_exists = TUR
+		}
+		completion_reward = {
+			TUR = { country_event = { id = turkey.2  } }
+		}
+	}
+	
+	focus = {
+	    id = TUR_retake_wallachia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TUR_looking_west }
+		cost = 10
+		x = 4
+		y = 2
+		available = {
+		    ROM = {
+				NOT = { has_war_with = TUR }
+				country_exists = ROM
+			}
+			has_army_manpower = { size > 150000 }
+		}
+		completion_reward = {
+		    TUR = {
+			    country_event = turkey.3
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_claims_on_greece
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TUR_looking_west }
+		cost = 10
+		x = 6
+		y = 2
+		available = {
+		    GRE = {
+				NOT = { has_war_with = TUR }
+				country_exists = GRE
+			}
+		}
+		completion_reward = {
+		   add_state_core = 187
+		   add_state_core = 164
+		   add_state_core = 731
+		}
+	}
+	
+	focus = {
+	    id = TUR_negotiations_with_albania
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TUR_claims_on_greece }
+		cost = 10
+		x = 6
+		y = 4
+		available = {
+		    OR = {
+			  OR = {
+				owns_state = 187
+			    owns_state = 164
+				owns_state = 731
+			  }
+			  OR = {
+			    GRE = {
+				is_puppet = yes
+			    }
+				}
+			}
+			ALB = {
+				NOT = { has_war_with = TUR }
+				country_exists = ALB
+				is_puppet = no
+				has_war = no
+			}
+		}
+		completion_reward = {
+		    ALB = {
+				country_event = albania.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_retake_serbia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		mutually_exclusive = { focus = TUR_negotiations_with_serbia }
+	    prerequisite = { focus = TUR_claims_on_greece }
+		cost = 10
+		x = 10
+		y = 4
+		available = {
+		    SER = {
+				NOT = { has_war_with = TUR }
+				country_exists = SER
+				is_puppet = no
+			}
+			has_army_manpower = { size > 400000 }
+		}
+		completion_reward = {
+		    TUR = {
+			    country_event = turkey.4
+			}
+		}
+		
+	
+	
+	
+	}
+		
+	focus = {
+	    id = TUR_negotiations_with_serbia
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = TUR_retake_serbia }
+		prerequisite = { focus = TUR_claims_on_greece }
+		cost = 10
+		x = 8
+		y = 4
+		available = {
+		   SER = {
+				NOT = { has_war_with = TUR }
+				country_exists = SER
+				is_puppet = no
+				has_war = no
+			}
+		}
+		completion_reward = {
+		    SER = {
+				country_event = serbia.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_preparing_for_a_war_with_hungary
+		icon = GFX_goal_generic_production2
+		mutually_exclusive = { focus = TUR_befriend_hungary }
+		prerequisite = {focus = TUR_retake_wallachia }
+		cost = 10
+		x = 4
+		y = 4
+		available = {
+		   HUN = {
+				NOT = { has_war_with = TUR }
+				country_exists = HUN
+			}
+		}
+		completion_reward = {
+		    81 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			48 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+    focus = {
+	    id = TUR_claiming_transylvania
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = TUR_preparing_for_a_war_with_hungary }
+		cost = 10
+		x = 4
+		y = 5
+		available = {
+		    HUN = {
+				NOT = { has_war_with = TUR }
+				country_exists = HUN
+			}
+		}
+		completion_reward = {
+		   add_state_core = 84
+		   add_state_core = 76
+		   add_state_core = 83
+		   add_state_core = 82
+		}
+	}
+
+    focus = {
+	    id = TUR_transylvania_or_war
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = TUR_claiming_transylvania }
+		cost = 10
+		x = 4
+		y = 6
+		available = {
+		    HUN = {
+				NOT = { has_war_with = TUR }
+				country_exists = HUN
+			}
+			has_army_manpower = { size > 500000 }
+		}
+		completion_reward = {
+		    HUN = {
+				country_event = hungary.1
+			}
+		}
+		
+		
+	
+	}	
+	
+	focus = {
+	    id = TUR_befriend_hungary
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = TUR_retake_wallachia }
+		mutually_exclusive = { focus = TUR_preparing_for_a_war_with_hungary }
+		cost = 10
+		x = 2
+		y = 4
+		available = {
+		   HUN = {
+				NOT = { has_war_with = TUR }
+				country_exists = HUN
+			}
+		}
+		completion_reward = {
+		    HUN = {
+				country_event = hungary.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_alliance_with_hungary
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = TUR_befriend_hungary }
+		cost = 10
+		x = 2
+		y = 5
+		available = {
+		   HUN = {
+				NOT = { has_war_with = TUR }
+				country_exists = HUN
+			}
+		}
+		bypass = {
+			HUN = {
+				is_in_faction_with = TUR
+			}
+		}
+		completion_reward = {
+		    HUN = {
+			    country_event = hungary.3
+			}
+		}
+		
+	}
+	
+	focus = {
+	    id = TUR_persian_rivalry
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TUR_looking_east }
+		mutually_exclusive = { focus = TUR_making_amends_with_persia }
+		cost = 10
+		x = 10
+		y = 2
+		available = {
+		   PER = {
+				NOT = { has_war_with = TUR }
+				country_exists = PER
+			}
+		}
+		bypass = {
+			PER = {
+				is_in_faction_with = TUR
+			}
+		}
+		completion_reward = {
+		    TUR = {
+			    country_event = turkey.5
+				add_opinion_modifier = { target = PER modifier = ottoman_persian_rivalry }
+			}
+			
+		}
+	}
+	
+	focus = {
+	    id = TUR_making_amends_with_persia
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TUR_looking_east }
+		mutually_exclusive = { focus = TUR_persian_rivalry }
+		cost = 10
+		x = 12
+		y = 2
+		available = {
+		   PER = {
+				NOT = { has_war_with = TUR }
+				country_exists = PER
+			}
+		}
+		completion_reward = {
+		    TUR = {
+				add_ideas = ottoman_persian_unity
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_claiming_the_west
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TUR_persian_rivalry }
+		cost = 10
+		x = 13
+		y = 3
+		available = {
+		    PER = {
+				NOT = { has_war_with = TUR }
+				country_exists = PER
+			}
+		}
+		bypass = {
+			PER = {
+				is_in_faction_with = TUR
+			}
+		}
+		completion_reward = {
+		   add_state_core = 229
+		   add_state_core = 419
+		   add_state_core = 421
+		   add_state_core = 413
+		   PER = {
+				country_event = persia.1
+		   }
+		}
+	}
+	
+	focus = {
+	    id = TUR_alliance_for_baku
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TUR_making_amends_with_persia }
+		cost = 10
+		x = 15
+		y = 3
+		available = {
+		    PER = {
+				NOT = { has_war_with = TUR }
+				country_exists = PER
+			}
+		}
+		bypass = {
+			PER = {
+				is_in_faction_with = TUR
+			}
+		}
+		completion_reward = {
+		    PER = {
+				country_event = persia.2
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_war_with_persia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TUR_claiming_the_west }
+		cost = 10
+		x = 13
+		y = 4
+		available = {
+		    PER = {
+				NOT = { has_war_with = TUR }
+				country_exists = PER
+			}
+		}
+		completion_reward = {
+		    create_wargoal = {
+			type = annex_everything
+			target = PER
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_develop_occupied_kurdistan
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TUR_war_with_persia }
+		cost = 10
+		x = 13
+		y = 5
+		available = {
+		    owns_state = 229
+			owns_state = 419
+			owns_state = 421
+			owns_state = 413
+		}
+		completion_reward = {
+		    229 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			419 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			421 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			413 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+	
+	focus = {
+	    id = TUR_caucasus_defences
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TUR_alliance_for_baku }
+		cost = 10
+		x = 15
+		y = 4
+		available = {
+		    owns_state = 229
+			owns_state = 230
+			owns_state = 231
+		}
+		completion_reward = {
+		    229 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			230 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			231 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+	
+	focus = {
+	    id = TUR_istanbul_university
+        icon = 	GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 16
+		y = 0
+		available = {
+		
+		}
+		completion_reward = {
+			341 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		
+	}
+	
+	focus = {
+	    id = TUR_the_greatest_minds
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TUR_istanbul_university
+		}
+		mutually_exclusive = { focus = TUR_education_revolution }
+		cost = 10
+		x = 15
+		y = 1
+		
+		completion_reward = {
+			add_ideas = greatest_minds_idea
+		}
+	}
+	
+	focus = {
+	    id = TUR_education_revolution
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = TUR_istanbul_university
+		}
+		mutually_exclusive = { focus = TUR_the_greatest_minds }
+		cost = 10
+		x = 17
+		y = 1
+		available = {
+			country_exists = TUR
+		}
+		completion_reward = {
+		    add_stability = 0.05
+			add_research_slot = 1
+		}
+    }
+	
+	focus = {
+	    id = TUR_developing_the_nation
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 21
+		y = 0
+		available = {
+		    country_exists = TUR
+		}
+		completion_reward = {
+		    add_political_power = 80
+		}
+	}
+	
+	focus = {
+	    id = TUR_developing_the_heartland
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TUR_developing_the_nation }
+		mutually_exclusive = { focus = TUR_developing_outside_of_heartland }
+	    cost = 10
+		x = 20
+		y = 1
+	    available = {
+		    country_exists = TUR
+			owns_state = 339
+			owns_state = 341
+			owns_state = 340
+			owns_state = 347
+		}
+		completion_reward = {
+		    339 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			341 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			340 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			347 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.02
+		}
+	}
+	
+	focus = {
+	    id = TUR_developing_outside_of_heartland
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TUR_developing_the_nation }
+		mutually_exclusive = { focus = TUR_developing_the_heartland }
+	    cost = 10
+		x = 22
+		y = 1
+	    available = {
+		    country_exists = TUR
+			owns_state = 677
+			owns_state = 446
+			owns_state = 656
+			owns_state = 676
+		}
+		completion_reward = {
+		    677 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			446 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			656 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			676 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.02
+		}
+	}
+	
+	focus = {
+	    id = TUR_defence_of_iraq
+	    icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TUR_developing_outside_of_heartland }
+		cost = 10
+		x = 22
+		y = 2
+		available = {
+		    country_exists = TUR
+			NOT { country_exists = IRQ }
+		}
+		completion_reward = {
+		    291 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			676 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		
+	}
+	
+	focus = {
+	    id = TUR_defence_of_palestine
+	    icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TUR_defence_of_iraq }
+		cost = 10
+		x = 22
+		y = 3
+		available = {
+		    country_exists = TUR
+			owns_state = 454
+			owns_state = 453
+		}
+		completion_reward = {
+		    454 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			453 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		
+	}
+	
+	focus = {
+	    id = TUR_defence_of_the_capital
+	    icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TUR_developing_the_heartland }
+		cost = 10
+		x = 20
+		y = 2
+		available = {
+		    country_exists = TUR
+			owns_state = 341
+			owns_state = 347
+		}
+		completion_reward = {
+		    341 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			347 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		
+	}
+	
+	focus = {
+	    id = TUR_defence_of_the_coast
+	    icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TUR_defence_of_the_capital }
+		cost = 10
+		x = 20
+		y = 3
+		available = {
+		    country_exists = TUR
+			owns_state = 342
+			owns_state = 339
+		}
+		completion_reward = {
+		    342 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			339 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		
+	}
+	
+	focus = {
+	    id = TUR_the_new_army
+		icon = GFX_goal_generic_army_doctrines
+	    prerequisite = { focus = TUR_imperial_reforms }
+		cost = 10
+		x = 28
+		y = 0 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = TUR_the_new_army
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_men_of_the_empire
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TUR_the_new_army }
+		cost = 10
+		x = 24
+		y = 1
+		completion_reward = {
+			army_experience = 5
+		}
+	}
+	
+	focus = {
+	    id = TUR_engines_of_the_empire
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TUR_the_new_army }
+		cost = 10
+		x = 26
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_tanks_of_the_empire
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TUR_the_new_army }
+		cost = 10
+		x = 28
+		y = 1
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = TUR_heavy_armor_focus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_shells_of_the_empire
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TUR_the_new_army }
+		cost = 10
+		x = 30
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_artillery_focus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_the_military_elite
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = {
+			focus = TUR_men_of_the_empire
+			focus = TUR_engines_of_the_empire
+			focus = TUR_tanks_of_the_empire
+			focus = TUR_shells_of_the_empire
+		}
+		available = {
+		    country_exists = TUR
+		}
+		cost = 10
+		x = 27
+		y = 2
+		completion_reward = {
+		    army_experience = 15
+			add_stability = 0.03
+		}
+	}
+	
+	focus = {
+	    id = TUR_the_new_navy
+		icon = GFX_goal_generic_build_navy
+	    prerequisite = { focus = TUR_imperial_reforms }
+		cost = 10
+		x = 34
+		y = 0 
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_the_new_navy
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_a_great_fleet
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TUR_the_new_navy }
+		cost = 10
+		x = 32
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = base_strike_main
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TUR_a_great_fleet }
+		cost = 10
+		x = 31
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_carriers
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = TUR_a_great_fleet }
+		cost = 10
+		x = 33
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_small_ships
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = TUR_the_new_navy }
+		cost = 10
+		x = 36
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_escorts
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TUR_small_ships }
+		cost = 10
+		x = 37
+		y = 2
+		completion_reward = {
+			navy_experience = 12
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = convoy_defense_tree
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = TUR_small_ships }
+		cost = 10
+		x = 35
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = TUR_submarines_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_destroyers
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TUR_battleships }
+		cost = 10
+		x = 31
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_transports
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = TUR_escorts }
+		cost = 10
+		x = 37
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = amphibious_focus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = amphibious_focus
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_the_new_air
+		icon = GFX_goal_generic_air_doctrine
+	    prerequisite = { focus = TUR_imperial_reforms }
+		cost = 10
+		x = 42
+		y = 0 
+		completion_reward = {
+			air_experience = 15
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			} 
+		}
+	}
+	
+	focus = {
+	    id = TUR_air_infrastructure
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TUR_the_new_air }
+		cost = 10
+		x = 42
+		y = 1
+		completion_reward = {
+			air_experience = 5
+
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_high_in_the_sky
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TUR_the_new_air }
+		cost = 10
+		x = 40
+		y = 1
+		completion_reward = {
+		    air_experience = 5
+		}
+	}
+	
+	focus = {
+		id = TUR_tactical_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = TUR_high_in_the_sky }
+		x = 39
+		y = 2
+		cost = 10	
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				technology = tactical_bomber2
+				technology = CAS2				
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_strategic_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TUR_high_in_the_sky }
+		x = 41
+		y = 2
+		cost = 10	
+		completion_reward = {
+		add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				technology = strategic_bomber2
+			}	
+		}
+	}
+	
+	focus = {
+	    id = TUR_close_combat
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TUR_the_new_air }
+		cost = 10
+		x = 44
+		y = 1
+		completion_reward = {
+		    air_experience = 5
+		}
+	}
+	
+	focus = {
+		id = TUR_light_fighters
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = TUR_close_combat }
+		x = 43
+		y = 2
+		cost = 10	
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_heavy_fighters
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TUR_close_combat }
+		x = 45
+		y = 2
+		cost = 10	
+		completion_reward = {
+			add_tech_bonus = {
+				name = heavy_fighters
+				bonus = 0.5
+				uses = 1				
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_great_bombers
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = {
+			focus = TUR_strategic_bombers
+			focus = TUR_tactical_bombers
+		}
+		x = 41
+		y = 3
+		cost = 10
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = combined_bomber_offensive
+				bonus = 0.5
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+	
+	focus = {
+	    id = TUR_industrial_nation
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 48
+		y = 0
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_military_installations
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TUR_industrial_nation }
+		x = 47
+		y = 1
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_civilian_industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TUR_industrial_nation }
+		x = 49
+		y = 1
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_infrastructure_project
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TUR_civilian_industry }
+		x = 49
+		y = 2
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = TUR_dockyard_project
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TUR_military_installations }
+		x = 47
+		y = 2
+		cost = 10
+		completion_reward = {
+			navy_experience = 5
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+	    id = TUR_airport_project
+		icon = GFX_goal_generic_air_production
+		prerequisite = {
+			focus = TUR_air_infrastructure
+			focus = TUR_dockyard_project
+		}
+		x = 47
+		y = 3
+		cost = 10
+		completion_reward = {
+			air_experience = 5
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+	    id = TUR_industrial_technology
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TUR_infrastructure_project }
+		x = 49
+		y = 3
+		cost = 10 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

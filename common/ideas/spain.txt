@@ -1,0 +1,183 @@
+ideas = {
+    
+	country = {
+	    catholic_nation = {
+		    
+			allowed = {
+				original_tag = SPR
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.2
+			}
+			rule = {
+				can_create_factions = yes
+			}
+			picture = generic_volunteer_expedition_bonus
+		
+		
+		}
+		
+		spanish_de_leonism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				de_leonist_drift = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		spanish_collectivism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				collectivist_drift = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		spanish_monarchism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				absolute_monarchist_drift = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		spanish_strasserism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				strasserist_drift = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				justify_war_goal_time = -0.10
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		spanish_theoconservatism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				theoconservative_drift = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		spanish_americanism = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				americanist_drift = 0.1
+				conscription = 0.03
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

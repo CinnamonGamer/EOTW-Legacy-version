@@ -1,0 +1,900 @@
+﻿###########################
+# HUN Events
+###########################
+
+add_namespace = hungary
+
+#Turkish Focus - Befriend Hungary
+country_event = {
+    id = hungary.2
+	title = hungary.2.t
+	desc = hungary.2.d
+    picture = GFX_report_event_german_politician_speech
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.2.o1
+        add_opinion_modifier = { target = TUR modifier = hungary_turkey_befriended }
+	}
+	
+	option = {
+	    name = hungary.2.o2
+        add_political_power = 10
+    }
+}        
+
+#Turkish Focus - Transylvania or War
+country_event = {
+    id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+		name = hungary.1.o1
+		ai_chance = {
+			factor = 17
+		}
+		effect_tooltip = {
+			TUR = {
+				transfer_state = 84
+				transfer_state = 76
+				transfer_state = 83
+				transfer_state = 82
+			}
+		}
+		TUR = {
+		    country_event = turkey.9
+		}
+	}
+	
+	option = {
+		name = hungary.1.o2
+		ai_chance = {
+			factor = 83
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = TUR
+					ratio > 0.7
+				}
+			}
+			modifier = {
+				factor = 0.1
+				any_country = {
+					is_major = yes
+					is_in_faction_with = HUN
+				}
+			}
+		}	
+			TUR = {
+		        country_event = turkey.10
+		    }
+		}		
+	}	
+	
+#Turkish Focus - Form Alliance
+country_event = {
+    id = hungary.3
+	title = hungary.3.t
+	desc = hungary.3.d
+	picture = GFX_report_event_german_turkish_pact
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.3.o1
+		ai_chance = { factor = 40 }
+		TUR = {
+		    country_event = turkey.11
+		}
+		
+	}
+	
+	option = {
+	    name = hungary.3.o2
+		ai_chance = { factor = 60 }
+		add_political_power = 15
+		remove_opinion_modifier = { target = TUR modifier = hungary_turkey_befriended }
+	}
+	
+}
+
+#Focus - Peasant Army
+country_event = {
+    id = hungary.4
+	title = hungary.4.t
+	desc = hungary.4.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.4.o1
+		ai_chance = { factor = 30 }
+		add_political_power = -50
+		add_manpower = 40000
+	}
+	
+	option = {
+	    name = hungary.4.o2
+		ai_chance = { factor = 50 }
+		add_political_power = -30
+		add_manpower =25000
+	}
+	
+	option = {
+	    name = hungary.4.o3
+		ai_chance = { factor = 20 }
+		add_manpower = 10000
+		add_stability = -0.02
+	}
+}
+
+#Focus - The Balkan Dream
+country_event = {
+    id = hungary.5
+	title = hungary.5.t
+	desc = hungary.5.d
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.5.o1
+		ai_chance = { factor = 80 }
+		every_country = {
+			add_opinion_modifier = { target = HUN modifier = hungarian_desires }
+		}
+	}
+	
+	option = {
+	    name = hungary.5.o2
+		ai_chance = { factor = 20 }
+		add_stability = -0.05
+		add_political_power = -25
+	}
+	
+	
+}
+
+#Austrian Event - Hungarian Tech Deal Army
+country_event = {
+    id = hungary.6
+	title = hungary.6.t
+	desc = hungary.6.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+	}
+	
+	option = {
+	    name = hungary.6.o1
+		ai_chance = { factor = 100 }
+		army_experience = 5
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 0.5
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+
+#Austrian Event - Hungarian Tech Deal Air
+country_event = {
+    id = hungary.7
+	title = hungary.7.t
+	desc = hungary.7.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+	}
+	
+	option = {
+	    name = hungary.7.o1
+		ai_chance = { factor = 100 }
+		army_experience = 5
+		add_tech_bonus = {
+			name =  air_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = air_doctrine
+		}
+	}
+}
+
+#Focus - Slovakia for Alliance
+country_event = {
+    id = hungary.8
+	title = hungary.8.t
+	desc = hungary.8.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = { #Southern Slovakia
+	    name = hungary.8.o1
+		ai_chance = { factor = 70 }
+		AUS = {
+			country_event = hungary.9
+		}
+	}
+	
+	option = { #Southern and Eastern Slovakia
+	    name = hungary.8.o2
+		ai_chance = { factor = 25 }
+		AUS = {
+			country_event = hungary.10
+		}
+	}
+	
+	option = { #All of Slovakia
+	    name = hungary.8.o3
+		ai_chance = { factor = 5 }
+		AUS = {
+			country_event = hungary.11
+		}
+	}
+}
+
+#Hungarian Focus - Southern Slovakia
+country_event = {
+    id = hungary.9
+	title = hungary.9.t
+	desc = hungary.9.d
+	picture = GFX_report_event_soviet_invasion_map
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+	}
+	
+	option = {
+	    name = hungary.9.o1
+		ai_chance = { factor = 80 }
+	    AUS = { add_to_faction = HUN }
+		HUN = {
+			transfer_state = 664
+		}
+	}
+	
+	option = {
+	    name = hungary.9.o2
+		ai_chance = { factor = 20 }
+		add_stability = 0.01
+	}
+}
+
+#Hungarian Focus - Southern and Eastern Slovakia
+country_event = {
+    id = hungary.10
+	title = hungary.10.t
+	desc = hungary.10.d
+	picture = GFX_report_event_soviet_invasion_map
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+	}
+	
+	option = {
+	    name = hungary.10.o1
+		ai_chance = { factor = 60 }
+	    AUS = { add_to_faction = HUN }
+		HUN = {
+			transfer_state = 664
+			transfer_state = 71
+		}
+	}
+	
+	option = {
+	    name = hungary.10.o2
+		ai_chance = { factor = 40 }
+		add_stability = 0.01
+	}
+}
+
+#Hungarian Focus - All of Slovakia
+country_event = {
+    id = hungary.11
+	title = hungary.11.t
+	desc = hungary.11.d
+	picture = GFX_report_event_soviet_invasion_map
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+	}
+	
+	option = {
+	    name = hungary.11.o1
+		ai_chance = { factor = 20 }
+	    AUS = { add_to_faction = HUN }
+		HUN = {
+			transfer_state = 664
+			transfer_state = 71
+			transfer_state = 70
+		}
+	}
+	
+	option = {
+	    name = hungary.11.o2
+		ai_chance = { factor = 80 }
+		add_stability = 0.01
+	}
+}
+
+#Hungarian Focus - Balkan Trade Union
+country_event = {
+    id = hungary.12
+	title = hungary.12.t
+	desc = hungary.12.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ROM
+	}
+	
+	option = {
+	    name = hungary.12.o1
+		ai_chance = { factor = 80 }
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+		HUN = {
+			country_event = hungary.13
+		}
+	}
+	
+	option = {
+	    name = hungary.12.o2
+		ai_chance = { factor = 20 }
+		add_stability = 0.1
+		add_political_power = 30
+		HUN = {
+			country_event = hungary.14
+		}
+	}
+}
+
+#Focus - Wallachians Accept
+country_event = {
+    id = hungary.13
+	title = hungary.13.t
+	desc = hungary.13.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.13.o1
+		ai_chance = { factor = 100 }
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+		random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+		}
+	}
+}
+
+#Focus - Wallachians Refuse
+country_event = {
+    id = hungary.14
+	title = hungary.14.t
+	desc = hungary.14.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.14.o1
+		ai_chance = { factor = 100 }
+		add_political_power = -30
+		add_stability = -0.02
+	}
+}
+
+#Hungarian Focus - Alliance
+country_event = {
+    id = hungary.15
+	title = hungary.15.t
+	desc = hungary.15.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ROM
+	}
+	
+	option = {
+	    name = hungary.15.o1
+		ai_chance = { factor = 70 }
+		HUN = {
+			country_event = hungary.16
+		}
+	}
+	
+	option = {
+	    name = hungary.15.o2
+		ai_chance = { factor = 30 }
+		HUN = {
+			country_event = hungary.17
+		}
+	}
+}
+
+#Focus - Wallachians Accept Alliance
+country_event = {
+    id = hungary.16
+	title = hungary.16.t
+	desc = hungary.16.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.16.o1
+		ai_chance = { factor = 100 }
+		create_faction = balkan_alliance
+		add_to_faction = ROM
+	}
+}
+
+#Focus - Wallachians Refuse Alliance
+country_event = {
+    id = hungary.17
+	title = hungary.17.t
+	desc = hungary.17.d
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.17.o1
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+#Hungarian Focus - Political Union with Hungary
+country_event = {
+    id = hungary.18
+	title = hungary.18.t
+	desc = hungary.18.d
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ROM
+	}
+	
+	option = {
+	    name = hungary.18.o1
+		ai_chance = { factor = 40 }
+		add_political_power = 200
+		HUN = {
+			country_event = hungary.19
+		}
+		
+	}
+	
+	option = {
+	    name = hungary.18.o2
+		ai_chance = { factor = 60 }
+		add_stability = 0.2
+		HUN = {
+			country_event = hungary.20
+		}
+	}
+}
+
+#Focus - Wallachians Accept Political Union
+country_event = {
+    id = hungary.19
+	title = hungary.19.t
+	desc = hungary.19.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.19.o1
+		ai_chance = { factor = 100 }
+		HUN = { puppet = ROM }
+		add_political_power = -60
+		add_stability = 0.1
+	}
+}
+
+#Focus - Wallachians Refuse Political Union
+country_event = {
+    id = hungary.20
+	title = hungary.20.t
+	desc = hungary.20.d
+	picture = GFX_report_event_czech_soldiers_01
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = { #War
+	    name = hungary.20.o1
+		ai_chance = { factor = 5 }
+		add_political_power = -70
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+		}
+	}
+	
+	option = { #Let it go
+	    name = hungary.20.o2
+		ai_chance = { factor = 95 }
+		add_political_power = 30
+	}
+}
+
+#Hungarian Focus - Personal Union
+country_event = {
+    id = hungary.21
+	title = hungary.21.t
+	desc = hungary.21.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = CRO
+	}
+	
+	option = {
+	    name = hungary.21.o1
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		HUN = {
+			country_event = hungary.22
+		}
+	}
+	
+	option = {
+	    name = hungary.21.o2
+		ai_chance = { factor = 60 }
+		add_stability = 0.1
+		add_political_power = 50
+		HUN = {
+			country_event = hungary.23
+		}
+	}
+}
+
+#Focus - Croatians Accept
+country_event = {
+    id = hungary.22
+	title = hungary.22.t
+	desc = hungary.22.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.22.o1
+		ai_chance = { factor = 100 }
+		HUN = { puppet = CRO }
+	}
+}
+
+#Focus - Croatians Refuse
+country_event = {
+    id = hungary.23
+	title = hungary.23.t
+	desc = hungary.23.d
+	picture = GFX_report_event_finnish_letter
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.23.o1
+		ai_chance = { factor = 10 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CRO
+		}
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	
+	option = {
+	    name = hungary.23.o2
+		ai_chance = { factor = 90 }
+		add_political_power = 20
+	}
+}
+
+#Hungarian Focus - Ukraine Alliance
+country_event = {
+    id = hungary.24
+	title = hungary.24.t
+	desc = hungary.24.d
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = UKR
+	}
+	
+	option = { #Accept
+	    name = hungary.24.o1
+		ai_chance = { factor = 60 }
+		HUN = {
+			country_event = hungary.25
+		}
+	}
+	
+	option = { #Refuse
+	    name = hungary.24.o2
+		ai_chance = { factor = 40 }
+	}
+}
+
+#Focus - Ukrainians Accept Alliance
+country_event = {
+    id = hungary.25
+	title = hungary.25.t
+	desc = hungary.25.d
+	picture = GFX_report_event_german_advisors_remain
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.25.o1
+		ai_chance = { factor = 100 }
+		create_faction = new_axis
+		add_to_faction = UKR
+	}
+}
+
+#Hungarian Focus - Hungarians Demand Bulgaria
+country_event = {
+    id = hungary.26
+	title = hungary.26.t
+	desc = hungary.26.d
+	picture = GFX_report_event_czech_soldiers_02
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = TUR
+	}
+	
+	option = {
+	    name = hungary.26.o1
+		ai_chance = { factor = 55 }
+		add_stability = -0.02
+		HUN = {
+				country_event = hungary.27
+		}
+	}
+	
+	option = {
+	    name = hungary.26.o2
+		ai_chance = { factor = 45 }
+		add_stability = 0.02
+		add_political_power = 30
+		HUN = {
+			country_event = hungary.28
+		}
+	}
+}
+
+#Focus - Ottomans Accept
+country_event = {
+    id = hungary.27
+	title = hungary.27.t
+	desc = hungary.27.d
+	picture = GFX_report_event_german_turkish_pact
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.27.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 48
+		transfer_state = 212
+		transfer_state = 81
+		add_stability = 0.02
+	}
+}
+
+#Focus - Ottomans Refuse
+country_event = {
+    id = hungary.28
+	title = hungary.28.t
+	desc = hungary.28.d
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = HUN
+	}
+	
+	option = {
+	    name = hungary.28.o1
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = take_state_focus
+			target = TUR
+			generator = { 48 212 81 }
+		}
+		add_political_power = -50
+		add_stability = -0.03
+	}
+}
+
+#Hungarian Focus - Trade Deal
+country_event = {
+    id = hungary.29
+	title = hungary.29.t
+	desc = hungary.29.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = UKR
+	}
+	
+	option = {
+	    name = hungary.29.o1
+		ai_chance = { factor = 100 }
+		random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+		    }
+	}
+}

@@ -1,0 +1,179 @@
+﻿###########################
+# AST Events
+###########################
+
+add_namespace = australia
+
+#Australian Focus - Taiwan Ultimatum
+country_event = {
+    id = australia.1
+	title = australia.1.t
+	desc = australia.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = CHI
+	}
+	
+	option = {
+	    name = australia.1.o1
+		ai_chance = {
+			factor = 80
+		}
+		AST = {
+			country_event = australia.2
+		}
+		add_political_power = 20
+	}
+	
+	option = {
+	    name = australia.1.o2
+		ai_chance = {
+			factor = 20
+		}
+		AST = {
+			country_event = australia.3
+		}
+		add_political_power = -20
+	}
+}
+
+#Focus - China Accepts
+country_event = {
+    id = australia.2
+	title = australia.2.t
+	desc = australia.2.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AST
+	}
+	
+	option = {
+	    name = australia.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 524
+		add_political_power = -10
+	}
+}
+
+#Focus - China Refuses
+country_event = {
+    id = australia.3
+	title = australia.3.t
+	desc = australia.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AST
+	}
+	
+	option = {
+	    name = australia.3.o1
+		ai_chance = {
+			factor = 10
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = CHI
+			generator = { 524 }
+		}
+		add_war_support = 0.05
+	}
+	
+	option = {
+	    name = australia.3.o2
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = 10
+	}
+}
+
+#Australian Focus - Non-Aggression Pact
+country_event = {
+    id = australia.4
+	title = australia.4.t
+	desc = australia.4.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = CHI
+	}
+	
+	option = {
+	    name = australia.4.o1
+		ai_chance = {
+			factor = 99
+		}
+		AST = {
+			country_event = australia.5
+		}
+		add_stability = 0.08
+	}
+	
+	option = {
+	    name = australia.4.o2
+		ai_chance = {
+			factor = 1
+		}
+		AST = {
+			country_event = australia.6
+		}
+		add_stability = -0.03
+	}
+}
+
+#Focus - China Accepts Pact
+country_event = {
+    id = australia.5
+	title = australia.5.t
+	desc = australia.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AST
+	}
+	
+	option = {
+	    name = australia.5.o1 
+		ai_chance = {
+			factor = 100
+		}
+		diplomatic_relation = { country = CHI relation = non_aggression_pact }
+	}
+}
+
+#Focus - China Refuses Pact
+country_event = {
+    id = australia.6
+	title = australia.6.t
+	desc = australia.6.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = AST
+	}
+	
+	option = {
+	    name = australia.6.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -15
+	}
+}

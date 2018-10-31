@@ -1,0 +1,432 @@
+focus_tree = {
+	id = brazil_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZZZ
+		}
+	}
+	
+	focus = {
+	    id = BRA_political_discussion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 12
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+	}
+	
+	focus = {
+	    id = BRA_nation_of_the_future
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_political_discussion }
+		mutually_exclusive = { focus = BRA_legacy_of_our_ancestors }
+		x = 11
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		}
+	}
+	
+	focus = {
+	    id = BRA_legacy_of_our_ancestors
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_political_discussion }
+		mutually_exclusive = { focus = BRA_nation_of_the_future }
+		x = 13
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		}
+	}
+	
+	focus = {
+	    id = BRA_industrial_reforms
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_nation_of_the_future focus = BRA_legacy_of_our_ancestors }
+		x = 6
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = industrial_reform_process
+				days = 50
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_subsidise_the_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_industrial_reforms }
+		x = 5
+		y = 3
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_private_military_corporations
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_subsidise_the_arms_industry }
+		x = 3
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_ideas = private_military_corporations_idea
+		}
+	}
+	
+	focus = {
+	    id = BRA_further_national_development
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_subsidise_the_arms_industry }
+		x = 5
+		y = 4
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_continued_industrial_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_further_national_development }
+		x = 5
+		y = 5
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_the_future_of_rio
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_continued_industrial_effort }
+		x = 5
+		y = 7
+		cost = 10
+		completion_reward = {
+		    add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = BRA_industrial_heartland
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_the_future_of_rio }
+		x = 4
+		y = 8
+		cost = 10
+		completion_reward = {
+		    500 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_infrastructure_projects
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_the_future_of_rio }
+		x = 6
+		y = 8
+		cost = 10
+		completion_reward = {
+		    500 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_southern_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_infrastructure_projects }
+		x = 8
+		y = 9
+		cost = 10
+		completion_reward = {
+		    501 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			502 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+			    limit = { NOT = { has_idea = disappointed_industrialists } }
+				add_ideas = disappointed_industrialists
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_nationwide_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_infrastructure_projects }
+		x = 10
+		y = 9
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+			    limit = { NOT = { has_idea = disappointed_industrialists } }
+				add_ideas = disappointed_industrialists
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_appease_the_industrialists
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_nationwide_effort }
+		prerequisite = { focus = BRA_southern_expansion }
+		x = 9
+		y = 10
+		cost = 10
+		completion_reward = {
+		    remove_ideas = disappointed_industrialists
+		}
+	}
+	
+	focus = {
+	    id = BRA_the_focus_of_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_industrial_heartland }
+		x = 4
+		y = 9 
+		cost = 10
+		completion_reward = {
+		    add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = BRA_stick_to_the_capital
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_the_focus_of_industry }
+		x = 2
+		y = 10
+		cost = 10
+		completion_reward = {
+		    500 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			503 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			501 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_the_north
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_the_focus_of_industry }
+		x = 4
+		y = 10
+		cost = 10
+		completion_reward = {
+		    499 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			496 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			505 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = BRA_central_regions
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BRA_the_focus_of_industry }
+		x = 6
+		y = 10
+		cost = 10
+		completion_reward = {
+		    504 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			280 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

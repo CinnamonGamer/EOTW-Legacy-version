@@ -1,0 +1,189 @@
+﻿capital = 141	
+
+set_stability = 0.75
+set_war_support = 0.34
+
+oob = "SWE_1936"
+
+set_research_slots = 3
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	early_bomber = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 12
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 80
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 2
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 6
+			#banned = no #default is no
+		}
+		
+	}
+	
+	ruling_party = national_conservative
+	last_election = "1932.9.18"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+add_ideas = {
+	export_focus
+	volunteer_only
+	civilian_economy
+	cultural_divide
+}
+
+create_country_leader = {
+	name = "Lewi Pethrus"
+	desc = ""
+	picture = "Portrait_SWE_Lewi_Pethrus.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_christian
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zeth Hoeglund"
+	desc = ""
+	picture = "Portrait_SWE_hoeglund.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fredrik Stroem"
+	desc = ""
+	picture = "Portrait_SWE_stroem.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gustaf V"
+	desc = ""
+	picture = "Portrait_SWE_Gustaf_V.dds"
+	expire = "1965.1.1"
+	ideology = imperial
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Sven Olov Lindholm"
+	desc = ""
+	picture = "Portrait_SWE_Lindholm.dds"
+	expire = "1965.1.1"
+	ideology = fascist
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Folke Högberg"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { commando }
+	skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Erik af Edholm"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = {  hill_fighter }
+	skill = 4
+
+}
+
+create_navy_leader = {
+	name = "Claes Lindström"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	traits = { blockade_runner }
+	skill = 4
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Draken Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+}

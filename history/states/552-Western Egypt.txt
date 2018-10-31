@@ -1,0 +1,23 @@
+
+state={
+	id=552
+	name="STATE_552"
+	manpower = 26539
+	
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = SUD
+		buildings = {
+			infrastructure = 0
+		}
+
+		add_core_of = SUD
+
+	}
+
+	provinces={
+		 7987 8103 10900 4961 4138 12836
+	}
+}

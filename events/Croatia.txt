@@ -1,0 +1,28 @@
+﻿###########################
+# CRO Events
+###########################
+
+add_namespace = croatia
+
+#Plane Crash Investigation
+country_event = {
+    id = croatia.1
+	title = croatia.1.t
+	desc = croatia.1.d
+	picture = GFX_report_event_airplane_crash
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = CRO
+        date > 1936.11.1
+        date < 1936.11.16
+    }
+	
+	option = {
+	    name = croatia.1.o1
+		hidden_effect = {
+		    every_country = { news_event = { id = news.7 } }
+		}
+	}
+}

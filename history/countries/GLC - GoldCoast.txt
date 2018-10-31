@@ -1,0 +1,135 @@
+﻿capital = 274
+
+set_stability = 0.00
+set_war_support = 0.00
+
+
+oob = "GLC_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 9
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 10
+			#banned = no #default is no
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 6
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 12
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 0
+		}
+
+                de_leonist = { 
+			popularity = 63
+		}
+	}
+	
+	ruling_party = de_leonist
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+add_ideas = {
+	closed_economy
+	service_by_requirement
+	partial_economic_mobilisation
+	african_isolationism
+}
+
+create_country_leader = {
+	name = "Bakota Aswari"
+	desc = ""
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = international_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mumfasi Raya"
+	desc = ""
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ovanramwen II"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = imperial
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Batayamin Okasa"
+	desc = ""
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = militant_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aimata Kosi"
+	desc = ""
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = religious_cultism
+	traits = {
+		#
+	}
+}

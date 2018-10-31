@@ -1,0 +1,75 @@
+﻿###########################
+# OMA Events
+###########################
+
+add_namespace = oman
+
+#Government
+country_event = {
+    id = oman.1
+	title = oman.1.t
+	desc = oman.1.d
+	picture = GFX_report_event_soviet_purge_officers_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = OMA
+		date > 1936.9.1
+		date < 1936.9.18
+	}
+	
+	option = {
+	    name = oman.1.o1
+		ai_chance = {
+			factor = 30
+		}
+		add_popularity = {
+			ideology = theoconservative
+			popularity = 0.20
+		}
+		add_political_power = -20
+	}
+	
+	option = {
+	    name = oman.1.o2
+		ai_chance = {
+			factor = 5
+		}
+		add_popularity = {
+			ideology = theoconservative
+			popularity = -0.03
+		}
+		add_political_power = -40
+	}
+	
+	option = {
+	    name = oman.1.o3
+		ai_chance = {
+			factor = 5
+		}
+		add_popularity = {
+			ideology = theoconservative
+			popularity = 0.60
+		}
+		set_politics = {
+			ruling_party = theoconservative
+			elections_allowed = no
+		}
+		add_political_power = -60
+		add_stability = -0.05
+	}
+	
+	option = {
+	    name = oman.1.o4
+		ai_chance = {
+			factor = 60
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SAU
+		}
+		add_stability = 0.05
+	
+	}
+}

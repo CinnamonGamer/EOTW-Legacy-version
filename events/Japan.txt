@@ -1,0 +1,24 @@
+﻿add_namespace = japan
+
+
+country_event = {
+	id = japan.1
+	title = japan.1.t
+	desc = japan.1.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	option =  {
+		name = japan.1.a
+		hidden_effect = {
+	start_civil_war = {
+			ideology = nationalist
+			size = 0.4
+				capital = 533
+				states = { 536 534 545 }
+		}
+		    news_event = { hours = 6 id = news.600 }
+			set_country_flag = japan_civil_war
+		}
+	}
+}

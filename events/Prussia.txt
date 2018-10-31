@@ -1,0 +1,172 @@
+﻿###########################
+# PRS Events
+###########################
+
+add_namespace = prussia
+
+#Wilhelm II 78th Birthday
+country_event = {
+    id = prussia.1
+	title = prussia.1.t
+	desc = prussia.1.d
+	picture = GFX_report_event_fascist_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRS
+		date > 1937.1.10
+		date < 1937.1.28
+	}
+	
+	option = {
+	    name = prussia.1.o1
+		ai_chance = {
+			factor = 70
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.01
+		}
+	}
+	
+	option = {
+	    name = prussia.1.o2
+		ai_chance = {
+			factor = 30
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = -0.01
+		}
+	}
+}
+
+#German Unification - Prussian Victory
+country_event = {
+    id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.d
+	picture = GFX_report_event_fascist_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = PRS
+		owns_state = 64
+		owns_state = 61
+		owns_state = 68
+		owns_state = 62
+		owns_state = 63
+		owns_state = 86
+		owns_state = 85
+		owns_state = 5
+		owns_state = 65
+		owns_state = 60
+		owns_state = 59
+		owns_state = 56
+		owns_state = 57
+		owns_state = 55
+		owns_state = 50
+		owns_state = 51
+		owns_state = 54
+		owns_state = 53
+		owns_state = 52
+		owns_state = 188
+	}
+	
+	immediate = {
+	    64 = {
+			add_core_of = GMY
+		}
+		61 = {
+			add_core_of = GMY
+		}
+		68 = {
+			add_core_of = GMY
+		}
+		62 = {
+			add_core_of = GMY
+		}
+		63 = {
+			add_core_of = GMY
+		}
+		86 = {
+			add_core_of = GMY
+		}
+		85 = {
+			add_core_of = GMY
+		}
+		5 = {
+			add_core_of = GMY
+		}
+		65 = {
+			add_core_of = GMY
+		}
+		60 = {
+			add_core_of = GMY
+		}
+		59 = {
+			add_core_of = GMY
+		}
+		56 = {
+			add_core_of = GMY
+		}
+		57 = {
+			add_core_of = GMY
+		}
+		55 = {
+			add_core_of = GMY
+		}
+		50 = {
+			add_core_of = GMY
+		}
+		51 = {
+			add_core_of = GMY
+		}
+		54 = {
+			add_core_of = GMY
+		}
+		53 = {
+			add_core_of = GMY
+		}
+		52 = {
+			add_core_of = GMY
+		}
+		188 = {
+			add_core_of = GMY
+		}
+	}
+	
+	option = {
+	    name = prussia.2.o1
+		set_cosmetic_tag = GMY
+		
+		hidden_effect = {
+		    GMY = {
+			    create_country_leader = {
+	                name = "Wilhelm II"
+	                desc = ""
+	                picture = "Portrait_PRS_Wilhelm_Second.dds"
+	                expire = "1965.1.1"
+	                ideology = imperial
+	                traits = {
+		                #
+	                }
+                }
+			}
+		}
+		GMY = {
+			country_event = { id = germ.1 days = 1 }
+		}
+		GMY = {
+			country_event = { id = germ.2 days = 3 }
+		}
+	}
+	
+	option = {
+	    name = prussia.2.o2
+		add_stability = -0.05
+	}
+}
+

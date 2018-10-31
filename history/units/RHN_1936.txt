@@ -1,0 +1,34 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Nationale Infanterie"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1. Rheinverteidigungskraft"
+		location = 6488
+		division_template = "Nationale Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Rheinverteidigungskraft"
+		location = 241
+		division_template = "Nationale Infanterie" 	
+		start_experience_factor = 0.3
+	}
+
+
+}

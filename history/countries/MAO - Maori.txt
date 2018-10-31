@@ -1,0 +1,133 @@
+﻿capital = 284
+
+set_stability = 0.92
+set_war_support = 0.02
+
+oob = "generic_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	early_light_cruiser = 1
+	transport = 1
+}
+
+set_convoys = 5
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 10
+			#banned = no #default is no
+		}
+
+        national_conservative = {
+			popularity = 70
+			#banned = no #default is no
+		}
+
+        theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+        national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+        americanist = {
+			popularity = 5
+			#banned = no #default is no
+		}
+
+        georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+        democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+        collectivist = {
+			popularity = 15
+			#banned = no #default is no
+		}
+
+        de_leonist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = national_conservative
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	limited_conscription
+	civilian_economy
+}
+
+create_country_leader = {
+	name = "Apirana Ngata"
+	desc = ""
+	picture = "Portrait_MAO_Apirana_Ngata.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Te Rata Mahuta"
+	desc = ""
+	picture = "Portrait_MAO_1_King.dds"
+	expire = "1965.1.1"
+	ideology = military_monarchy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Maori Council"
+	desc = ""
+	picture = "Portrait_MAO_Maori_Council.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Eruera Tirikatene"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = national_collectivist
+	traits = {
+		#
+	}
+} 

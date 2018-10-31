@@ -1,0 +1,43 @@
+﻿division_template = {
+	name = "Piyoda Korpusi"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tog ' korpus"	
+    regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+	}
+}
+
+units = {
+    division= {	
+		name = "1. Tog ' Armiyasi"
+		location = 1459 #Capital Tashkent
+		division_template = "Tog ' korpus"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {	
+		name = "1. Piyoda Askar"
+		location = 1459 #Capital Tashkent
+		division_template = "Piyoda Korpusi"
+		start_experience_factor = 0.2
+
+	}
+
+
+
+
+
+}

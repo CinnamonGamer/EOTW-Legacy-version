@@ -1,0 +1,41 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Dakaru"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+	
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 10862 #Accra
+		division_template = "Dakaru" 	
+		start_experience_factor = 0.3
+	}
+	
+	 division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 5039 #Guinea Border
+		division_template = "Dakaru" 	
+		start_experience_factor = 0.2
+	}
+	
+	 division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 2050 #Lagos
+		division_template = "Dakaru" 	
+		start_experience_factor = 0.2
+	}
+
+
+}

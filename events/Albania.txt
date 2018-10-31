@@ -1,0 +1,36 @@
+﻿###########################
+# ALB Events
+###########################
+
+add_namespace = albania
+
+#Turkish Focus - Negotiations
+country_event = {
+    id = albania.1
+	title = albania.1.t
+	desc = albania.1.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ALB
+	}
+	
+	option = {
+	    name = albania.1.o1
+		ai_chance = { factor = 35 }
+		TUR = { puppet = ALB }
+		TUR = {
+			country_event = { days = 1 id = turkey.7 }
+		}
+		add_political_power = -10
+	}
+
+	option = {
+	    name = albania.1.o2
+		ai_chance = { factor = 65 }
+		add_stability = 0.1
+		add_political_power = -10
+	}
+}

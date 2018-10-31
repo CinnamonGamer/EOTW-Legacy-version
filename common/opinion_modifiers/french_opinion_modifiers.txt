@@ -1,0 +1,78 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    
+	french_ambitions = {
+		value = -5
+	}
+	
+	french_italian_unity = {
+		value = 50
+	}
+	
+	istria_annexation = {
+		value = -10
+	}
+	
+	european_union = {
+		value = 100
+	}
+	
+	united_against_france = {
+		value = 20
+	}
+	
+	rejected_the_kongo = {
+		value = 10
+	}
+	
+	libyan_coast = {
+		value = 10
+	}
+	
+	libya_transfer = {
+		value = 30
+	}
+	
+	libya_and_tunisia = {
+		value = 45
+	}
+	
+	south_china_purchase_refused = {
+		value = -30
+	}
+	
+	harsh_army_restrictions = {
+		value = -10
+	}
+	
+	army_restrictions = {
+		value = -5
+	}
+	
+	disasterous_territorial_loss = {
+		value = -45
+	}
+	
+	harsh_territorial_loss = {
+		value = -35
+	}
+	
+	moderate_territorial_loss = {
+		value = -15
+	}
+	
+	lenient = {
+		value = 5
+	}
+
+
+}

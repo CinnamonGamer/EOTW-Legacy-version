@@ -1,0 +1,220 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Osterreichische Infanterie"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+division_template = {
+	name = "Motorisierte Kraft Truppen"	
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+		artillery = { x = 0 y = 1 }  
+	}
+}
+division_template = {
+	name = "Alpen Abwehr"	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }			
+	}
+}
+division_template = {
+	name = "Kavallerie-Brigade" 	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+}
+division_template = {
+	name = "Leichte Panzerdivision" 	
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+    ###### Austria Region #####
+	division= {	
+		name = "Wien Rote Garde"
+		location = 11666 #Vienna
+		division_template = "Osterreichische Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Hauptstadt Revolutionäre Panzerdivision"
+		location = 11666 #Vienna
+		division_template = "Leichte Panzerdivision" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Wien Volkspolizei"
+		location = 11666 #Vienna
+		division_template = "Kavallerie-Brigade" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Slowenien Abwehr Einheit"
+		location = 9627 #Slovenia
+		division_template = "Osterreichische Infanterie" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1. Österreichische Rote Armee"
+		location = 9648 #Graz
+		division_template = "Osterreichische Infanterie" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1. Graz Polizei Kavallerie"
+		location = 9648 #Graz
+		division_template = "Kavallerie-Brigade" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "2. Österreichische Rote Armee"
+		location = 688 #Salzburg
+		division_template = "Osterreichische Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Revolutionäre Alpen Armee"
+		location = 9650
+		division_template = "Alpen Abwehr" 	
+		start_experience_factor = 0.3
+	}
+	
+	###### Bohemia Region #####
+	division= {	
+		name = "Prag Regionalen Verteidigungseinheit"
+		location = 11542 #Prague
+		division_template = "Osterreichische Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Prag Rot Panzerdivision"
+		location = 11542 #Prague
+		division_template = "Leichte Panzerdivision" 		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Prag Volkspolizeieinheit"
+		location = 11542 #Prague
+		division_template = "Kavallerie-Brigade" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "3. Österreichische Rote Armee"
+		location = 3569 
+		division_template = "Osterreichische Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Böhmischen Regionalen Polizeitruppen"
+		location = 6418 #Plzen
+		division_template = "Kavallerie-Brigade" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Bohemian Alpen Truppen"
+		location = 3585
+		division_template = "Alpen Abwehr" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Regionale Revolutionäre Alpine"
+		location = 6485
+		division_template = "Alpen Abwehr" 	
+		start_experience_factor = 0.3
+	}
+	
+	###### Slovakia Region #####
+	division= {	
+		name = "Slowakei Roten Gebirgsdivision"
+		location = 11554
+		division_template = "Alpen Abwehr" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Vereinigte Slowakei Rote Garde"
+		location = 9692 
+		division_template = "Osterreichische Infanterie" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1. Slowakei Kavallerie-Division"
+		location = 11679
+		division_template = "Kavallerie-Brigade" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1. Ostlichen Gebirgs Armee"
+		location = 6604
+		division_template = "Alpen Abwehr" 	
+		start_experience_factor = 0.1
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}

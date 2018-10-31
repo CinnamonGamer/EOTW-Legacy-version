@@ -1,0 +1,99 @@
+﻿capital = 293
+
+OOB = "YEM_1936"
+
+add_ideas = {
+
+}
+
+set_research_slots = 2
+
+set_technology = {
+	### MOD ###
+	### INF ###
+	infantry_weapons = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 80
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 3
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 15
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 2
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = absolute_monarchist
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_convoys = 35
+
+add_ideas = {
+	#medium_economy
+}
+
+create_country_leader = {
+	name = "Yahya al Hamid"
+	desc = "POLITICS_YAHYA_HAMID_DESC"
+	picture = "portrait_YEM_Imam_Yaha.tga"
+	expire = "1965.1.1"
+	ideology = imperial
+	traits = { }
+}
+
+### Field Marshal
+
+### Corps Commander
+
+### Navy Leader

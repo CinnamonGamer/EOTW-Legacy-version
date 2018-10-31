@@ -1,0 +1,57 @@
+﻿###########################
+# EAF Events
+###########################
+
+add_namespace = eastafrica
+
+#Spreading the Revolution
+country_event = {
+    id = eastafrica.1
+	title = eastafrica.1.t
+	desc = eastafrica.1.d
+	picture = GFX_report_event_tanks_mexico_city
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EAF
+		date > 1937.4.1
+		date < 1937.4.18
+	}
+	
+	option = {
+	    name = eastafrica.1.o1
+		ai_chance = {
+			factor = 34
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = KON
+		}
+		add_stability = 0.08
+		add_named_threat = { threat = 1 name = kongo_under_threat }
+	
+	}
+	
+	option = {
+	    name = eastafrica.1.o2
+		ai_chance = {
+			factor = 64
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SUD
+		}
+		add_stability = 0.08
+		add_named_threat = { threat = 1 name = sudan_under_threat }
+	
+	}
+	
+	option = {
+	    name = eastafrica.1.o3
+		ai_chance = {
+			factor = 2
+		}
+		add_political_power = 25
+	}
+}

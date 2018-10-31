@@ -1,0 +1,128 @@
+﻿###########################
+# MAO Events
+###########################
+
+add_namespace = maori
+
+#Maori Revolt
+country_event = {
+	id = maori.1
+	title = maori.1.t
+	desc = maori.1.d
+	picture = GFX_report_event_USA_tanks_snow
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MAO
+		is_puppet = yes
+		date > 1937.2.1
+		date < 1937.2.18
+	}
+	
+	option = { #Collectivism
+	    name = maori.1.o1
+		ai_chance = {
+			factor = 60
+		}
+		ENG = { end_puppet = MAO }
+		set_politics = {
+			ruling_party = collectivist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.45
+		}
+		MAO = {
+			country_event = { hours = 9 id = maori.2 }
+		}
+	}
+	
+	option = { #Americanism
+	    name = maori.1.o2
+		ai_chance = {
+			factor = 30
+		}
+		ENG = { end_puppet = MAO }
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.45
+		}
+		MAO = {
+			country_event = { hours = 9 id = maori.2 }
+		}
+	}
+	
+	option = { #Monarchism
+	    name = maori.1.o3
+		ai_chance = {
+			factor = 10
+		}
+		ENG = { end_puppet = MAO }
+		set_politics = {
+			ruling_party = absolute_monarchist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.45
+		}
+		MAO = {
+			country_event = { hours = 9 id = maori.2 }
+		}
+	}
+}
+
+#South Island Revolt
+country_event = {
+	id = maori.2
+	title = maori.2.t
+	desc = maori.2.d
+	picture = GFX_report_event_USA_tanks_snow
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = MAO
+	}
+	
+	option = {
+	    name = maori.2.o1
+		ai_chance = {
+			factor = 100
+		}
+		transfer_state = 723
+		transfer_state = 745
+		add_stability = 0.1
+		ENG = {
+			country_event = { hours = 9 id = maori.3 }
+		}
+	}
+}
+
+#Maori Revolt
+country_event = {
+	id = maori.3
+	title = maori.3.t
+	desc = maori.3.d
+	picture = GFX_report_event_USA_tanks_snow
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ENG
+	}
+	
+	option = {
+	    name = maori.3.o1
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -50
+	}
+}

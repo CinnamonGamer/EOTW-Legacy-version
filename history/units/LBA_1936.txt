@@ -1,0 +1,22 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Firqat Almasha"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "Aljaysh 1"
+		location = 1149
+		division_template = "Firqat Almasha" 	
+		start_experience_factor = 0.2
+	}
+
+
+}

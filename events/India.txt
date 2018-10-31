@@ -1,0 +1,1676 @@
+﻿###########################
+# Mughal Events
+###########################
+
+add_namespace = india
+
+# The Industrialisation - Begins
+country_event = {
+	id = india.1
+	title = india.1.t
+	desc = india.1.d
+	picture = GFX_report_event_india_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.05
+		}
+	}
+	
+	option = {
+		name = india.1.a
+		add_manpower = -1000
+	}
+}
+
+# The Industrialisation-scientific breakthrough
+country_event = {
+	id = india.2
+	title = india.2.t
+	desc = india.2.d
+	picture = GFX_report_event_india_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.2
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = india.2.a
+		add_manpower = -200
+		add_political_power = -10
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = industry
+			}
+		}
+	}
+	
+# The Industrialisation - New Factories compeleted in Delhi
+country_event = {
+	id = india.3
+	title = india.3.t
+	desc = india.3.d
+	picture = GFX_report_event_india_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.5
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = india.3.a
+		add_political_power = -10
+		add_manpower = -20000
+			439 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				}
+			}
+		}
+	}
+	
+# The Industrialisation - Dockyards
+country_event = {
+	id = india.4
+	title = india.4.t
+	desc = india.4.d
+	picture = GFX_report_event_india_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.70
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = india.4.a
+		add_political_power = -10
+		add_manpower = -10000
+		426 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		431 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		428 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+# The Industrialisation - Railroad System
+country_event = {
+	id = india.5
+	title = india.5.t
+	desc = india.5.d
+	picture = GFX_report_event_india_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.80
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = india.5.a
+		add_political_power = -10
+		add_manpower = -20000	
+		426 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		431 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		428 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		435 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		433 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		323 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		438 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		437 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		436 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		439 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		441 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+	}
+	
+# The Industrialisation - More building space
+country_event = {
+	id = india.6
+	title = india.6.t
+	desc = india.6.d
+	picture = GFX_report_event_india_purge_trial
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MUG
+		NOT = { has_completed_focus = MUG_industrialisation }
+		focus_progress = {
+			focus = MUG_industrialisation
+			progress > 0.90
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = india.6.a
+		add_political_power = -10
+		add_manpower = -5000
+		add_ideas = MUG_expanding_idea
+		}
+	}
+	
+# Choosing the democracy - Witch one to take?
+country_event = {
+	id = india.7
+	title = india.7.t
+	desc = india.7.d
+	picture = GFX_report_event_india_purge_trial
+
+	is_triggered_only = yes
+
+	#Democratic Socialists - commies
+	option = {
+		ai_chance = {
+			factor = 33
+		}
+		name = india.7.b
+		add_political_power = 20
+		add_ideas = democratic_socialism
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = national_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = 0.03
+		}
+	}
+	#Georgists - My boi Gandhi in here
+	option = {
+		ai_chance = {
+			factor = 33
+		}
+		name = india.7.c
+		add_political_power = 20
+		add_ideas = georgism
+		add_popularity = {
+			ideology = georgist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = national_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.03
+		}
+	}
+	#liberity freaks
+	option = {
+		ai_chance = {
+			factor = 33
+		}
+		name = india.7.d
+		add_political_power = 20
+		add_ideas = americanism
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = national_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.03
+			}
+		}
+	}
+	
+#Mughal - Pakistan Alliance
+country_event = {
+	id = india.8
+	title = india.8.t
+	desc = india.8.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.8.a
+		ai_chance = { factor = 100 }
+		dismantle_faction = yes
+		MUG = {
+			if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+			}
+			if = {
+					limit = {
+						is_in_faction  = yes
+					}
+					remove_from_faction = MUG
+			}
+			create_faction = "Greenpeace"
+			add_to_faction = PAK	
+		}
+	}
+	option = {
+		name = india.8.b
+		ai_chance = { factor = 0 }
+		PAK = {
+			remove_ideas = MUG_georgist_influence
+			remove_opinion_modifier = { target = MUG modifier = mughal_pakistani_friendship }
+		}
+		MUG = {
+			country_event = india.9
+		}
+	}
+}
+
+# Pakistan refuses
+country_event = {
+	id = india.9
+	title = india.9.t
+	desc = india.9.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.9.a
+	}
+}
+
+
+# (georgist - Discussion about Bangladesh)
+country_event = {
+	id = india.10
+	title = india.10.t
+	desc = india.10.d
+	picture = GFX_report_event_india_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		MUG = {
+			NOT = { has_completed_focus = MUG_unarmed_liberation }
+			focus_progress = {
+				focus = MUG_unarmed_liberation
+				progress > 0.2
+			}
+		}
+	}
+	#Accept the independace of Bangladesh
+	option = {
+		name = india.10.a
+		MUG = { 
+			country_event = { id = india.11 }
+		}
+		ai_chance = {
+			factor = 75
+		}
+		effect_tooltip = {
+			BAG = { transfer_state = 430 }
+		}
+	}
+	#Give Bangladesh to Mughal
+	option = {
+		name = india.10.b
+		MUG = { 
+			country_event = { id = india.12 }
+		}
+		ai_chance = {
+			factor = 15
+		}
+		effect_tooltip = {
+			MUG = { transfer_state = 430 }
+		}
+	}
+	#Refuse to do anything
+	option = {
+		name = india.10.c
+		MUG = { 
+			country_event = { id = india.13 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			country_event = { id = india.100 days = 100 } 
+		}
+	}
+}
+
+# Portugal announces the independace of Bangladesh
+country_event = {
+	id = india.11
+	title = india.11.t
+	desc = india.11.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Okay
+	option = {
+		name = india.11.a
+		ai_chance = {
+			factor = 100
+		}
+		BAG = { transfer_state = 430 }
+		430 = {
+			add_core_of = BAG
+		}
+		FRA = {
+				country_event = india.14
+			}
+		MUG = {
+				country_event = india.14
+		}
+	}
+}
+
+# Portugal gives us Bangladesh
+country_event = {
+	id = india.12
+	title = india.12.t
+	desc = india.12.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Thanks Portugal
+	option = {
+		name = india.12.a
+		430 = {
+			add_core_of = MUG
+		}
+		ai_chance = {
+			factor = 100
+		}
+		MUG = { transfer_state = 430 }
+	}
+}
+
+# Portugal keeps bangladesh
+country_event = {
+	id = india.13
+	title = india.13.t
+	desc = india.13.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+
+	
+	#pressure portugal
+	option = {
+		name = india.13.a
+		POR = { 
+			country_event = { id = india.15 }
+		}
+		ai_chance = {
+			factor = 50
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = -0.2
+		}
+		add_stability = -0.05
+	}
+	#form protests and strikes
+	option = {
+		name = india.13.b
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			POR = {
+				country_event = { id = india.17 days = 10 } 
+			}
+		}
+	}
+}
+
+# PORTUGALS AND MUGHALS COMBINED EVENT Guarantee Bangladesh?
+country_event = {
+	id = india.14
+	title = india.14.t
+	desc = india.14.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	
+	#guarantee
+	option = {
+		name = india.14.a
+		give_guarantee = BAG
+		ai_chance = {
+			factor = 50
+		}
+	}
+	#dont guarantee
+	option = {
+		name = india.14.b
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Mughal Pressures us
+country_event = {
+	id = india.15
+	title = india.15.t
+	desc = india.15.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	
+	#release bangladesh
+	option = {
+		name = india.15.a
+		MUG = { 
+			country_event = { id = india.11 }
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	#so it is war
+	option = {
+		name = india.15.b
+		MUG = { 
+			country_event = { id = india.16 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Portugal Refuses again
+country_event = {
+	id = india.16
+	title = india.16.t
+	desc = india.16.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+
+	option = {
+		name = india.16.a
+		create_wargoal = {
+			type = take_state
+			target = POR
+			generator = { 430 }
+		}
+	}
+}
+
+# Portugal accepts
+country_event = {
+	id = india.18
+	title = india.18.t
+	desc = india.18.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.18.a
+		BAG = { transfer_state = 430 }
+	}
+}
+
+# Protests in bangladesh
+country_event = {
+	id = india.17
+	title = india.17.t
+	desc = india.17.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.17.a
+		add_stability = -0.08
+		add_political_power = -100
+		add_manpower = -20000
+	}
+}
+
+# (georgist - Discussion about Sri Lanka)
+country_event = {
+	id = india.20
+	title = india.20.t
+	desc = india.20.d
+	picture = GFX_report_event_india_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		MUG = {
+			NOT = { has_completed_focus = MUG_unarmed_liberation }
+			focus_progress = {
+				focus = MUG_unarmed_liberation
+				progress > 0.6
+			}
+		}
+	}
+	#Accept the independace of Sri Lanka
+	option = {
+		name = india.20.a
+		MUG = { 
+			country_event = { id = india.21 }
+		}
+		ai_chance = {
+			factor = 80
+		}
+		effect_tooltip = {
+			SIR = { transfer_state = 422 }
+		}
+	}
+	#Give Sri Lanka to Mughal
+	option = {
+		name = india.20.b
+		MUG = { 
+			country_event = { id = india.22 }
+		}
+		ai_chance = {
+			factor = 5
+		}
+		effect_tooltip = {
+			MUG = { transfer_state = 422 }
+		}
+	}
+	#Refuse to do anything
+	option = {
+		name = india.20.c
+		MUG = { 
+			country_event = { id = india.23 }
+		}
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+
+# FRANCE announces the independace of Sri Lanka
+country_event = {
+	id = india.21
+	title = india.21.t
+	desc = india.21.d
+	picture = GFX_report_event_india_purge_speech
+
+	is_triggered_only = yes
+	
+	#Okay
+	option = {
+		name = india.21.a
+		ai_chance = {
+			factor = 100
+		}
+		SIR = { transfer_state = 422 }
+		422 = {
+			add_core_of = SIR
+		}
+		FRA = {
+			country_event = { id = india.24 days = 10 } 
+		}
+		MUG = {
+			country_event = { id = india.24 days = 10 } 
+		}
+		hidden_effect = {
+			FRA = {
+				country_event = india.24
+			}
+			MUG = {
+				country_event = india.24
+			}
+		}
+	}
+}
+
+# FRANCE GIVE SRI LANKA
+country_event = {
+	id = india.22
+	title = india.22.t
+	desc = india.22.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Thanks france
+	option = {
+		name = india.22.a
+		ai_chance = {
+			factor = 100
+		}
+		MUG = { transfer_state = 422 }
+		422 = {
+			add_core_of = MUG
+		}
+	}
+}
+
+# FRANCE KEEP SRI LANKA
+country_event = {
+	id = india.23
+	title = india.23.t
+	desc = india.23.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#okay
+	option = {
+		name = india.23.a
+		add_state_claim = 422
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# FRANCE AND MUGHALS COMBINED EVENT Guarantee Sri Lanka?
+country_event = {
+	id = india.24
+	title = india.24.t
+	desc = india.24.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	
+	#guarantee
+	option = {
+		name = india.24.a
+		give_guarantee = SIR
+		ai_chance = {
+			factor = 45
+		}
+	}
+	#dont guarantee
+	option = {
+		name = india.24.b
+		ai_chance = {
+			factor = 55
+		}
+	}
+}
+
+# (georgist - Mumbay confress)
+country_event = {
+	id = india.26
+	title = india.26.t
+	desc = india.26.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Accept the independace of Southern India
+	option = {
+		name = india.26.a
+		MUG = { 
+			country_event = { id = india.27 }
+		}
+		ai_chance = {
+			factor = 75
+		}
+		effect_tooltip = {
+			CHO = { transfer_state = 429 }
+			CHO = { transfer_state = 427 }
+			CHO = { transfer_state = 424 }
+			CHO = { transfer_state = 425 }
+			CHO = { transfer_state = 423 }
+			429 = {
+				add_core_of = CHO
+			}
+			427 = {
+				add_core_of = CHO
+			}
+			424 = {
+				add_core_of = CHO
+			}
+			425 = {		
+				add_core_of = CHO
+			}
+			423 = {
+				add_core_of = CHO
+			}
+		}
+	}
+	#Give Southern India to Mughal
+	option = {
+		name = india.26.b
+		MUG = { 
+			country_event = { id = india.28 }
+		}
+		ai_chance = {
+			factor = 15
+		}
+		effect_tooltip = {
+			MUG = { transfer_state = 429 }
+			MUG = { transfer_state = 427 }
+			MUG = { transfer_state = 424 }
+			MUG = { transfer_state = 425 }
+			MUG = { transfer_state = 423 }
+			429 = {
+			add_core_of = MUG
+			}
+			427 = {
+				add_core_of = MUG
+			}
+			424 = {
+				add_core_of = MUG
+			}
+			425 = {		
+				add_core_of = MUG
+			}
+			423 = {
+				add_core_of = MUG
+			}
+		}
+	}
+	#Refuse to do anything
+	option = {
+		name = india.26.c
+		MUG = { 
+			country_event = { id = india.29 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# france announces the independace of Southern India
+country_event = {
+	id = india.27
+	title = india.27.t
+	desc = india.27.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Okay
+	option = {
+		name = india.27.a
+		ai_chance = {
+			factor = 100
+		}
+		CHO = { transfer_state = 429 }
+		CHO = { transfer_state = 427 }
+		CHO = { transfer_state = 424 }
+		CHO = { transfer_state = 425 }
+		CHO = { transfer_state = 423 }
+		429 = {
+			add_core_of = CHO
+		}
+		427 = {
+			add_core_of = CHO
+		}
+		424 = {
+			add_core_of = CHO
+		}
+		425 = {		
+			add_core_of = CHO
+		}
+		423 = {
+			add_core_of = CHO
+		}
+		hidden_effect = {
+			FRA = {
+				country_event = india.30
+			}
+			MUG = {
+				country_event = india.30
+			}
+		}	
+	}
+}
+
+# france gives us Southern India
+country_event = {
+	id = india.28
+	title = india.28.t
+	desc = india.28.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#Thanks france
+	option = {
+		name = india.28.a
+		ai_chance = {
+			factor = 100
+		}
+		MUG = { transfer_state = 429 }
+		MUG = { transfer_state = 427 }
+		MUG = { transfer_state = 424 }
+		MUG = { transfer_state = 425 }
+		MUG = { transfer_state = 423 }
+		429 = {
+			add_core_of = MUG
+		}
+		427 = {
+			add_core_of = MUG
+		}
+		424 = {
+			add_core_of = MUG
+		}
+		425 = {		
+			add_core_of = MUG
+		}
+		423 = {
+			add_core_of = MUG
+		}
+	}
+}
+
+# france keeps southern india
+country_event = {
+	id = india.29
+	title = india.29.t
+	desc = india.29.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	#pressure france
+	option = {
+		name = india.29.a
+		FRA = { 
+			country_event = { id = india.31 }
+		}
+		ai_chance = {
+			factor = 50
+		}
+		add_popularity = {
+			ideology = georgist
+			popularity = -0.2
+		}
+		add_stability = -0.05
+	}
+	#form protests and strikes
+	option = {
+		name = india.29.b
+		add_state_claim = 422
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			FRA = {
+				country_event = { id = india.33 days = 10 } 
+			}
+		}
+	}
+}
+
+# franceS AND MUGHALS COMBINED EVENT Guarantee Southern India?
+country_event = {
+	id = india.30
+	title = india.30.t
+	desc = india.30.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	
+	#guarantee
+	option = {
+		name = india.30.a
+		give_guarantee = CHO
+		ai_chance = {
+			factor = 50
+		}
+	}
+	#dont guarantee
+	option = {
+		name = india.30.b
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Mughal Pressures us
+country_event = {
+	id = india.31
+	title = india.31.t
+	desc = india.31.d
+	picture = GFX_report_event_india_purge_speech
+	
+	is_triggered_only = yes
+	
+	
+	#release southern india
+	option = {
+		name = india.31.a
+		MUG = { 
+			country_event = { id = india.34 }
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	#so it is war
+	option = {
+		name = india.31.b
+		MUG = { 
+			country_event = { id = india.32 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# france Refuses again
+country_event = {
+	id = india.32
+	title = india.32.t
+	desc = india.32.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.32.a
+		create_wargoal = {
+			type = take_state
+			target = FRA
+			generator = { 429 427 424 423 425 }
+		}
+	}
+}
+
+# france accepts
+country_event = {
+	id = india.34
+	title = india.34.t
+	desc = india.34.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.34.a
+		CHO = { transfer_state = 429 }
+		CHO = { transfer_state = 427 }
+		CHO = { transfer_state = 424 }
+		CHO = { transfer_state = 425 }
+		CHO = { transfer_state = 423 }
+		429 = {
+			add_core_of = CHO
+		}
+		427 = {
+			add_core_of = CHO
+		}
+		424 = {
+			add_core_of = CHO
+		}
+		425 = {		
+			add_core_of = CHO
+		}
+		423 = {
+			add_core_of = CHO
+		}
+	}
+}
+
+# Protests in southern india
+country_event = {
+	id = india.33
+	title = india.33.t
+	desc = india.33.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.33.a
+		add_stability = -0.05
+		add_political_power = -120
+		429 = {
+			add_core_of = CHO
+		}
+		427 = {
+			add_core_of = CHO
+		}
+		424 = {
+			add_core_of = CHO
+		}
+		425 = {		
+			add_core_of = CHO
+		}
+		423 = {
+			add_core_of = CHO
+		}
+	}
+}
+
+#INDIA Asks to Join red front
+country_event = {
+    id = india.44
+	title = india.44.t
+	desc = india.44.d
+	picture = report_event_vienna_hall
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = india.44.o1
+		ai_chance = {
+			factor = 99
+		}
+		SPR = { add_to_faction = MUG }
+	}
+	
+	option = {
+	    name = india.44.o2
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# assam asked 
+country_event = {
+	id = india.35
+	title = india.35.t
+	desc = india.35.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = india.35.a
+		ai_chance = {
+			base = 70
+		}
+		MUG = {
+			country_event = { hours = 2 id = india.37 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = india.35.b
+		ai_chance = {
+			base = 30 
+		}
+		MUG = {
+			country_event = { hours = 2 id = india.36 }
+			if = { limit = { is_in_faction_with = ASS }
+				remove_from_faction = ASS
+			}
+		}
+	}
+}
+
+# assam refuses 
+country_event = {
+	id = india.36
+	title = india.36.t
+	desc = india.36.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		name = india.36.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ASS
+			generator = { 432 434 }
+		}
+	}
+}
+
+# assam accepts
+country_event = {
+	id = india.37
+	title = india.37.t
+	desc = india.37.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.37.a
+		annex_country = { target = ASS transfer_troops = yes }
+		add_political_power = 100
+	}
+}
+
+#bangladesh por
+country_event = {
+	id = india.38
+	title = india.38.t
+	desc = india.38.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	#accept
+	option = {
+		name = india.38.a
+		effect_tooltip = {
+			MUG = { transfer_state = 430 }
+		}
+		MUG = { 
+			country_event = { id = india.40 }
+		}
+	}
+	
+	#refuse
+	option = {
+		name = india.38.b
+		MUG = { 
+			country_event = { id = india.39 }
+		}
+	}
+}
+
+#bangladesh por refuse
+country_event = {
+	id = india.39
+	title = india.39.t
+	desc = india.39.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.39.a
+		create_wargoal = {
+			type = take_state
+			target = POR
+			generator = { 430 }
+		}
+	}
+}
+
+#bangladesh por accept
+country_event = {
+	id = india.40
+	title = india.40.t
+	desc = india.40.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = {
+		name = india.40.a
+		MUG = { transfer_state = 430 }
+	}
+}
+
+
+# FRANCE AND MUGHAL BORDER WAR
+country_event = {
+	id = india.41
+	title = india.41.t
+	desc = india.41.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # not one step back
+		name = india.41.a
+		ai_chance = { factor = 85 }
+		effect_tooltip = {
+			MUG = {
+				add_stability = 0.02
+				country_event = { id = india.42 }
+			}
+		}
+		hidden_effect = {
+			MUG = { country_event = { id = india.42 } }
+		}
+	}
+	option = { # give them what they want
+		name = india.41.b
+		ai_chance = { factor = 15 }
+		MUG = {
+			effect_tooltip = {
+				transfer_state = 427
+				transfer_state = 429
+			}
+			country_event = { id = india.43 }
+		}
+	}
+}
+
+# France Refuse Concessions
+country_event = {
+	id = india.42
+	title = india.42.t
+	desc = india.42.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.42.a
+		add_stability = 0.02
+	}
+}
+
+# France Concessions
+country_event = {
+	id = india.43
+	title = india.43.t
+	desc = india.43.d
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = india.43.a
+		MUG = {
+			transfer_state = 427
+			transfer_state = 429
+		}
+		427 = {		
+			add_core_of = MUG
+		}
+		429 = {
+			add_core_of = MUG
+		}
+	}
+}
+
+#Mughal creates their own americanist faction
+country_event = {
+	id = india.50
+	title = india.50.t
+	desc = india.50.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {
+		name = india.50.a
+		ai_chance = { factor = 100 }
+		MUG = {
+			if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+			}
+			if = {
+					limit = {
+						is_in_faction  = yes
+					}
+					remove_from_faction = MUG
+			}
+			create_faction = "freedom_fighters"
+		}
+	}
+}
+#Mughal wants to join us
+country_event = {
+	id = india.51
+	title = india.51.t
+	desc = india.51.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.51.a
+		ai_chance = { factor = 99 }
+		add_to_faction = MUG
+		MUG = {
+			country_event = india.53
+		}
+	}
+	option = {
+		name = india.51.b
+		ai_chance = { factor = 1 }
+		MUG = {
+			country_event = india.52
+		}
+	}
+}
+
+# USA DOESNT ALLOW
+country_event = {
+	id = india.52
+	title = india.52.t
+	desc = india.52.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.52.a
+	}
+}
+
+# USA ALLOWS
+country_event = {
+	id = india.53
+	title = india.53.t
+	desc = india.53.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = india.53.a
+		USA = {
+			if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					add_to_faction = MUG
+			}
+			if = {
+					limit = {
+						is_in_faction  = yes
+					}
+					add_to_faction = MUG
+			}
+			if = {
+					limit = {
+						is_in_faction  = no
+					}
+					create_faction = freedom_fighters
+			}
+		}
+	}
+}
+
+# Mughals Demand Colonies for Alliance
+country_event = {
+	id = india.54
+	title = india.54.t
+	desc = india.54.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = india.54.o1
+		ai_chance = { factor = 60 }
+		add_to_faction = MUG
+		MUG = {
+			country_event = india.55
+		}
+	}
+	
+	option = { #Refuse
+	    name = india.54.o2
+		ai_chance = { factor = 40 }
+		add_political_power = -20
+		MUG = {
+			country_event = india.56
+		}
+	}
+}
+
+# France Accepts
+country_event = {
+	id = india.55
+	title = india.55.t
+	desc = india.55.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = india.55.o1
+		ai_chance = { factor = 100 }
+		transfer_state = 427
+		transfer_state = 429
+		transfer_state = 424
+		transfer_state = 425
+		transfer_state = 423
+	}
+}
+
+# France Refuses
+country_event = {
+	id = india.56
+	title = india.56.t
+	desc = india.56.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = india.56.o1
+		ai_chance = { factor = 100 }
+		add_political_power -20
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FRA
+		}
+	}
+}
+
+# Alliance with Mughals - Austria
+country_event = {
+	id = india.57
+	title = india.57.t
+	desc = india.57.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+	    name = india.57.o1
+		ai_chance = { factor = 90 }
+		add_to_faction = MUG
+		MUG = {
+			country_event = india.58
+		}
+	}
+	
+	option = { #Refuse
+	    name = india.57.o2
+		ai_chance = { factor = 10 }
+		add_political_power = -40
+		MUG = {
+			country_event = india.59
+		}
+	}
+}
+
+# Austria Accepts
+country_event = {
+	id = india.58
+	title = india.58.t
+	desc = india.58.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = india.58.o1
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Austria Refuses
+country_event = {
+	id = india.59
+	title = india.59.t
+	desc = india.59.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+	
+	option = {
+	    name = india.59.o1
+		ai_chance = { factor = 100 }
+		add_political_power -20
+	}
+}

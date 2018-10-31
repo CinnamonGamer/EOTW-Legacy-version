@@ -1,0 +1,83 @@
+﻿capital = 335 #Jakarta
+
+set_stability = 0.11
+set_war_support = 0.32
+
+oob = "generic_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	early_fighter = 1
+	early_bomber = 1
+	early_submarine = 1
+	basic_destroyer = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 10
+		}
+
+		nationalist = {
+			popularity = 55
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 5
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+          
+                collectivist = { 
+			popularity = 0
+		}
+
+                de_leonist = { 
+			popularity = 30
+		}
+	}
+	
+	ruling_party = nationalist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+
+

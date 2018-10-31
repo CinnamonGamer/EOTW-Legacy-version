@@ -1,0 +1,36 @@
+﻿division_template = {
+	name = "Daehanminguk Yuk-gun"				
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+
+### OOB ###
+units = {
+	division = {
+		name = "1 Bumun"
+		location = 7125
+		division_template = "Daehanminguk Yuk-gun"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2 Bumun"
+		location = 4052
+		division_template = "Daehanminguk Yuk-gun"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3 Bumun"
+		location = 4056
+		division_template = "Daehanminguk Yuk-gun"
+		start_experience_factor = 0.2
+	}
+}
+

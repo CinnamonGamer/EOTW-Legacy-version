@@ -1,0 +1,114 @@
+﻿###########################
+# IRELAND Events
+###########################
+
+add_namespace = ire
+
+#Iveragh for protection
+country_event = {
+	id = ire.1
+	title = ire.1.t
+	desc = ire.1.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = IRE
+	}
+	
+	is_triggered_only = yes
+	
+	#Iveragh to the US
+	option = {
+		name = ire.1.a
+		ai_chance = {
+			base = 100
+		}
+		USA = {
+			country_event = { id = ire.3 }
+		}
+		effect_tooltip = {
+			add_ideas = IRE_american_advisors
+			add_ideas = IRE_under_american_protection
+			USA = {
+				transfer_state = 742
+			}
+		}
+	}
+	
+	#Refuse to give iveragh
+	option = {
+		name = ire.1.b
+		ai_chance = {
+			base = 0
+		}
+		USA = {
+			country_event = { id = ire.2 }
+		}
+	}
+}
+#IRELAND REFUSES
+country_event = {
+	id = ire.2
+	title = ire.2.t
+	desc = ire.2.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = USA
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ire.2.a
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+	
+#IRELAND ACCEPTS HAPPILY
+country_event = {
+	id = ire.3
+	title = ire.3.t
+	desc = ire.3.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = USA
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ire.3.a
+		transfer_state = 742
+		give_guarantee = IRE
+		IRE = {
+			add_ideas = IRE_american_advisors
+			add_ideas = IRE_under_american_protection
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+#IRELAND REACTS TO USA DEVELOPING USA
+country_event = {
+	id = ire.4
+	title = ire.4.t
+	desc = ire.4.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = USA
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ire.4.a
+		ai_chance = {
+			base = 100
+		}
+	}

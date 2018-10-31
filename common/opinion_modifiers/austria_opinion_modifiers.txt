@@ -1,0 +1,30 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	aus_anti_monarchist_diplomacy = {
+		value = -50
+	}
+	
+	aus_anti_nationalist_diplomacy = {
+		value = -50
+	}
+	
+	aus_rus_friendship = {
+		value = 50
+	}
+	
+	syndicalist_union = {
+		value = 100
+	}
+	
+	
+}

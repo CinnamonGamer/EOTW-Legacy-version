@@ -1,0 +1,202 @@
+﻿capital = 206
+
+oob = "BYL_1936"
+
+set_stability = 0.50
+set_war_support = 0.50
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+}
+
+
+set_convoys = 10
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 6
+		}
+
+		nationalist = {
+			popularity = 68
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+		}
+		
+		national_conservative = { 
+			popularity = 1
+		}
+
+                theoconservative = { 
+			popularity = 8
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 3
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 4
+		}
+
+                collectivist = { 
+			popularity = 10
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = nationalist
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	extensive_conscription
+	partial_economic_mobilisation
+}
+
+
+create_country_leader = {
+	name = "Zmicier Zhylunovich"
+	desc = ""
+	picture = "Portrait_BYL_Zhylunovich.dds"
+	expire = "1965.1.1"
+	ideology = bolshevik
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Radoslau Ostrowski"
+	desc = ""
+	picture = "Portrait_BYL_Radoslau.dds"
+	expire = "1965.1.1"
+	ideology = social_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Stanisław Bułak-Bałachowicz"
+	desc = ""
+	picture = "Portrait_BYL_Bulakbalachowicz.dds"
+	expire = "1965.1.1"
+	ideology = liberal_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Adam Stankievič"
+	desc = ""
+	picture = "Portrait_BYL_Adam_Stankievic.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mikola Abramchyk"
+	desc = ""
+	picture = "Portrait_BYL_Mikola_Abramchyk.dds"
+	expire = "1965.1.1"
+	ideology = centrist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vasil Zacharka"
+	desc = ""
+	picture = "Portrait_BYL_Zacharka.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alexander Chervyakov"
+	desc = ""
+	picture = "Portrait_BYL_Alaksandar_Carviakou.dds"
+	expire = "1965.1.1"
+	ideology = liberal_collectivist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Sergiusz Piasecki"
+	desc = ""
+	picture = "Portrait_BYL_Piasecki.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vera Kharuzhaya"
+	desc = ""
+	picture = "Portrait_BYL_Vera_Kharuzhaya.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Raman I"
+	desc = ""
+	picture = "Portrait_BYL_Raman_Skirmunt.dds"
+	expire = "1965.1.1"
+	ideology = military_monarchy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Vaclau Lastouski"
+	desc = ""
+	picture = "Portrait_BYL_Lastouski.dds"
+	expire = "1965.1.1"
+	ideology = secular_conservative
+	traits = {
+		#
+	}
+}

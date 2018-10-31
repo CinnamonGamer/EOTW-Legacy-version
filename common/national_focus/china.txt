@@ -1,0 +1,2086 @@
+focus_tree = {
+    id = china_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_imperial_army
+		icon = GFX_goal_anschluss
+		x = 10
+		y = 0
+		cost = 10
+		completion_reward = {
+		    army_experience = 20
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_green_standard_army
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = CHI_the_imperial_army }
+		mutually_exclusive = { focus = CHI_the_eight_banners }
+		x = 8
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = mass_assault_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_eight_banners
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = CHI_the_imperial_army }
+		mutually_exclusive = { focus = CHI_green_standard_army }
+		x = 14
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = mobile_warfare_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_whampoa_military_academy
+		icon = GFX_goal_bank
+		prerequisite = { focus = CHI_the_eight_banners focus = CHI_green_standard_army }
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = military_politicians_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_strengthen_our_defences
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CHI_whampoa_military_academy }
+		x = 10
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = defence_of_china_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_infantry_focus
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = CHI_green_standard_army }
+		x = 7
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_ideas = infantry_focus_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_specialist_equipment
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CHI_infantry_focus }
+		x = 7
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_state_of_the_art_armies
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CHI_specialist_equipment }
+		x = 7
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CHI_green_standard_army }
+		x = 5
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_anti_air_protection
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = CHI_artillery_focus }
+		x = 6
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = anti_air_bonus
+				bonus = 0.5
+				uses = 2
+				category = mot_rockets
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_heavy_guns
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CHI_artillery_focus }
+		x = 4
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = heavy_armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_armor
+			}
+			add_tech_bonus = {
+				name = anti_tank_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_elite
+		icon = GFX_goal_south_china_purchase
+		prerequisite = { focus = CHI_the_eight_banners }
+		x = 14
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = night_vision_bonus
+				bonus = 0.5
+				uses = 1
+				category = night_vision
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_elite_thinking
+		icon = GFX_goal_south_china_purchase
+		prerequisite = { focus = CHI_the_elite }
+		x = 14
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+	    id = CHI_mechanize_the_infantry
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CHI_the_eight_banners }
+		x = 12
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_modernize_their_equipment
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CHI_mechanize_the_infantry }
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_modern_cavalry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = CHI_the_eight_banners }
+		x = 15
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_light_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CHI_modern_cavalry }
+		mutually_exclusive = { focus = CHI_medium_tanks }
+		x = 16
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = light_armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_light_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_medium_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CHI_modern_cavalry }
+		mutually_exclusive = { focus = CHI_light_tanks }
+		x = 18
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = medium_armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_medium_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_heavy_tank_focus
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = CHI_medium_tanks focus = CHI_light_tanks }
+		x = 17
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = heavy_armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_urbanize_our_nation
+		icon = GFX_goal_generic_construction
+		x = 24
+		y = 0
+		cost = 10
+		completion_reward = {
+		    every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_industrialize_the_coast_line
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = CHI_urbanize_our_nation }
+		x = 21
+		y = 1
+		cost = 10
+		completion_reward = {
+		    every_owned_state = {
+			    limit = { is_coastal = yes }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			608 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 10068
+					instant_build = yes
+				}
+            }
+            597 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 10000
+					instant_build = yes
+				}
+            }	
+            613 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 7014
+					instant_build = yes
+				}
+            }	
+            595 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 4196
+					instant_build = yes
+				}
+            }
+            592 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 1047
+					instant_build = yes
+				}
+            }
+            add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}			
+		}
+	}
+	
+	focus = {
+	    id = CHI_industrialize_the_center
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = CHI_industrialize_the_coast_line }
+		x = 21
+		y = 2
+		cost = 10
+		completion_reward = {
+		    283 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			605 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			603 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			620 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			602 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			607 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			622 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_industrialize_the_far_west
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = CHI_industrialize_the_center }
+		x = 21
+		y = 3
+		cost = 10
+		completion_reward = {
+		    601 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			604 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			616 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			287 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			619 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			617 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			618 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_technology_grants
+		icon = GFX_focus_research
+		prerequisite = { focus = CHI_urbanize_our_nation }
+		x = 26
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_southern_steel_industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = CHI_technology_grants }
+		x = 24
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_resource = {
+				type = steel
+				amount = 10
+				state = 599
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 594
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 592
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 593
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_expand_the_jiangian_arsenal
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = CHI_southern_steel_industry }
+		x = 24
+		y = 3
+		cost = 10
+		completion_reward = {
+		    613 = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			606 = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_oil_prospecting
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = CHI_expand_the_jiangian_arsenal }
+		x = 24
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_resource = {
+				type = oil
+				amount = 12
+				state = 601
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 283
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_greatest_university
+		icon = GFX_goal_bank
+		prerequisite = { focus = CHI_oil_prospecting }
+		prerequisite = { focus = CHI_industrialize_the_far_west }
+		x = 21
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = CHI_all_minds_as_one
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CHI_greatest_university }
+		x = 21
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				name = industry_bonus
+				ahead_reduction = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_exemplar_university
+		icon = GFX_goal_bank
+		prerequisite = { focus = CHI_technology_grants }
+		x = 27
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = CHI_acquiesce_to_haipan_culture
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = CHI_exemplar_university }
+		x = 27
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_nuclear_research
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHI_acquiesce_to_haipan_culture }
+		mutually_exclusive = { focus = CHI_rocket_research }
+		x = 26
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_rocket_research
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHI_acquiesce_to_haipan_culture }
+		mutually_exclusive = { focus = CHI_nuclear_research }
+		x = 28
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = rocketry_bonus
+				bonus = 0.5
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_nuclear_specialists
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = CHI_nuclear_research }
+		x = 26
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_rocket_testing
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHI_rocket_research }
+		x = 28
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = rocketry_bonus
+				bonus = 0.5
+				uses = 1
+				category = rocketry
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_government_reforms
+		icon = GFX_goal_generic_forceful_treaty
+		x = 37
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+	}
+	
+	focus = {
+	    id = CHI_people_want_stability
+		icon = GFX_goal_south_china_purchase
+		prerequisite = { focus = CHI_government_reforms }
+		mutually_exclusive = { focus = CHI_people_want_freedom }
+		x = 36
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_ideas = people_want_stability_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_people_want_freedom
+		icon = GFX_goal_south_china_purchase
+		prerequisite = { focus = CHI_government_reforms }
+		mutually_exclusive = { focus = CHI_people_want_stability }
+		x = 38
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_ideas = people_want_freedom_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_root_out_corruption
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = CHI_people_want_freedom focus = CHI_people_want_stability }
+		x = 37
+		y = 2
+		cost = 20
+		completion_reward = {
+		    remove_ideas = corrupt_officials_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_strengthen_the_emperor
+		icon = GFX_goal_qing_flag
+		prerequisite = { focus = CHI_people_want_stability }
+		mutually_exclusive = { focus = CHI_allow_party_controlled_unions }
+		mutually_exclusive = { focus = CHI_nationalist_dreams }
+		x = 36
+		y = 3
+		cost = 10
+		completion_reward = {
+		    remove_ideas = crumbling_monarchy_idea
+			add_ideas = splendid_monarchy_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_a_new_bride
+		icon = GFX_goal_royal_tree
+		prerequisite = { focus = CHI_strengthen_the_emperor }
+		x = 36
+		y = 4
+		cost = 10
+		completion_reward = {
+		    remove_ideas = broken_marriage_idea
+		}
+		
+	}
+	
+	focus = {
+	    id = CHI_a_french_woman
+		icon = GFX_goal_napoleons_legacy
+		prerequisite = { focus = CHI_a_new_bride }
+		mutually_exclusive = { focus = CHI_a_local_noblewoman }
+		mutually_exclusive = { focus = CHI_a_japanese_woman }
+		available = {
+		    NOT = {
+			    has_war_with = FRA
+			}
+		}
+		x = 37
+		y = 5
+		cost = 10
+		completion_reward = {
+		    FRA = {
+			    country_event = china.1
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_a_local_noblewoman
+		icon = GFX_goal_qing_flag
+		prerequisite = { focus = CHI_a_new_bride }
+		mutually_exclusive = { focus = CHI_a_french_woman }
+		mutually_exclusive = { focus = CHI_a_japanese_woman }
+		x = 35
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.05
+		    add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+	    id = CHI_a_japanese_woman
+		icon = GFX_goal_japanese_bride
+		prerequisite = { focus = CHI_a_new_bride }
+		mutually_exclusive = { focus = CHI_a_french_woman }
+		mutually_exclusive = { focus = CHI_a_local_noblewoman }
+		x = 39
+		y = 5
+		cost = 10
+		completion_reward = {
+		    JAP = {
+				add_opinion_modifier = { target = CHI modifier = royal_marriage }
+			}
+			CHI = {
+				add_opinion_modifier = { target = JAP modifier = royal_marriage }
+			}
+			create_faction = harmonious_alliance
+			JAP = {
+			    country_event = china.3
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_franco_chinese_tech_exchange
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = CHI_a_french_woman }
+		available = {
+			num_of_factories > 70
+		}
+		x = 37
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = CHI_sino_japanese_dev_agreement
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = CHI_a_japanese_woman }
+		available = {
+			num_of_factories > 70
+		}
+		x = 39
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = CHI_nationalist_dreams
+		icon = GFX_goal_chinese_nationalist
+		prerequisite = { focus = CHI_people_want_stability }
+		prerequisite = { focus = CHI_whampoa_military_academy }
+		mutually_exclusive = { focus = CHI_allow_party_controlled_unions }
+		mutually_exclusive = { focus = CHI_strengthen_the_emperor }
+		x = 38
+		y = 3
+		cost = 10
+		completion_reward = {
+		    remove_ideas = forbidden_city_idea
+			remove_ideas = broken_marriage_idea
+			remove_ideas = crumbling_monarchy_idea
+			add_timed_idea = {
+				idea = nationalist_dream_idea
+				days = 100
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_new_way_movement
+		icon = GFX_goal_chinese_nationalist
+		prerequisite = { focus = CHI_nationalist_dreams }
+		available = {
+		    has_government = nationalist
+		}
+		x = 38
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		    add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+	    id = CHI_allow_party_controlled_unions
+		icon = GFX_goal_workers
+		prerequisite = { focus = CHI_people_want_stability }
+		mutually_exclusive = { focus = CHI_nationalist_dreams }
+		mutually_exclusive = { focus = CHI_strengthen_the_emperor }
+		x = 32
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_ideas = party_unions_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_western_way
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = CHI_allow_party_controlled_unions }
+		mutually_exclusive = { focus = CHI_the_asian_way }
+		x = 31
+		y = 4
+		cost = 10
+		completion_reward = {
+		    remove_ideas = forbidden_city_idea
+			remove_ideas = broken_marriage_idea
+			remove_ideas = crumbling_monarchy_idea
+			add_ideas = western_way_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_asian_way
+		icon = GFX_goal_strike_the_collective
+		prerequisite = { focus = CHI_allow_party_controlled_unions }
+		mutually_exclusive = { focus = CHI_the_western_way }
+		x = 33
+		y = 4
+		cost = 10
+		completion_reward = {
+		    remove_ideas = forbidden_city_idea
+			remove_ideas = broken_marriage_idea
+			remove_ideas = crumbling_monarchy_idea
+			add_ideas = asian_way_idea
+		}
+	}
+	
+	focus = {
+	    id = CHI_join_the_internationale
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CHI_the_western_way }
+		available = {
+		    has_government = de_leonist
+		}
+		x = 31
+		y = 5
+		cost = 10
+		completion_reward = {
+		    AUS = {
+			    country_event = china.5
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_forbidden_palace_museum
+		icon = GFX_goal_support_the_left
+		prerequisite = { focus = CHI_the_asian_way }
+		available = {
+		    has_government = collectivist
+		}
+		x = 33
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_stability = -0.05
+		    add_war_support = -0.05
+		}
+	}
+	
+	focus = {
+	    id = CHI_provisional_constitutional_monarchy
+		icon = GFX_goal_royal_tree
+		prerequisite = { focus = CHI_people_want_freedom }
+		x = 42
+		y = 2
+		cost = 10
+		completion_reward = {
+		    remove_ideas = forbidden_city_idea
+			remove_ideas = broken_marriage_idea
+			remove_ideas = crumbling_monarchy_idea
+			set_politics = {
+			    ruling_party = national_conservative
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = national_conservative
+			    popularity = 0.6
+		    }
+			create_country_leader = {
+			    name = "Puren"
+			    desc = ""
+			    picture = ""
+			    expire = "1965.1.1"
+			    ideology = imperial
+			    traits = {
+				
+			    }
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_abolish_the_monarchy
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = CHI_people_want_freedom }
+		x = 44
+		y = 2
+		cost = 10
+		completion_reward = {
+		    remove_ideas = forbidden_city_idea
+			remove_ideas = broken_marriage_idea
+			remove_ideas = crumbling_monarchy_idea
+			set_politics = {
+			    ruling_party = national_liberal
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = national_liberal
+			    popularity = 0.6
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_strengthen_freedoms
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = CHI_abolish_the_monarchy focus = CHI_provisional_constitutional_monarchy }
+		x = 43
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_political_power = 140
+		}
+	}
+	
+	focus = {
+	    id = CHI_keep_the_provisional_government
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = CHI_strengthen_freedoms }
+		mutually_exclusive = { focus = CHI_the_american_dream }
+		mutually_exclusive = { focus = CHI_socialism_and_freedom }
+		x = 43
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.1
+		    add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_american_dream
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = CHI_strengthen_freedoms }
+		mutually_exclusive = { focus = CHI_keep_the_provisional_government }
+		mutually_exclusive = { focus = CHI_socialism_and_freedom }
+		x = 41
+		y = 5
+		cost = 10
+		completion_reward = {
+		    set_politics = {
+			    ruling_party = americanist
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = americanist
+			    popularity = 0.6
+		    }
+			every_country = {
+				limit = { has_government = americanist }
+				add_opinion_modifier = { target = CHI modifier = americanist_china }
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_socialism_and_freedom
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = CHI_strengthen_freedoms }
+		mutually_exclusive = { focus = CHI_keep_the_provisional_government }
+		mutually_exclusive = { focus = CHI_the_american_dream }
+		x = 45
+		y = 5
+		cost = 10
+		completion_reward = {
+		    set_politics = {
+			    ruling_party = democratic_socialist
+			    elections_allowed = yes
+		    }
+		    add_popularity = {
+			    ideology = democratic_socialist
+			    popularity = 0.6
+		    }
+			add_stability = -0.05
+			add_war_support = -0.05
+			every_country = {
+				limit = { has_government = democratic_socialist }
+				add_opinion_modifier = { target = CHI modifier = socialist_china }
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_foreign_policy
+		icon = GFX_goal_expanding_the_empire
+		x = 47
+		y = 0
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+	    id = CHI_militaristic_path
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = CHI_foreign_policy }
+		x = 46
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_ideas = militaristic_path_idea
+			615 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			622 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			325 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_southern_thrust
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = CHI_militaristic_path }
+		x = 46
+		y = 2
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = ICH
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CMB
+			}
+			CHI = {
+			    country_event = china.7
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_occupation_of_tibet
+		icon = GFX_goal_tibet_map
+		prerequisite = { focus = CHI_southern_thrust }
+		x = 47
+		y = 3
+		cost = 10
+		completion_reward = {
+		    TIB = {
+			    country_event = china.14
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_protection_against_russia
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = CHI_occupation_of_tibet }
+		x = 48
+		y = 4
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = MON
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_old_borders
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = CHI_protection_against_russia }
+		x = 48
+		y = 5
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = KOR
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_strike_the_philippines
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = CHI_the_old_borders }
+		x = 49
+		y = 6
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = annex_everything
+				target = PHI
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_final_struggle
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = CHI_strike_the_philippines }
+		prerequisite = { focus = CHI_the_old_borders }
+		x = 49
+		y = 7
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_seeking_allies
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = CHI_foreign_policy }
+		available = {
+		    is_in_faction = no
+		}
+		x = 51
+		y = 1
+		cost = 10
+		completion_reward = {
+		    set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_english
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CHI_seeking_allies }
+		mutually_exclusive = { focus = CHI_the_russians }
+		mutually_exclusive = { focus = CHI_the_australians }
+		available = {
+		    ENG = { is_in_faction = no }
+			NOT = {
+			    has_war_with = ENG
+			}
+		}
+		x = 51
+		y = 2
+		cost = 10
+		completion_reward = {
+		    ENG = {
+				add_opinion_modifier = { target = CHI modifier = new_diplomatic_ties }
+			}
+			CHI = {
+				add_opinion_modifier = { target = ENG modifier = new_diplomatic_ties }
+			}
+			ENG = {
+			    country_event = china.17
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_russians
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CHI_seeking_allies }
+		mutually_exclusive = { focus = CHI_the_english }
+		mutually_exclusive = { focus = CHI_the_australians }
+		available = {
+		    SOV = { is_in_faction = no }
+			NOT = {
+			    has_war_with = SOV
+			}
+		}
+		x = 49
+		y = 2
+		cost = 10
+		completion_reward = {
+		    SOV = {
+				add_opinion_modifier = { target = CHI modifier = new_diplomatic_ties }
+			}
+			CHI = {
+				add_opinion_modifier = { target = SOV modifier = new_diplomatic_ties }
+			}
+			SOV = {
+			    country_event = china.20
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_australians
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = CHI_seeking_allies }
+		mutually_exclusive = { focus = CHI_the_english }
+		mutually_exclusive = { focus = CHI_the_russians }
+		available = {
+		    AST = { is_in_faction = no }
+			NOT = {
+			    has_war_with = AST
+			}
+		}
+		x = 53
+		y = 2
+		cost = 10
+		completion_reward = {
+		    AST = {
+				add_opinion_modifier = { target = CHI modifier = new_diplomatic_ties }
+			}
+			CHI = {
+				add_opinion_modifier = { target = AST modifier = new_diplomatic_ties }
+			}
+			AST = {
+			    country_event = china.23
+		    }
+		}
+	}
+	
+	focus = {
+	    id = CHI_exchange_agreeement
+		icon = GFX_focus_research
+		prerequisite = { focus = CHI_the_australians focus = CHI_the_russians focus = CHI_the_english }
+		available = {
+		    num_of_factories > 100
+		}
+		x = 51
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = CHI_expand_aviation_ministry
+		icon = GFX_goal_generic_air_doctrine
+		x = 54
+		y = 3
+		cost = 10
+		completion_reward = {
+		    air_experience = 20
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			618 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			325 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			714 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_dominate_the_skies
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = CHI_expand_aviation_ministry }
+		x = 54
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = light_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_close_air_support
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = CHI_dominate_the_skies }
+		mutually_exclusive = { focus = CHI_bomber_focus }
+		x = 53
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = cas_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = CHI_dominate_the_skies }
+		mutually_exclusive = { focus = CHI_close_air_support }
+		x = 55
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = strategic_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				name = heavy_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_integrated_support
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = CHI_close_air_support }
+		x = 53
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = cas_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = light_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_logistical_destruction
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = CHI_bomber_focus }
+		x = 55
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = strategic_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_masters_of_flight
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = CHI_logistical_destruction focus = CHI_integrated_support }
+		x = 54
+		y = 7
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = light_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_paratroopers
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = CHI_masters_of_flight }
+		x = 54
+		y = 8
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = para_bonus
+				bonus = 0.5
+				uses = 2
+				category = para_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_future_of_air_warfare
+		icon = GFX_focus_research
+		prerequisite = { focus = CHI_paratroopers }
+		x = 54
+		y = 9
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = jet_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = jet_technology
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_naval_rebirth
+		icon = GFX_goal_generic_build_navy
+		x = 57
+		y = 0
+		cost = 10
+		completion_reward = {
+		    navy_experience = 25 
+			596 = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			593 = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			595 = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_study_foreign_ships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = CHI_naval_rebirth }
+		x = 56
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = cl_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = bc_bonus
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_study_foreign_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = CHI_study_foreign_ships }
+		x = 56
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_marine_landings
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = CHI_study_foreign_tactics }
+		x = 56
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = marine_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = tp_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_foreign_engineers
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = CHI_marine_landings }
+		x = 56
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+				category = cv_tech
+				category = bc_tech
+				category = bb_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_the_island_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CHI_naval_rebirth }
+		x = 60
+		y = 1
+		cost = 10
+		completion_reward = {
+		    524 = {
+			    add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 7186
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 11959
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 7186
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 12068
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 4096
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 1175
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_south_china_sea
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = CHI_the_island_fortress }
+		mutually_exclusive = { focus = CHI_great_east_sea }
+		x = 59
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = submarine_bonus
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = destroyer_bonus
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = cruiser_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_great_east_sea
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = CHI_the_island_fortress }
+		mutually_exclusive = { focus = CHI_south_china_sea }
+		x = 61
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = battleship_bonus
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = carrier_bonus
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = naval_bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_inner_south_china_sea
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = CHI_south_china_sea }
+		x = 59
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BRN
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_island_nations
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = CHI_great_east_sea }
+		x = 61
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AST
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HOL
+			}
+		}
+	}
+	
+	focus = {
+	    id = CHI_ever_growing_fleet
+		icon = GFX_goal_generic_occypy_states_coastal
+		prerequisite = { focus = CHI_island_nations focus = CHI_inner_south_china_sea }
+		x = 60
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+				category = cv_tech
+				category = bc_tech
+				category = bb_tech
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+}

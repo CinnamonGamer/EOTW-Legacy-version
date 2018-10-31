@@ -1,0 +1,181 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infanterie-Division"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+
+division_template = {
+	name = "Infanterie-Brigade"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Motorisierte Infanterie"	
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+}
+division_template = {
+	name = "Alpine Abteilung"	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }		
+	}
+}
+division_template = {
+	name = "Kavallerie-Division" 	 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+}
+
+##### OOB #####
+units = {
+    ###### Brandenburg Region #####
+	division= {	
+		name = "Kapitaleinheit"
+		location = 6521 #Berlin
+		division_template = "Infanterie-Division" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1st Preussische Armee"
+		location = 3522
+		division_template = "Infanterie-Division" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Hauptstadt Kavallerie Abwehr"
+		location = 6521 #Berlin
+		division_template = "Kavallerie-Division" 		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1st Preussische Kavallerie"
+		location = 11219
+		division_template = "Kavallerie-Division" 		
+		start_experience_factor = 0.2
+	}
+	
+	###### Pommerania Region #####
+	division= {	
+		name = "1st Pommern Wache"
+		location = 6282
+		division_template = "Infanterie-Division" 	
+		start_experience_factor = 0.3
+	}
+	
+	###### Danzig Region #####
+	division= {	
+		name = "1st Danzig Motorisierte Kraft"
+		location = 389
+		division_template = "Motorisierte Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Danzig 1. Brigade"
+		location = 362
+		division_template = "Infanterie-Brigade" 	
+		start_experience_factor = 0.3
+	}
+	
+	###### East Prussia Region #####
+	division= {	
+		name = "Konigsberg Regional Abwehr"
+		location = 6332
+		division_template = "Infanterie-Division" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Outer - Konigsberg Kavallerie-Einheit"
+		location = 266
+		division_template = "Kavallerie-Division" 	
+		start_experience_factor = 0.3
+	}
+	
+	###### Ostmark Region #####
+	division= {	
+		name = "Ostmark - Peakteilung"
+		location = 3572
+		division_template = "Alpine Abteilung" 	
+		start_experience_factor = 0.3
+	}
+	
+	### KONIGSBERG PORT ###
+	navy = {				
+		name = "Flotte von Ostpreussen"			
+		base = 6332
+		location = 6332 #Konigsberg			
+		ship = { name = "Stolz Preussens" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = PRS } } }
+		ship = { name = "Der Preussische Tod" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = PRS } } }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

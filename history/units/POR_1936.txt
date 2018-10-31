@@ -1,0 +1,148 @@
+﻿division_template = {
+	name = "Divisão de Infanteria"		# Infantry Division
+	# Note: each regiment could also mobilize a 3rd battalion if called up
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # Full howitzer regiment
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Força de Caçadores"		# Elite light infantry, always fully mobilized w best equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Brigada de Cavalaria" 		# Cavalry Brigade
+	# Note: Cavalry regiments included about 5 squadrons/companies
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	###### Exército Portugues #####
+	# Governo Militar Portugues #
+	division = {
+		name = "Governo Militar Portugues"
+		location = 11805
+		division_template = "Divisão de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2a Brigada de Cavalaria"
+		location = 11805
+		division_template = "Brigada de Cavalaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "5a Força de Caçadores"
+		location = 11805
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# 1a Distrito Militar #
+	division = {
+		name = "1a Divisão de Infanteria"
+		location = 9817
+		division_template = "Divisão de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Cavalaria do Porto"
+		location = 9817
+		division_template = "Brigada de Cavalaria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1a Força de Caçadores"
+		location = 9817
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	# 2a Distrito Militar #
+	division = {
+		name = "2a Divisão de Infanteria"
+		location = 3798
+		division_template = "Divisão de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2a Força de Caçadores"
+		location = 3798
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	# 3a Distrito Militar #
+	division = {
+		name = "3a Divisão de Infanteria"
+		location = 844
+		division_template = "Divisão de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	### Colonial Forces ###
+	division = {
+		name = "Caçadores de Azores"
+		location = 1751
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.2
+	}
+
+	division = {
+		name = "1º Exército Bengal"
+		location = 11929
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Força Imperial Goa"
+		location = 1273
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.1
+	}
+
+	##### NAVAL UNITS #####
+	navy = {				
+		name = "Marinha de Portugal"			
+		base = 11805
+		location = 11805 # Lisbon
+		# Flotilha 'Viana do Castelo'
+		ship = { name = "NRP Tamega" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }
+		ship = { name = "NRP Dão" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }
+		ship = { name = "NRP Douro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }	
+	}				
+
+}

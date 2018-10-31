@@ -1,0 +1,113 @@
+leader_traits = {
+
+	strasserist_politician = {
+		random = no
+		strasserist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	nationalist_politician = {
+		random = no
+		nationalist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	absolute_monarchist_politician = {
+		random = no
+		absolute_monarchist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	national_conservative_politician = {
+		random = no
+		national_conservative_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	theoconservative_politician = {
+		random = no
+		theoconservative_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	national_liberal_politician = {
+		random = no
+		national_liberal_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	americanist_politician = {
+		random = no
+		americanist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	georgist_politician = {
+		random = no
+		georgist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	democratic_socialist_politician = {
+		random = no
+		democratic_socialist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	collectivist_politician = {
+		random = no
+		collectivist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	de_leonist_politician = {
+		random = no
+		de_leonist_drift = 0.05
+		sprite = 13
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

@@ -1,0 +1,211 @@
+﻿capital = 47
+
+set_stability = 0.24
+set_war_support = 0.65
+
+OOB = "GRE_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 85
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 10
+			#banned = no #default is no
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 3
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 0
+		}
+
+                de_leonist = { 
+			popularity = 2
+		}
+	}
+	
+	ruling_party = strasserist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	service_by_requirement
+	partial_economic_mobilisation
+}
+
+set_convoys = 5
+
+create_country_leader = {
+	name = "Ioannis Metaxas"
+	desc = ""
+	picture = "Portrait_GRE_Metaxas.dds"
+	expire = "1965.1.1"
+	ideology = national_bolshevik
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "George II"
+	desc = ""
+	picture = "Portrait_GRE_George_Second.dds"
+	expire = "1965.1.1"
+	ideology = oligarchist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Nikolaos Plastiras"
+	desc = ""
+	picture = "Portrait_GRE_Plastiras.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Meletius IV"
+	desc = ""
+	picture = "Portrait_GRE_Meletius.dds"
+	expire = "1965.1.1"
+	ideology = religious_cultism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Eleftherious Venizelos"
+	desc = ""
+	picture = "Portrait_GRE_Venizelos.dds"
+	expire = "1965.1.1"
+	ideology = reformist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Georgios Papandreou"
+	desc = ""
+	picture = "Portrait_GRE_Papandreou.dds"
+	expire = "1965.1.1"
+	ideology = liberal_leninist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Nikos Beloyannis"
+	desc = ""
+	picture = "Portrait_GRE_Nikos_Beloyannis.dds"
+	expire = "1965.1.1"
+	ideology = international_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Nikos Ploumpidis"
+	desc = ""
+	picture = "Portrait_GRE_Ploumpidis.dds"
+	expire = "1965.1.1"
+	ideology = international_collectivist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Konstantinos Maniadakis"
+	desc = ""
+	picture = "Portrait_GRE_Konstantinos.dds"
+	expire = "1965.1.1"
+	ideology = liberal_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Konstantinos Tsaldaris"
+	desc = ""
+	picture = "Portrait_GRE_Tsaldaris.dds"
+	expire = "1965.1.1"
+	ideology = direct_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pandelis Pouliopoulos"
+	desc = ""
+	picture = "Portrait_GRE_Pantelis_Pouliopoulos.dds"
+	expire = "1965.1.1"
+	ideology = socio_capitalist
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Xhemal Aranitasi"
+	picture = "Portrait_Europe_Generic_land_3.dds"
+	skill = 1
+}
+

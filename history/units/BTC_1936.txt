@@ -1,0 +1,69 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Kajnieku Nodala"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kalnu Karaspeks"	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1. Livonijas Armija"
+		location = 9340 #Riga
+		division_template = "Kajnieku Nodala" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Livonijas Armija"
+		location = 3152 #Tallinn
+		division_template = "Kajnieku Nodala" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "3. Livonijas Armija"
+		location = 6296 #Kaunas
+		division_template = "Kajnieku Nodala" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "Kalnu Aizsardzibas Vieniba"
+		location = 9275
+		division_template = "Kalnu Karaspeks" 	
+		start_experience_factor = 0.3
+	}
+
+    navy = {				
+		name = "Jauns Zemudens Flote"			
+		base = 6314
+		location = 6314	
+		ship = { name = "Dzili Nave" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BTC } } }
+		ship = { name = "Baltic Sapnis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BTC } } }
+		ship = { name = "Torpedu" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BTC } } }
+	}
+
+
+
+
+
+
+}

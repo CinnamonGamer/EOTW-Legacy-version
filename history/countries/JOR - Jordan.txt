@@ -1,0 +1,75 @@
+﻿capital = 455
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 0
+		}
+
+		nationalist = {
+			popularity = 25
+		}
+		
+		absolute_monarchist = {
+			popularity = 55
+			#banned = no #default is no
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 20
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 0
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = absolute_monarchist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Abdullah bin al-Hussein"
+	desc = ""
+	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_land_3.dds"
+	ideology = oligarchist
+	traits = {
+		#
+	}
+}

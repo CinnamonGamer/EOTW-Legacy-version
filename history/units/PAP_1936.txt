@@ -1,0 +1,95 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Divisio Peditum"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Alpes a Militibus"					
+	regiments = {
+		mountaineers = { x = 0 y = 0 }			
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Ala Equitum" 			
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1 Sancta Exercitu"
+		location = 9904
+		division_template = "Divisio Peditum"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2 Sancta Exercitu"
+		location = 11846
+		division_template = "Divisio Peditum"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1 Sancta Equitibus"
+		location = 9907
+		division_template = "Ala Equitum"		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "2 Sancta Equitibus"
+		location = 9904
+		division_template = "Ala Equitum"		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1 Alpine Divisionem"
+		location = 3910
+		division_template = "Alpes a Militibus"		
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "3 Sancta Exercitu"
+		location = 6973
+		division_template = "Divisio Peditum"		
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "4 Sancta Exercitu"
+		location = 3966
+		division_template = "Divisio Peditum"		
+		start_experience_factor = 0.2
+	}
+
+}
+
+

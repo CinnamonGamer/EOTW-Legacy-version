@@ -1,0 +1,216 @@
+﻿capital = 279
+
+oob = "CHL_1936"
+
+set_stability = 0.59
+set_war_support = 0.87
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	gw_artillery = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_bomber = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_convoys = 20
+
+set_convoys = 5
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 1
+		}
+
+		nationalist = {
+			popularity = 5
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 4
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 9
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 6
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 74
+			#banned = no #default is no
+		}
+ 
+                de_leonist = {
+			popularity = 1
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = collectivist
+	last_election = "1932.10.30"
+	election_frequency = 72  #but 4 years after this one in 1938.
+	elections_allowed = yes
+}
+
+add_ideas = {
+	limited_exports
+	service_by_requirement
+	war_economy
+}
+
+create_country_leader = {
+	name = "Arturo Alessandri Palma"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Arturo_Alessandri_palma.dds"
+	expire = "1965.1.1"
+	ideology = libertarian
+	
+}
+
+create_country_leader = {
+	name = "Agustin Edwards Mac-Clure"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Edwards_MC.dds"
+	expire = "1965.1.1"
+	ideology = traditional_nationalist
+	
+}
+
+create_country_leader = {
+	name = "Carlos Ibanez del Campo"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Ibanez_del_Campo.dds"
+	expire = "1965.1.1"
+	ideology = liberal_collectivist
+	
+}
+
+create_country_leader = {
+	name = "Eduardo Cruz-Coke"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Cruz_Coke_Lasabe.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_christian
+	
+}
+
+create_country_leader = {
+	name = "Carlos Davila"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Carlos_Davila.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	
+}
+
+create_country_leader = {
+	name = "Jose Maria Caro Rodriguez"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Jose_Maria_Caro.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	
+}
+
+create_country_leader = {
+	name = "Luis Emilio Recabarren"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Luis_Emilio_Recabarren.dds"
+	expire = "1965.1.1"
+	ideology = international_collectivist
+	
+}
+
+create_country_leader = {
+	name = "Salvador Allende"
+	desc = ""
+	picture = "Portrait_CHL_Allende.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	
+}
+
+create_country_leader = {
+	name = "Jorge Alessandri"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Jorge_Alessandri.dds"
+	expire = "1965.1.1"
+	ideology = direct_democrat
+	
+}
+
+create_country_leader = {
+	name = "Jorge Gonzalez von Marees"
+	desc = ""
+	picture = "gfx/leaders/CHL/Portrait_CHL_Jorge_Gonzales.dds"
+	expire = "1965.1.1"
+	ideology = fascist
+	
+}
+
+create_corps_commander = {
+	name = "Escudero Oscar Otárola"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_9.dds"
+	traits = { trait_mountaineer }
+	skill = 4
+}
+
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Capitán O`Brien Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Serrano Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 1
+		destroyer_engine_upgrade = 1
+		ship_ASW_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+}

@@ -1,0 +1,56 @@
+﻿###########################
+# GMY Events
+###########################
+
+add_namespace = germ
+
+#Hidden event for taking Tyrol
+country_event = {
+    id = germ.1
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    tag = GMY
+	}
+	
+	hidden = yes
+	
+	immediate = {
+	    transfer_state = 153
+	}
+}
+
+#Death of Wilhelm II, Wilhelm III takes power
+country_event = {
+	id = germ.7
+	title = germ.7.t
+	desc = germ.7.d
+	picture = GFX_report_event_dead_soldiers
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		tag = GMY
+		date > 1941.6.1
+		date < 1941.6.18
+	}
+	
+	option = {
+	    name = germ.7.o1
+		ai_chance = {
+		    factor = 100
+	    }
+		create_country_leader = {
+	        name = "Wilhelm III"
+	        desc = ""
+	        picture = "Portrait_GMY_Wilhelm_Third.dds"
+	        expire = "1965.1.1"
+	        ideology = imperial
+	        traits = {
+		        #
+	        }
+        }
+	}
+}

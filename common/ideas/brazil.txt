@@ -1,0 +1,66 @@
+ideas = {
+
+    country = {
+	    industrial_reform_process = {
+		
+		    allowed = {
+				original_tag = BRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				research_time_factor = 0.05
+				political_power_gain = -0.2
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    private_military_corporations_idea = {
+		
+		    allowed = {
+				original_tag = BRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				foreign_subversive_activites = 0.3
+				
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	country = {
+	    disappointed_industrialists = {
+		
+		    allowed = {
+				original_tag = BRA
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				industrial_capacity_factory = -0.05
+				
+				
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+		}
+	}
+	
+	
+}

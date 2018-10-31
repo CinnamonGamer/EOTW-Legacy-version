@@ -1,0 +1,27 @@
+ideas = {
+	
+	country = {
+	  
+	  violent_rebels = {
+		
+		    allowed = {
+				tag = PHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				conscription = -0.01
+				political_power_gain = -0.5
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		}
+	
+	
+	
+	}
+	
+	
+}

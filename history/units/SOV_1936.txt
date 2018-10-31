@@ -1,0 +1,179 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Gornostrelkovaya Diviziya"		# Motor Rifle Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 		# Engineer bn
+		artillery = { x = 0 y = 1 } 	# Heavy Arty Regiment had 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Kavaleriyskaya Diviziya
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+##### OOB #####
+units = {
+	
+	division= {			
+		name = "1st Russian Infantry"		
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}	
+
+    division= {			
+		name = "2nd Russian Infantry"		
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}
+
+    division= {			
+		name = "3rd Russian Infantry"		
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}	
+	
+	division= {			
+		name = "1st Moscow Infantry"		
+		location = 6380 
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "2nd Moscow Infantry"		
+		location = 6380 
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "1st Caucasus Defence Unit"		
+		location = 3734 
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "East Caucasus Defence Unit"		
+		location = 3672
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "East Border Unit 1"		
+		location = 4841
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "East Border Unit 2"		
+		location = 4841
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "East Border Unit 3"		
+		location = 7748
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "Helsinki Guard"		
+		location = 11105
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "Capital Holy Guard"		
+		location = 3151
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "1st Cavalry"		
+		location = 306
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "2nd Cavalry"		
+		location = 9461
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "3rd Cavalry"		
+		location = 413
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "4th Cavalry"		
+		location = 1450
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.1
+
+	}
+		
+
+}
+	

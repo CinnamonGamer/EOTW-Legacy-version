@@ -1,0 +1,23 @@
+state={
+	id=767
+	name="STATE_767"
+	manpower = 250000
+	resources={
+		aluminium = 5
+		rubber = 5
+	}
+
+	state_category = pastoral
+
+
+	history= {
+		owner = BRA
+		buildings = {
+			infrastructure = 7
+		}
+		add_core_of = BRA
+	}
+	provinces={
+		4980 5008 10934 5214 5083
+	}
+}

@@ -1,0 +1,356 @@
+﻿capital = 285
+
+set_stability = 0.75
+set_war_support = 0.27
+
+set_research_slots = 4
+
+oob = "AST_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	CAS1 = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_submarine = 1
+	transport = 1
+	trench_warfare = 1
+
+	fleet_in_being = 1
+}
+
+set_convoys = 100
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	oob = "AST_1939"
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+
+	add_ideas = {
+		#laws
+		volunteer_only
+		low_economic_mobilisation
+	}
+
+	
+	set_technology = {
+		fighter1 = 1
+		tactical_bomber1 = 1
+		improved_light_tank = 1
+		basic_medium_tank = 1
+		basic_heavy_tank = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		basic_destroyer = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 14
+		}
+
+		nationalist = {
+			popularity = 62
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+                
+                national_conservative = {
+			popularity = 6
+			#banned = no #default is no
+		}
+ 
+                theoconservative = {
+			popularity = 8
+			#banned = no #default is no
+		}
+ 
+                national_liberal = {
+			popularity = 4
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 4
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 2
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = nationalist
+	last_election = "1934.9.15"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	export_focus
+	limited_conscription
+	partial_economic_mobilisation
+	politically_unstable
+}
+
+create_country_leader = {
+	name = "Billy Hughes"
+	desc = ""
+	picture = "Portrait_AST_Billy_Hughes.dds"
+	expire = "1965.1.1"
+	ideology = traditional_nationalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Eric Campbell"
+	desc = "POLITICS_ERIC_CAMPBELL_DESC"
+	picture = "Portrait_AST_Eric_Campbell.dds"
+	expire = "1965.1.1"
+	ideology = militant_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Richard Dixon"
+	desc = "POLITICS_RICHARD_DIXON_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = radical_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Barbara I"
+	desc = ""
+	picture = "Portrait_AST_Barbara_First.dds"
+	expire = "1965.1.1"
+	ideology = military_monarchy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Stanley Bruce"
+	desc = ""
+	picture = "Portrait_AST_Stanley_Bruce.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jack Lang"
+	desc = ""
+	picture = "Portrait_AST_Jack_Lang.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Robert Menzies"
+	desc = ""
+	picture = "Portrait_AST_Robert_Menzies.dds"
+	expire = "1965.1.1"
+	ideology = reformist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Joseph Cook"
+	desc = ""
+	picture = "Portrait_AST_Joseph_Cook.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "James Scullin"
+	desc = ""
+	picture = "Portrait_AST_James_Scullin.dds"
+	expire = "1965.1.1"
+	ideology = conservative_georgist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "John Curtin"
+	desc = ""
+	picture = "Portrait_AST_John_Curtin.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jock Garden"
+	desc = ""
+	picture = "Portrait_AST_Jock_Garden.dds"
+	expire = "1965.1.1"
+	ideology = international_collectivist
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Iven Mackay"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { defensive_doctrine }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Leslie Morshead"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	traits = { offensive_doctrine }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Thomas Blamey"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { jungle_rat }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Harold Farncomb"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	traits = { air_controller }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Victor Crutchley"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+	traits = { superior_tactician }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Ragnar Colbin"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+	traits = { ironside }
+	skill = 2
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Sydney Class"
+	type = light_cruiser_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_gun_upgrade = 2
+		ship_anti_air_upgrade = 2
+	}
+}
+
+create_equipment_variant = {
+	name = "Canberra Class"
+	type = heavy_cruiser_1
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_armor_upgrade = 2
+		ship_gun_upgrade = 2
+	}
+}
+

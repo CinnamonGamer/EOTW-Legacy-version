@@ -1,0 +1,318 @@
+ideas = {
+    
+	country = {
+	    forbidden_city_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.25
+			}
+			
+			picture = generic_pp_unity_bonus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	    broken_marriage_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+			}
+			
+			picture = anti_soviet_pact
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   crumbling_monarchy_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.1
+			}
+			
+			picture = FRA_national_mobilization_focus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   corrupt_officials_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+			
+			picture = generic_spy_coup
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   military_politicians_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				absolute_monarchist_drift = -0.025
+			}
+			
+			picture = generic_manpower_bonus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   defence_of_china_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.25
+			}
+			
+			picture = generic_wall_line
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   infantry_focus_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+				    instant = yes
+					build_cost_ic = -0.1 
+				}
+			}
+			
+			picture = generic_infantry_bonus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   people_want_stability_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				americanist_drift = -0.01
+				national_liberal_drift = -0.01
+				georgist_drift = -0.01
+				democratic_socialist_drift = -0.01
+			}
+			
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   people_want_freedom_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				absolute_monarchist_drift = -0.01
+				strasserist_drift = -0.01
+				de_leonist_drift = -0.01
+				nationalist_drift = -0.01
+			}
+			
+			picture = air_support_focus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   splendid_monarchy_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+			
+			picture = generic_victors_of_ww1
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   nationalist_dream_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				nationalist_drift = 0.15
+			}
+			
+			picture = generic_fascism_drift_bonus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	   party_unions_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.05
+				collectivist_drift = 0.05
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	  western_way_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.05
+				collectivist_drift = -0.05
+			}
+			
+			picture = home_of_the_revolution
+		}
+	
+	
+	
+	}
+	
+	country = {
+	  asian_way_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = -0.05
+				collectivist_drift = 0.05
+			}
+			
+			picture = generic_morale_bonus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	  militaristic_path_idea = {
+		
+		    allowed = {
+				tag = CHI
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+			
+			picture = strategic_bombing_focus
+		}
+	
+	
+	
+	}
+	
+	
+}

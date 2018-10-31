@@ -1,0 +1,288 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "National Guard Division"  	# Standard formation for NG divisions through late 1940
+
+	regiments = {						
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		# 1st Cavalry Division only
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+
+###### OOB ######
+units = {
+	### 1st Army -- note: Armies only paper organizations in 1936 ###
+	# I Army Corps #
+	division= {			
+		name = "1st 'Yankee' Army"		
+		location = 3878
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "1st Infantry"		
+		location = 3957
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "2nd Infantry"		
+		location = 3957
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "3rd Infantry"		
+		location = 6845
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "4th Infantry"		
+		location = 9450
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "5th Infantry"		
+		location = 7831
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "6th Infantry"		
+		location = 6710
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "7th Infantry"		
+		location = 7629
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+
+	}
+	
+	division= {			
+		name = "1st Cavalry"		
+		location = 6778
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "2nd Cavalry"		
+		location = 4590
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "3rd Cavalry"		
+		location = 788
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "4th Cavalry"		
+		location = 6984
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+
+	}
+	
+	division= {			
+		name = "1st Garrison"		
+		location = 11800
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "2nd Garrison"		
+		location = 12312
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+
+	}
+	
+	division= {			
+		name = "3rd Garrison"		
+		location = 10233
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+
+	}
+
+	division= {			
+		name = "8th Infantry"		
+		location = 6890
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+
+	}					
+
+	### ATLANTIC FLEET
+	navy = {					
+		name = "Battleship Division 3"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "USS New Mexico" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico Class" } } }				
+		ship = { name = "USS Mississippi" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico Class" } } }				
+		ship = { name = "USS Idaho" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico Class" } } }				
+	}					
+	navy = {					
+		name = "Battleship Division 5"				
+		base = 788
+		location = 788 # Norfolk
+		ship = { name = "USS Arkansas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS New York" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA } } }				
+	}					
+	navy = {					
+		name = "Cruiser Division 2"				
+		base = 3878
+		location = 3878 #New York
+		ship = { name = "USS Omaha" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Milwaukee" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Cincinnati" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Memphis" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+	}															
+	navy = {					
+		name = "Destroyer Flotilla  3"				
+		base = 3878
+		location = 3878 #New York
+		# 13th Destroyer Division				
+		ship = { name = "USS Clemson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Chandler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Southard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Hovey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }			
+		# 14th Destroyer Division				
+		ship = { name = "USS Little" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Gregory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Stringham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }			
+		# 17th Destroyer Division				
+		ship = { name = "USS Goldsborough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS McFarland" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Reuben James" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Hopkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }				
+	}					
+	navy = {					
+		name = "Destroyer Flotilla  4"				
+		base = 6732
+		location = 6732 #Boston
+		# 3rd Destroyer Division				
+		ship = { name = "USS Decatur" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Badger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Babbitt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Leary" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Schenck" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		# 4th Destroyer Division				
+		ship = { name = "USS Jacob Jones" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Roper" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Dickerson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }					
+	}					
+	navy = {					
+		name = "Destroyer Flotilla  6"				
+		base = 6732 
+		location = 6732 #Boston
+		# 36th Destroyer Division			
+		ship = { name = "USS Trever" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Perry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }			
+	}					
+	navy = {					
+		name = "1st Submarine Squadron"				
+		base = 6732 
+		location = 6732 #Boston
+		# 11th Submarine Division			
+		ship = { name = "USS O-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS O-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS O-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+	}															
+		
+}
+
+#####################

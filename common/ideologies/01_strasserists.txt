@@ -1,0 +1,51 @@
+ideologies = {
+
+	strasserist = {
+		
+		types = {
+		
+			militant_strasserist = {	
+			}
+			
+			social_strasserist = {	
+			}
+			
+			fascist = {			
+			}
+			
+			national_bolshevik = {				
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_STRASSERIST_1"
+			"FACTION_NAME_STRASSERIST_2"
+			"FACTION_NAME_STRASSERIST_3"
+			"FACTION_NAME_STRASSERIST_4"
+			"FACTION_NAME_STRASSERIST_5"
+			"FACTION_NAME_STRASSERIST_6"
+		}
+		
+		color = { 140 80 0 }
+		
+		war_impact_on_world_tension = 3
+		faction_impact_on_world_tension = 3
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.05
+			lend_lease_tension = 0.05
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.05
+		}
+		
+	}
+
+}

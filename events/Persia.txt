@@ -1,0 +1,75 @@
+﻿###########################
+# PER Events
+###########################
+
+add_namespace = persia
+
+country_event = {
+    id = persia.1
+	title = persia.1.t
+	desc = persia.1.d
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = PER
+	}
+	
+	option = {
+	    name = persia.1.o1
+		ai_chance = { factor = 90 }
+		add_popularity = {
+			ideology = absolute_monarchist
+			popularity = -0.05
+		}
+	}
+	
+	option = {
+	    name = persia.1.o2
+		ai_chance = { factor = 10 }
+		PER = {
+			declare_war_on = {
+				target = TUR
+				type = puppet_wargoal_focus 
+			}
+		}
+		add_stability = 0.05
+	}
+	
+}
+
+#Turkish Focus - Alliance for Baku
+country_event = {
+    id = persia.2
+	title = persia.2.t
+	desc = persia.2.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+    is_triggered_only = yes
+	
+	trigger = {
+		tag = PER
+	}
+	
+	option = {
+	    name = persia.2.o1
+		ai_chance = { factor = 70 }
+		if = {
+			random_country = {
+				limit = {
+					is_in_faction_with = TUR
+				}
+				add_to_faction = PER
+			}
+		}
+		TUR = {
+				country_event = turkey.12
+		}
+	}
+	option = {
+        name = persia.2.o2
+		ai_chance = { factor = 30 }
+	}
+	
+}

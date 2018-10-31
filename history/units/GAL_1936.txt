@@ -1,0 +1,60 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Dywizja Piechoty"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Alpy Bojownikow"	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+	}
+}
+
+##### OOB #####
+units = {
+    division= {	
+		name = "1-ty Piechota"
+		location = 9427 #Krakow
+		division_template = "Dywizja Piechoty" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2-ty Piechota"
+		location = 9570 #Breslau
+		division_template = "Dywizja Piechoty" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1 Dywizja Strzelcow Gorskich"
+		location = 11398 #Austrian Mountain Border
+		division_template = "Alpy Bojownikow" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2 Dywizja Strzelcow Gorskich"
+		location = 9548 #Hungarian-Wallachian Border
+		division_template = "Alpy Bojownikow" 	
+		start_experience_factor = 0.2
+	}
+
+
+}

@@ -1,0 +1,669 @@
+ideas = {
+
+	country = {
+	
+		ENG_bitter_looser = {
+			
+			picture = generic_volunteer_expedition_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		ENG_home_defence = {
+			
+			picture = FRA_fortification_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		
+		ENG_research_agreement = {
+			
+			picture = generic_research_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+			
+		ENG_trade_agreement_with_ireland = {
+			
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				local_resources_factor = 0.03
+				industrial_capacity_factory = 0.03
+			}
+		}
+		
+		ENG_trade_agreement_with_england = {
+			
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				local_resources_factor = 0.03
+				industrial_capacity_factory = 0.03
+			}
+		}
+	
+		ENG_english_pride = {
+			
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		ENG_prepared_for_long_lasting_war = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		
+		ENG_brititsh_agriculture = {
+			
+			picture = generic_morale_bonus
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		
+		ENG_insert_creative_name_here = {
+			
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		ENG_accepting_the_french = {
+			
+			picture = generic_victors_of_ww1
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				absolute_monarchist_drift = 0.02
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		ENG_influence_monarchist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				absolute_monarchist_drift = 0.04
+				absolute_monarchist_acceptance = 85
+			}
+		}
+		
+		ENG_influence_strasserist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				strasserist_drift = 0.04
+				strasserist_acceptance = 35
+			}
+		}
+		
+		ENG_influence_nationalist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				nationalist_drift = 0.04
+				nationalist_acceptance = 35
+			}
+		}
+		
+		ENG_influence_national_conservative = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				national_conservative_drift = 0.04
+				national_conservative_acceptance = 35
+			}
+		}
+		
+		ENG_influence_theoconservative = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				theoconservative_drift = 0.04
+				theoconservative_acceptance = 35
+			}
+		}
+		
+		ENG_influence_national_liberal = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				national_liberal_drift = 0.04
+				national_liberal_acceptance = 35
+			}
+		}
+		
+		ENG_influence_americanist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				americanist_drift = 0.04
+				americanist_acceptance = 35
+			}
+		}
+		
+		ENG_influence_georgist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				georgist_drift = 0.04
+				georgist_acceptance = 35
+			}
+		}
+		
+		ENG_influence_democratic_socialist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				democratic_socialist_drift = 0.04
+				democratic_socialist_acceptance = 35
+			}
+		}
+		
+		ENG_influence_collectivist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				collectivist_drift = 0.04
+				collectivist_acceptance = 35
+				
+			}
+		}
+		
+		ENG_influence_de_leonist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_coup
+
+			
+			modifier = {
+				de_leonist_drift = 0.04
+				de_leonist_acceptance = 35
+			}
+		}
+		
+		ENG_meditarrinean_experience = {
+			
+			picture = liberty_ships_focus
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				invasion_preparation = -0.35
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.15
+			}
+		}
+		
+		ENG_north_sea_experience = {
+			
+			picture = liberty_ships_focus
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				army_infantry_attack_factor = 0.03
+				army_infantry_defence_factor = 0.03
+				supply_consumption_factor = -0.05
+				winter_attrition_factor = -0.2
+			}
+		}
+		
+		ENG_cooperations_monarchist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				absolute_monarchist_acceptance = 85
+			}
+		}
+		
+		ENG_cooperations_strasserist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				strasserist_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_nationalist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				nationalist_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_national_conservative = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				national_conservative_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_theoconservative = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				theoconservative_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_national_liberal = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				national_liberal_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_americanist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				americanist_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_georgist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				georgist_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_democratic_socialist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				democratic_socialist_acceptance = 35
+			}
+		}
+		
+		ENG_cooperations_collectivist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				collectivist_acceptance = 35
+				
+			}
+		}
+		
+		ENG_cooperations_de_leonist = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			
+			modifier = {
+				de_leonist_acceptance = 35
+			}
+		}
+	
+		ENG_england_in_continental = {
+		
+			allowed = {
+				always = no
+			}
+			picture = FRA_army_of_aggression_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				absolute_monarchist_acceptance = 150
+			}
+		}
+		
+	    UK_academies = {
+		
+		    allowed = {
+				tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+			
+			picture = generic_pp_unity_bonus
+		}
+	}
+	
+	country = {
+	    UK_england_at_war = {
+		
+		    allowed = {
+				tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+			
+			picture = generic_infantry_bonus
+		}
+	}
+	
+	country = {
+	    UK_seaforts = {
+		
+		    allowed = {
+				tag = ENG
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.25
+			}
+			
+			picture = generic_pp_unity_bonus
+		}
+	}
+}

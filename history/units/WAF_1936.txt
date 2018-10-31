@@ -1,0 +1,25 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Dakaru"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	
+}
+
+##### OOB #####
+units = {
+     division= {	
+		name = "Chitsvene Luanda Mauto"
+		location = 4948
+		division_template = "Dakaru" 	
+		start_experience_factor = 0.3
+	}
+
+
+
+}

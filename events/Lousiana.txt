@@ -1,0 +1,134 @@
+﻿###########################
+# LOU Events
+###########################
+
+add_namespace = lou
+
+#Surrender when USA has taken too much land
+country_event = {
+	id = lou.1
+	title = lou.1.t
+	desc = lou.1.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = LOU
+		has_war_with = USA
+		surrender_progress > 0.8
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#Surrender and join the USA
+	
+	option = {
+		name = lou.1.a
+		ai_chance = {
+			base = 100
+		}
+		USA = {
+			country_event = { id = lou.2 }
+		}
+		effect_tooltip = {
+			USA = { annex_country = LOU }
+			}
+		}
+	}
+}
+
+
+#USA response to Lousiana surrender
+
+country_event = {
+	id = lou.2
+	title = lou.2.t
+	desc = lou.2.d
+	picture = GFX_report_event_french_resistance_01
+	
+	trigger = {
+		tag = USA
+	}
+	is_triggered_only = yes
+
+	#Accept surrender
+	
+	option = {
+		name = lou.2.a
+		FRA = {
+			country_event = { id = lou.3 }
+		}
+		ai_chance = {
+			base = 100
+		}
+		annex_country = { target = LOU }
+	}
+}
+#FRA peace with USA?
+country_event = {
+	id = lou.3
+	title = lou.3.t
+	desc = lou.3.d
+	picture = GFX_report_event_french_resistance_01
+	
+	trigger = {
+		tag = FRA
+	}
+	
+	is_triggered_only = yes
+
+	#Peace with the USA
+	option = {
+		name = lou.3.a
+		USA = {
+			country_event = { id = lou.4 }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	#Continue war
+	option = {
+		name = lou.3.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+#USA reacts to french peaceoffer
+country_event = {
+	id = lou.4
+	title = lou.4.t
+	desc = lou.4.d
+	picture = GFX_report_event_french_resistance_01
+	
+	trigger = {
+		tag = USA
+	}
+	
+	is_triggered_only = yes
+
+	#Peace with the French
+	option = {
+		name = lou.4.a
+		ai_chance = {
+			base = 100
+		}
+		ITA = { white_peace = USA }
+		FRA = { white_peace = USA }
+		TUR = { white_peace = USA }
+		MEX = { white_peace = USA }
+
+		add_named_threat = { threat = -7 name = atlantic_peace }
+	}
+	#Never! Peace is bad!
+	option = {
+		name = lou.4.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}

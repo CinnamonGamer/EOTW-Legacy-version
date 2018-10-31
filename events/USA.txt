@@ -1,0 +1,537 @@
+﻿###########################
+# USA Events
+###########################
+
+add_namespace = usa
+
+#American - Mexican Alliance
+country_event = {
+	id = usa.51
+	title = usa.51.t
+	desc = usa.51.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MEX
+	}
+	option = {
+		name = usa.51.a
+		ai_chance = { factor = 40 }
+		dismantle_faction = yes
+		USA = {
+			if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+			}
+			if = {
+					limit = {
+						is_in_faction  = yes
+					}
+					remove_from_faction = USA
+			}
+			create_faction = "american_union"
+			add_to_faction = MEX	
+		}
+	}
+	option = {
+		name = usa.51.b
+		ai_chance = { factor = 60 }
+		MEX = {
+			remove_opinion_modifier = { target = USA modifier = American_influence_eotw }
+		}
+		USA = {
+			country_event = usa.52
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state_focus
+					target = MEX
+					generator = { 375 378 } # Texas California
+				}
+			}
+		}
+	}
+}
+
+# Mexico refuses
+country_event = {
+	id = usa.52
+	title = usa.52.t
+	desc = usa.52.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.52.a
+		create_wargoal = {
+			type = take_state_focus
+			target = MEX
+			generator = { 375 378 } # Texas California
+		}
+	}
+}
+
+# Lousiana asked 
+country_event = {
+	id = usa.53
+	title = usa.53.t
+	desc = usa.53.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = LOU
+	}
+	
+	option = { # Accept
+		name = usa.53.a
+		ai_chance = {
+			base = 45
+		}
+		USA = {
+			country_event = { hours = 2 id = usa.55 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = usa.53.b
+		ai_chance = {
+			base = 55 
+		}
+		USA = {
+			country_event = { hours = 2 id = usa.54 }
+			if = { limit = { is_in_faction_with = LOU }
+				remove_from_faction = LOU
+			}
+		}
+	}
+}
+
+# Lousiana refuses 
+country_event = {
+	id = usa.54
+	title = usa.54.t
+	desc = usa.54.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.54.a
+		add_state_claim = 371
+		add_state_claim = 394
+		add_state_claim = 373
+		create_wargoal = {
+			type = take_state_focus
+			target = FRA
+			generator = { 689 690 }
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = LOU
+			generator = { 371 394 373 }
+		}
+	}
+}
+
+# Lousiana accepts
+country_event = {
+	id = usa.55
+	title = usa.55.t
+	desc = usa.55.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.5.a
+		annex_country = { target = LOU transfer_troops = yes }
+		add_political_power = 100
+		add_named_threat = { threat = 0.95 name = louisiana_joins_union }
+		set_country_flag = { } 
+		news_event = { }
+	}
+}
+
+# Montana asked 
+country_event = {
+	id = usa.600
+	title = usa.600.t
+	desc = usa.600.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MOT
+	}
+	
+	option = { # Accept
+		name = usa.600.a
+		ai_chance = {
+			base = 10
+		}
+		USA = {
+			country_event = { hours = 2 id = usa.800 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = usa.600.b
+		ai_chance = {
+			base = 90 
+		}
+		USA = {
+			country_event = { hours = 2 id = usa.700 }
+			if = { limit = { is_in_faction_with = MOT }
+				remove_from_faction = MOT
+			}
+		}
+	}
+}
+
+# Montana refuses 
+country_event = {
+	id = usa.700
+	title = usa.700.t
+	desc = usa.700.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.700.a
+		381 = {
+			add_core_of = USA
+		}
+		388 = {
+			add_core_of = USA
+		}
+		387 = {
+			add_core_of = USA
+		}
+		386 = {		
+			add_core_of = USA
+		}
+		385 = {
+			add_core_of = USA
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = MOT
+			generator = { 381 388 387 386 385 }
+		}
+	}
+}
+
+# Montana accepts
+country_event = {
+	id = usa.800
+	title = usa.800.t
+	desc = usa.800.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.800.a
+		annex_country = { target = MOT transfer_troops = yes }
+		add_political_power = 100
+		set_country_flag = { }
+		news_event = { }
+	}
+}
+
+# Mexico Claims
+country_event = {
+	id = usa.900
+	title = usa.900.t
+	desc = usa.900.d
+	picture = GFX_report_event_asian_politicians
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = MEX
+	}
+	option = {
+		name = usa.900.a
+		ai_chance = { factor = 5 }
+		USA = { 
+			country_event = { id = usa.100 }
+		}
+	}
+
+	option = {
+		name = usa.900.b
+		ai_chance = { factor = 95 }
+		USA = { 
+			country_event = { id = usa.110 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = MEX
+					generator = owned_states
+				}
+			}
+		}
+	}
+}
+# Mexico accepts 
+country_event = {
+	id = usa.100
+	title = usa.100.t
+	desc = usa.100.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.100.a
+		transfer_state = 375
+		transfer_state = 376
+		transfer_state = 382
+		transfer_state = 353
+		transfer_state = 378
+		transfer_state = 379
+		transfer_state = 380
+		transfer_state = 377
+		hidden_effect = {
+			news_event = { }
+		}
+	}
+}
+
+# Mexico refuses, 
+country_event = {
+	id = usa.110
+	title = usa.110.t
+	desc = usa.110.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.110.a
+		create_wargoal = {
+			type = take_state
+			target = MEX
+			generator = { 375 }
+		}
+	}
+}
+
+# Alaska for factories
+country_event = {
+	id = usa.80
+	title = usa.80.t
+	desc = usa.80.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SOV
+	}
+	
+	option = {
+		name = usa.80.a
+		
+		ai_chance = {
+			factor = 95	
+		}
+		USA = { country_event = { id = usa.81 days = 1 } }
+		USA = { transfer_state = 463 }
+		652 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	
+	option = {	
+		name = usa.80.b
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				factor = 0
+				is_in_faction_with = USA
+			}			
+		}		
+		USA = {
+			country_event = { id = usa.82 days = 1 }
+		}
+	}
+}
+
+# Russia Accepts, Alaska to USA
+country_event = {
+	id = usa.81
+	title = usa.81.t
+	desc = usa.81.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.81.a
+		SOV = {
+			add_opinion_modifier = { target = USA modifier = USA_EOTW_ALASKA_TRADE }
+		}
+		358 = {
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		transfer_state = 463
+		hidden_effect = {
+			news_event = {  }
+		}
+		add_named_threat = { threat = -1 name = peaceful_deal }
+	}
+}
+
+# Russia Refuses to give up alaska
+country_event = {
+	id = usa.82
+	title = usa.82.t
+	desc = usa.82.d
+	picture = GFX_report_event_polish_army
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.82.a
+		SOV = {
+			add_opinion_modifier = { target = USA modifier = USA_EOTW_ALASKA_TRADE_FAIL }
+		}
+	}
+}
+
+# USA occupies Panama channel
+country_event = {
+	id = usa.750
+	title = usa.750.t
+	desc = usa.750.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+	
+	option = {
+		name = usa.750.a
+		transfer_state = 685
+		CEA = {
+			country_event = { id = usa.751 days = 1 }
+		}
+	}
+}
+
+# CEA reaacts to loss of Panama
+country_event = {
+	id = usa.751
+	title = usa.751.t
+	desc = usa.751.d
+	picture = GFX_report_event_chinese_soldiers_02
+	
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CEA
+	}
+	
+	option = {
+		name = usa.751.a
+		ai_chance = { factor = 95 }
+		add_stability = 0.2
+			create_wargoal = {
+				type = take_state
+				target = USA
+				generator = { 685 }
+		}
+	}
+	option = {
+		name = usa.751.b
+		ai_chance = { factor = 5 }
+		add_war_support = -0.05
+		add_named_threat = { threat = -0.2 name = panama_war_averted }
+	}
+}

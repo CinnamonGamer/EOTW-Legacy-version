@@ -1,0 +1,67 @@
+﻿division_template = {
+	name = "Divizia Infanterie"			# Infantry Division
+	# Note: also represents Guards, Fortress divisions
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Munte Brigada"				# Mountain Brigade
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "Divizia 1 Infanterie"
+		location = 9716
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Divizia 2 Infanterie"
+		location = 9617
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Divizia 3 Infanterie"
+		location = 11686
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Divizia 1 Munte"
+		location = 11655
+		division_template = "Munte Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+
+	
+}

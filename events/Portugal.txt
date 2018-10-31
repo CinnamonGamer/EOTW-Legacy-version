@@ -1,0 +1,70 @@
+﻿###########################
+# POR Events
+###########################
+
+add_namespace = portugal
+
+country_event = {
+    id = portugal.1
+	title = portugal.1.t
+	desc = portugal.1.d
+	picture = GFX_report_event_journalists_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POR
+		date > 1936.5.1
+		date < 1936.5.18
+		has_government = absolute_monarchist
+	}
+	
+	option = {
+	    name = portugal.1.o1
+		ai_chance = {
+			factor = 10
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Duarte I"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = imperial
+			traits = {
+				
+			}
+		}
+		add_stability = -0.10
+	}
+	
+	option = {
+	    name = portugal.1.o2
+		ai_chance = {
+			factor = 90
+		}
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Duarte I"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = imperial
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = americanist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = americanist
+			popularity = 0.49
+		}
+		add_stability = -0.08
+		hidden_effect = {
+		    every_country = { news_event = { id = news.8 } }
+		}
+	}
+}

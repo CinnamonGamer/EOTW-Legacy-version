@@ -1,0 +1,80 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    
+	english_threat = {
+		value = -10
+	}
+	england_wants_our_lands = {
+		value = -50
+	}
+	
+	we_are_being_locked_on = {
+		value = -5
+	}
+	
+	english_frienship = {
+		value = 30
+	}
+	
+	english_hatred = {
+		value = -50
+	}
+	
+	spain_refuses_help = {
+		value = -20
+	}
+	
+	england_prepares_for_invasion = {
+		value = -100
+	}
+	
+	english_playing_nice = {
+		value = 20
+	}
+	
+	cooperations_england = {
+		value = 50
+	}
+	
+	albanian_refusal = {
+		value = -50
+	}
+	
+	greek_refusal = {
+		value = -50
+	}
+	exported_citizens = {
+		value = -50
+	}
+	building_the_friendship = {
+		value = 20
+	}
+	
+	austrian_refusal = {
+		value = -20
+	}
+	french_english_alliance = {
+		value = 100
+	}
+	british_ambitions = {
+		value = -5
+	}
+	
+	english_influence = {
+		value = 5
+	}
+	
+	english_colonialism = {
+		value = -10
+	}
+}
+

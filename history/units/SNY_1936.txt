@@ -1,0 +1,76 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Nationale Infanterie"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+division_template = {
+	name = "Alpen Division"	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }			
+	}
+}
+division_template = {
+	name = "Pferde Einheiten" 	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+}
+
+
+##### OOB #####
+units = {
+    division= {	
+		name = "Konigliche Wache"
+		location = 514
+		division_template = "Nationale Infanterie" 	
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Infanterie"
+		location = 3535
+		division_template = "Nationale Infanterie" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "2. Infanterie"
+		location = 3326
+		division_template = "Nationale Infanterie" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "1. Pferde Einheiten"
+		location = 514
+		division_template = "Pferde Einheiten" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "2. Pferde Einheiten"
+		location = 9238
+		division_template = "Pferde Einheiten" 	
+		start_experience_factor = 0.1
+	}
+
+
+}

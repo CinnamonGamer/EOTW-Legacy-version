@@ -1,0 +1,110 @@
+﻿capital = 498
+
+set_stability = 0.82
+set_war_support = 0.35
+
+
+oob = "RIO_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+
+	
+}
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 1
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 0
+		}
+
+                americanist = { 
+			popularity = 4
+		}
+
+                georgist = { 
+			popularity = 0
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 95
+		}
+
+                de_leonist = { 
+			popularity = 0
+		}
+	}
+	
+	ruling_party = collectivist
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	limited_exports
+	service_by_requirement
+	war_economy
+}
+
+create_country_leader = {
+	name = "Luis Carlos Prestes"
+	desc = ""
+	picture = "Portrait_RIO_Carlos_Prestes.dds"
+	expire = "1965.1.1"
+	ideology = radical_collectivism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Osvaldo Aranha"
+	desc = ""
+	picture = "Portrait_RIO_Aranha.dds"
+	expire = "1965.1.1"
+	ideology = direct_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Getulio Vargas"
+	desc = ""
+	picture = "Portrait_RIO_Vargas.dds"
+	expire = "1965.1.1"
+	ideology = fascist
+	traits = {
+		#
+	}
+}

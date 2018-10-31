@@ -1,0 +1,120 @@
+ideas = {
+    
+	country = {
+	    HUN_hungarian_dream_idea = {
+		    
+			allowed = {
+				original_tag = HUN
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.4
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    soldiers_for_a_greater_hungary = {
+		    
+			allowed = {
+				original_tag = HUN
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    reconciliation_with_austria_idea = {
+		    
+			allowed = {
+				original_tag = HUN
+				AUS = {
+				has_government = de_leonist
+			    }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				de_leonist_drift = 0.035
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    reconciliation_with_wallachia_idea = {
+		    
+			allowed = {
+				original_tag = HUN
+				ROM = {
+				has_government = national_liberal
+			    }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				national_liberal_drift = 0.035
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		
+		
+		
+		}
+	}
+	
+	country = {
+	    wallachian_political_advisors = {
+		    
+			allowed = {
+				original_tag = HUN
+				ROM = {
+				has_government = national_liberal
+			    }
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				national_liberal_drift = 0.03
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		
+		
+		
+		}
+	}
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,156 @@
+﻿###########################
+# France News Events
+###########################
+
+add_namespace = news_FRA
+
+#Arc De Triomphe
+news_event = {
+	id = news_FRA.1
+	title = news_FRA.1.t
+	desc = news_FRA.1.d
+	picture = GFX_news_event_generic_funeral
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_FRA.1.o1
+		trigger = { tag = FRA }
+	}
+	
+	option = {
+		name = news_FRA.1.o2
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = news_FRA.1.o3
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+			NOT = { has_government = de_leonist }
+		}
+	}
+	
+	option = {
+		name = news_FRA.1.o4
+		trigger = {
+			has_government = de_leonist
+		}
+	}
+}
+
+#Stability
+news_event = {
+    id = news_FRA.2
+	title = news_FRA.2.t
+	desc = news_FRA.2.d
+	picture = GFX_report_event_german_politician_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = france_1937_coup
+		date > 1938.1.1
+		date < 1938.1.16
+	}
+	
+	option = {
+		name = news_FRA.2.o1
+		trigger = {
+		    tag = FRA 
+			has_government = absolute_monarchist
+		
+	    }
+		clr_country_flag = france_1937_coup
+    }
+	
+	option = {
+		name = news_FRA.2.o2
+		trigger = {
+		    tag = FRA 
+			has_government = strasserist
+		
+	    }
+		clr_country_flag = france_1937_coup
+    }
+	
+	option = {
+		name = news_FRA.2.o3
+		trigger = {
+		    tag = FRA 
+			has_government = de_leonist
+		
+	    }
+		clr_country_flag = france_1937_coup
+    }
+}
+
+#De Leonist Revolution 1937
+news_event = {
+    id = news_FRA.3
+	title = news_FRA.3.t
+	desc = news_FRA.3.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = de_leonist_rev_1937
+		date > 1937.5.1
+		date < 1937.5.16
+	}
+	
+	option = {
+		name = news_FRA.3.o1
+		clr_country_flag = de_leonist_rev_1937
+    }
+}
+
+#Strasserist Takeover 1937
+news_event = {
+    id = news_FRA.4
+	title = news_FRA.4.t
+	desc = news_FRA.4.d
+	picture = GFX_report_event_soviet_tanks
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = strasserist_rev_1937
+		date > 1937.5.1
+		date < 1937.5.16
+	}
+	
+	option = {
+		name = news_FRA.4.o1
+		clr_country_flag = strasserist_rev_1937
+    }
+}
+
+#Monarchist Control
+news_event = {
+    id = news_FRA.5
+	title = news_FRA.5.t
+	desc = news_FRA.5.d
+	picture = GFX_report_event_german_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_country_flag = retain_control_1937
+		date > 1937.5.1
+		date < 1937.5.16
+	}
+	
+	option = {
+		name = news_FRA.5.o1
+		clr_country_flag = retain_control_1937
+    }
+}	

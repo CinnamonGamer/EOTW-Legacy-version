@@ -1,0 +1,52 @@
+ideologies = {
+
+	national_conservative = {
+		
+		types = {
+		
+			constitutional_christian = {
+			}
+			
+			secular_conservative = {
+			}
+			
+			fiscal_conservative = {
+			}
+			
+			prussianist = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_1"
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_2"
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_3"
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_4"
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_5"
+			"FACTION_NAME_NATIONAL_CONSERVATIVE_6"
+		}
+		
+		color = { 97 105 220 }
+		
+		war_impact_on_world_tension = 2
+		faction_impact_on_world_tension = 2
+
+		rules = {
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = yes
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.45
+			lend_lease_tension = 0.60
+			send_volunteers_tension = 0.60
+			guarantee_tension = 0.60
+		}
+		
+	}
+
+}

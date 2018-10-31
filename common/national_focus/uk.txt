@@ -1,0 +1,2620 @@
+focus_tree = {
+    id = britain_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	
+	focus = {
+	    id = UK_our_politics
+		icon = GFX_goal_support_democracy
+		x = 8
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1937.1.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_domination_in_british_isles
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = UK_our_politics }
+		x = 8
+		y = 1
+		cost = 10 
+		completion_reward = {
+			IRE = {
+				add_opinion_modifier = { target = ENG modifier = english_threat } 
+			}
+			SCD = {
+				add_opinion_modifier = { target = ENG modifier = english_threat } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_northern_england_dispute
+		icon = GFX_goal_ties_with_scotland
+		prerequisite = { focus = UK_domination_in_british_isles }
+		bypass = {
+			OR = {
+				NOT = { country_exists = SCD }
+				131 = { is_owned_by = ENG }
+			}	
+		}
+		x = 11
+		y = 2
+		cost = 10 
+		completion_reward = {
+			SCD = {
+				country_event = england.18
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_fate_of_scotland
+		icon = GFX_goal_demand_sudetenland
+		mutually_exclusive = { focus = UK_bury_the_hatchet } 
+		prerequisite = { focus = UK_northern_england_dispute }
+		bypass = {
+			OR = {
+				NOT = { country_exists = SCD }
+				SCD = { is_puppet_of = ENG }
+				131 = { is_owned_by = ENG }
+				121 = { is_owned_by = ENG }
+				133 = { is_owned_by = ENG }
+				120 = { is_owned_by = ENG }
+				136 = { is_owned_by = ENG }
+			}	
+		}
+		x = 9
+		y = 3
+		cost = 10 
+		completion_reward = {
+			ENG = {
+				country_event = england.24
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_bury_the_hatchet
+		icon = GFX_goal_scotland_alliance
+		mutually_exclusive = { focus = UK_fate_of_scotland } 
+		prerequisite = { focus = UK_northern_england_dispute }
+		available = {
+			ENG = {
+				owns_state = 131
+				NOT = { has_war_with = SCD }
+			}
+		}
+		x = 12
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    
+			SCD = {
+				country_event = england.28
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_defensive_pact_scotland
+		icon = GFX_goal_scotland_alliance
+		mutually_exclusive = { focus = UK_research_agreement } 
+		prerequisite = { focus = UK_bury_the_hatchet }
+		available = {
+			ENG = {
+				NOT = { has_war_with = SCD }
+			}
+		}
+		x = 13
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    
+			SCD = {
+				country_event = england.31
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_research_agreement
+		icon = GFX_goal_generic_scientific_exchange
+		mutually_exclusive = { focus = UK_defensive_pact_scotland } 
+		prerequisite = { focus = UK_bury_the_hatchet }
+		available = {
+			ENG = {
+				NOT = { has_war_with = SCD }
+			}
+		}
+		x = 11
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    
+			SCD = {
+				country_event = england.34
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_develop_scotland
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = UK_fate_of_scotland }
+		available = {
+			OR = {
+			    ENG = { owns_state = 121 } 
+				any_allied_country = { owns_state = 121 } 
+			}
+			OR = {
+			    ENG = { owns_state = 131 } 
+				any_allied_country = { owns_state = 131 } 
+			}
+			OR = {
+			    ENG = { owns_state = 133 } 
+				any_allied_country = { owns_state = 133 } 
+			}
+		}
+		x = 9
+		y = 4
+		cost = 10 
+		completion_reward = {
+			121 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			133 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_island_defence
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = UK_fate_of_scotland focus = UK_defensive_pact_scotland focus = UK_research_agreement }
+		available = {
+			OR = {
+			    ENG = { owns_state = 131 } 
+				131 = { is_controlled_by = ENG }
+				any_allied_country = { owns_state = 131 } 
+				is_in_faction_with = SCD
+			}
+		}
+		x = 10
+		y = 5
+		cost = 10 
+		completion_reward = {
+			add_ideas = ENG_home_defence
+		}
+	}
+	
+	focus = {
+	    id = UK_lock_on_ireland
+		icon = GFX_goal_future_of_ireland
+		prerequisite = { focus = UK_domination_in_british_isles }
+		bypass = {
+			NOT = { country_exists = IRE }
+		}
+		x = 6
+		y = 2
+		cost = 10 
+		completion_reward = {
+			IRE = {
+				add_opinion_modifier = { target = ENG modifier = we_are_being_locked_on } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_friendly_aproach
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = UK_claims_in_ireland }
+		prerequisite = { focus = UK_lock_on_ireland }
+		x = 7
+		y = 3
+		cost = 10 
+		completion_reward = {
+			IRE = {
+				remove_opinion_modifier = { target = ENG modifier = we_are_being_locked_on } 
+				remove_opinion_modifier = { target = ENG modifier = english_threat }
+				add_opinion_modifier = { target = ENG modifier = english_frienship } 				
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_claims_in_ireland
+		icon = GFX_goal_generic_more_territorial_claims
+		mutually_exclusive = { focus = UK_friendly_aproach }
+		prerequisite = { focus = UK_lock_on_ireland }
+		x = 5
+		y = 3
+		cost = 10 
+		completion_reward = {  
+			add_state_claim = 119
+			add_state_claim = 113
+		}
+	}
+	
+	focus = {
+	    id = UK_belfast_or_war
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = UK_claims_in_ireland }
+		bypass = {
+			119 = { is_owned_by = ENG }
+			NOT = { country_exists = IRE }
+		}
+		x = 5
+		y = 4
+		cost = 10 
+		completion_reward = {  
+			IRE = {
+				country_event = england.40
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_tradepartners
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = UK_friendly_aproach }
+		x = 7
+		y = 4
+		cost = 10 
+		completion_reward = { 
+			IRE = {
+				country_event = england.37
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_english_pride
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = UK_tradepartners focus = UK_belfast_or_war }
+		x = 6
+		y = 5
+		cost = 10 
+		completion_reward = {    
+			add_ideas = ENG_english_pride
+		}
+	}
+	
+	focus = {
+	    id = UK_home_of_industrial_revolution
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 0
+		cost = 10
+		completion_reward = {
+		    130 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+			132 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_prearmament
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = UK_home_of_industrial_revolution }
+		x = 2
+		y = 1
+		cost = 10
+		completion_reward = {
+			129 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+			    }
+			}
+			125 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_long_lasting_war
+		icon = GFX_goal_generic_construction2
+		mutually_exclusive = { focus = UK_shorter_war }
+		prerequisite = { focus = UK_prearmament }
+		x = 3
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = ENG_prepared_for_long_lasting_war
+		}
+	}
+	
+	focus = {
+	    id = UK_shorter_war
+		icon = GFX_goal_generic_production
+		mutually_exclusive = { focus = UK_long_lasting_war }
+		prerequisite = { focus = UK_prearmament }
+		x = 1
+		y = 2
+		cost = 10
+		completion_reward = {
+			123 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+			    }
+			}
+			338 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_good_o_wales
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = UK_home_of_industrial_revolution }
+		bypass = {
+			NOT = { 122 = { is_owned_by = ENG } }
+		}
+		x = -1
+		y = 2
+		cost = 10
+		completion_reward = {
+			122 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+			    }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_british_geniuses
+		icon = GFX_focus_research
+		prerequisite = { focus = UK_shorter_war focus = UK_long_lasting_war }
+		prerequisite = { focus = UK_good_o_wales }
+		x = 1
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = UK_industrial_breakthrough
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = UK_british_geniuses }
+		x = 0
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+	    id = UK_agriculture
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = UK_industrial_breakthrough }
+		x = 1
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_ideas = ENG_brititsh_agriculture
+		}
+	}
+	focus = {
+	    id = UK_electronics
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = UK_british_geniuses }
+		x = 3
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {
+	    id = UK_toasty_toasters
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = UK_industrial_breakthrough }
+		x = -1
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_ideas = ENG_insert_creative_name_here
+		}
+	}
+	
+	focus = {
+		id = UK_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = UK_electronics }
+		x = 3
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+		id = UK_heureka
+		icon = GFX_focus_research
+		prerequisite = { focus = UK_agriculture }
+		prerequisite = { focus = UK_toasty_toasters }
+		prerequisite = { focus = UK_secret_weapons }
+		available = {
+			date > 1942.1.1
+			num_of_factories > 100
+		}
+		x = 1
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = UK_hatred_of_france
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = UK_english_pride }
+		prerequisite = { focus = UK_island_defence }
+		mutually_exclusive = { focus = UK_accept_the_french } 
+		bypass = {
+			NOT = { country_exists = FRA }
+		}
+		x = 7
+		y = 6
+		cost = 10 
+		completion_reward = {  
+			add_stability = 0.05
+			add_war_support = 0.1
+			FRA = {
+				add_opinion_modifier = { target = ENG modifier = english_hatred } 
+			}
+			ENG = {
+				add_opinion_modifier = { target = FRA modifier = english_hatred } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_accept_the_french
+		icon = GFX_goal_napoleons_legacy
+		prerequisite = { focus = UK_english_pride }
+		prerequisite = { focus = UK_island_defence }
+		mutually_exclusive = { focus = UK_hatred_of_france } 
+		available = {
+			ENG = {
+				NOT = { has_war_with = FRA }
+			}
+		}
+		x = 9
+		y = 6
+		cost = 10 
+		completion_reward = {   
+			add_ideas = ENG_accepting_the_french
+		}
+	}
+	
+	focus = {
+	    id = UK_mediterrainean_area
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_hatred_of_france focus = UK_accept_the_french }
+		x = 3
+		y = 7
+		cost = 10 
+		completion_reward = {
+			navy_experience = 25
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+	    id = UK_north_sea_area
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_hatred_of_france focus = UK_accept_the_french }
+		x = 13
+		y = 7
+		cost = 10 
+		completion_reward = {
+			navy_experience = 25
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+	    id = UK_spain
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_mediterrainean_area }
+		x = 1
+		y = 8
+		cost = 10 
+		completion_reward = {  
+			country_event = england.47
+		}
+	}
+	
+	focus = {
+	    id = UK_greece
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_mediterrainean_area }
+		mutually_exclusive = { focus = UK_albania } 
+		x = 5
+		y = 8
+		cost = 10 
+		completion_reward = {   
+			if = {
+				limit = { has_government = strasserist }
+				GRE = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				GRE = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				GRE = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				GRE = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				GRE = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				GRE = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				GRE = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				GRE = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				GRE = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				GRE = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				GRE = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_albania
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_mediterrainean_area }
+		mutually_exclusive = { focus = UK_greece } 
+		x = 7
+		y = 8
+		cost = 10 
+		completion_reward = {
+			if = {
+				limit = { has_government = strasserist }
+				ALB = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				ALB = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				ALB = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				ALB = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				ALB = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				ALB = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				ALB = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				ALB = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				ALB = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				ALB = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				ALB = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_interest_in_spanish_lands
+		icon = GFX_goal_generic_more_territorial_claims
+		mutually_exclusive = { focus = UK_spain_friend } 
+		prerequisite = { focus = UK_spain }
+		x = 2
+		y = 9
+		cost = 10 
+		completion_reward = {   
+			add_state_claim = 118
+		}
+	}
+	
+	focus = {
+	    id = UK_spain_friend
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = UK_interest_in_spanish_lands } 
+		prerequisite = { focus = UK_spain }
+		x = 0
+		y = 9
+		cost = 10 
+		completion_reward = {  
+			if = {
+				limit = { has_government = strasserist }
+				SPR = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				SPR = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				SPR = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				SPR = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				SPR = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				SPR = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				SPR = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				SPR = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				SPR = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				SPR = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				SPR = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_gibraltar_ulrantum
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = UK_interest_in_spanish_lands }
+		x = 2
+		y = 10
+		cost = 10 
+		completion_reward = {   
+			SPR = {
+				country_event = england.43
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_help_against_the_french #the event that i wanted didnt work at all and i dont know how to fix
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = UK_spain_friend }
+		bypass = {
+			NOT = { country_exists = SPR }
+			SPR = { is_puppet_of = ENG }
+			ENG = { has_war_with = SPR }
+		}
+		available = {
+			ENG = {
+				NOT = { has_war_with = FRA }
+				NOT = { has_war_with = SPR }
+			}
+			SPR = {
+				NOT = { has_war_with = ENG }
+				has_war_with = FRA
+			}
+		}
+		x = 0
+		y = 10
+		cost = 10 
+		completion_reward = { 
+			SPR = {
+				country_event = england.46
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_epirus_crisis
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = UK_greece} 
+		available = {
+			ENG = {
+				NOT = { has_war_with = GRE }
+				NOT = { has_war_with = ALB }
+			}
+			GRE = {
+				NOT = { has_war_with = ALB }
+			}
+		}
+		x = 4
+		y = 9
+		cost = 10 
+		completion_reward = {
+			GRE = {
+				country_event = england.69
+			}
+		}
+	}
+	focus = {
+	    id = UK_fate_of_greece
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = UK_albania }
+		available = {
+			ENG = {
+				NOT = { has_war_with = GRE }
+				NOT = { has_war_with = ALB }
+			}
+			GRE = {
+				NOT = { has_war_with = ALB }
+			}
+		}
+		x = 8
+		y = 9
+		cost = 10 
+		completion_reward = {   
+			ALB = {
+				country_event = england.59
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_mediterrainean_experience
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = UK_fate_of_greece focus = UK_epirus_crisis }
+		x = 6
+		y = 10
+		cost = 10 
+		completion_reward = {
+		    add_ideas = ENG_meditarrinean_experience
+			navy_experience = 50
+		}
+	}
+
+	
+	focus = {
+	    id = UK_red_nations
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = UK_north_sea_area }
+		x = 15
+		y = 8
+		cost = 10 
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+	    id = UK_sweden_ally
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = UK_norwegian_shores } 
+		available = {
+			NOT = { has_war_with = SWE }
+		}
+		prerequisite = { focus = UK_north_sea_area }
+		x = 12
+		y = 8
+		cost = 10 
+		completion_reward = {
+		    
+			if = {
+				limit = { has_government = strasserist }
+				SWE = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				SWE = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				SWE = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				SWE = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				SWE = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				SWE = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				SWE = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				SWE = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				SWE = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				SWE = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				SWE = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = UK_norwegian_shores
+		icon = GFX_goal_generic_military_sphere
+		mutually_exclusive = { focus = UK_sweden_ally } 
+		prerequisite = { focus = UK_north_sea_area }
+		x = 10
+		y = 8
+		cost = 10 
+		completion_reward = { 
+			SWE = {
+				country_event = england.73
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_strike_the_de_leonist
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = UK_red_nations }
+		available = {
+			NOT = { has_government = de_leonist }
+		}
+		mutually_exclusive = { focus = UK_seek_cooperation } 
+		x = 14
+		y = 9
+		cost = 10 
+		completion_reward = {
+			HOL = {
+				if = {
+					limit = { has_government = de_leonist }
+				}
+			}
+			ENG = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = HOL
+				}
+			}
+			DEN = {
+				if = {
+					limit = { has_government = de_leonist }
+				}
+			}
+			ENG = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = DEN
+				}
+			}
+			AUS = {
+				if = {
+					limit = { has_government = de_leonist }
+				}
+			}
+			ENG = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = AUS
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = UK_seek_cooperation
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = UK_red_nations }
+		available = {
+			NOT = { has_war_with = HOL }
+			NOT = { has_war_with = DEN }
+			NOT = { has_war_with = AUS }
+		}
+		mutually_exclusive = { focus = UK_strike_the_de_leonist } 
+		x = 16
+		y = 9
+		cost = 10 
+		completion_reward = {    
+			HOL = {
+				country_event = england.76
+			}
+			AUS = {
+				country_event = england.76
+			}
+			DEN = {
+				country_event = england.76
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_north_sea_exprerience
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = UK_strike_the_de_leonist focus = UK_seek_cooperation }
+		prerequisite = { focus = UK_norwegian_shores focus = UK_sweden_ally }
+		x = 12
+		y = 10
+		cost = 10 
+		completion_reward = {   
+			add_ideas = ENG_north_sea_experience
+		}
+	}
+	
+	focus = {
+	    id = UK_export_the_french
+		icon = GFX_goal_generic_navy_battleship
+		mutually_exclusive = { focus = UK_build_french_friendship } 
+		available = {
+			NOT = { has_idea = ENG_accepting_the_french }
+		}
+		prerequisite = { focus = UK_mediterrainean_experience focus = UK_north_sea_exprerience }
+		x = 8
+		y = 12
+		cost = 10 
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = 0.1
+			FRA = {
+				country_event = england.72
+			}
+			effect_tooltip = {
+				ENG = {
+					add_opinion_modifier = { target = ENG modifier = exported_citizens } 
+				}
+				FRA = {
+					add_opinion_modifier = { target = ENG modifier = exported_citizens } 
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_build_french_friendship
+		icon = GFX_goal_anschluss
+		mutually_exclusive = { focus = UK_export_the_french } 
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		prerequisite = { focus = UK_mediterrainean_experience focus = UK_north_sea_exprerience }
+		x = 10
+		y = 12
+		cost = 10 
+		completion_reward = {    
+			FRA = {
+				add_opinion_modifier = { target = ENG modifier = building_the_friendship } 
+			}
+			ENG = {
+				add_opinion_modifier = { target = ENG modifier = building_the_friendship } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_the_great_war
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = UK_export_the_french }
+		x = 7
+		y = 13
+		cost = 10 
+		completion_reward = {    
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_forget_the_past
+		icon = GFX_goal_molotov_ribbentrop_pact
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		prerequisite = { focus = UK_build_french_friendship }
+		x = 11
+		y = 13
+		cost = 10 
+		completion_reward = {
+			FRA = {
+				country_event = england.80
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_otherside_of_the_atlantic
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 19
+		y = 0
+		cost = 10 
+		completion_reward = {	
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = UK_north_america
+		icon = GFX_goal_america
+		prerequisite = { focus = UK_otherside_of_the_atlantic }
+		x = 16
+		y = 1
+		cost = 10 
+		completion_reward = {	
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = UK_tighten_grip_on_canada
+		icon = GFX_goal_tripartite_pact
+		mutually_exclusive = { focus = UK_support_canada } 
+		prerequisite = { focus = UK_north_america }
+		available = {
+			CAN = {	has_civil_war = no }
+			is_in_faction_with = CAN
+		}
+		x = 15
+		y = 2
+		cost = 10 
+		completion_reward = {
+			CAN = {
+				country_event = england.96
+			}
+		}
+	}
+	focus = {
+	    id = UK_support_canada
+		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = UK_tighten_grip_on_canada } 
+		prerequisite = { focus = UK_north_america }
+		available = {
+			CAN = {	has_civil_war = no }
+			is_in_faction_with = CAN
+		}
+		x = 17
+		y = 2
+		cost = 10 
+		completion_reward = {	
+			CAN = {
+				add_opinion_modifier = { target = ENG modifier = english_influence } 
+				country_event = england.93
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_south_america
+		icon = GFX_goal_america
+		prerequisite = { focus = UK_otherside_of_the_atlantic }
+		x = 22
+		y = 1
+		cost = 10 
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = UK_war_plan_blue
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_otherside_of_the_atlantic }
+		available = {
+			country_exists = USA
+			OR = {
+				USA = { has_added_tension_amount > 25 }
+			}
+		}
+		x = 19
+		y = 1
+		cost = 10 
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+		}
+	}
+	focus = {
+	    id = UK_positive_influence_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = UK_south_america }
+		mutually_exclusive = { focus = UK_pressure_and_gain } 
+		x = 24
+		y = 2
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = { capital_scope = { is_on_continent = south_america } }
+				add_opinion_modifier = { target = ENG modifier = english_influence } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_pressure_and_gain
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = UK_south_america }
+		mutually_exclusive = { focus = UK_positive_influence_focus } 
+		x = 19
+		y = 3
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = { capital_scope = { is_on_continent = south_america } }
+				add_opinion_modifier = { target = ENG modifier = british_ambitions } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_war_plan_carneval
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = UK_pressure_and_gain }
+		available = {
+			country_exists = BRA
+			OR = {
+				BRA = { has_added_tension_amount > 25 }
+			}
+		}
+		x = 22
+		y = 4
+		cost = 10 
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BRA
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_claim_galapagos_islands
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = UK_pressure_and_gain }
+		x = 20
+		y = 4
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = {
+					owns_state = 649
+				}
+				country_event = england.83
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_claim_belize
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = UK_pressure_and_gain }
+		x = 18
+		y = 4
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = {
+					owns_state = 311
+				}
+				country_event = england.89
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_claim_puerto_rico
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = UK_pressure_and_gain }
+		x = 16
+		y = 4
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = {
+					owns_state = 686
+				}
+				country_event = england.86
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_north_latin_america
+		icon = GFX_goal_america
+		prerequisite = { focus = UK_positive_influence_focus }
+		x = 25
+		y = 3
+		cost = 10 
+		completion_reward = {
+			if = {
+				limit = { has_government = strasserist }
+				VEN = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				VEN = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				VEN = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				VEN = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				VEN = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				VEN = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				VEN = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				VEN = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				VEN = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				VEN = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				VEN = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				COL = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				COL = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				COL = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				COL = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				COL = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				COL = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				COL = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				COL = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				COL = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				COL = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				COL = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				ECU = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				ECU = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				ECU = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				ECU = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				ECU = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				ECU = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				ECU = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				ECU = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				ECU = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				ECU = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				ECU = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				CUB = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				CUB = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				CUB = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				CUB = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				CUB = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				CUB = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				CUB = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				CUB = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				CUB = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				CUB = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				CUB = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+	    id = UK_south_latin_america
+		icon = GFX_goal_america
+		prerequisite = { focus = UK_positive_influence_focus }
+		x = 23
+		y = 3
+		cost = 10 
+		completion_reward = {
+			if = {
+				limit = { has_government = strasserist }
+				RIO = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				RIO = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				RIO = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				RIO = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				RIO = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				RIO = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				RIO = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				RIO = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				RIO = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				RIO = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				RIO = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				CHL = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				CHL = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				CHL = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				CHL = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				CHL = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				CHL = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				CHL = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				CHL = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				CHL = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				CHL = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				CHL = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				ARG = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				ARG = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				ARG = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				ARG = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				ARG = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				ARG = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				ARG = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				ARG = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				ARG = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				ARG = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				ARG = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+			if = {
+				limit = { has_government = strasserist }
+				PRU = {
+					add_ideas = ENG_influence_strasserist
+				}
+			}
+			if = {
+				limit = { has_government = nationalist }
+				PRU = {
+					add_ideas = ENG_influence_nationalist
+				}
+			}
+			if = {
+				limit = { has_government = absolute_monarchist }
+				PRU = {
+					add_ideas = ENG_influence_monarchist
+				}
+			}
+			if = {
+				limit = { has_government = national_conservative }
+				PRU = {
+					add_ideas = ENG_influence_national_conservative
+				}
+			}
+			if = {
+				limit = { has_government = theoconservative }
+				PRU = {
+					add_ideas = ENG_influence_theoconservative
+				}
+			}
+			if = {
+				limit = { has_government = national_liberal }
+				PRU = {
+					add_ideas = ENG_influence_national_liberal
+				}
+			}
+			if = {
+				limit = { has_government = americanist }
+				PRU = {
+					add_ideas = ENG_influence_americanist
+				}
+			}
+			if = {
+				limit = { has_government = georgist }
+				PRU = {
+					add_ideas = ENG_influence_georgist
+				}
+			}
+			if = {
+				limit = { has_government = democratic_socialist }
+				PRU = {
+					add_ideas = ENG_influence_democratic_socialist
+				}
+			}
+			if = {
+				limit = { has_government = collectivist }
+				PRU = {
+					add_ideas = ENG_influence_collectivist
+				}
+			}
+			if = {
+				limit = { has_government = de_leonist }
+				PRU = {
+					add_ideas = ENG_influence_de_leonist
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_colonialism
+		icon = GFX_goal_expanding_the_empire
+		prerequisite = { focus = UK_help_against_the_french focus = UK_gibraltar_ulrantum }
+		x = 1
+		y = 11
+		cost = 10 
+		completion_reward = {
+			every_country = {
+				limit = { capital_scope = { is_on_continent = africa } }
+			}
+			add_opinion_modifier = { target = ENG modifier = english_colonialism } 
+
+			every_country = {
+				limit = { has_government = de_leonist }
+			}
+			add_opinion_modifier = { target = ENG modifier = english_colonialism } 
+		}
+	}
+	
+	focus = {
+	    id = UK_puppet_for_land_GLC
+		icon = GFX_goal_expanding_the_empire
+		prerequisite = { focus = UK_colonialism }
+		x = 2
+		y = 12
+		cost = 10 
+		completion_reward = {
+			GLC = {
+				country_event = england.103
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_puppet_for_industry_WAF
+		icon = GFX_goal_expanding_the_empire
+		prerequisite = { focus = UK_colonialism }
+		x = 0
+		y = 12
+		cost = 10 
+		completion_reward = {
+			GLC = {
+				country_event = england.99
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_ties_with_australia
+		icon = GFX_goal_expanding_the_empire
+		prerequisite = { focus = UK_puppet_for_land_GLC focus = UK_puppet_for_industry_WAF }
+		available = {
+			NOT = { has_war_with = AST }
+		}
+		x = 1
+		y = 13
+		cost = 10 
+		completion_reward = {
+			AST = {
+				add_opinion_modifier = { target = ENG modifier = english_frienship } 
+			}
+			ENG = {
+				add_opinion_modifier = { target = AST modifier = english_frienship } 
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_restore_army
+		icon = GFX_goal_anschluss
+		x = 29
+		y = 0
+		cost = 10
+		completion_reward = {
+		    army_experience = 15
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_equipment
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = UK_restore_army }
+		x = 27
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_tactics
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = UK_restore_army }
+		x = 31
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_cruiser_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = UK_equipment }
+		x = 26
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_support_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = UK_equipment }
+		x = 28
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_national_academies
+		icon = GFX_goal_bank
+		prerequisite = { focus = UK_tactics }
+		x = 31
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = UK_academies
+		}
+	}
+	
+	focus = {
+	    id = UK_england_at_war
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = UK_national_academies }
+		x = 30
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = UK_england_at_war
+		}
+	}
+	
+	focus = {
+	    id = UK_english_elites
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = UK_national_academies }
+		x = 32
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = paratroopers3
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_air_academies
+		icon = GFX_goal_generic_build_airforce
+		x = 35
+		y = 0
+		cost = 10
+		completion_reward = {
+		    air_experience = 15 
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	
+	focus = {
+	    id = UK_strategic_destruction
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = { focus = UK_support_for_infantry }
+		prerequisite = { focus = UK_air_academies }
+		x = 34
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = total_destruction_bonus
+				bonus = 0.5
+				uses = 2
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_support_for_infantry
+		icon = GFX_goal_generic_CAS
+		mutually_exclusive = { focus = UK_strategic_destruction }
+		prerequisite = { focus = UK_air_academies }
+		x = 36
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus_UK
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_big_planes
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = { focus = UK_smaller_planes  }
+		prerequisite = { focus = UK_strategic_destruction focus = UK_support_for_infantry }
+		x = 34
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = big_plane_bonus
+				bonus = 0.5
+				uses = 2
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_smaller_planes
+		icon = GFX_goal_generic_air_fighter
+		mutually_exclusive = { focus = UK_big_planes }
+		prerequisite = { focus = UK_strategic_destruction focus = UK_support_for_infantry }
+		x = 36
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	
+	focus = {
+	    id = UK_platforms_for_planes
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = UK_big_planes focus = UK_smaller_planes }
+		x = 35
+		y = 3
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_naval_revolution
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 41
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_revolution
+				bonus = 0.5
+				uses = 3
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_the_chassee_of_navy
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = UK_naval_revolution }
+		x = 43
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+	focus = {
+	    id = UK_the_constuction_of_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = UK_naval_revolution }
+		x = 39
+		y = 1
+		cost = 10
+		completion_reward = {
+			 random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = UK_prepare_for_invasion_from_the_sea
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = UK_the_constuction_of_navy }
+		x = 38
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = UK_seaforts
+		}
+	}
+	
+	focus = {
+	    id = UK_liverpool_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = UK_the_constuction_of_navy }
+		available = {
+			owns_state = 132
+		}
+		x = 40
+		y = 2
+		cost = 10
+		completion_reward = {
+			132 = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = UK_marines
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = UK_prepare_for_invasion_from_the_sea }
+		prerequisite = { focus = UK_liverpool_dockyards }
+		x = 39
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 2
+				technology = marines
+				technology = marines2
+				technology = marines3
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_subs
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = UK_the_chassee_of_navy }
+		x = 42
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = submarine_doctrine_bonus
+				bonus = 0.5
+				uses = 3
+				category = submarine_doctrine
+			}
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_ship_killers
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = UK_the_chassee_of_navy }
+		x = 44
+		y = 2
+		cost = 10
+		completion_reward = { 
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_carriers_of_england
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = UK_subs }
+		prerequisite = { focus = UK_ship_killers }
+		mutually_exclusive = { focus = UK_capital_ship_project }
+		x = 44
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_capital_ship_project
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = UK_subs }
+		prerequisite = { focus = UK_ship_killers }
+		mutually_exclusive = { focus = UK_carriers_of_england }
+		x = 42
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				technology = basic_battlecruiser
+				technology = basic_battleship
+				technology = improved_battleship
+				technology = advanced_battleship
+				technology = heavy_battleship
+				technology = heavy_battleship2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_naval_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = UK_carriers_of_england }
+		x = 44
+		y = 4
+		cost = 10
+		completion_reward = {
+		    air_experience = 10
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = UK_super_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = UK_capital_ship_project }
+		x = 42
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = superheavy_battleship_bonus
+				bonus = 0.5
+				uses = 2
+				category = shbb_tech
+			}
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+}
+	
+	
+	
+

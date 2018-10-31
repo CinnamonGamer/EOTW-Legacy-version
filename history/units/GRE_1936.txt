@@ -1,0 +1,139 @@
+﻿division_template = {
+	name = "Trigonikó Pezikoú" 				
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Tetrágono Pezikoú" 				
+	# Prior to 1940 mobilization = 1st, 2nd, 8th
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 3 y = 0 }
+		mountaineers = { x = 3 y = 1 }
+		mountaineers = { x = 3 y = 2 }
+	}
+}
+division_template = {
+	name = "Merarchía Ippikoú" 			# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Motorized recon inf bn
+	}
+}
+
+units = {
+	######## Ellinikó Genikó Epiteleío ########
+	division = {
+		name = "VIII Merarchía Pezikoú"
+		location = 10163
+		division_template = "Tetrágono Pezikoú" 
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "Merarchía Ippikoú"
+		location = 11818
+		division_template = "Merarchía Ippikoú" 
+		start_experience_factor = 0.2
+
+	}
+
+	# A Sóma Stratoú
+	division = {
+		name = "II Merarchía Pezikoú"
+		location = 4109
+		division_template = "Tetrágono Pezikoú" 
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "III Merarchía Pezikoú"
+		location = 4193
+		division_template = "Trigonikó Pezikoú" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "IV Merarchía Pezikoú"
+		location = 7096
+		division_template = "Trigonikó Pezikoú" 
+		start_experience_factor = 0.2
+
+	}
+
+	# B Sóma Stratoú
+	division = {
+		name = "I Merarchía Pezikoú"
+		location = 863
+		division_template = "Tetrágono Pezikoú" 
+		start_experience_factor = 0.3
+
+	}
+
+	# C Sóma Stratoú
+	division = {
+		name = "X Merarchía Pezikoú"
+		location = 10163
+		division_template = "Trigonikó Pezikoú" 
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "XI Merarchía Pezikoú"
+		location = 11818
+		division_template = "Trigonikó Pezikoú" 
+		start_experience_factor = 0.2
+
+	}
+
+	# E Sóma Stratoú
+	division = {
+		name = "XII Merarchía Pezikoú"
+		location = 895
+		division_template = "Trigonikó Pezikoú" 
+		start_experience_factor = 0.1
+
+	}
+
+	##### NAVAL UNITS #####
+	navy = {					
+		name = "Vasilikó Polemikó Naftikó"				
+		base = 4109
+		location = 4109 # Athens
+		ship = { name = "RHS Georgios Averoff" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GRE } } }				
+		ship = { name = "RHS Elli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GRE } } }				
+	}					
+	navy = {					
+		name = "Stolískou Ypovrychíon"				
+		base = 4109 
+		location = 4109 # Athens
+		ship = { name = "RHS Katsonis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GRE } } }		
+		ship = { name = "RHS Papanikolis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GRE } } }				
+	}					
+
+}

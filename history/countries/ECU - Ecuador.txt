@@ -1,0 +1,187 @@
+﻿capital = 305
+
+set_stability = 0.50
+set_war_support = 0.50
+
+oob = "ECU_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1 
+	early_fighter = 1
+	tech_mountaineers = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 4
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+		
+		national_conservative = { 
+			popularity = 0
+		}
+
+                theoconservative = { 
+			popularity = 0
+		}
+
+                national_liberal = { 
+			popularity = 9
+		}
+
+                americanist = { 
+			popularity = 10
+		}
+
+                georgist = { 
+			popularity = 70
+		}
+
+                democratic_socialist = { 
+			popularity = 0
+		}
+
+                collectivist = { 
+			popularity = 1
+		}
+
+                de_leonist = { 
+			popularity = 6
+		}
+	}
+	
+	ruling_party = georgist
+	last_election = "1933.12.15"
+	election_frequency = 84
+	elections_allowed = yes
+}
+
+add_ideas = {
+	export_focus
+	disarmed_nation
+	civilian_economy
+}
+
+create_country_leader = {
+	name = "Federico Paez"
+	desc = ""
+	picture = "Portrait_ECU_Federico_Paez.dds"
+	expire = "1965.1.1"
+	ideology = socio_capitalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alberto Enriquez Gallo"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Enriquez_Gallo.dds"
+	expire = "1965.1.1"
+	ideology = national_collectivist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jacinto Jijon y Caamano"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Jacinto_Jijon.dds"
+	expire = "1965.1.1"
+	ideology = fiscal_conservative
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mariano Suarez Veintimilla"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Mariano_Suarez.dds"
+	expire = "1965.1.1"
+	ideology = representative_democrat
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aurelio Mosquera"
+	desc = "POLITICS_AURELIO_MOSQUERA_DESC"
+	picture = "gfx/leaders/ECU/Portrait_ECU_Aurelio_Mosquera.dds"
+	expire = "1965.1.1"
+	ideology = libertarian
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Carlos Maria de la Torre"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Carlos_Maria.dds"
+	expire = "1965.1.1"
+	ideology = liberal_theocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jose Maria Velasco Ibarra"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Velasco_Ibarra.dds"
+	expire = "1965.1.1"
+	ideology = international_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Francisco Arizaga Luque"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Francisco_Luque.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Carlos Mancheno"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Carlos_Mancheno.dds"
+	expire = "1965.1.1"
+	ideology = social_strasserist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Luis Larrea Alba"
+	desc = ""
+	picture = "gfx/leaders/ECU/Portrait_ECU_Luis_Larrea_Alba.dds"
+	expire = "1965.1.1"
+	ideology = liberal_nationalist
+	traits = {
+		#
+	}
+}

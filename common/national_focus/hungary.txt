@@ -1,0 +1,1225 @@
+focus_tree = {
+	id = hungary_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HUN
+		}
+	}
+	
+	focus = {
+	    id = HUN_industry_in_politics
+		icon = GFX_goal_generic_construct_civilian
+		x = 3
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 60
+		}
+	}
+	
+	focus = {
+	    id = HUN_industrialisation
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HUN_industry_in_politics }
+		mutually_exclusive = { focus = HUN_peasant_army }
+		x = 2
+		y = 1
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_peasant_army
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HUN_industry_in_politics }
+		mutually_exclusive = { focus = HUN_industrialisation }
+		x = 5
+		y = 1
+		cost = 10
+		completion_reward = {
+		    HUN = {
+				country_event = hungary.4
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_regional_infrastructure_program
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = HUN_peasant_army }
+		x = 5
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_national_infrastructure_program
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = HUN_regional_infrastructure_program }
+		x = 5
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HUN_industrialisation }
+		mutually_exclusive = { focus = HUN_civilian_industry }
+		x = 1
+		y = 2
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HUN_industrialisation }
+		mutually_exclusive = { focus = HUN_military_industry }
+		x = 3
+		y = 2
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_our_place_in_europe
+		icon = GFX_goal_generic_demand_territory
+		x = 15
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.03
+		}
+	}
+	
+	focus = {
+	    id = HUN_the_balkan_dream
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = HUN_our_place_in_europe }
+		x = 14
+		y = 1
+		cost = 10
+		completion_reward = {
+		    HUN = {
+				country_event = hungary.5
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_the_hungarian_dream
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = HUN_our_place_in_europe }
+		x = 16
+		y = 1
+		cost = 10
+		completion_reward = {
+		    add_ideas = HUN_hungarian_dream_idea
+		}
+	}
+	
+	focus = {
+	    id = HUN_reconciliation_with_austria
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = HUN_the_balkan_dream }
+		mutually_exclusive = { focus = HUN_reconciliation_with_wallachia }
+		mutually_exclusive = { focus = HUN_greater_hungary }
+		available = {
+			country_exists = AUS
+		}
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+		    HUN = {
+				add_opinion_modifier = { target = AUS modifier = balkan_reconciliation }
+			}
+			AUS = {
+				add_opinion_modifier = { target = HUN modifier = balkan_reconciliation }
+			}
+			add_ideas = reconciliation_with_austria_idea
+		}
+		
+	}
+	
+	focus = {
+	    id = HUN_reconciliation_with_wallachia
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = HUN_the_balkan_dream }
+		mutually_exclusive = { focus = HUN_reconciliation_with_austria }
+		mutually_exclusive = { focus = HUN_greater_hungary }
+		x = 12
+		y = 2
+		cost = 10
+		completion_reward = {
+		    HUN = {
+				add_opinion_modifier = { target = ROM modifier = balkan_reconciliation }
+			}
+			ROM = {
+				add_opinion_modifier = { target = HUN modifier = balkan_reconciliation }
+			}
+			add_ideas = reconciliation_with_wallachia_idea
+		}
+		
+	}
+	
+	focus = {
+	    id = HUN_greater_hungary
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = HUN_the_balkan_dream }
+		mutually_exclusive = { focus = HUN_reconciliation_with_austria }
+		mutually_exclusive = { focus = HUN_reconciliation_with_wallachia }
+		x = 15
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_ideas = soldiers_for_a_greater_hungary
+		}
+	}
+	
+	focus = {
+	    id = HUN_austrian_army_tech_deal
+		icon = GFX_focus_research
+		prerequisite = { focus = HUN_reconciliation_with_austria }
+		mutually_exclusive = { focus = HUN_austrian_air_tech_deal }
+		available = {
+			country_exists = AUS
+		}
+		x = 8
+		y = 3
+		cost = 10
+		completion_reward = {
+		    army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			AUS = {
+				country_event = hungary.6
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_austrian_air_tech_deal
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = HUN_reconciliation_with_austria }
+		mutually_exclusive = { focus = HUN_austrian_army_tech_deal }
+		available = {
+			country_exists = AUS
+		}
+		x = 10
+		y = 3
+		cost = 10
+		completion_reward = {
+		    air_experience = 15
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			AUS = {
+				country_event = hungary.7
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_slovakia_for_alliance
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = HUN_austrian_air_tech_deal focus = HUN_austrian_army_tech_deal }
+		available = {
+			country_exists = AUS
+			HUN = {
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+				has_government = de_leonist
+			}
+			AUS = {
+			    owns_state = 664
+			    owns_state = 71
+			    owns_state = 70
+		    }
+		}
+		bypass = {
+			HUN = {
+				is_in_faction_with = AUS
+			}
+		}
+		x = 9
+		y = 4
+		cost = 10
+		completion_reward = {
+		    HUN = {
+				country_event = hungary.8
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_preparing_for_a_great_war
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = HUN_slovakia_for_alliance }
+		mutually_exclusive = { focus = HUN_adjusting_to_de_leonism }
+		x = 8
+		y = 5
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_adjusting_to_de_leonism
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = HUN_slovakia_for_alliance }
+		mutually_exclusive = { focus = HUN_preparing_for_a_great_war }
+		x = 10
+		y = 5
+		cost = 10
+		available = {
+			HUN = {
+				has_government = de_leonist
+			}
+		}
+		completion_reward = {
+		    random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_wallachian_political_advisors
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = HUN_reconciliation_with_wallachia }
+		mutually_exclusive = { focus = HUN_wallachian_military_advisors }
+		x = 12
+		y = 3
+		cost = 10 
+		available = {
+			country_exists = ROM
+		}
+		completion_reward = {
+		    add_ideas = wallachian_political_advisors
+		}
+	}
+	
+	focus = {
+	    id = HUN_wallachian_military_advisors
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = HUN_reconciliation_with_wallachia }
+		mutually_exclusive = { focus = HUN_wallachian_political_advisors }
+		x = 14
+		y = 3
+		cost = 10 
+		available = {
+			country_exists = ROM
+		}
+		completion_reward = {
+		    army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_pan_balkan_flight_school
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = HUN_wallachian_military_advisors }
+		x = 15
+		y = 4
+		cost = 10 
+		available = {
+			country_exists = ROM
+		}
+		completion_reward = {
+		    air_experience = 15
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			ROM = {
+				add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			    }
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_balkan_trade_union
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = HUN_wallachian_political_advisors }
+		mutually_exclusive = { focus = HUN_political_union_with_wallachia }
+		available = {
+			country_exists = ROM
+		}
+		x = 13
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    ROM = {
+				country_event = hungary.12
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_balkan_alliance
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = HUN_balkan_trade_union }
+		available = {
+			country_exists = ROM
+			HUN = {
+				has_government = national_liberal
+			}
+		}
+		x = 13
+		y = 5
+		cost = 10
+		completion_reward = {
+		    ROM = {
+				country_event = hungary.15
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_political_union_with_wallachia
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = HUN_wallachian_political_advisors }
+		mutually_exclusive = { focus = HUN_balkan_trade_union }
+		available = {
+			ROM = {
+				NOT = { has_war_with = HUN }
+				country_exists = ROM
+				is_puppet = no
+				has_war = no
+			}
+		}
+		x = 11
+		y = 4
+		cost = 10
+		completion_reward = {
+		    ROM = {
+				country_event = hungary.18
+		    }
+		}
+		
+	}
+	
+	focus = {
+	    id = HUN_croatian_personal_union
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = HUN_greater_hungary }
+		mutually_exclusive = { focus = HUN_ukraine_alliance }
+		available = {
+			CRO = {
+				NOT = { has_war_with = HUN }
+				country_exists = CRO
+				is_puppet = no
+				has_war = no
+				has_government = absolute_monarchist
+			}
+			has_government = absolute_monarchist
+		}
+		x = 17
+		y = 3
+		cost = 10
+		completion_reward = {
+		    CRO = {
+				country_event = hungary.21
+		    }  
+		}
+	}
+	
+	focus = {
+	    id = HUN_ukraine_alliance
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = HUN_greater_hungary }
+		mutually_exclusive = { focus = HUN_croatian_personal_union }
+		available = {
+			UKR = {
+				NOT = { has_war_with = HUN }
+				country_exists = UKR
+				is_puppet = no
+				has_government = strasserist
+				has_war = no
+			}
+			has_government = strasserist
+		}
+		x = 19
+		y = 3
+		cost = 10
+		completion_reward = {
+		    UKR = {
+				country_event = hungary.24
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_conquering_wallachia
+		icon = GFX_goal_generic_occypy_start_war
+		prerequisite = { focus = HUN_ukraine_alliance }
+		available = {
+			ROM = {
+				NOT = { has_war_with = HUN }
+				country_exists = ROM
+			}
+		}
+		x = 19
+		y = 4
+		cost = 10
+        completion_reward = {
+		    create_wargoal = {
+			    type = annex_everything
+			    target = ROM
+		    }
+		}		
+	}
+	
+	focus = {
+	    id = HUN_demand_bulgaria
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = HUN_conquering_wallachia }
+		available = {
+			TUR = {
+				NOT = { has_war_with = HUN }
+				country_exists = TUR
+				owns_state = 48
+				owns_state = 212
+				owns_state = 81
+			}
+		}
+		x = 18
+		y = 5
+		cost = 10
+		completion_reward = {
+		    TUR = {
+				country_event = hungary.26
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_backstab_ukraine
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = HUN_demand_bulgaria }
+		mutually_exclusive = { focus = HUN_ukraine_industrial_deal }
+		available = {
+			UKR = { is_in_faction_with = HUN }
+		}
+		x = 17
+		y = 6
+		cost = 10
+		completion_reward = {
+		    HUN = { remove_from_faction = UKR }
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = UKR
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_ukraine_industrial_deal
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = HUN_demand_bulgaria }
+		mutually_exclusive = { focus = HUN_backstab_ukraine }
+		available = {
+			UKR = { is_in_faction_with = HUN }
+		}
+		x = 19
+		y = 6
+		cost = 10
+		completion_reward = {
+		    UKR = {
+				country_event = hungary.29
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+		    }
+			random_owned_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = HUN_the_extremes_of_politics
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = HUN_the_hungarian_dream }
+		mutually_exclusive = { focus = HUN_centre_of_politics }
+		mutually_exclusive = { focus = HUN_status_quo }
+		x = 25
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_stability = -0.03
+			add_popularity = {
+					ideology = strasserist
+					popularity = 0.03
+			}
+			add_popularity = {
+					ideology = de_leonist
+					popularity = 0.03
+			}
+			add_popularity = {
+					ideology = americanist
+					popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_centre_of_politics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = HUN_the_hungarian_dream }
+		mutually_exclusive = { focus = HUN_the_extremes_of_politics }
+		mutually_exclusive = { focus = HUN_status_quo }
+		x = 27
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_stability = -0.03
+			add_popularity = {
+					ideology = national_liberal
+					popularity = 0.03
+			}
+			add_popularity = {
+					ideology = national_conservative
+					popularity = 0.03
+			}
+			add_popularity = {
+					ideology = democratic_socialist
+					popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_status_quo
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = HUN_the_hungarian_dream }
+		mutually_exclusive = { focus = HUN_the_extremes_of_politics }
+		mutually_exclusive = { focus = HUN_centre_of_politics }
+		x = 29
+		y = 2
+		cost = 10 
+		completion_reward = {
+		    add_stability = 0.03
+			add_popularity = {
+				ideology = absolute_monarchist
+				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_de_leonist_support
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = HUN_the_extremes_of_politics }
+		mutually_exclusive = { focus = HUN_strasserist_support }
+		mutually_exclusive = { focus = HUN_americanist_support }
+		x = 21
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_ideas = de_leonism
+		}
+	}
+	
+	focus = {
+	    id = HUN_strasserist_support
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = HUN_the_extremes_of_politics }
+		mutually_exclusive = { focus = HUN_de_leonist_support }
+		mutually_exclusive = { focus = HUN_americanist_support }
+		x = 23
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_ideas = strasserism
+		}
+	}
+	
+	focus = {
+	    id = HUN_americanist_support
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = HUN_the_extremes_of_politics }
+		mutually_exclusive = { focus = HUN_de_leonist_support }
+		mutually_exclusive = { focus = HUN_strasserist_support }
+		x = 25
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_ideas = americanism
+		}
+	}
+	
+	focus = {
+	    id = HUN_revolutionary_army
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HUN_de_leonist_support }
+		x = 21
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    add_popularity = {
+				ideology = de_leonist
+				popularity = 0.07
+			} 
+		} 
+	}
+	
+	focus = {
+	    id = HUN_hungarian_workers_union
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = HUN_strasserist_support }
+		x = 23
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    add_popularity = {
+				ideology = strasserist
+				popularity = 0.07
+			} 
+		} 
+	}
+	
+	focus = {
+	    id = HUN_constitution_of_hungary
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = HUN_americanist_support }
+		x = 25
+		y = 4
+		cost = 10 
+		completion_reward = {
+		    add_popularity = {
+				ideology = americanist
+				popularity = 0.07
+			} 
+		} 
+	}
+	
+	focus = {
+	    id = HUN_traditional_roots
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = HUN_centre_of_politics }
+		mutually_exclusive = { focus = HUN_new_movement }
+		x = 27
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = national_conservative
+				popularity = 0.035
+			}
+			add_popularity = {
+				ideology = national_liberal
+				popularity = 0.035
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_new_movement
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = HUN_centre_of_politics }
+		mutually_exclusive = { focus = HUN_traditional_roots }
+		x = 29
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = democratic_socialist
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_conservative_support
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = HUN_traditional_roots }
+		mutually_exclusive = { focus = HUN_liberal_support }
+		x = 26
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_ideas = national_conservatism
+		}
+	}
+	
+	focus = {
+	    id = HUN_liberal_support
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = HUN_traditional_roots }
+		mutually_exclusive = { focus = HUN_conservative_support }
+		x = 28
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_ideas = national_liberalism
+		}
+	}
+	
+	focus = {
+	    id = HUN_hungarian_socialism
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = HUN_new_movement }
+		x = 30
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_ideas = democratic_socialism
+		}
+	}
+	
+	focus = {
+	    id = HUN_military_reform
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 36
+		y = 0
+		cost = 10
+        completion_reward = {
+		    army_experience = 10
+			air_experience = 10
+		}		
+	}
+	
+	focus = {
+	    id = HUN_hungarian_air
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = HUN_military_reform }
+		x = 34
+		y = 1
+		completion_reward = {
+		    air_experience = 25
+		}
+	}
+	
+	focus = {
+	    id = HUN_hungarian_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = HUN_military_reform }
+		x = 36
+		y = 1
+		completion_reward = {
+		    army_experience = 25
+		}
+	}
+	
+	focus = {
+	    id = HUN_hungarian_navy
+		icon = GFX_goal_generic_build_nay
+		prerequisite = { focus = HUN_military_reform }
+		x = 38
+		y = 1
+		completion_reward = {
+		    navy_experience = 25
+		}
+	}
+	
+	focus = {
+	    id = HUN_reform_the_mkhl
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = HUN_hungarian_air }
+		x = 34
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		
+	}
+	
+	focus = {
+	    id = HUN_air_research
+		icon = GFX_focus_research
+		prerequisite = { focus = HUN_reform_the_mkhl }
+		mutually_exclusive = { focus = HUN_air_infrastructure }
+		x = 33
+		y = 3
+		cost = 10 
+        completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}		
+	}
+	
+	focus = {
+	    id = HUN_air_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = HUN_reform_the_mkhl }
+		mutually_exclusive = { focus = HUN_air_research }
+		x = 35
+		y = 3
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+	
+	focus = {
+	    id = HUN_comprehensive_army
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HUN_hungarian_army }
+		x = 36
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_guns_of_hungary
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = HUN_comprehensive_army }
+		mutually_exclusive = { focus = HUN_working_with_corporations }
+		x = 37
+		y = 3
+		cost = 10 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_working_with_corporations
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = HUN_comprehensive_army }
+		mutually_exclusive = { focus = HUN_guns_of_hungary }
+		x = 39
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_tech_bonus = {
+					name = med_armor_bonus
+					bonus = 0.5
+					uses = 1 
+					technology = basic_medium_tank
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_preparing_for_naval_engagements
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = HUN_hungarian_navy }
+		x = 41
+		y = 2 
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = naval_engagements
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_destruction
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = HUN_preparing_for_naval_engagements }
+		mutually_exclusive = { focus = HUN_covert_vessels }
+		x = 41
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+	
+	focus = {
+	    id = HUN_covert_vessels
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = HUN_preparing_for_naval_engagements }
+		mutually_exclusive = { focus = HUN_destruction }
+		x = 43
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+				technology = convoy_interdiction_ti
+				technology = wolfpacks
+			}
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+}

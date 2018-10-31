@@ -1,0 +1,367 @@
+ideas = {
+		
+	country = {
+
+		USA_recovering_civilwar = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				ai_get_ally_desire_factor = -100
+				join_faction_tension = 0.5
+			}
+		}
+	}
+
+	country = {
+
+		USA_amer_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				americanist_drift = 0.1
+				americanist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_natlib_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				national_liberal_drift = 0.1
+				national_liberal_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_theo_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				theoconservative_drift = 0.1
+				theoconservative_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_leo_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				de_leonist_drift = 0.1
+				de_leonist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_col_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				collectivist_drift = 0.1
+				collectivist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_demsoc_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_socialist_drift = 0.1
+				democratic_socialist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_natcon_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				national_conservative_drift = 0.1
+				national_conservative_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_abs_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				absolute_monarchist_drift = 0.1
+				absolute_monarchist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_nat_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				nationalist_drift = 0.1
+				nationalist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_stra_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				strasserist_drift = 0.1
+				strasserist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_geo_focus_eotw = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				georgist_drift = 0.1
+				georgist_acceptance = 85
+			}
+		}
+	}
+
+	country = {
+
+		USA_war_propaganda = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+	}
+
+	country = {
+
+		USA_expansion_project = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+	}
+
+	country = {
+
+		USA_united_america = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			rule = {
+				can_create_factions = yes
+			}
+
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+
+	country = {
+
+		USA_united_america_project = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+	
+	country = {
+
+		USA_the_american_system = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				americanist_drift = 0.05
+				national_liberal_drift = 0.05
+				democratic_socialist_drift = 0.05
+				georgist_drift = 0.05
+			}
+		}
+	}
+	
+	
+}

@@ -1,0 +1,286 @@
+ideas = {
+    
+	country = {
+	    politically_unstable = {
+		
+		    allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+		}
+	
+	
+	
+	}
+	
+	country = {
+	    american_influences = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				americanist_acceptance = 85
+				production_speed_industrial_complex_factor = 0.2
+			}
+			
+			picture = generic_morale_bonus
+		}
+	}
+	
+	country = {
+	    socialist_paradise_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				democratic_socialist_acceptance = 85
+			}
+			
+			picture = soviet_german_friendship
+		}
+	}
+	
+	country = {
+	    georgist_utopia_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				georgist_acceptance = 85
+				production_speed_industrial_complex_factor = 0.25
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+		}
+	}
+	
+	country = {
+	    per_ardua_ad_astra = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				national_conservative_acceptance = 85
+				production_speed_air_base_factor = 0.1
+				army_bonus_air_superiority_factor = 0.1
+			}
+			
+			picture = generic_victors_of_ww1
+		}
+	}	
+
+	country = {
+	    nationalism_aussie = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				nationalist_acceptance = 85
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_dockyard = 0.2 
+			}
+			
+			picture = generic_victors_of_ww1
+		}
+	}	
+
+	country = {
+	    strasserism_aussie = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				strasserist_acceptance = 85
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1 
+			}
+			
+			picture = generic_victors_of_ww1
+		}
+	}	
+
+	country = {
+	    de_leonism_aussie = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				de_leonist_acceptance = 85
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1 
+			}
+			
+			picture = generic_victors_of_ww1
+		}
+	}	
+	
+	country = {
+	    girt_by_sea_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_speed_dockyard_factor = 0.25
+			}
+			
+			picture = generic_morale_bonus
+		}
+	}
+
+    country = {
+	    remember_geelong_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+			}
+			
+			picture = generic_fascism_drift_bonus
+		}
+	}
+	
+	country = {
+	    pride_in_arms = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+			}
+			
+			picture = FRA_national_mobilization_focus
+		}
+	}
+	
+	country = {
+	    the_peoples_will_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				production_speed_air_base_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+			}
+			
+			picture = trotskyite_plot
+		}
+	}
+	
+	country = {
+	    army_expansion_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+			}
+			
+			picture = FRA_army_of_aggression_focus
+		}
+	}
+	
+	country = {
+	    fleet_hub_idea = {
+		    
+			allowed = {
+				original_tag = AST
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				naval_speed_factor = 0.2
+			}
+			
+			picture = escort_effort_focus
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+}

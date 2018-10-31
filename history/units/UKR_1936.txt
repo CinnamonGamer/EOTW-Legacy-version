@@ -1,0 +1,79 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Pikhotna Dyviziya"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+
+
+##### OOB #####
+units = {
+    division= {	
+		name = ""
+		location = 525
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = ""
+		location = 525
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = ""
+		location = 3580
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = ""
+		location = 3686
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = ""
+		location = 3686
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = ""
+		location = 462
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = ""
+		location = 9424
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = ""
+		location = 6474
+		division_template = "Pikhotna Dyviziya" 	
+		start_experience_factor = 0.1
+	}
+
+
+
+
+}

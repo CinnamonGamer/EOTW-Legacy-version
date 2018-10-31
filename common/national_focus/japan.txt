@@ -1,0 +1,861 @@
+focus_tree = {
+	id = japan_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	focus = {
+		id = JAP_IND_BUILD_1
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 1
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}		
+				}
+				random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}		
+				}
+				}
+				}
+				
+				
+				
+				
+				
+				
+
+focus = {
+		id = JAP_IND_BUILD_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = JAP_IND_BUILD_1 }
+		x = 1
+		y = 2
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}		
+				}
+				random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}		
+				}
+				}
+				}
+				
+		
+focus = {
+		id = JAP_MIL_BUILD_1
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = JAP_IND_BUILD_2 }
+		x = 1
+		y = 3
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}		
+				}
+				random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}		
+				}
+				}
+				}		
+				
+				
+				
+	focus = {
+		id = JAP_MIL_BUILD_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = JAP_MIL_BUILD_1 }
+		x = 1
+		y = 4
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}		
+				}
+				random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}		
+				}
+				}
+				}	
+
+
+				focus = {
+		id = JAP_RES
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = JAP_MIL_BUILD_2 }
+		x = 1
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_ideas = JAP_austerity_idea
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		}
+		
+		focus = {
+		id = JAP_ASSASINATION
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_political_power = -100
+			}
+			}
+			
+			focus = {
+		id = JAP_NAVY_PRI
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = JAP_ASSASINATION }
+		mutually_exclusive = { focus = JAP_ARMY_PRI}
+		x = 3
+		y = 3
+		cost = 10
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				}
+				}
+				
+			}
+			
+				focus = {
+		id = JAP_PHILI
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = JAP_NAVY_PRI }
+		prerequisite = { focus = JAP_RES }
+		x = 3
+		y = 4
+		cost = 10
+			completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PHI
+			}
+			}
+			}
+				focus = {
+		id = JAP_BRN
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = JAP_PHILI }
+		x = 3
+		y = 5
+		cost = 10
+			completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BRN
+			}
+			}
+			}
+				focus = {
+		id = JAP_OIL
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = JAP_BRN }
+		x = 4
+		y = 6
+		cost = 10
+		available = {
+			controls_state = 333
+		}
+			completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 50
+				state = 333
+			}
+			}
+			}
+			
+			focus = {
+		id = JAP_IND
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = JAP_BRN }
+		x = 3
+		y = 7
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CMB
+				
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DAI
+			}
+			create_wargoal = {
+				type = annex_everything
+		        target = ICH
+				
+			}
+			}
+			}
+			
+			focus = {
+		id = JAP_KOR_NAV
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_IND }
+		x = 3
+		y = 8
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KOR
+				}
+				}
+				}
+				
+				focus = {
+		id = JAP_NTL
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = JAP_IND }
+		x = 5
+		y = 8
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				
+				type = take_state_focus
+				target = HOL
+				generator = { 672 335 667 721 668 738 669  } 
+				}
+				}
+				}
+				
+				focus = {
+		id = JAP_AST
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_IND }
+		x = 7
+		y = 8
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = AST
+				}
+			}
+		}
+				
+		focus = {
+		id = JAP_ARMY_PRI
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_ASSASINATION }
+		mutually_exclusive = { focus = JAP_NAVY_PRI}
+		x = 7
+		y = 3
+		completion_reward = {
+		army_experience = 40
+				add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			}
+		}		
+				
+		focus = {
+		id = JAP_KOR
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_ARMY_PRI }
+		prerequisite = { focus = JAP_RES }
+		x = 7
+		y = 4
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KOR
+				}
+				}
+				}
+				
+				focus = {
+		id = JAP_KOR_DEV
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = JAP_KOR }
+		x = 9
+		y = 4
+		cost = 10
+		available = {
+			controls_state = 527
+		}
+			completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 50
+				state = 527
+			}
+			527 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			}
+			}
+				
+			focus = {
+			id = JAP_CHI
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_KOR }
+		x = 7
+		y = 5
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = CHI
+				generator = { 716 610 611 609 715 328 717 714 657 409 408  } 
+				}
+				}
+				}
+				
+				
+				focus = {
+			id = JAP_TIB_ASS
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_CHI }
+		x = 7
+		y = 6
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TIB
+				}
+				create_wargoal = {
+				type = annex_everything
+				target = ASS
+				}
+				}
+				}
+						focus = {
+			id = JAP_MONG
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_CHI }
+		x = 9
+		y = 6
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+				}
+				}
+				}
+				
+				
+				focus = {
+		id = JAP_modernise_army
+		icon = GFX_goal_generic_army_artillery2
+		x = 10
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+				
+			focus = {
+		id = JAP_motorise
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = JAP_modernise_army }
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+				
+				
+					focus = {
+		id = JAP_doctrine_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = JAP_motorise }
+		x = 10
+		y = 3
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	      
+				
+				
+					focus = {
+		id = JAP_MARINES	
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = JAP_modernise_army }
+		prerequisite = { focus = JAP_NAVY_TECH }
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 2
+				technology = marines
+				technology = marines2
+				technology = landing_craft
+			}
+		}
+	}
+				
+				focus = {
+		id = JAP_NAVY_TECH	
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 14
+		y = 1
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+		}
+	}
+	}
+	focus = {
+		id = JAP_DESTROYER	
+		icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = JAP_NAVY_TECH }
+		x = 16
+		y = 1
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH2
+				uses = 2
+				bonus = 0.5
+				category = dd_tech
+				
+		}
+	}
+		}		
+				
+				focus = {
+		id = JAP_YAMATO	
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = JAP_NAVY_TECH }
+		x = 14
+		y = 2
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH
+				uses = 1
+				bonus = 0.5
+				technology = heavy_battleship
+		}
+	}
+	}
+				
+				focus = {
+		id = JAP_BB
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = JAP_YAMATO }
+		mutually_exclusive = { focus = JAP_CARRIER}
+		x = 15
+		y = 3
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH
+				uses = 1
+				bonus = 0.5
+				category = bb_tech
+		}
+	}
+	}
+				
+				focus = {
+		id = JAP_CARRIER
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = JAP_YAMATO }
+		mutually_exclusive = { focus = JAP_BB}
+		x = 17
+		y = 3
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH
+				uses = 2
+				bonus = 1.0
+				category = cv_tech
+		}
+	}
+			}	
+				
+				
+				focus = {
+		id = JAP_CRUISER	
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = JAP_YAMATO }
+		x = 14
+		y = 4
+		cost = 10
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = JAP_NAVY_TECH2
+				uses = 2
+				bonus = 0.5
+				category = ca_tech
+				category = cl_tech
+		}
+	}
+		}		
+				
+				
+				focus = {
+		id = JAP_AVIATION
+		icon = GFX_goal_generic_build_airforce
+		x = 15
+		y = 10
+		cost = 10
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}			
+				
+		}
+		}
+				focus = {
+		id = JAP_FIGHTER
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = JAP_AVIATION }
+		mutually_exclusive = { focus = JAP_BOMBER }
+		x = 17
+		y = 11
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				
+			}
+		}
+	}
+				
+				focus = {
+		id = JAP_BOMBER
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = JAP_AVIATION }
+		mutually_exclusive = { focus = JAP_FIGHTER }
+		x = 14
+		y = 11
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				technology = CAS1	
+				technology = CAS2
+				technology = naval_bomber1
+				technology = naval_bomber2
+			}
+		}
+	}
+				focus = {
+		id = JAP_CV_FIGHER
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = JAP_FIGHTER }
+		
+		x = 17
+		y = 12
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = cv_fighter1
+				technology = cv_fighter2
+				technology = cv_fighter3
+				
+			}
+		}
+	}
+				focus = {
+		id = JAP_CV_BOMBER
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = JAP_BOMBER }
+		x = 14
+		y = 12
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 3
+				technology = cv_CAS1	
+				technology = cv_CAS2
+				technology = cv_naval_bomber1
+				technology = cv_naval_bomber2
+				technology = cv_naval_bomber3
+			}
+		}
+	}
+		
+		
+		
+		
+				
+			focus = {
+		id = JAP_POLITICS1
+		icon = GFX_goal_tripartite_pact
+		x = 20
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+		}
+				
+		}
+		focus = {
+		id = JAP_POLITICS2
+		prerequisite = { focus = JAP_POLITICS1 }
+		icon = GFX_goal_tripartite_pact
+		x = 20
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = JAP_construction_idea
+		}
+				
+		}
+		
+		focus = {
+		id = JAP_POLITICS3
+		prerequisite = { focus = JAP_POLITICS2 }
+		icon = GFX_goal_tripartite_pact
+		x = 20
+		y = 3
+		cost = 10
+		completion_reward = {
+			remove_ideas = JAP_Unity_idea
+		}
+				
+		}
+		
+		focus = {
+		id = JAP_POLITICS4
+		prerequisite = { focus = JAP_POLITICS3 }
+		icon = GFX_goal_tripartite_pact
+		x = 20
+		y = 5
+		cost = 10
+		completion_reward = {
+			remove_ideas = JAP_Org_idea
+			country_event = { id = japan.1 }
+		}
+				
+		}

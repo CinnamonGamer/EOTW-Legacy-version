@@ -1,0 +1,1543 @@
+focus_tree = {
+    id = swedish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+	}
+	
+	focus = {
+	    id = SWE_politics_of_scandinavia
+		icon = GFX_goal_scandinavia_map
+		x = 17
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+	}
+	
+	focus = {
+	    id = SWE_uniting_the_nation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SWE_politics_of_scandinavia }
+		mutually_exclusive = { focus = SWE_the_fight_for_freedom }
+		x = 13
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.05
+		    add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+	    id = SWE_the_fight_for_freedom
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SWE_politics_of_scandinavia }
+		mutually_exclusive = { focus = SWE_uniting_the_nation }
+		x = 15
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.05
+		    add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+	    id = SWE_support_the_left
+		icon = GFX_goal_support_the_left
+		prerequisite = { focus = SWE_uniting_the_nation }
+		mutually_exclusive = { focus = SWE_support_the_right }
+		mutually_exclusive = { focus = SWE_a_traditional_nation }
+		x = 11
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = de_leonist
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_support_the_right
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = SWE_uniting_the_nation }
+		mutually_exclusive = { focus = SWE_support_the_left }
+		mutually_exclusive = { focus = SWE_a_traditional_nation }
+		x = 13
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = strasserist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = absolute_monarchist
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_a_traditional_nation
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SWE_uniting_the_nation }
+		mutually_exclusive = { focus = SWE_support_the_left }
+		mutually_exclusive = { focus = SWE_support_the_right }
+		x = 17
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = national_conservative
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_negotiate_with_illegal_parties
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SWE_support_the_left }
+		x = 11
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = legalisation_of_leftist_parties
+				days = 100
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_expanding_royal_privileges
+		icon = GFX_goal_royal_tree
+		prerequisite = { focus = SWE_support_the_right }
+		mutually_exclusive = { focus = SWE_right_wing_unions }
+		x = 13
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = expanded_royal_privileges
+				days = 100
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_right_wing_unions
+		icon = GFX_goal_workers
+		prerequisite = { focus = SWE_support_the_right }
+		mutually_exclusive = { focus = SWE_expanding_royal_privileges }
+		x = 15
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = right_wing_unions_idea
+				days = 200
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_links_with_the_church
+		icon = GFX_goal_swedish_church
+		prerequisite = { focus = SWE_a_traditional_nation }
+		x = 17
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = links_with_the_church_idea
+				days = 100
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_exile_the_royal_family
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SWE_negotiate_with_illegal_parties }
+		x = 11
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = de_leonist
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_king_gustaf_university
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SWE_expanding_royal_privileges }
+		x = 13
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = absolute_monarchist
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_strassers_stockholm_visit
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SWE_right_wing_unions }
+		x = 15
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = strasserist
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_poor_communities
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SWE_links_with_the_church }
+		x = 17
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = national_conservative
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_jazz_in_stockholm
+		icon = GFX_goal_jazz
+		prerequisite = { focus = SWE_the_fight_for_freedom }
+		x = 19
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = americanist
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_support_the_americanist_party
+		icon = GFX_goal_dropping_ballot
+		prerequisite = { focus = SWE_jazz_in_stockholm }
+		x = 19
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_timed_idea = {
+				idea = atlantic_ties
+				days = 100
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_new_traditions
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = SWE_support_the_americanist_party }
+		x = 19
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_popularity = {
+				ideology = americanist
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_healing_the_divide
+		icon = GFX_goal_scandinavia_map
+		prerequisite = { focus = SWE_strassers_stockholm_visit focus = SWE_king_gustaf_university focus = SWE_exile_the_royal_family focus = SWE_poor_communities focus = SWE_new_traditions }
+		available = {
+		    OR = {
+			    has_government = de_leonist
+				has_government = strasserist
+				has_government = absolute_monarchist
+				has_government = national_conservative
+				has_government = americanist
+			}
+		}
+		x = 14
+		y = 6
+		cost = 10
+		completion_reward = {
+		    remove_ideas = cultural_divide
+		}
+	}
+	
+	focus = {
+	    id = SWE_the_path_of_scandinavia
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = SWE_healing_the_divide }
+		x = 14
+		y = 7
+		cost = 10
+		completion_reward = {
+		    army_experience = 20
+			navy_experience = 20
+			air_experience = 20
+		}
+	}
+	
+	focus = {
+	    id = SWE_ignore_the_skane_treaty
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SWE_the_path_of_scandinavia }
+		mutually_exclusive = { focus = SWE_friends_in_copenhagen }
+		x = 13
+		y = 8
+		cost = 10
+		completion_reward = {
+		    SWE = {
+				country_event = sweden.2
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_friends_in_copenhagen
+		icon = GFX_goal_denmark_map
+		prerequisite = { focus = SWE_the_path_of_scandinavia }
+		mutually_exclusive = { focus = SWE_ignore_the_skane_treaty }
+		x = 15
+		y = 8
+		cost = 10
+		completion_reward = {
+		    DEN = {
+				country_event = sweden.3
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_alliance_with_denmark
+		icon = GFX_goal_denmark_map
+		prerequisite = { focus = SWE_friends_in_copenhagen }
+		available = {
+		    DEN = { has_government = ROOT }
+		}
+		x = 16
+		y = 9
+		cost = 10
+		completion_reward = {
+		    DEN = {
+				country_event = sweden.4
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_atlantic_demands
+		icon = GFX_goal_greenland_map
+		prerequisite = { focus = SWE_ignore_the_skane_treaty }
+		available = {
+		    DEN = {
+			    owns_state = 100
+				owns_state = 101
+			}
+		}
+		x = 12
+		y = 9
+		cost = 10
+		completion_reward = {
+		    DEN = {
+				country_event = sweden.7
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_unite_with_prussia
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SWE_atlantic_demands focus = SWE_alliance_with_denmark }
+		x = 12
+		y = 10
+		cost = 10
+		completion_reward = {
+		    PRS = {
+				country_event = sweden.10
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_open_a_russian_embassy
+		icon = GFX_goal_bank
+		prerequisite = { focus = SWE_atlantic_demands focus = SWE_alliance_with_denmark }
+		mutually_exclusive = { focus = SWE_close_the_russian_banks }
+		x = 14
+		y = 10
+		cost = 10
+		completion_reward = {
+		    SWE = {
+		        add_opinion_modifier = { target = SOV modifier = russian_embassy_opened }
+		    }
+			SOV = {
+				country_event = sweden.13
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_close_the_russian_banks
+		icon = GFX_goal_bank
+		prerequisite = { focus = SWE_atlantic_demands focus = SWE_alliance_with_denmark }
+		mutually_exclusive = { focus = SWE_open_a_russian_embassy }
+		x = 16
+		y = 10
+		cost = 10
+		completion_reward = {
+		    SOV = {
+				country_event = sweden.14
+			}
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+	    id = SWE_northern_alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SWE_open_a_russian_embassy }
+		x = 14
+		y = 11
+		cost = 10
+		completion_reward = {
+		    SOV = {
+				country_event = sweden.15
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_the_final_stand
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SWE_close_the_russian_banks }
+		x = 16
+		y = 11
+		cost = 10
+		completion_reward = {
+		    create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SOV
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SWE_mighty_sweden
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SWE_unite_with_prussia }
+		prerequisite = { focus = SWE_the_final_stand focus = SWE_northern_alliance }
+		x = 14
+		y = 13
+		cost = 10
+		completion_reward = {
+		    army_experience = 50
+			navy_experience = 50
+			air_experience = 50 
+			add_political_power = 100
+			add_ideas = mighty_sweden_idea
+		}
+	}
+	
+	focus = {
+	    id = SWE_stockholm_projects
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 0
+		cost = 10
+		completion_reward = {
+		    141 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_expansion_of_the_projects
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SWE_stockholm_projects }
+		x = 4
+		y = 1
+		cost = 10
+		completion_reward = {
+		    141 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_political_power = 15
+		}
+	}
+	
+	focus = {
+	    id = SWE_oslo_projects
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SWE_expansion_of_the_projects }
+		x = 4
+		y = 2
+		cost = 10
+		completion_reward = {
+		    110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_focus_on_sweden
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SWE_expansion_of_the_projects }
+		x = 6
+		y = 2
+		cost = 10
+		completion_reward = {
+		    141 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			    }
+			}
+			148 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			    }
+			}
+			138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_norwegian_infrastructure_program
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SWE_oslo_projects }
+		x = 5
+		y = 3
+		cost = 10
+		completion_reward = {
+		    110 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			142 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			143 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			144 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_fund_northern_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SWE_norwegian_infrastructure_program }
+		x = 4
+		y = 4
+		cost = 10
+		completion_reward = {
+		    144 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_northern_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SWE_fund_northern_industry }
+		x = 4
+		y = 5
+		cost = 10
+		completion_reward = {
+		    144 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_northern_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SWE_northern_civilian_industry }
+		x = 4
+		y = 6
+		cost = 10
+		completion_reward = {
+		    144 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_fund_southern_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SWE_norwegian_infrastructure_program }
+		x = 6
+		y = 4
+		cost = 10
+		completion_reward = {
+		    142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_southern_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SWE_fund_southern_industry }
+		x = 6
+		y = 5
+		cost = 10
+		completion_reward = {
+		    142 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_southern_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SWE_southern_civilian_industry }
+		x = 6
+		y = 6
+		cost = 10
+		completion_reward = {
+		    142 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_industrial_scania
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SWE_focus_on_sweden }
+		x = 8
+		y = 3
+	    cost = 10
+		completion_reward = {
+		    138 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_southern_military_potential
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SWE_industrial_scania }
+		x = 8
+		y = 4
+	    cost = 10
+		completion_reward = {
+		    138 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_northern_military_potential
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SWE_southern_military_potential }
+		x = 8
+		y = 5
+	    cost = 10
+		completion_reward = {
+		    38 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_swedish_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SWE_northern_military_potential }
+		x = 9
+		y = 6
+		cost = 10
+		completion_reward = {
+		    38 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+			    }
+			}
+			138 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+			    }
+			}
+			140 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+			    }
+			}
+			139 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_industrialised_sweden
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SWE_swedish_infrastructure }
+		x = 9
+		y = 7
+		cost = 10
+		completion_reward = {
+		    138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+			139 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+			140 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			    }
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_national_university_program
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = SWE_industrialised_sweden }
+		prerequisite = { focus = SWE_southern_military_industry }
+		x = 7
+		y = 8
+		cost = 10
+		completion_reward = {
+		    add_research_slot = 1
+		}
+	}
+	
+	focus = {
+	    id = SWE_agriculture_policy
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SWE_politics_of_scandinavia }
+		x = 22
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_political_power = 50
+		}
+	}
+	
+	focus = {
+	    id = SWE_authoritarian_ideas
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = SWE_agriculture_policy }
+		mutually_exclusive = { focus = SWE_liberal_ideas }
+		x = 21
+		y = 3
+		cost = 10
+		completion_reward = {
+		    
+		}
+	}
+	
+	focus = {
+	    id = SWE_liberal_ideas
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SWE_agriculture_policy }
+		mutually_exclusive = { focus = SWE_authoritarian_ideas }
+		x = 23
+		y = 3
+		cost = 10
+		completion_reward = {
+		    
+		}
+	}
+	
+	focus = {
+	    id = SWE_rural_collectives
+		icon = GFX_goal_strike_the_collective
+		prerequisite = { focus = SWE_authoritarian_ideas }
+		x = 21
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.05
+		    add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+	    id = SWE_forced_peasant_conscription
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SWE_rural_collectives }
+		available = {
+		    NOT = {
+			    OR = {
+				    has_government = americanist
+					has_government = national_liberal
+					has_government = georgist
+					has_government = democratic_socialist
+				}
+			}
+		}
+		x = 21
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_ideas = forced_peasant_conscription_idea
+		}
+	}
+	
+	focus = {
+	    id = SWE_free_unions
+		icon = GFX_goal_workers
+		prerequisite = { focus = SWE_liberal_ideas }
+		x = 23
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_stability = 0.05
+		    add_war_support = 0.05
+			add_popularity = {
+				ideology = de_leonist
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_rural_to_urban
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SWE_free_unions }
+		x = 23
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_ideas = urbanisation
+		}
+	}
+	
+	focus = {
+	    id = SWE_the_final_struggle
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SWE_rural_to_urban focus = SWE_forced_peasant_conscription }
+		available = {
+		    has_war = yes
+            surrender_progress > 0.8			
+		}
+		x = 22
+		y = 6
+		cost = 10
+		completion_reward = {
+		    add_ideas = the_final_struggle_idea
+		}
+	}
+	
+	focus = {
+	    id = SWE_united_army
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 29
+		y = 0 
+		completion_reward = {
+		    add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_norwegian_strategists
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SWE_united_army }
+		cost = 10
+		x = 25
+		y = 1
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	
+	focus = {
+	    id = SWE_regional_companies
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SWE_united_army }
+		cost = 10
+		x = 27
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_capital_companies
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SWE_united_army }
+		cost = 10
+		x = 29
+		y = 1
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = heavy_armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_deadly_rain
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SWE_united_army }
+		cost = 10
+		x = 31
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_high_command_reorganisation
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = {
+			focus = SWE_norwegian_strategists
+			focus = SWE_regional_companies
+			focus = SWE_capital_companies
+			focus = SWE_deadly_rain
+		}
+		available = {
+		    SWE = {	has_civil_war = no }
+		}
+		cost = 10
+		x = 28
+		y = 2
+		completion_reward = {
+		    army_experience = 15
+			add_stability = 0.03
+			add_war_support = 0.02
+		}
+	}
+	
+	focus = {
+	    id = SWE_national_air_force
+		icon = GFX_goal_generic_air_doctrine
+		x = 35
+		y = 0
+		cost = 10
+		completion_reward = {
+		    air_experience = 15
+		}
+	}
+	
+	focus = {
+	    id = SWE_search_for_experts
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SWE_national_air_force }
+		x = 35
+		y = 1
+		cost = 10
+		completion_reward = {
+		    air_experience = 5 
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_comprehensive_air_research
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = SWE_search_for_experts }
+		x = 34
+		y = 2
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_air
+				category = medium_air
+				category = heavy_air
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_construction_projects
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SWE_search_for_experts }
+		x = 36
+		y = 2
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+		    }
+		}
+	}
+	
+	focus = {
+	    id = SWE_blue_and_yellow_bombs
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SWE_comprehensive_air_research }
+		mutually_exclusive = { focus = SWE_blue_and_yellow_pilots }
+		x = 32
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_blue_and_yellow_pilots
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SWE_comprehensive_air_research }
+		mutually_exclusive = { focus = SWE_blue_and_yellow_bombs }
+		x = 34
+		y = 3
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_strategic_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = SWE_blue_and_yellow_bombs }
+		mutually_exclusive = { focus = SWE_tactical_bombers }
+		x = 30
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = strategic_bomber_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_tactical_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SWE_blue_and_yellow_bombs }
+		mutually_exclusive = { focus = SWE_strategic_bombers }
+		x = 32
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 0.5
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_light_fighters
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SWE_blue_and_yellow_pilots }
+		mutually_exclusive = { focus = SWE_heavy_fighters }
+		x = 34
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = light_fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_heavy_fighters
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SWE_blue_and_yellow_pilots }
+		mutually_exclusive = { focus = SWE_light_fighters }
+		x = 36
+		y = 4
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = heavy_fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_warfare_reform
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SWE_heavy_fighters focus = SWE_light_fighters focus = SWE_strategic_bombers focus = SWE_tactical_bombers }
+		x = 33
+		y = 5
+		cost = 10
+		completion_reward = {
+		    add_tech_bonus = {
+				name = destruction_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_destruction
+			}
+			add_tech_bonus = {
+				name = battlefield_support_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_battlefield_support
+			}
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_further_construction
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SWE_construction_projects }
+		mutually_exclusive = { focus = SWE_focus_on_production }
+		x = 37
+		y = 3
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+		    }
+			
+		}
+	}
+	
+	focus = {
+	    id = SWE_focus_on_production
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SWE_construction_projects }
+		mutually_exclusive = { focus = SWE_further_construction }
+		x = 39
+		y = 3
+		cost = 10
+		completion_reward = {
+		    random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		    }
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		    }
+			
+		}
+	}
+	
+	focus = {
+	    id = SWE_warfare_on_the_seas
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		x = 45
+		y = 0 
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_the_grand_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SWE_warfare_on_the_seas }
+		cost = 10
+		x = 43
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				category = base_strike_main
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SWE_the_grand_navy }
+		cost = 10
+		x = 42
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_carriers
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SWE_the_grand_navy }
+		cost = 10
+		x = 44
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_a_modest_navy
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SWE_warfare_on_the_seas }
+		cost = 10
+		x = 47
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_escorts
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SWE_a_modest_navy }
+		cost = 10
+		x = 48
+		y = 2
+		completion_reward = {
+			navy_experience = 12
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = convoy_defense_tree
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SWE_a_modest_navy }
+		cost = 10
+		x = 46
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				name = submarines_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_destroyers
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SWE_battleships }
+		cost = 10
+		x = 42
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+	    id = SWE_transports
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SWE_escorts }
+		cost = 10
+		x = 48
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				name = amphibious_focus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = amphibious_focus
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,47 @@
+ideologies = {
+
+	theoconservative = {
+		
+		types = {
+		
+			religious_cultism = {
+			}
+                        
+                        liberal_theocracy = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_THEOCONSERVATIVE_1"
+			"FACTION_NAME_THEOCONSERVATIVE_2"
+			"FACTION_NAME_THEOCONSERVATIVE_3"
+			"FACTION_NAME_THEOCONSERVATIVE_4"
+			"FACTION_NAME_THEOCONSERVATIVE_5"
+			"FACTION_NAME_THEOCONSERVATIVE_6"
+		}
+		
+		color = { 250 142 0 }
+		
+		war_impact_on_world_tension = 2
+		faction_impact_on_world_tension = 2
+
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_guarantee_other_ideologies = yes
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+		}
+		
+		modifiers = {
+			join_faction_tension = 0.25
+			lend_lease_tension = 0.30
+			send_volunteers_tension = 0.45
+			guarantee_tension = 0.50
+		}
+		
+	}
+
+}

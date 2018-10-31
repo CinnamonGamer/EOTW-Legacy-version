@@ -1,0 +1,301 @@
+﻿add_namespace = cheat
+
+country_event = {	#Random Ideology for all countries
+	id = cheat.1
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			random_list = {
+				10 = { 
+					set_politics = {
+						ruling_party = strasserist
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = strasserist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = nationalist
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = nationalist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = national_conservative
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = national_conservative
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = absolute_monarchist
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = absolute_monarchist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = theoconservative
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = theoconservative
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = national_liberal
+						elections_allowed = yes
+					}
+					add_popularity = {
+						ideology = national_liberal
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = americanist
+						elections_allowed = yes
+					}
+					add_popularity = {
+						ideology = americanist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = georgist
+						elections_allowed = yes
+					}
+					add_popularity = {
+						ideology = georgist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = democratic_socialist
+						elections_allowed = yes
+					}
+					add_popularity = {
+						ideology = democratic_socialist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = collectivist
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = collectivist
+						popularity = 0.6
+					}
+				}
+				10 = { 
+					set_politics = {
+						ruling_party = de_leonist
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = de_leonist
+						popularity = 0.6
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+    id = cheat.2
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_named_threat = { threat = 200 name = increase_tension_cheat }
+	}
+}
+
+country_event = {
+    id = cheat.3
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_named_threat = { threat = -200 name = decrease_tension_cheat }
+	}
+}
+
+country_event = { #Strasserist Popularity
+    id = cheat.4
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = strasserist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Nationalist Popularity
+    id = cheat.5
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = nationalist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Monarchist Popularity
+    id = cheat.6
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = absolute_monarchist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Conservative Popularity
+    id = cheat.7
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = national_conservative
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Theocratic Popularity
+    id = cheat.8
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = theoconservative
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Liberal Popularity
+    id = cheat.9
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = national_liberal
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Americanist Popularity
+    id = cheat.10
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = americanist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Georgist Popularity
+    id = cheat.11
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = georgist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Socialist Popularity
+    id = cheat.12
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #Collectivist Popularity
+    id = cheat.13
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = collectivist
+			popularity = 0.6
+		}
+	}
+}
+
+country_event = { #De Leonist Popularity
+    id = cheat.14
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_popularity = {
+			ideology = de_leonist
+			popularity = 0.6
+		}
+	}
+}

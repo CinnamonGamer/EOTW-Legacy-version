@@ -1,0 +1,178 @@
+﻿division_template = {
+	name = "Infantry Division"	# Divisions were reserves assigned to various military districts
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+}
+division_template = {
+	name = "Cavalry Division"  
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	##### Royal Australian Army #####
+	division= {	
+		name = "5th Infantry Division"
+		location = 1652 # Perth
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "1st Cavalry Division"
+		location = 7564 # Brisbane
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# 2nd Military District -- New South Wales
+	division= {	
+		name = "1st Infantry Division"
+		location = 12406 # Sydney
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "2nd Infantry Division"
+		location = 7859 # Canberra
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# 3rd Military District -- New South Wales
+	division= {	
+		name = "3rd Infantry Division"
+		location = 7798 # Melbourne
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "4th Infantry Division"
+		location = 7798 # Melbourne
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "2nd Cavalry Division"
+		location = 7798 # Melbourne
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	##### Naval OOB #####
+	navy = {				
+		name = "Australian Squadron"			
+		base = 12406
+		location = 12406 # Sydney
+		ship = { name = "HMAS Canberra" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST version_name = "Canberra Class" } }	}
+		ship = { name = "HMAS Australia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST version_name = "Canberra Class" } } }
+		ship = { name = "HMAS Sydney" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Adelaide" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		# Scrap Iron Flotilla
+		ship = { name = "HMAS Stuart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Vampire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Vendetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Voyager" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Waterhen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Punisher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Eureka" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Pacifica" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+	}
+    navy = {				
+		name = "Victoria Squadron"			
+		base = 7798
+		location = 7798 # Melbourne
+		# Scrap Iron Flotilla
+		ship = { name = "HMAS Federation" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Queen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Australis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Hughes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Walker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS National" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Hellfire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Pacific Glory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Union" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Smoke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Geelong" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Tasmania" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Luna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Orange" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Newcastle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS St. Kilda" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AST } } }
+	}	
+	navy = {				
+		name = "Western Squadron"			
+		base = 1652
+		location = 1652 # Perth
+		ship = { name = "HMAS Perth" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Gold" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Deep Sea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Night" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Royal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Governor" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Pacific Nightmare" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Hunt" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Traveller" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Guinea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Broome" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Darwin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AST } } }
+	}
+	navy = {				
+		name = "Sunshine Fleet"			
+		base = 7564
+		location = 7564 # Brisbane
+		ship = { name = "HMAS Sunshine State" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Toowoomba" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Paradise" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Townsville" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Cairns" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Glasshouse" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Taylor" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Noosa" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Valley" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+		ship = { name = "HMAS Pacific Cruise" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AST } } }
+	}
+}
+
+air_wings = {
+	### Royal Australian Air Force (RAAF)-- New South Wales
+	285 = {
+		# RAAF Stations Laverton, Richmond -- Hawker Demons, Avro Ansons
+		CAS_equipment_1 =  {
+			owner = "AST" 
+			amount = 24
+		}
+	}
+}

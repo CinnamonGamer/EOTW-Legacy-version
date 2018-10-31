@@ -1,0 +1,179 @@
+﻿###########################
+# ETH Events
+###########################
+
+add_namespace = ethiopia
+
+#Vision for Africa
+country_event = {
+    id = ethiopia.1
+	title = ethiopia.1.t
+	desc = ethiopia.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		date > 1936.4.1
+		date < 1936.4.18
+	}
+	
+	option = {
+	    name = ethiopia.1.o1
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 30
+		set_country_flag = ethiopia_looking_outwards
+	}
+	
+	option = {
+	    name = ethiopia.1.o2
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.05
+	}
+	
+}
+
+#Somaliland Purchase
+country_event = {
+    id = ethiopia.2
+	title = ethiopia.2.t
+	desc = ethiopia.2.d
+	picture = GFX_report_event_french_british_officers
+    
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		date > 1936.6.1
+		date < 1936.6.25
+		has_country_flag = ethiopia_looking_outwards
+	}
+	
+	option = {
+	    name = ethiopia.2.o1
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = -10
+		set_global_flag = ethiopia_wants_french_somaliland
+		clr_country_flag = ethiopia_looking_outwards
+	}
+	
+	option = {
+	    name = ethiopia.2.o2
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -10
+		set_global_flag = ethiopia_wants_english_somaliland
+		clr_country_flag = ethiopia_looking_outwards
+	}
+}
+
+#France Accepts Offer for Somaliland
+country_event = {
+    id = ethiopia.3
+	title = ethiopia.3.t
+	desc = ethiopia.3.d
+	picture = GFX_report_event_soldiers_marching
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		has_global_flag = france_accepts_somaliland_purchase
+	}
+	
+	option = {
+	    name = ethiopia.3.o1
+		ai_chance = {
+		    factor = 100
+	    }
+		ETH = { transfer_state = 559 }
+		FRA = { add_to_faction = ETH }
+		add_political_power = -20
+		clr_global_flag = france_accepts_somaliland_purchase
+	}
+}
+
+#France Refuses Offer for Somaliland
+country_event = {
+    id = ethiopia.4
+	title = ethiopia.4.t
+	desc = ethiopia.4.d
+	picture = GFX_report_event_journalists_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		has_global_flag = france_refuses_somaliland_purchase
+	}
+	
+	option = {
+	    name = ethiopia.4.o1
+		ai_chance = {
+		    factor = 100
+	    }
+	    add_stability = -0.02
+		clr_global_flag = france_refuses_somaliland_purchase
+	}
+}
+
+#England Accepts Offer for Somaliland
+country_event = {
+    id = ethiopia.5
+	title = ethiopia.5.t
+	desc = ethiopia.5.d
+	picture = GFX_report_event_soldiers_marching
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		has_global_flag = england_accepts_somaliland_purchase
+	}
+	
+	option = {
+	    name = ethiopia.5.o1
+		ai_chance = {
+		    factor = 100
+	    }
+		ETH = { transfer_state = 269 }
+		add_popularity = {
+			ideology = national_conservative
+			popularity = 0.48
+		}
+		add_political_power = -20
+		clr_global_flag = england_accepts_somaliland_purchase
+	}
+}
+
+#England Refuses Offer for Somaliland
+country_event = {
+    id = ethiopia.6
+	title = ethiopia.6.t
+	desc = ethiopia.6.d
+	picture = GFX_report_event_journalists_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ETH
+		has_global_flag = england_refuses_somaliland_purchase
+	}
+	
+	option = {
+	    name = ethiopia.6.o1
+		ai_chance = {
+		    factor = 100
+	    }
+	    add_stability = -0.02
+		clr_global_flag = england_refuses_somaliland_purchase
+	}
+}

@@ -1,0 +1,417 @@
+ideas = {
+		
+	country = {
+
+		MUG_developing_country = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.2
+				research_time_factor = 0.1
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		
+		MUG_devoted_soldiers_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    army_attack_factor = 0.1
+				conscription = 0.02
+				army_defence_factor = 0.1
+			}
+		}
+		
+		MUG_devoted_workers_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+
+		MUG_industrialisation_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				research_time_factor = 0.02
+				political_power_cost = 0.5
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		MUG_expanding_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				global_building_slots_factor = 0.50
+			}
+		}
+
+		MUG_dockyards_idea = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+	}
+	country = {
+
+		MUG_dem_soc_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_socialist_drift = 0.1
+			}
+		}
+	}
+	country = {
+
+		MUG_georgist_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				georgist_drift = 0.1
+			}
+		}
+	}
+	country = {
+
+		MUG_america_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				americanist_drift = 0.1
+			}
+		}
+	}
+	country = {
+
+		MUG_nat_lib_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				national_liberal_drift = 0.1
+			}
+		}
+	}
+	
+	country = {
+	    MUG_building_own_tanks = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05 
+				}
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+	    MUG_gun_production_idea = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+	    MUG_big_guns_arty = {
+		
+		    allowed = {
+				original_tag = AUS
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.05
+				}
+			}
+			
+			picture = FRA_factory_strikes
+			
+		}
+	}
+	
+	country = {
+
+		MUG_Mahatma_Gandhi = {
+
+			picture = FRA_factory_strikes
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = georgist
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.2
+			}
+		}
+	}
+	
+	country = {
+
+		MUG_georgist_boost = {
+
+			picture = FRA_factory_strikes
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = georgist
+			}
+
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+
+		MUG_georgist_influence = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				georgist_drift = 0.05
+				georgist_acceptance = 85
+			}
+		}
+	}
+	
+	country = {
+
+		MUG_pacifism_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				join_faction_tension = 1.00
+				ai_get_ally_desire_factor = -100
+				drift_defence_factor = 0.1
+				enemy_justify_war_goal_time = 0.25
+			}
+		}
+	}
+	
+	country = {
+
+		MUG_peace_keepers = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+			}
+		}
+	}
+	
+	
+	country = {
+
+		MUG_socialist_workers_idea = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+
+		MUG_americanist_influence_idea = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				americanist_drift = 0.05
+			}
+		}
+	}
+	
+	country = {
+	
+		MUG_influence_defence_americanist = {
+	
+				allowed = { always = no	}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+				picture = generic_democratic_drift_bonus
+				modifier = {
+					drift_defence_factor = 0.5
+				}
+			}
+		
+	}
+	

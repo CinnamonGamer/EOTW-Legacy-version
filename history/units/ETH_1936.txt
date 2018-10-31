@@ -1,0 +1,109 @@
+﻿division_template = {
+	name = "Kebur Zabagna"				# Imperial Bodyguard
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Infantry Division"		
+	# Note: Represents both regular infantry and militia units
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Mountain Division"		
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	##### Imperial Army #####
+	division = {
+		name = "Kebur Zabagna"
+		location = 5010
+		division_template = "Kebur Zabagna"			# Elite emperor's guard
+		start_experience_factor = 0.2
+	}
+
+	division = {
+		name = "Wolqayt-Semien Sefari"
+		location = 2072
+		division_template = "Mountain Division"		# Regular Infantry
+		start_experience_factor = 0.2
+		
+
+	}
+	division = {
+		name = "Welega-Ardjo Sefari"
+		location = 2072
+		division_template = "Infantry Division"		# Regular Infantry
+		start_experience_factor = 0.2
+		
+
+	}
+	# Tigray Provincial Armed Forces #
+	division = {
+		name = "1st Tigray Sefari"
+		location = 1984
+		division_template = "Infantry Division"		# Militia
+		start_experience_factor = 0.1
+		
+
+	}
+	division = {
+		name = "2nd Tigray Sefari"
+		location = 1984
+		division_template = "Infantry Division"		# Militia
+		start_experience_factor = 0.1
+		
+
+	}
+
+	### Southern Front ###
+	division = {
+		name = "Ogaden Sefari"
+		location = 12812
+		division_template = "Infantry Division"		# Militia
+		start_experience_factor = 0.1
+		
+
+	}
+	division = {
+		name = "Arusi Sefari"
+		location = 8062
+		division_template = "Infantry Division"		# Militia
+		start_experience_factor = 0.1
+		
+
+	}
+	# Willubabor and Sidamo Provincial Armed Forces #
+	division = {
+		name = "2nd Sidamo Sefari"
+		location = 4995
+		division_template = "Infantry Division"		# Regular Infantry
+		start_experience_factor = 0.2
+
+	}
+}

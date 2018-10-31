@@ -1,0 +1,153 @@
+﻿capital = 41
+
+set_stability = 0.21
+set_war_support = 0.22
+
+oob = "SPR_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_convoys = 50
+set_politics = {
+
+	parties = {
+		strasserist = { 
+			popularity = 5
+		}
+
+		nationalist = {
+			popularity = 0
+		}
+		
+		absolute_monarchist = {
+			popularity = 4
+			#banned = no #default is no
+		}
+
+                national_conservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                theoconservative = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                national_liberal = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                americanist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                georgist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                democratic_socialist = {
+			popularity = 84
+			#banned = no #default is no
+		}
+
+                collectivist = {
+			popularity = 0
+			#banned = no #default is no
+		}
+
+                de_leonist = {
+			popularity = 7
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = democratic_socialist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+add_ideas = {
+	free_trade
+	volunteer_only
+	partial_economic_mobilisation
+}
+
+create_faction = red_front
+add_to_faction = SPR
+add_to_faction = CUB
+
+
+create_country_leader = {
+	name = "Indalecio Prieto"
+	desc = ""
+	picture = "Portrait_SPR_Prieto.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Francisco Largo Caballero"
+	desc = ""
+	picture = "Portrait_SPR_Caballero.dds"
+	expire = "1965.1.1"
+	ideology = international_de_leonist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alfonso XIII"
+	desc = ""
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = oligarchist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jose Sanjurjo"
+	desc = ""
+	picture = "Portrait_SPR_Sanjurjo.dds"
+	expire = "1965.1.1"
+	ideology = militant_strasserist
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+	name = "Vincente Marlillo"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = {  }
+	skill = 3
+
+}
+

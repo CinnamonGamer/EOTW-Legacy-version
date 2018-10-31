@@ -1,0 +1,63 @@
+﻿###########################
+# MOT Events
+###########################
+
+add_namespace = mot
+
+#Surrender when USA has taken too much land
+country_event = {
+	id = mot.1
+	title = mot.1.t
+	desc = mot.1.d
+	picture = GFX_report_event_german_parade_paris
+	
+	trigger = {
+		tag = MOT
+		has_war_with = USA
+		surrender_progress > 0.8
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 20 }
+
+	fire_only_once = yes
+
+	#Surrender and join the USA
+	
+	option = {
+		name = mot.1.a
+		ai_chance = {
+			base = 100
+		}
+		USA = {
+			country_event = { id = mot.2 }
+		}
+		effect_tooltip = {
+			USA = { annex_country = MOT }
+			}
+		}
+	}
+}
+
+#USA response to Montana surrender
+
+country_event = {
+	id = mot.2
+	title = mot.2.t
+	desc = mot.2.d
+	picture = GFX_report_event_french_resistance_01
+	
+	trigger = {
+		tag = USA
+	}
+	is_triggered_only = yes
+
+	#Accept surrender Montana
+	option = {
+		name = mot.2.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = { target = MOT }
+	}
+}
