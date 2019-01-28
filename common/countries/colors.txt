@@ -9,7 +9,7 @@ ANG = {
 	color_ui = rgb { 255 73 121 }
 }
 ARG = {
-	color = rgb { 19 165 131 }
+	color = rgb { 65 91 188 }
 	color_ui = rgb { 163 17 31 }
 }
 ASS = {
@@ -17,7 +17,7 @@ ASS = {
 	color_ui = rgb { 47 172 255 }
 }
 AST = {
-	color = rgb { 57 113 228 }
+	color = rgb { 35 133 114 }
 	color_ui = rgb { 74 147 255 }
 }
 AUS = {
@@ -25,7 +25,7 @@ AUS = {
 	color_ui = rgb { 163 17 31 }
 }
 BTC = {
-	color = rgb { 155 168 111 }
+	color = rgb { 109 65 50  }
 	color_ui = rgb { 85 228 233 }
 }
 BAV = { color 	 = rgb { 20 133 237  }
@@ -82,7 +82,7 @@ DAI = {
 	color_ui = rgb { 222 247 198 }
 }
 DEN = {
-	color = rgb { 255 58 58 }
+	color = rgb { 132 91 49 }
 	color_ui = rgb { 121 235 255 }
 }
 EAF = {
@@ -90,8 +90,8 @@ EAF = {
 	color_ui = rgb { 194 59 133 }
 }
 ECU = {
-	color = rgb { 111 71 71 }
-	color_ui = rgb { 144 92 92 }
+	color = rgb { 200 236 195 }
+	color_ui = rgb { 200 236 195 }
 }
 ETH = {
 	color = rgb { 153 116 93 }
@@ -130,8 +130,8 @@ HSP = {
 	color_ui = rgb { 83 208 217 }
 }
 HOL = {
-	color = rgb { 145 157 236 }
-	color_ui = rgb { 189 204 255 }
+	color = rgb { 244 146 66 }
+	color_ui = rgb { 244 146 66 }
 }
 HUN = {
 	color = rgb { 57 143 97 }
@@ -142,15 +142,15 @@ ICH = {
 	color_ui = rgb { 172 122 88 }
 }
 IRE = {
-	color = hsv { 0.1 0.47 0.8 } #255 180 136
-	color_ui = rgb { 255 234 177 }
+	color = rgb { 72 142 81 } 
+	color_ui = rgb { 72 142 81 }
 }
 ITA = {
 	color = rgb { 76 145 63 }
 	color_ui = rgb { 99 189 82 }
 }
 JAP = {
-	color = rgb { 225 137 6 }
+	color = rgb { 131 29 24 }
 	color_ui = rgb { 155 62 51 }
 }
 KON = {
@@ -158,7 +158,7 @@ KON = {
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
 KOR = {
-	color = rgb { 155 101 107 }
+	color = rgb { 40 40 150 }
 	color_ui = rgb { 202 131 139 }
 }
 LBA = {
@@ -174,7 +174,7 @@ MAO = {
 	color_ui = rgb { 152 128 43 }
 }
 MON = {
-	color = rgb { 249 146 98 }
+	color = rgb { 154 122 70 }
 	color_ui = rgb { 255 190 127 }
 }
 MUG = {
@@ -194,12 +194,12 @@ PAP = {
 	color_ui = rgb { 128 145 65 }
 }
 PER = {
-	color = rgb { 178 114 99 }
-	color_ui = rgb { 231 148 129 }
+	color = rgb { 21 96 38 }
+	color_ui = rgb { 21 96 38 }
 }
 PRU = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+	color = rgb { 116 30 30 }
+	color_ui = rgb { 49 23 19 }
 }
 PHI = {
 	color = rgb { 152 130 191 }
@@ -214,20 +214,20 @@ POR = {
 	color_ui = rgb { 198 169 248 }
 }
 PRS = {
-	color = rgb { 146 179 191 }
-	color_ui = rgb { 146 179 191 }
+	color = rgb { 73 83 87 }
+	color_ui = rgb { 73 83 87 }
 }
 RHN = {
-	color = rgb { 156 249 162 }
-	color_ui = rgb { 198 169 248 }
+	color = rgb { 121 201 194 }
+	color_ui = rgb { 121 201 194 }
 }
 RIO = {
-	color = rgb { 129 245 145 }
+	color = rgb { 158 46 57 }
 	color_ui = rgb { 198 169 248 }
 }
 ROM = {
-	color = rgb { 71 113 97 }
-	color_ui = rgb { 92 147 126 }
+	color = rgb { 204 184 45 }
+	color_ui = rgb { 204 184 45 }
 }
 SAU = {
 	color = rgb { 53 135 53 }
@@ -238,8 +238,8 @@ SNY = {
 	color_ui = rgb { 255 246 255 }
 }
 SCD = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
+	color = rgb { 182 64 119 }
+	color_ui = rgb { 182 64 119 }
 }
 SER = {
 	color = rgb { 171 190 152 }
@@ -250,7 +250,7 @@ SIA = {
 	color_ui = rgb { 222 247 198 }
 }
 SCY = {
-	color = rgb { 71 190 152 }
+	color = rgb { 204 204 0 }
 	color_ui = rgb { 222 247 198 }
 }
 SOV = {
@@ -262,7 +262,7 @@ SPR = {
 	color_ui = rgb { 222 247 198 }
 }
 SUD = {
-	color = rgb { 171 190 152 }
+	color = rgb { 116 68 41 }
 	color_ui = rgb { 222 247 198 }
 }
 SWE = {
@@ -270,8 +270,8 @@ SWE = {
 	color_ui = rgb { 222 247 198 }
 }
 SWI = {
-	color = rgb { 193 171 8 }
-	color_ui = rgb { 87 160 255 }
+	color = rgb { 224 5 5 }
+	color_ui = rgb { 224 5 5 }
 }
 TIB = {
 	#color = HSV { 0.1 0.15 0.4 }
@@ -279,12 +279,12 @@ TIB = {
 	color_ui = rgb { 209 247 133 }
 }
 TUR = {
-	color = rgb { 185  255  152 }
-	color_ui = rgb { 165  230  132 }
+	color = rgb { 143 33 34 }
+	color_ui = rgb { 143 33 34 }
 }
 UKR = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
+	color = rgb { 0 105 210 }
+	color_ui = rgb { 0 105 201 }
 }
 ENG = {
 	color = rgb { 166 22 22 }
