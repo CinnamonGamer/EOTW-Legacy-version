@@ -150,7 +150,7 @@ ITA = {
 	color_ui = rgb { 99 189 82 }
 }
 JAP = {
-	color = rgb { 131 29 24 }
+	color = rgb { 182 64 119 }
 	color_ui = rgb { 155 62 51 }
 }
 KON = {
@@ -238,8 +238,8 @@ SNY = {
 	color_ui = rgb { 255 246 255 }
 }
 SCD = {
-	color = rgb { 182 64 119 }
-	color_ui = rgb { 182 64 119 }
+	color = rgb { 29 101 135 }
+	color_ui = rgb { 29 101 135 }
 }
 SER = {
 	color = rgb { 171 190 152 }
