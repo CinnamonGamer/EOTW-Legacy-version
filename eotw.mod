@@ -1,5 +1,5 @@
 ﻿name="Emperor of the World: Fan Fork"
-path="mod/EOTW/"
+path="mod/EOTW-Legacy-version/"
 tags={
 	"Alternative History"
 }

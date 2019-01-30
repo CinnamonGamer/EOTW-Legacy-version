@@ -10,11 +10,11 @@ state={
 
 
 	history= {
-		owner = OMA
+		owner = SAU
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = OMA
+		add_core_of = SAU
 	}
 	provinces={
 		8051

@@ -1,25 +1,27 @@
 
 state={
-	id=35
-	name="STATE_35" # Brabant
-	manpower = 1449000
+	id=773
+	name="STATE_773" # Cologne
+	manpower = 745320
+	resources={
+		steel=47
+	}
 	
 	state_category = city
 
 	history={
 		owner = FRA
 		add_core_of = FRA
-		add_core_of = HOL
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 5
+			industrial_complex = 3
 		}
 		victory_points = {
-			6496 5
+			587 5
 		}
 
 	}
 
 	provinces={
-		3262 6496 6500 11456 
+		3488 11562 3444 9522 3547 587
 }

@@ -8,11 +8,12 @@ state={
 
 
 	history= {
-		owner = SUD
+		owner = TUR
 		buildings = {
 			infrastructure = 1
 		}
 		add_core_of = EGY
+		add_core_of = TUR
 	}
 	provinces={
 		2064 10907 12099 12816 12733 10869 7216 7117 992 10127 1143 7148 12091 12764 12033 5078 
