@@ -315,7 +315,7 @@ ideas = {
 			
 			modifier = {
 				de_leonist_drift = 0.05
-				research_time_factor = -0.2
+				research_speed_factor = 0.02
 				consumer_goods_factor = 0.3
 				stability_factor = -0.05
 				war_support_factor = 0.05

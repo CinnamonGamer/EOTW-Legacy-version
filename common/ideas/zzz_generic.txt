@@ -32,7 +32,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				research_time_factor = -0.2
+				research_speed_factor = 0.10
 				consumer_goods_factor = 0.3
 				stability_factor = -0.1
 				production_speed_industrial_complex_factor = 0.15

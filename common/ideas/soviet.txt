@@ -20,7 +20,7 @@ ideas = {
 				industrial_capacity_factory = -0.05
 				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
-				research_time_factor = 0.03
+				research_speed_factor = -0.05
 			}
 			
 			
@@ -128,7 +128,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 				consumer_goods_factor = 0.05
 			}
 
@@ -184,7 +184,7 @@ ideas = {
 			
 			
 			modifier = {
-				research_time_factor = -0.1
+				research_speed_factor = 0.10
 				political_power_gain = -0.5
 			}
 			
@@ -393,7 +393,7 @@ ideas = {
 			
 			
 			modifier = {
-				research_time_factor = -0.15
+				research_speed_factor = 0.15
 				stability_factor = 0.1
 				war_support_factor = 0.1
 			}
