@@ -1,24 +1,23 @@
 
 state={
-	id=539
-	name="STATE_539"
-	manpower = 2564000
+	id=773
+	name="STATE_773" # Cameroon
+	manpower = 2945782
 	
 	state_category = rural
 
 	history={
 		owner = KON
+		add_core_of = KON
+		add_core_of = CMR
 		victory_points = {
-			8193 2
-		}
-		victory_points = {
-			5139 1
+			2080 1
 		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 			air_base = 1
-			5139 = {
+			6039 = {
 				naval_base = 1
 			}
 		}
@@ -26,6 +25,6 @@ state={
 	}
 
 	provinces={
-		5139 8207 10948 
+		1993 2080 5036 5054 6039 7963 9137 11194 
 	}
 }

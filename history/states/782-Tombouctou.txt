@@ -1,14 +1,16 @@
 
 state={
-	id=557
-	name="STATE_557" # Mauritania
-	manpower = 429200
+	id=782
+	name="STATE_782" # Tombouctou
+	manpower = 79243
 	
 	state_category = wasteland
 	impassable = yes
 
 	history={
 		owner = WAF
+		add_core_of = WAF
+		add_core_of = MLI
 		buildings = {
 			infrastructure = 0
 		}
@@ -16,6 +18,6 @@ state={
 	}
 
 	provinces={
-		1115 1897 1962 5034 5077 7943 7992 8035 8058 10725 10779 10814 10838 10868 
+		1115 2068 10725 10868
 	}
 }
