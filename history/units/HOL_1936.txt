@@ -58,7 +58,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 9498  # Rotterdam
+		location = 391  # Rotterdam
 		division_template = "Infanterie Divisie"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
@@ -69,7 +69,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 9498  # Rotterdam
+		location = 391 # Rotterdam
 		division_template = "Infanterie Divisie"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
@@ -82,7 +82,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 6500  # Venlo
+		location = 9363  # Venlo
 		division_template = "Infanterie Divisie"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
@@ -93,7 +93,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 6
 		}
-		location = 11562  # Maastricht
+		location = 6241  # Maastricht
 		division_template = "Infanterie Divisie"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5

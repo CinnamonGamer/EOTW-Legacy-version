@@ -87,7 +87,7 @@ add_ideas = {
 set_convoys = 40
 
 create_country_leader = {
-	name = "Marie-Sophie Nielson"
+	name = "Mogen Fog
 	desc = ""
 	picture = "Portrait_DEN_Marie_Nielsen.dds"
 	expire = "1965.1.1"
