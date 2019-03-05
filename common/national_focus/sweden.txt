@@ -1019,7 +1019,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = land_doctrine_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = land_doctrine
 			}
@@ -1065,7 +1065,7 @@ focus_tree = {
 			army_experience = 5
 			add_tech_bonus = {
 				name = heavy_armor_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = cat_heavy_armor
 			}
@@ -1082,7 +1082,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = artillery_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = artillery
 			}
@@ -1133,7 +1133,7 @@ focus_tree = {
 		    air_experience = 5 
 			add_tech_bonus = {
 				name = air_doctrine_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}
@@ -1150,7 +1150,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = air_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = light_air
 				category = medium_air
@@ -1195,7 +1195,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = bomber_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = tactical_bomber
 				category = cat_strategic_bomber
@@ -1214,7 +1214,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = light_fighter
 				category = cat_heavy_fighter
@@ -1233,7 +1233,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = strategic_bomber_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = cat_strategic_bomber
 			}
@@ -1251,7 +1251,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = tactical_bomber_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = tactical_bomber
 			}
@@ -1269,7 +1269,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = light_fighter_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = light_fighter
 			}
@@ -1287,7 +1287,7 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = heavy_fighter_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = cat_heavy_fighter
 			}
@@ -1304,19 +1304,19 @@ focus_tree = {
 		completion_reward = {
 		    add_tech_bonus = {
 				name = destruction_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = cat_strategic_destruction
 			}
 			add_tech_bonus = {
 				name = battlefield_support_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = cat_battlefield_support
 			}
 			add_tech_bonus = {
 				name = air_doctrine_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = air_doctrine
 			}
@@ -1387,7 +1387,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = naval_doctrine_bonus
 				uses = 2
-				bonus = 0.5
+				bonus = 1.0
 				category = naval_doctrine
 			}
 		}
@@ -1402,7 +1402,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				category = base_strike_main
 			}
 		}
@@ -1417,7 +1417,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = bb_tech
 			}
@@ -1433,7 +1433,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = cv_tech
 			}
@@ -1450,7 +1450,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = sub_op_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = combined_operations_raiding
@@ -1468,7 +1468,7 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 12
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = convoy_defense_tree
 			}
@@ -1485,7 +1485,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = submarines_bonus
-				bonus = 0.5
+				bonus = 1.0
 				ahead_reduction = 1
 				uses = 1
 				technology = early_submarine
@@ -1505,7 +1505,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = dd_tech
 			}
@@ -1522,13 +1522,13 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = amphibious_focus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = marine_tech
 			}
 			add_tech_bonus = {
 				name = amphibious_focus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = tp_tech
 			}

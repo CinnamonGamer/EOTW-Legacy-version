@@ -312,7 +312,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_support_rock_island
 				uses = 3
-				bonus = 0.5
+				bonus = 1.0
 				category = artillery
 				category = support_tech
 			}
@@ -624,7 +624,7 @@ focus_tree = {
 			army_experience = 5
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = land_doctrine
 			}
@@ -642,13 +642,13 @@ focus_tree = {
 			army_experience = 5
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}	
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				technology = tech_mountaineers
 				technology = tech_mountaineers2
@@ -666,7 +666,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = infantry_weapons
 				category = artillery
@@ -685,13 +685,13 @@ focus_tree = {
 			army_experience = 5
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				technology = paratroopers
 				technology = paratroopers2
@@ -714,7 +714,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = motorized_bonus
-				ahead_reduction = 0.5
+				ahead_reduction = 1.0
 				uses = 1
 				category = motorized_equipment
 			}
@@ -732,7 +732,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = armor
 			}
@@ -751,7 +751,7 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 25
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = air_doctrine
 			} # REVISIT May use modifier?
@@ -805,7 +805,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_TAC
 				uses = 1
-				bonus = 0.5
+				bonus = 1.0
 				category = tactical_bomber
 			}
 		}
@@ -826,7 +826,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_CAS
 				uses = 1
-				bonus = 0.5
+				bonus = 1.0
 				category = cas_bomber
 			}
 		}
@@ -857,7 +857,7 @@ focus_tree = {
 			air_experience = 25
 			add_tech_bonus = {
 				name = USA_combined_bomber_offensive
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = heavy_air
 			}
@@ -891,7 +891,7 @@ focus_tree = {
 		#}
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = bb_tech
 			}
@@ -910,7 +910,7 @@ focus_tree = {
 		#}
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				category = base_strike_main
 			}
 		}
@@ -929,7 +929,7 @@ focus_tree = {
 		#}
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = cv_tech
 			}
@@ -949,7 +949,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = USA_bureau_of_aeronautics
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = naval_bomber
 			}
@@ -969,7 +969,7 @@ focus_tree = {
 		completion_reward = {
 		add_tech_bonus = {
 				name = USA_escort
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				technology = improved_destroyer
 				technology = advanced_destroyer
@@ -990,7 +990,7 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 25
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = convoy_defense_tree
 			}
@@ -1011,7 +1011,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_fund_the_navy
 				uses = 3
-				bonus = 0.5
+				bonus = 1.0
 				category = naval_doctrine
 			}
 		}
@@ -1029,7 +1029,7 @@ focus_tree = {
 		#}
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				technology = marines
 				technology = marines2
@@ -1049,7 +1049,7 @@ focus_tree = {
 		#}
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = tp_tech
 			}
@@ -1249,7 +1249,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = USA_manhattan_project
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = nuclear
 			}
@@ -1267,7 +1267,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_committee_on_technocracy
 				uses = 3
-				bonus = 0.5
+				bonus = 1.0
 				category = electronics
 				category = support_tech
 			}

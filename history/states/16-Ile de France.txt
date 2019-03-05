@@ -18,6 +18,7 @@ state={
 			industrial_complex = 6
 			anti_air_building = 3
 			air_base = 9
+			fuel_silo = 1
 		}
 		add_core_of = FRA
 		1939.1.1 = {

@@ -225,7 +225,7 @@ completion_reward = {
 			add_ideas = JAP_austerity_idea
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = infantry_weapons
 			}
@@ -403,7 +403,7 @@ completion_reward = {
 		completion_reward = {
 		army_experience = 40
 				add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
@@ -514,13 +514,13 @@ completion_reward = {
 			army_experience = 5
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = infantry_weapons
 			}
@@ -537,13 +537,13 @@ completion_reward = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
 				category = armor
 			}
@@ -562,7 +562,7 @@ completion_reward = {
 			
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = land_doctrine
 			}
@@ -583,7 +583,7 @@ completion_reward = {
 			
 			add_tech_bonus = {
 				name = marines_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = marines
 				technology = marines2
@@ -603,7 +603,7 @@ completion_reward = {
 			add_tech_bonus = {
 				name = JAP_NAVY_TECH
 				uses = 2
-				bonus = 0.5
+				bonus = 1.0
 				category = naval_doctrine
 		}
 	}
@@ -620,7 +620,7 @@ completion_reward = {
 			add_tech_bonus = {
 				name = JAP_NAVY_TECH2
 				uses = 2
-				bonus = 0.5
+				bonus = 1.0
 				category = dd_tech
 				
 		}
@@ -639,7 +639,7 @@ completion_reward = {
 			add_tech_bonus = {
 				name = JAP_NAVY_TECH
 				uses = 1
-				bonus = 0.5
+				bonus = 1.0
 				technology = heavy_battleship
 		}
 	}
@@ -658,7 +658,7 @@ completion_reward = {
 			add_tech_bonus = {
 				name = JAP_NAVY_TECH
 				uses = 1
-				bonus = 0.5
+				bonus = 1.0
 				category = bb_tech
 		}
 	}
@@ -696,7 +696,7 @@ completion_reward = {
 			add_tech_bonus = {
 				name = JAP_NAVY_TECH2
 				uses = 2
-				bonus = 0.5
+				bonus = 1.0
 				category = ca_tech
 				category = cl_tech
 		}
@@ -714,7 +714,7 @@ completion_reward = {
 			air_experience = 25
 			add_tech_bonus = {
 				name = air_doc_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				category = air_doctrine
 			}			
@@ -732,7 +732,7 @@ completion_reward = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = early_fighter
 				technology = fighter1
@@ -754,7 +754,7 @@ completion_reward = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = bomber_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = CAS1	
 				technology = CAS2
@@ -774,7 +774,7 @@ completion_reward = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 2
 				technology = early_fighter
 				technology = cv_fighter1
@@ -794,7 +794,7 @@ completion_reward = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = bomber_bonus
-				bonus = 0.5
+				bonus = 1.0
 				uses = 3
 				technology = cv_CAS1	
 				technology = cv_CAS2
