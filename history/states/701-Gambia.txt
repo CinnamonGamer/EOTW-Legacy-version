@@ -5,7 +5,7 @@ state={
 	
 	state_category = enclave
 	history={
-		owner = GUI
+		owner = WAF
 		buildings = {
 			infrastructure = 3
 			4989 = {

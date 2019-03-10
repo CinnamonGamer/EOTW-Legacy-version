@@ -22,7 +22,7 @@ state={
 		victory_points = {
 			10400 10
 		}
-		add_core_of = HOL
+# Add cores for SAF
 	}
 
 	provinces={

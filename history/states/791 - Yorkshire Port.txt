@@ -16,7 +16,7 @@ state={
 			infrastructure = 7
 		}
 		add_core_of = ENG
-		add_core_of = SCD
+		add_claim_by = SCD
 	}
 	provinces={
 		11317
