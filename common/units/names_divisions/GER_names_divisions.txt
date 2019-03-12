@@ -500,14 +500,6 @@ GER_MOT_01 =
 
 	for_countries = { GER }
 
-	can_use = {
-		OR = {
-			has_government = neutrality 
-			has_government = democratic 
-		}
-		has_completed_focus = GER_oppose_hitler
-	}
-
 	division_types = { "motorized"  }
 
 	fallback_name = "%d. Infanterie-Division (mot)"
@@ -1004,14 +996,6 @@ GER_MONINF_01 =
 
 	for_countries = { GER }
 
-	can_use = { 
-		OR = {
-			has_government = neutrality 
-			has_government = democratic 
-		}
-		has_completed_focus = GER_oppose_hitler
-	}
-
 	division_types = { "infantry" "mechanized" "mountaineers" "paratrooper" "marine" }
 
 	fallback_name = "%d. Division"
@@ -1240,14 +1224,6 @@ GER_MONMOB_01 =
 	name = "Monarchist Mobile Divisions"
 
 	for_countries = { GER }
-
-	can_use = { 
-		OR = {
-			has_government = neutrality 
-			has_government = democratic 
-		}
-		has_completed_focus = GER_oppose_hitler
-	}
 
 	division_types = {  "cavalry" "light_armor" "medium_armor" "heavy_armor" "modern_armor"  }
 

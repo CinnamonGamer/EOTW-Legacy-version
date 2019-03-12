@@ -507,7 +507,7 @@ ARM = {
 	color_ui = rgb { 252 182 112 }
 }
 
-BUR = {
+BRM = {
 	color = rgb { 119  64  64 }
 	color_ui = rgb { 252 182 112 }
 }

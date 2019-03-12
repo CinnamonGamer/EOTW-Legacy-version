@@ -14,28 +14,14 @@ state={
 			6332 10 
 		}
 		buildings = {
-			infrastructure = 6
-			industrial_complex = 2
-			6332 = {
-				bunker = 1
-
-			}
-			anti_air_building = 2
-			6332 = {
-				naval_base = 5
-
-			}
+			infrastructure = 5
+			industrial_complex = 1
 			air_base = 6
 		}
 		add_core_of = PRS
 		add_core_of = SNY
 		add_core_of = BAV
 		add_core_of = RHN
-		1939.1.1 = {
-			buildings = {
-				anti_air_building = 5
-			}
-		}
 	}
 
 	provinces={

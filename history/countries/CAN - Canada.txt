@@ -1,4 +1,4 @@
-﻿capital = 476
+﻿capital = 276
 
 oob = "CAN_1936"
 

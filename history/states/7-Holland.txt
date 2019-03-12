@@ -19,8 +19,8 @@ state={
 			3314 = {
 				naval_base = 10
 			}
-			9498 = {
-				naval_base = 5
+			3211 = {
+				naval_base = 2
 			}
 		}
 
