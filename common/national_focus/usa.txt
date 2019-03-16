@@ -1106,7 +1106,7 @@ focus_tree = {
 			IRE = {
 				NOT = { has_war_with = USA }
 				is_puppet = no
-				owns_state = 742
+				owns_state = 788
 			}
 		}
 		completion_reward = {
@@ -1124,10 +1124,10 @@ focus_tree = {
 		x = 13
 		y = 5
 		available = {
-			owns_state = 742
+			owns_state = 788
 		}
 		completion_reward = {
-			742 = {
+			788 = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 3

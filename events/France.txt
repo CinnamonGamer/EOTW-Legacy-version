@@ -1208,7 +1208,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		transfer_state = 746
+		transfer_state = 791
 		hidden_effect = {
 		    every_country = { news_event = { id = news.38 } }
 		}
@@ -1229,7 +1229,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		transfer_state = 746
+		transfer_state = 791
 		hidden_effect = {
 		    every_country = { news_event = { id = news.39 } }
 		}

@@ -13,7 +13,10 @@ state={
 		owner = ENG
 		victory_points = { 11317 3 }
 		buildings = {
-			infrastructure = 7
+			infrastructure = 6
+			11317 ={
+				naval_base = 2
+			}
 		}
 		add_core_of = ENG
 		add_claim_by = SCD

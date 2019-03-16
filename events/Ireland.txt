@@ -30,7 +30,7 @@ country_event = {
 			add_ideas = IRE_american_advisors
 			add_ideas = IRE_under_american_protection
 			USA = {
-				transfer_state = 742
+				transfer_state = 788
 			}
 		}
 	}
